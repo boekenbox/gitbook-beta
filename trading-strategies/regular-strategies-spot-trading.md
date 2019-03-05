@@ -1,0 +1,2 @@
+# Regular strategies \(spot trading\)
+

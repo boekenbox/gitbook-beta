@@ -1,0 +1,2 @@
+# Cryptosight add-on
+
