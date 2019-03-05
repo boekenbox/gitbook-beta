@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [this is the arabic version](README.md)
 
