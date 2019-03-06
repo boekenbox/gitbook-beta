@@ -13,10 +13,10 @@
 
 * [Installation & startup](getting-started/installation/README.md)
   * [Download software](getting-started/installation/untitled.md)
-  * [ARM](getting-started/installation/arm.md)
-  * [Windows](getting-started/installation/windows.md)
-  * [macOS](getting-started/installation/macos.md)
-  * [Linux](getting-started/installation/linux.md)
+  * [Windows installation](getting-started/installation/windows.md)
+  * [macOS installation](getting-started/installation/macos.md)
+  * [Linux installation](getting-started/installation/linux.md)
+  * [ARM installation](getting-started/installation/arm.md)
   * [How to enable SSL/TLS](getting-started/installation/enable-ssl-tls.md)
   * [Running multiple instances](getting-started/installation/running-multiple-instances.md)
   * [Headless mode](getting-started/installation/headless-mode.md)
@@ -107,6 +107,6 @@
 ## Troubleshooting
 
 * [Critical errors](troubleshooting/critical-errors.md)
-* [My bot does not trade](troubleshooting/my-bot-does-not-trade.md)
+* [Bot does not trade](troubleshooting/my-bot-does-not-trade.md)
 * [Reset password / 2FA](troubleshooting/reset-password-2fa.md)
 

@@ -1,2 +1,2 @@
-# macOS
+# macOS installation
 

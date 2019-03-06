@@ -1,2 +1,2 @@
-# My bot does not trade
+# Bot does not trade
 
