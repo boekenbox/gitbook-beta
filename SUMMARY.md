@@ -12,7 +12,7 @@
 ## Setup & general settings
 
 * [Installation & startup](getting-started/installation/README.md)
-  * [Download software](getting-started/installation/untitled.md)
+  * [Download software](getting-started/installation/download.md)
   * [Windows installation](getting-started/installation/windows.md)
   * [macOS installation](getting-started/installation/macos.md)
   * [Linux installation](getting-started/installation/linux.md)
