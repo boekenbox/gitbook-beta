@@ -4,7 +4,7 @@
 
 1. Unpack the release .zip file to a new folder
 2. Start running Gunbot by double clicking **gunthy-win.exe**
-3. Open `localhost:5000` in a browser on the same system to access the Gunbot GUI \(modern browsers recommended, preferably Chrome or Firefox\)
+3. Open [localhost:5000](http://localhost:5000) in a browser on the same system to access the Gunbot GUI \(modern browsers recommended, preferably Chrome or Firefox\)
 
 {% hint style="info" %}
 Depending on your systems settings, you may need to add a firewall rule to allow for incoming traffic on TCP port 5000.
