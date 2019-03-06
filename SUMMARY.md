@@ -50,7 +50,11 @@
 
 ## Trading strategy options
 
-* [About Gunbot strategies](trading-strategies/about-gunbot-strategies.md)
+* [About Gunbot strategies](trading-strategies/about-gunbot-strategies/README.md)
+  * [Trading methods](trading-strategies/about-gunbot-strategies/trading-methods.md)
+  * [Protections](trading-strategies/about-gunbot-strategies/protections.md)
+  * [Using overrides](trading-strategies/about-gunbot-strategies/using-overrides.md)
+  * [Strategy naming](trading-strategies/about-gunbot-strategies/strategy-naming.md)
 * [Time series analysis](trading-strategies/time-series-analysis.md)
 * [Regular strategies \(spot trading\)](trading-strategies/regular-strategies-spot-trading/README.md)
   * [ADX](trading-strategies/regular-strategies-spot-trading/adx.md)
