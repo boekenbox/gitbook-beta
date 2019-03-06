@@ -1,2 +1,2 @@
-# TradingView add-on
+# TradingView
 

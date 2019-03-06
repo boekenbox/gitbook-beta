@@ -1,2 +1,2 @@
-# Backtesting add-on
+# Backtesting
 
