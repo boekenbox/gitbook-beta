@@ -8,7 +8,7 @@ Everything described here can also be done using the browser interface.
 
 ## Config file system
 
-All Gunbot settings are done in a single file named `config.js`. This is where you set up your exchange API keys, add pairs and define your strategies. 
+All Gunbot settings are defined in a single file named `config.js`. This is where you set up your exchange API keys, add pairs and define your strategies. 
 
 You can refer to the included `config-js-example.txt` file for an example of a config file with properly defined pairs and all needed parameters for adding each exchange. Throughout this wiki you'll find detailed descriptions for every parameter available in the config file.
 
