@@ -4,7 +4,7 @@
 
 ## About
 
-* [What's new?](about/whats-new.md)
+* [What's new in v12?](about/whats-new-v12.md)
 * [How to purchase Gunbot](about/untitled.md)
 * [Supported exchanges](about/supported-exchanges.md)
 * [System requirements](about/system-requirements.md)
