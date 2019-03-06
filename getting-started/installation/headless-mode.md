@@ -3,7 +3,7 @@
 {% hint style="info" %}
 This article is meant for power users who want to run Gunbot without using the GUI. 
 
-Everything described here can also be done using the browser interface.
+This is not an exhaustive overview of all available settings, just a quick overview of how to manually work with the config file. Refer to other parts of the wiki for detailed settings descriptions.
 {% endhint %}
 
 ## Config file system
