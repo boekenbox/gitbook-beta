@@ -55,5 +55,5 @@ New strategy parameters for v12 will be automatically added through the GUI the 
 
 _Due to new libraries used, you cannot simply overwrite the executable for this release._
 
-{% page-ref page="../getting-started/installation/download.md" %}
+{% page-ref page="../setup-and-general-settings/installation/download.md" %}
 
