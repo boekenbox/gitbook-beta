@@ -6,6 +6,8 @@ To run multiple instances of Gunbot, just make a copy of its folder for each ins
 *  `clientport` - in the ws section
 *  `TOKEN` in the bot section
 
+The GUI of each instance will be available on localhost through the specified port number.
+
 {% hint style="info" %}
 Use a text editor like Notepad++ to edit the `config.js` file to make the required changes described above.
 {% endhint %}
