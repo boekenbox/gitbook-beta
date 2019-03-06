@@ -34,6 +34,7 @@ Enable this to have Gunbot send trade notifications through Telegram.
 
 {% tab title="Values" %}
 **Values:** true or false
+**Default value:** false
 {% endtab %}
 
 {% tab title="Name" %}
@@ -41,3 +42,123 @@ Parameter name in `config.js`: `TELEGRAM_ENABLED`
 {% endtab %}
 {% endtabs %}
 
+
+### Telegram Nick
+
+{% tabs %}
+{% tab title="Description" %}
+Each trade notification starts with the nickname set here. 
+
+Use this to easily check from which bot instance the notifications have been sent.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** string
+**Default value:** Gunbot
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TELEGRAM_NICK`
+{% endtab %}
+{% endtabs %}
+
+
+### Token
+
+{% tabs %}
+{% tab title="Description" %}
+The Telegram token for your bot.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** string
+**Default value:** YOURTOKEN
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TOKEN`
+{% endtab %}
+{% endtabs %}
+
+
+### Chat ID
+
+{% tabs %}
+{% tab title="Description" %}
+The Chat ID for your bot to send its messages to.
+
+Valid options:
+
+"12345"
+A positive integer, to send messages directly to a telegram user. Use this method when you just want to receive notifications for your personal use.
+
+To find your telegram id, send /start to @MyTelegramID_bot and it will respond with your ID.
+
+"-12345"
+A negative integer, to send messages to a group chat.
+
+The easiest way to obtain a groups id, is to open https://web.telegram.org login, and navigate to the group. Now pay attention to the URL, you should see something like https://web.telegram.org/#/im?p=g12345 - the number after the p=g part is the group id.
+
+This must be listed in chat_id with a - symbol in front, in this case "-12345"
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** string
+**Default value:** 123456789
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `chat_id`
+{% endtab %}
+{% endtabs %}
+
+### TG PL Only
+
+{% tabs %}
+{% tab title="Description" %}
+When enabled notifications will be only sent for strategy sell orders.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+**Default value:** false
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TG_PL_ONLY`
+{% endtab %}
+{% endtabs %}
+
+### TG Order Timeout
+
+{% tabs %}
+{% tab title="Description" %}
+When set above 0, you'll receive a Telegram dialog to manually allow or deny every order Gunbot wants to place. During the set amount of seconds you can choose to allow the order (and it will immediately be placed) or deny it. After the timeout passes without reply, the order will be placed at the exchange.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical, represent time in seconds.
+**Default value:** 0
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TG_PL_ONLY`
+{% endtab %}
+{% endtabs %}
+
+### TG Test
+
+{% tabs %}
+{% tab title="Description" %}
+Enable this to test if your Telegram bot is working. A test message will be sent on the first round for each pair. Disable after verifying your bot works.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+**Default value:** false
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TG_TEST`
+{% endtab %}
+{% endtabs %}
