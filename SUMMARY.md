@@ -32,19 +32,17 @@
 * [Other global settings](setup-and-general-settings/other-global-settings/README.md)
   * [Bot settings](setup-and-general-settings/other-global-settings/bot-settings.md)
   * [GUI settings](setup-and-general-settings/other-global-settings/gui-settings.md)
-  * [IMAP listener](setup-and-general-settings/other-global-settings/imap-listener.md)
   * [Websockets](setup-and-general-settings/other-global-settings/websockets.md)
 
 ## How to work with Gunbot
 
 * [Learning the basics](how-to-work-with-gunbot/basic-workings/README.md)
   * [Trading logic](how-to-work-with-gunbot/basic-workings/trading-logic.md)
+  * [Balance settings](how-to-work-with-gunbot/basic-workings/balance-settings.md)
   * [Order types](how-to-work-with-gunbot/basic-workings/order-types.md)
+  * [Period](how-to-work-with-gunbot/basic-workings/period.md)
   * [Trailing](how-to-work-with-gunbot/basic-workings/trailing.md)
   * [ROE trailing](how-to-work-with-gunbot/basic-workings/roe-trailing.md)
-* [Essential settings](how-to-work-with-gunbot/essential-balance-settings/README.md)
-  * [Balance settings](how-to-work-with-gunbot/essential-balance-settings/balance-settings.md)
-  * [Period](how-to-work-with-gunbot/essential-balance-settings/period.md)
 * [Editing strategies and pairs](how-to-work-with-gunbot/editing-strategies-and-pairs/README.md)
   * [Trading pairs](how-to-work-with-gunbot/editing-strategies-and-pairs/trading-pairs.md)
   * [Strategy configurator](how-to-work-with-gunbot/editing-strategies-and-pairs/strategy-configurator.md)
@@ -97,7 +95,8 @@
 
 ## Add-ons
 
-* [TradingView](add-ons/tradingview-add-on.md)
+* [TradingView](add-ons/tradingview-add-on/README.md)
+  * [IMAP listener](add-ons/tradingview-add-on/imap-listener.md)
 * [Backtesting](add-ons/backtesting-add-on.md)
 * [Cryptosight](add-ons/cryptosight-add-on.md)
 
