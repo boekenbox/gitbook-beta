@@ -7,7 +7,7 @@ Orders are placed when both the main strategy settings and confirming indicators
 Especially when TrailMe is used together with confirming indicators, it makes sense to not set the indicators too strict as all order criteria must happen in the same cycle for an order to be placed \(strategy conditions + indicator conditions + hitting trailing stop\).
 
 {% hint style="success" %}
-**Indicators in Gunbot are calculated with live data.** 
+**Indicators in Gunbot are calculated with live data.**
 
 For example for a 14 period RSI calculation, that means that the period close values for the past 13 completed candles are used, plus the live data for the current cycle.
 {% endhint %}
@@ -16,21 +16,19 @@ For example for a 14 period RSI calculation, that means that the period close va
 For margin trading, the buy side for indicator settings apply for opening long position. The sell side applies for opening short positions.
 {% endhint %}
 
-
-
 ## ADX
 
 ### ADX Enabled
 
 {% tabs %}
 {% tab title="Description" %}
-Setting this to true will enable ADX as a confirming indicator, only allowing trades when the trend is strong enough to meet or exceeds the set ADX_LEVEL.
+Setting this to true will enable ADX as a confirming indicator, only allowing trades when the trend is strong enough to meet or exceeds the set ADX\_LEVEL.
 
-ADX measures both up- and downtrends, when DI+ is lower than DI- prices are moving up (these values are visible in the logs). When DI- is lower than DI+, prices are moving down. The ADX value indicates the strength of the current up- or downtrend.
+ADX measures both up- and downtrends, when DI+ is lower than DI- prices are moving up \(these values are visible in the logs\). When DI- is lower than DI+, prices are moving down. The ADX value indicates the strength of the current up- or downtrend.
 
-A buy order is confirmed when ADX is above ADX_LEVEL and DI- is lower than DI+.
+A buy order is confirmed when ADX is above ADX\_LEVEL and DI- is lower than DI+.
 
-A sell order is confirmed when ADX is above ADX_LEVEL and DI- is higher than DI+.
+A sell order is confirmed when ADX is above ADX\_LEVEL and DI- is higher than DI+.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -115,15 +113,13 @@ Parameter name in `config.js`: `DI_PERIOD`
 {% endtab %}
 {% endtabs %}
 
-
-
 ## BTC PND protection
 
 ### BTC PND Protection
 
 {% tabs %}
 {% tab title="Description" %}
-Setting this to true disables buy orders when there is too much price and volume pressure on BTC. 
+Setting this to true disables buy orders when there is too much price and volume pressure on BTC.
 
 This setting is dependent on `BTC_MONEY_FLOW`. Only use this if BTC pumps have a significant effect on your trading pair.
 {% endtab %}
@@ -154,9 +150,9 @@ Parameter name in `config.js`: `BTC_PND_PROTECTION`
 
 {% tabs %}
 {% tab title="Description" %}
-Sets the value on the Money Flow Index (MFI) for BTC-USD that `BTC_PND_PROTECTION` disables orders for. As soon as MFI hits the set value or drops below it, `BTC_PND_PROTECTION` will be active.
+Sets the value on the Money Flow Index \(MFI\) for BTC-USD that `BTC_PND_PROTECTION` disables orders for. As soon as MFI hits the set value or drops below it, `BTC_PND_PROTECTION` will be active.
 
-The default value of 35 indicates that the BTC-USD market is moving into oversold territory and might start pumping soon, no buy orders would be placed while BTC-USD MFI is between 35 and 0. 
+The default value of 35 indicates that the BTC-USD market is moving into oversold territory and might start pumping soon, no buy orders would be placed while BTC-USD MFI is between 35 and 0.
 
 As long as BTC-USD is the defined oversold territory, no orders will be placed.
 {% endtab %}
@@ -187,7 +183,7 @@ Parameter name in `config.js`: `BTC_MONEY_FLOW`
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to the number of candlestick periods you want to use for calculating MFI for BTC_PND_PROTECTION.
+Set this to the number of candlestick periods you want to use for calculating MFI for BTC\_PND\_PROTECTION.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -212,8 +208,6 @@ Parameter name in `config.js`: `BTC_PND_PERIOD`
 {% endtab %}
 {% endtabs %}
 
-
-
 ## EMA Spread
 
 ### EMA Spread
@@ -222,9 +216,9 @@ Parameter name in `config.js`: `BTC_PND_PERIOD`
 {% tab title="Description" %}
 Setting this to true will enable EMA spread as a confirming indicator for both buy and sell orders. The spread is calculated each cycle by subtracting the lowest EMA value from the highest EMA.
 
-A buy signal occurs when EMA1 (slow EMA) is at least `EMAx` higher than EMA2 (fast EMA) and the EMA spread value starts to decrease (after having increased first). 
+A buy signal occurs when EMA1 \(slow EMA\) is at least `EMAx` higher than EMA2 \(fast EMA\) and the EMA spread value starts to decrease \(after having increased first\).
 
-A sell signal occurs when EMA1 (slow EMA) is at least EMAx lower than EMA2 (fast EMA) and the EMA spread value starts to increase (after having decreased first).
+A sell signal occurs when EMA1 \(slow EMA\) is at least EMAx lower than EMA2 \(fast EMA\) and the EMA spread value starts to increase \(after having decreased first\).
 {% endtab %}
 
 {% tab title="Values" %}
@@ -279,7 +273,6 @@ When set to 1, the spread must reach at least 1% before `EMASPREAD` can trigger 
 Parameter name in `config.js`: `EMAx`
 {% endtab %}
 {% endtabs %}
-
 
 ## MFI
 
@@ -382,7 +375,7 @@ Parameter name in `config.js`: `MFI_SELL_LEVEL`
 {% tab title="Description" %}
 Set this to the number of candlestick periods you want to use for calculating MFI.
 
-MFI is calculated using an array of the period close prices of MFI_LENGTH-1 candles and the last price.
+MFI is calculated using an array of the period close prices of MFI\_LENGTH-1 candles and the last price.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -498,7 +491,6 @@ Parameter name in `config.js`: `RSI_METHOD`
 {% endtab %}
 {% endtabs %}
 
-
 ### RSI Buy Level
 
 {% tabs %}
@@ -573,7 +565,7 @@ Parameter name in `config.js`: `RSI_SELL_LEVEL`
 {% tab title="Description" %}
 Set this to the number of candlestick periods you want to use for calculating RSI.
 
-RSI is calculated using an array of the period close prices of RSI_LENGTH-1 candles and the last price.
+RSI is calculated using an array of the period close prices of RSI\_LENGTH-1 candles and the last price.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -587,7 +579,7 @@ RSI is calculated using an array of the period close prices of RSI_LENGTH-1 cand
 | :--- | :--- |
 | Strategy sell | RT buy |
 | Strategy buy | RT buyback |
-| DCA buy (when using RSI) | RT sell |
+| DCA buy \(when using RSI\) | RT sell |
 |  | Close |
 |  | Stop limit |
 {% endtab %}
@@ -658,7 +650,6 @@ Sets the method for using Stochastic. See `STOCH_BUY_LEVEL` and `STOCH_SELL_LEVE
 Parameter name in `config.js`: `STOCH_METHOD`
 {% endtab %}
 {% endtabs %}
-
 
 ### Stoch Buy Level
 
@@ -881,7 +872,6 @@ Parameter name in `config.js`: `STOCHRSI_METHOD`
 {% endtab %}
 {% endtabs %}
 
-
 ### Stoch RSI Buy Level
 
 {% tabs %}
@@ -922,9 +912,9 @@ Parameter name in `config.js`: `STOCHRSI_BUY_LEVEL`
 {% tab title="Description" %}
 Set this to the StochRSI level you want to allow sell orders at.
 
-STOCHRSI_METHOD = oscillator: when set to 0.8, sell orders will only be placed when StochRSI is 0.8 or higher.
+STOCHRSI\_METHOD = oscillator: when set to 0.8, sell orders will only be placed when StochRSI is 0.8 or higher.
 
-STOCHRSI_METHOD = cross: when set to 0.8, sell orders will only be placed when StochRSI crosses under 0.8.
+STOCHRSI\_METHOD = cross: when set to 0.8, sell orders will only be placed when StochRSI crosses under 0.8.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -1014,9 +1004,9 @@ Parameter name in `config.js`: `EMALENGTH`
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to the number of candlestick periods you want Gunbot to pull from the exchange, which are available for calculating other indicators. 
+Set this to the number of candlestick periods you want Gunbot to pull from the exchange, which are available for calculating other indicators.
 
-Always make sure that this setting is high enough for other indicators to be properly calculated. 
+Always make sure that this setting is high enough for other indicators to be properly calculated.
 
 Please be aware that exchanges won't always provide the number of specified candles, often it is less.
 {% endtab %}
@@ -1032,7 +1022,7 @@ Please be aware that exchanges won't always provide the number of specified cand
 | :--- | :--- |
 | Strategy sell | RT buy |
 | Strategy buy | RT buyback |
-| DCA buy (when using an indicator as trigger) | RT sell |
+| DCA buy \(when using an indicator as trigger\) | RT sell |
 |  | Close |
 |  | Stop limit |
 {% endtab %}
@@ -1104,7 +1094,7 @@ Parameter name in `config.js`: `STDV`
 
 ![](https://user-images.githubusercontent.com/2372008/51115276-13a69500-1808-11e9-85b9-b221ef2cddeb.png)
 
-[Renko](%20https://www.tradingview.com/wiki/Renko_Charts) candles can be used with the ichimoku-margin strategy.
+[Renko](https://github.com/boekenbox/gitbook/tree/74bed25d66f4b0422a81f67f250bcb09c6cf1780/wiki/Renko_Charts/README.md) candles can be used with the ichimoku-margin strategy.
 
 ### Use Renko
 
@@ -1114,7 +1104,8 @@ Setting this to true will enable the use of renko candles, instead of regular ca
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false
+**Values:** true or false 
+
 **Default value:** false
 {% endtab %}
 
@@ -1140,7 +1131,8 @@ Sets which regular candle size is used as input for renko candles. Make sure to 
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** numerical
+**Values:** numerical 
+
 **Default value:** 15
 {% endtab %}
 
@@ -1166,11 +1158,12 @@ Defines the brick size for each candle.
 
 For example, when set to 1 on a pair with USD as base currency, each renko candle will represent a price change of at least 1 USD.
 
-If you are unfamiliar with renko charts, it's recommended to first set the brick size to the smallest possible step, for example 1 USD or 0.00000001 BTC, and see what effect it has on the chart (do keep the chart open a while to check how new price movements get visualized). Then keep increasing the brick size until you get a good feeling of how the chart behaves.
+If you are unfamiliar with renko charts, it's recommended to first set the brick size to the smallest possible step, for example 1 USD or 0.00000001 BTC, and see what effect it has on the chart \(do keep the chart open a while to check how new price movements get visualized\). Then keep increasing the brick size until you get a good feeling of how the chart behaves.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** numerical
+**Values:** numerical 
+
 **Default value:** 0.0001
 {% endtab %}
 
@@ -1192,13 +1185,14 @@ Parameter name in `config.js`: `RENKO_BRICK_SIZE`
 
 {% tabs %}
 {% tab title="Description" %}
-Enable this to dynamically adjust brick size based on the average true range (ATR).
+Enable this to dynamically adjust brick size based on the average true range \(ATR\).
 
 For fiat pairs, 1 pip equals 1 cent. For crypto, 1 pip equals 1 satoshi.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false
+**Values:** true or false 
+
 **Default value:** false
 {% endtab %}
 
@@ -1215,7 +1209,4 @@ For fiat pairs, 1 pip equals 1 cent. For crypto, 1 pip equals 1 satoshi.
 Parameter name in `config.js`: `RENKO_ATR`
 {% endtab %}
 {% endtabs %}
-
-
-
 
