@@ -8,7 +8,7 @@ These strategy settings allow you to control your stop limit and other uncategor
 
 {% tabs %}
 {% tab title="Description" %}
-Sets a stop limit to sell a coin at a calculated loss. 
+Sets a stop limit to sell a coin at a calculated loss.
 
 After a stop limit sell order has been placed, the bot will go into buying mode after `TRADES_TIMEOUT` has passed and will buy again when market conditions meet your buying strategy.
 
@@ -142,7 +142,7 @@ Parameter name in `config.js`: `PANIC_SELL`
 {% tab title="Description" %}
 Sets a maximum number of sell orders before automatically disabling a pair.
 
-Setting this to 5 disables the pair after 5 strategy sell orders took place (not including RT). No further trades will happen until you reenable the pair. The `COUNT_SELL` counter gets reset after a pair is reenabled.
+Setting this to 5 disables the pair after 5 strategy sell orders took place \(not including RT\). No further trades will happen until you reenable the pair. The `COUNT_SELL` counter gets reset after a pair is reenabled.
 
 This parameter is irrelevant for trading at Bitmex.
 {% endtab %}
@@ -174,7 +174,7 @@ Parameter name in `config.js`: `COUNT_SELL`
 
 {% tabs %}
 {% tab title="Description" %}
-Bitmex: When set to true, limit orders will placed as post only orders. If the order can be (partially) filled immediately, it will get cancelled by Bitmex. Using `PRE_ORDER` you can configure how far from bid/ask the order gets placed.
+Bitmex: When set to true, limit orders will placed as post only orders. If the order can be \(partially\) filled immediately, it will get cancelled by Bitmex. Using `PRE_ORDER` you can configure how far from bid/ask the order gets placed.
 
 Other exchanges: When set to true, limit buy orders are placed at bid, limit sell orders are placed at ask. This increases the likelyhood that the trade is executed with maker fees.
 {% endtab %}
@@ -206,11 +206,11 @@ Parameter name in `config.js`: `MAKER_FEES`
 
 {% tabs %}
 {% tab title="Description" %}
-Optional parameter to force Gunbot to not consider any trades before the set timestamp. 
+Optional parameter to force Gunbot to not consider any trades before the set timestamp.
 
 Only ever use this when you know exactly what you are accomplishing, and for example want to prevent RT from being started on a pair where the last sell order resulted in a loss.
 
-Use https://currentmillis.com/ to convert human readable time to unix timestamps, make sure to use the timestamp in milliseconds.
+Use [https://currentmillis.com/](https://currentmillis.com/) to convert human readable time to unix timestamps, make sure to use the timestamp in milliseconds.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -224,14 +224,15 @@ Parameter name in `config.js`: `IGNORE_TRADES_BEFORE`
 {% endtab %}
 {% endtabs %}
 
-
-
 ## Order type settings
 
 On exchanges that support market orders, you can select which types of orders should be sent as limit or market.
 
-Supported exchanges: Binance, Bitfinex, Bitmex, Coinbase Pro, Kraken and Poloniex.
+{% hint style="success" %}
+**Supported exchanges**
 
+Binance, Bitfinex, Bitmex, Coinbase Pro, Kraken and Poloniex
+{% endhint %}
 
 ### Market Buy
 
@@ -262,7 +263,6 @@ When set to true, strategy buy/long orders will be placed as market order.
 Parameter name in `config.js`: `MARKET_BUY`
 {% endtab %}
 {% endtabs %}
-
 
 ### Market Sell
 
@@ -298,7 +298,7 @@ Parameter name in `config.js`: `MARKET_SELL`
 
 {% tabs %}
 {% tab title="Description" %}
-When set to true, RT_BUY orders will be placed as market order.
+When set to true, RT\_BUY orders will be placed as market order.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -310,7 +310,7 @@ When set to true, RT_BUY orders will be placed as market order.
 {% tab title="Order types" %}
 | Affects | Does not affect |
 | :--- | :--- |
-| RT buy| Stop limit |
+| RT buy | Stop limit |
 |  | Strategy sell |
 |  | RT buyback |
 |  | RT sell |
@@ -328,7 +328,7 @@ Parameter name in `config.js`: `MARKET_RTBUY`
 
 {% tabs %}
 {% tab title="Description" %}
-When set to true, RT_SELL orders will be placed as market order.
+When set to true, RT\_SELL orders will be placed as market order.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -340,7 +340,7 @@ When set to true, RT_SELL orders will be placed as market order.
 {% tab title="Order types" %}
 | Affects | Does not affect |
 | :--- | :--- |
-| RT sell| Stop limit |
+| RT sell | Stop limit |
 |  | Strategy sell |
 |  | RT buyback |
 |  | RT buy |
@@ -491,3 +491,4 @@ When set to true, FOK orders will be placed as market order. This refers to orde
 Parameter name in `config.js`: `MARKET_FOK`
 {% endtab %}
 {% endtabs %}
+
