@@ -160,16 +160,22 @@ Parameter name in `config.js`: `TM_RT_SELL`
 
 ### Trail Me Buy Range
 
+{% tabs %}
+{% tab title="Description" %}
 This sets the buy range for TrailMe.
 
 Setting a range of 0.5% at a starting price of 0.1 would set a range between 0.0995 and 0.1005. As long as prices keep moving downwards, the range moves down along with the price.
 
 As soon as prices start going upward, the range freezes and a buy order is placed when the price crosses the upper boundary of the range.
+{% endtab %}
 
+{% tab title="Values" %}
 **Values:** numerical – represent a percentage.
 
 **Default value:** 0.5
+{% endtab %}
 
+{% tab title="Order types" %}
 | Affects | Does not affect |
 | :--- | :--- |
 | Strategy buy | RT sell |
