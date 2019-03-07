@@ -22,10 +22,361 @@ Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different me
 
 
 
+## Buy settings
+
+Buy settings are the primary trigger for buy orders. These parameters control the execution of buy orders when using `emotionless` as buy method.
+
+### Buy enabled
+
+{% tabs %}
+{% tab title="Description" %}
+Set this to false to prevent Gunbot from placing buy orders. 
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false 
+
+**Default value:** true
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Strategy sell |
+| DCA buy | Stop limit |
+| RT buy | Close |
+| RT buyback | RT sell |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `BUY_ENABLED`
+{% endtab %}
+{% endtabs %}
+
+### Buy Level
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the target for buying at a percentage below the lowest EMA.
+
+When you set this to 1, the target for buy orders is 1% below the currently lowest EMA. Due to trailing, it is possible Gunbot will buy slightly higher than the target.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical, represents a percentage.
+
+**Default value:** 1
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Strategy sell |
+|  | Stop limit |
+|  | Close |
+|  | RT sell |
+|  | DCA buy |
+|  | RT buy |
+|  | RT buyback |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `BUY_LEVEL`
+{% endtab %}
+{% endtabs %}
+
+### NBA
+
+{% tabs %}
+{% tab title="Description" %}
+"Never Buy Above". Use this to only allow buy orders below the last sell rate. 
+
+This sets the minimum percentage difference between the last sell order and the next buy. The default setting of 0 disables this option.
+
+When set to 1, Gunbot will only place a buy order when the strategy buy criteria meet and price is at least 1% below the last sell price.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical, represents a percentage.
+
+**Default value:** 0
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Strategy sell |
+|  | Stop limit |
+|  | Close |
+|  | RT sell |
+|  | DCA buy |
+|  | RT buy |
+|  | RT buyback |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `NBA`
+{% endtab %}
+{% endtabs %}
+
+
+## Sell settings
+
+Sell settings are the primary trigger for sell orders. These parameters control the execution of sell orders when using `emotionless` as sell method.
+
+### Sell enabled
+
+{% tabs %}
+{% tab title="Description" %}
+Set this to false to prevent Gunbot from placing sell orders. 
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false 
+
+**Default value:** true
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Strategy buy |
+| Stop limit | RT buy |
+| RT sell | RT buyback |
+|  | Close |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `SELL_ENABLED`
+{% endtab %}
+{% endtabs %}
+
+### Gain
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the minimum target for selling. Gunbot will sell once price reaches the set percentage above the break-even point. and `HIGH_BB` is reached.
+
+If you want to have at least 2% profit per trade, set this to 2.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical – represents a percentage.
+
+**Default value:** 0.5
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Strategy buy |
+|  | RT buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  |  |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `GAIN`
+{% endtab %}
+{% endtabs %}
+
+### Double Check Gain
+
+{% tabs %}
+{% tab title="Description" %}
+This is an extra check that looks at your recent trading history to verify `GAIN` will be reached before placing a sell order.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** true
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Strategy buy |
+|  | RT buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  |  |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `DOUBLE_CHECK_GAIN`
+{% endtab %}
+{% endtabs %}
+
+
+## Indicator settings
+
+Relevant indicators for trading with emotionless.
+
+These settings have a direct effect on trading with `emotionless`.
+
+### Period
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the candlestick period used for trading, this affects all indicators within the strategy. 
+
+Only use [supported values](../../how-to-work-with-gunbot/basic-workings/period.md#supported-period-values).
+
+Setting a short period allows you to trade on shorter trends, but be aware that these will be noisier than longer periods.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical– represents candlestick size in minutes.
+
+**Default value:** 15
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | RT buy |
+| Strategy buy | RT buyback |
+| DCA buy \(when using an indicator to trigger\) | RT sell |
+|  | Close |
+|  | Stop limit |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `PERIOD`
+{% endtab %}
+{% endtabs %}
+
+### Slow EMA
+
+{% tabs %}
+{% tab title="Description" %}
+Set this to the amount of candlesticks you want to use for your slow EMA. The closing price for each candle is used in the slow EMA calculation.
+
+For example: when you set `PERIOD` to 5, and want to use 2h for slow EMA – you need to set `EMA1` to 24 (24 * 5 mins).
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical – represents a number of candlesticks.
+
+**Default value:** 16
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | RT buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | Stop limit |
+|  | Strategy sell |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `EMA1`
+{% endtab %}
+{% endtabs %}
+
+### Fast EMA
+
+{% tabs %}
+{% tab title="Description" %}
+Set this to the amount of candlesticks you want to use for your fast EMA. The closing price for each candle is used in the fast EMA calculation.
+
+For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 (12 * 5 mins).
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical – represents a number of candlesticks.
+
+**Default value:** 8
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | RT buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | Stop limit |
+|  | Strategy sell |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `EMA2`
+{% endtab %}
+{% endtabs %}
+
+
+## TrailMe settings
+
+{% hint style="info" %}
+This is not available for Gunbot Starter.
+{% endhint %}
+
+These settings can be used, but they are not tested and not intended for use with emotionless. Use at your own risk.
+
+Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
+
+Orders resulting from trailing are only placed when the main strategy criteria are met, and confirming indicators \(if any\) allow the order. All these conditions must occur in the same cycle.
+
+{% page-ref page="../trailme.md" %}
+
+
+## Balance settings
+
+{% page-ref page="../balance-settings.md" %}
 
 
 
+## Confirming indicator + advanced indicator settings
 
+{% hint style="info" %}
+This is not available for Gunbot Starter.
+{% endhint %}
+
+{% page-ref page="../confirming-indicators.md" %}
+
+
+
+## Dollar cost avg settings
+
+{% hint style="info" %}
+This is not available for Gunbot Starter.
+{% endhint %}
+
+{% page-ref page="../dollar-cost-avg-dca.md" %}
+
+
+
+## Reversal trading settings
+
+These settings can be used, but they are not tested and not intended for use with emotionless. Use at your own risk.
+
+{% hint style="info" %}
+This is not available for Gunbot Starter.
+{% endhint %}
+
+
+{% page-ref page="../reversal-trading-rt.md" %}
+
+
+
+## Misc settings
+
+{% page-ref page="../misc-settings.md" %}
 
 
 ## Placeholders

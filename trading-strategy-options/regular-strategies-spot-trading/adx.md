@@ -30,7 +30,7 @@ The infographic below describes what triggers trades with this strategy.
 
 Following settings options are available for `ADX` and can be set in the strategy configurator of the GUI or the strategies section of the `config.js` file.
 
-These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an [override](https://github.com/GuntharDeNiro/BTCT/wiki/Gunbot-settings#overrides) at the pair level.
+These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an override at the pair level.
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `ADX`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md).
 
@@ -508,13 +508,14 @@ Orders resulting from trailing are only placed when the main strategy criteria a
 
 {% page-ref page="../trailme.md" %}
 
+
 ## Balance settings
 
 {% page-ref page="../balance-settings.md" %}
 
 
 
-## Confirming indicator settings
+## Confirming indicator + advanced indicator settings
 
 {% page-ref page="../confirming-indicators.md" %}
 

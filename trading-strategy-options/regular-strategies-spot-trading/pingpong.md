@@ -31,8 +31,273 @@ These settings are global and apply to all pairs running this strategy. When you
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `pp`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md#available-buy-and-sell-methods).
 
 
+## Buy settings
+
+Buy settings are the primary trigger for buy orders. These parameters control the execution of buy orders when using `pp` as buy method.
+
+### Buy enabled
+
+{% tabs %}
+{% tab title="Description" %}
+Set this to false to prevent Gunbot from placing buy orders. 
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false 
+
+**Default value:** true
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Strategy sell |
+| DCA buy | Stop limit |
+| RT buy | Close |
+| RT buyback | RT sell |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `BUY_ENABLED`
+{% endtab %}
+{% endtabs %}
+
+### PP Buy
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the exact target price for placing a buy order. A buy order will be placed as soon as this price is hit or an even better price is available.
+
+For example: when trading a BTC-x pair with `PP_BUY` set to 0.00123456, a buy order will be placed in the first cycle where the ask price is 0.00123456 or lower.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical – represents a price in base currency.
+
+**Default value:** 0
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Strategy sell |
+|  | Stop limit |
+|  | Close |
+|  | RT sell |
+|  | DCA buy |
+|  | RT buy |
+|  | RT buyback |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `PP_BUY`
+{% endtab %}
+{% endtabs %}
+
+### NBA
+
+{% tabs %}
+{% tab title="Description" %}
+"Never Buy Above". Use this to only allow buy orders below the last sell rate. 
+
+This sets the minimum percentage difference between the last sell order and the next buy. The default setting of 0 disables this option.
+
+When set to 1, Gunbot will only place a buy order when the strategy buy criteria meet and price is at least 1% below the last sell price.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical, represents a percentage.
+
+**Default value:** 0
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Strategy sell |
+|  | Stop limit |
+|  | Close |
+|  | RT sell |
+|  | DCA buy |
+|  | RT buy |
+|  | RT buyback |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `NBA`
+{% endtab %}
+{% endtabs %}
 
 
+## Sell settings
+
+Sell settings are the primary trigger for sell orders. These parameters control the execution of sell orders when using `pp` as sell method.
+
+
+### Sell enabled
+
+{% tabs %}
+{% tab title="Description" %}
+Set this to false to prevent Gunbot from placing sell orders. 
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false 
+
+**Default value:** true
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Strategy buy |
+| Stop limit | RT buy |
+| RT sell | RT buyback |
+|  | Close |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `SELL_ENABLED`
+{% endtab %}
+{% endtabs %}
+
+### PP Sell
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the exact target price for placing a sell order. A sell order will be placed as soon as this price is hit or an even better price is available.
+
+For example: when trading a BTC-x pair with `PP_SELL` set to 0.00123456, a buy order will be placed in the first cycle where the bid price is 0.00123456 or lower.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical – represents a price in base currency.
+
+**Default value:** 0
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Strategy buy |
+|  | Stop limit |
+|  | Close |
+|  | RT sell |
+|  | DCA buy |
+|  | RT buy |
+|  | RT buyback |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `PP_SELL`
+{% endtab %}
+{% endtabs %}
+
+### Double Check Gain
+
+{% tabs %}
+{% tab title="Description" %}
+Disable this to allow sell orders below the break-even point.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** true
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Strategy buy |
+|  | RT buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  |  |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `DOUBLE_CHECK_GAIN`
+{% endtab %}
+{% endtabs %}
+
+### Gain
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the minimum target for selling when `DOUBLE_CHECK_GAIN` is enabled.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical – represents a percentage.
+
+**Default value:** 0.5
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Strategy buy |
+|  | RT buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  |  |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `GAIN`
+{% endtab %}
+{% endtabs %}
+
+
+## Indicator settings
+
+As `pp` is purely price based, there are no indicators that directly influence trading with `pp`.
+
+
+## TrailMe settings
+
+Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
+
+Orders resulting from trailing are only placed when the main strategy criteria are met, and confirming indicators \(if any\) allow the order. All these conditions must occur in the same cycle.
+
+{% page-ref page="../trailme.md" %}
+
+
+## Balance settings
+
+{% page-ref page="../balance-settings.md" %}
+
+
+
+## Confirming indicator + advanced indicator settings
+
+{% page-ref page="../confirming-indicators.md" %}
+
+
+
+## Dollar cost avg settings
+
+{% page-ref page="../dollar-cost-avg-dca.md" %}
+
+
+
+## Reversal trading settings
+
+{% page-ref page="../reversal-trading-rt.md" %}
+
+
+
+## Misc settings
+
+{% page-ref page="../misc-settings.md" %}
 
 
 
