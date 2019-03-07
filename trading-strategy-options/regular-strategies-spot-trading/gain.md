@@ -8,15 +8,11 @@ To refine this strategy, other indicators are available to be used as confirmati
 Some extra features are available for users of Gunbot Standard edition and higher. These are marked below.
 {% endhint %}
 
-
-
 ## Trading example
 
 ![](https://user-images.githubusercontent.com/2372008/47171108-23e1cd80-d308-11e8-8bf3-22f5e461d8ab.PNG)
 
 _Example of how trading with the gain strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/XLMBTC/szZmNtD1-Gain-Gunbot-trading-strategy/)
-
-
 
 ## How to work with this strategy
 
@@ -24,16 +20,13 @@ The infographic below describes what triggers trades with this strategy.
 
 ![The settings used in the example are not recommended.](https://user-images.githubusercontent.com/2372008/40631012-76d296c8-62d8-11e8-8f09-6319b349955d.PNG)
 
- 
-
 ## Strategy parameters
 
 Following settings options are available for `gain` and can be set in the strategy configurator of the GUI or the strategies section of the config.js file.
 
-These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an [override](https://github.com/GuntharDeNiro/BTCT/wiki/Gunbot-settings#overrides) at the pair level.
+These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an override at the pair level.
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `gain`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md#available-buy-and-sell-methods).
-
 
 ## Buy settings
 
@@ -43,11 +36,11 @@ Buy settings are the primary trigger for buy orders. These parameters control th
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing buy orders. 
+Set this to false to prevent Gunbot from placing buy orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -102,7 +95,7 @@ Parameter name in `config.js`: `BUY_LEVEL`
 
 {% tabs %}
 {% tab title="Description" %}
-"Never Buy Above". Use this to only allow buy orders below the last sell rate. 
+"Never Buy Above". Use this to only allow buy orders below the last sell rate.
 
 This sets the minimum percentage difference between the last sell order and the next buy. The default setting of 0 disables this option.
 
@@ -200,7 +193,6 @@ Parameter name in `config.js`: `TBUY_RANGE`
 {% endtab %}
 {% endtabs %}
 
-
 ## Sell settings
 
 Sell settings are the primary trigger for sell orders. These parameters control the execution of sell orders when using `bb` as sell method.
@@ -209,11 +201,11 @@ Sell settings are the primary trigger for sell orders. These parameters control 
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing sell orders. 
+Set this to false to prevent Gunbot from placing sell orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -280,7 +272,7 @@ This option should not be used together with reversal trading and `DOUBLE_CHECK_
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -398,7 +390,6 @@ Parameter name in `config.js`: `DOUBLE_CHECK_GAIN`
 {% endtab %}
 {% endtabs %}
 
-
 ## Indicator settings
 
 Relevant indicators for trading with gain.
@@ -409,7 +400,7 @@ These settings have a direct effect on trading with `gain`, because `BUY_LEVEL` 
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the candlestick period used for trading, this affects all indicators within the strategy. 
+This sets the candlestick period used for trading, this affects all indicators within the strategy.
 
 Only use [supported values](../../how-to-work-with-gunbot/basic-workings/period.md#supported-period-values).
 
@@ -443,7 +434,7 @@ Parameter name in `config.js`: `PERIOD`
 {% tab title="Description" %}
 Set this to the amount of candlesticks you want to use for your slow EMA. The closing price for each candle is used in the slow EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 2h for slow EMA – you need to set `EMA1` to 24 (24 * 5 mins).
+For example: when you set `PERIOD` to 5, and want to use 2h for slow EMA – you need to set `EMA1` to 24 \(24 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}
@@ -475,7 +466,7 @@ Parameter name in `config.js`: `EMA1`
 {% tab title="Description" %}
 Set this to the amount of candlesticks you want to use for your fast EMA. The closing price for each candle is used in the fast EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 (12 * 5 mins).
+For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 \(12 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}
@@ -501,13 +492,11 @@ Parameter name in `config.js`: `EMA2`
 {% endtab %}
 {% endtabs %}
 
-
 ## TrailMe settings
 
 {% hint style="info" %}
 This is not available for Gunbot Starter.
 {% endhint %}
-
 
 Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
 
@@ -515,12 +504,9 @@ Orders resulting from trailing are only placed when the main strategy criteria a
 
 {% page-ref page="../trailme.md" %}
 
-
 ## Balance settings
 
 {% page-ref page="../balance-settings.md" %}
-
-
 
 ## Confirming indicator + advanced indicator settings
 
@@ -530,8 +516,6 @@ This is not available for Gunbot Starter.
 
 {% page-ref page="../confirming-indicators.md" %}
 
-
-
 ## Dollar cost avg settings
 
 {% hint style="info" %}
@@ -540,23 +524,17 @@ This is not available for Gunbot Starter.
 
 {% page-ref page="../dollar-cost-avg-dca.md" %}
 
-
-
 ## Reversal trading settings
 
 {% hint style="info" %}
 This is not available for Gunbot Starter.
 {% endhint %}
 
-
 {% page-ref page="../reversal-trading-rt.md" %}
-
-
 
 ## Misc settings
 
 {% page-ref page="../misc-settings.md" %}
-
 
 ## Placeholders
 
@@ -613,8 +591,4 @@ The following parameters in `config.js` have no function for this strategy and a
 | `TENKAN_STOP` | Placeholder. |
 | `TSSL_TARGET_ONLY` | Placeholder. |
 | `USE_RENKO` | Placeholder. |
-
-
-
-
 

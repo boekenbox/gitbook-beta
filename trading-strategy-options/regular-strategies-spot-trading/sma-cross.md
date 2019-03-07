@@ -5,30 +5,24 @@ This strategy is based on [SMA](https://www.investopedia.com/terms/s/sma.asp), e
 To refine this strategy, other indicators are available to be used as confirmation for both buying and selling. For example you could have Gunbot buy when slow SMA crosses up fast SMA and and RSI is below 30.
 
 {% hint style="warning" %}
-Gain protection is optional for this strategy. 
+Gain protection is optional for this strategy.
 
-Be aware that this can lead to sell orders below your break-even point. 
+Be aware that this can lead to sell orders below your break-even point.
 
 Normal constraints like "buy once, sell once" don't apply to this strategy: each time buying criteria occur, Gunbot will place a buy order as high as set in your balance settings.
 {% endhint %}
-
-
 
 ## Trading example
 
 ![](https://user-images.githubusercontent.com/2372008/47293427-6a863f00-d60a-11e8-9c26-0a5e9e2cf979.PNG)
 
- _Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/BTCUSDT/CuQ1RJzp-SMACROSS-Gunbot-trading-strategy/)
-
-
+_Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/BTCUSDT/CuQ1RJzp-SMACROSS-Gunbot-trading-strategy/)
 
 ## How to work with this strategy
 
 The infographic below describes what triggers trades with this strategy.
 
 ![](https://user-images.githubusercontent.com/2372008/41108606-4c435920-6a75-11e8-913a-07ef8e06a39a.png)
-
- 
 
 ## Strategy parameters
 
@@ -38,8 +32,6 @@ These settings are global and apply to all pairs running this strategy. When you
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `SMACROSS`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md#available-buy-and-sell-methods).
 
-
-
 ## Buy settings
 
 Buy settings are the primary trigger for buy orders. These parameters control the execution of buy orders when using `SMACROSS` as buy method.
@@ -48,11 +40,11 @@ Buy settings are the primary trigger for buy orders. These parameters control th
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing buy orders. 
+Set this to false to prevent Gunbot from placing buy orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -75,7 +67,7 @@ Parameter name in `config.js`: `BUY_ENABLED`
 
 {% tabs %}
 {% tab title="Description" %}
-"Never Buy Above". Use this to only allow buy orders below the last sell rate. 
+"Never Buy Above". Use this to only allow buy orders below the last sell rate.
 
 This sets the minimum percentage difference between the last sell order and the next buy. The default setting of 0 disables this option.
 
@@ -205,7 +197,6 @@ Parameter name in `config.js`: `BUY_LEVEL`
 {% endtab %}
 {% endtabs %}
 
-
 ## Sell settings
 
 Sell settings are the primary trigger for sell orders. These parameters control the execution of sell orders when using `SMACROSS` as sell method.
@@ -214,11 +205,11 @@ Sell settings are the primary trigger for sell orders. These parameters control 
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing sell orders. 
+Set this to false to prevent Gunbot from placing sell orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -252,7 +243,7 @@ This option should not be used together with reversal trading and `DOUBLE_CHECK_
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -401,7 +392,6 @@ Parameter name in `config.js`: `GAIN`
 {% endtab %}
 {% endtabs %}
 
-
 ## Indicator settings
 
 Relevant indicators for trading with SMA cross.
@@ -412,7 +402,7 @@ These settings have a direct effect on trading with `SMACROSS`.
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the candlestick period used for trading, this affects all indicators within the strategy. 
+This sets the candlestick period used for trading, this affects all indicators within the strategy.
 
 Only use [supported values](../../how-to-work-with-gunbot/basic-workings/period.md#supported-period-values).
 
@@ -498,7 +488,6 @@ Parameter name in `config.js`: `FAST_SMA`
 {% endtab %}
 {% endtabs %}
 
-
 ## TrailMe settings
 
 Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
@@ -509,36 +498,25 @@ Because this strategy trades on crosses happening in a single cycle, it is not r
 
 {% page-ref page="../trailme.md" %}
 
-
 ## Balance settings
 
 {% page-ref page="../balance-settings.md" %}
-
-
 
 ## Confirming indicator + advanced indicator settings
 
 {% page-ref page="../confirming-indicators.md" %}
 
-
-
 ## Dollar cost avg settings
 
 {% page-ref page="../dollar-cost-avg-dca.md" %}
-
-
 
 ## Reversal trading settings
 
 {% page-ref page="../reversal-trading-rt.md" %}
 
-
-
 ## Misc settings
 
 {% page-ref page="../misc-settings.md" %}
-
-
 
 ## Placeholders
 

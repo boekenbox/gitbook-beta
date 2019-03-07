@@ -9,28 +9,22 @@ Some extra features are available for users of Gunbot Standard edition and highe
 {% endhint %}
 
 {% hint style="warning" %}
-Gain protection is optional for this strategy. 
+Gain protection is optional for this strategy.
 
 Be aware that this can lead to sell orders below your break-even point.
 {% endhint %}
-
-
 
 ## Trading example
 
 ![](https://user-images.githubusercontent.com/2372008/47218852-65788400-d3ad-11e8-8100-1ab21cbc70dd.PNG)
 
- _Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/EOSUSDT/L6342dzc-Bollinger-Bands-TA-Gunbot-trading-strategy/)
-
-
+_Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/EOSUSDT/L6342dzc-Bollinger-Bands-TA-Gunbot-trading-strategy/)
 
 ## How to work with this strategy
 
 The infographic below describes what triggers trades with this strategy.
 
-![bollinger-bands-ta](https://user-images.githubusercontent.com/2372008/40925897-196d6510-681b-11e8-94ac-99757f46ab7b.PNG)
-
- 
+![](https://user-images.githubusercontent.com/2372008/40925897-196d6510-681b-11e8-94ac-99757f46ab7b.PNG)
 
 ## Strategy parameters
 
@@ -40,8 +34,6 @@ These settings are global and apply to all pairs running this strategy. When you
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `BBTA`. Accepted values are all strategy names as listed [here.](../about-gunbot-strategies/trading-methods.md#available-buy-and-sell-methods)
 
-
-
 ## Buy settings
 
 Buy settings are the primary trigger for buy orders. These parameters control the execution of buy orders when using `BBTA` as buy method.
@@ -50,11 +42,11 @@ Buy settings are the primary trigger for buy orders. These parameters control th
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing buy orders. 
+Set this to false to prevent Gunbot from placing buy orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -77,7 +69,7 @@ Parameter name in `config.js`: `BUY_ENABLED`
 
 {% tabs %}
 {% tab title="Description" %}
-"Never Buy Above". Use this to only allow buy orders below the last sell rate. 
+"Never Buy Above". Use this to only allow buy orders below the last sell rate.
 
 This sets the minimum percentage difference between the last sell order and the next buy. The default setting of 0 disables this option.
 
@@ -215,11 +207,11 @@ Sell settings are the primary trigger for sell orders. These parameters control 
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing sell orders. 
+Set this to false to prevent Gunbot from placing sell orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -253,7 +245,7 @@ This option should not be used together with reversal trading and `DOUBLE_CHECK_
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -402,7 +394,6 @@ Parameter name in `config.js`: `GAIN`
 {% endtab %}
 {% endtabs %}
 
-
 ## Indicator settings
 
 Relevant indicators for trading with BBTA
@@ -413,7 +404,7 @@ These settings have a direct effect on trading with `BBTA`.
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the candlestick period used for trading, this affects all indicators within the strategy. 
+This sets the candlestick period used for trading, this affects all indicators within the strategy.
 
 Only use [supported values](../../how-to-work-with-gunbot/basic-workings/period.md#supported-period-values).
 
@@ -445,9 +436,9 @@ Parameter name in `config.js`: `PERIOD`
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the target for buying. Negative values are allowed. 
+This sets the target for buying. Negative values are allowed.
 
-The bot will buy after prices first move under the set % from the lower Bollinger Band, then cross over the set level. 
+The bot will buy after prices first move under the set % from the lower Bollinger Band, then cross over the set level.
 
 When set to 0, the lower Bollinger Band is the target. When set to 30, the target is 30% above the lower Bollinger Band - the upper band is at 100% from the lower band.
 {% endtab %}
@@ -479,7 +470,7 @@ Parameter name in `config.js`: `LOW_BB`
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the target for selling. Negative values are allowed. 
+This sets the target for selling. Negative values are allowed.
 
 The bot will sell after prices first move over the set % from the upper Bollinger Band, then cross down the set level. Additionally `GAIN` must be reached.
 
@@ -544,7 +535,7 @@ This value defines the multiplier used for calculating Bollinger Bands.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** numerical (recommended: between 1.9 and 2.1) - represents a multiplier value used in the bollinger bands calculation.
+**Values:** numerical \(recommended: between 1.9 and 2.1\) - represents a multiplier value used in the bollinger bands calculation.
 
 **Default value:** 2
 {% endtab %}
@@ -570,7 +561,7 @@ Parameter name in `config.js`: `STDV`
 {% tab title="Description" %}
 Set this to the amount of candlesticks you want to use for your slow EMA. The closing price for each candle is used in the slow EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 2h for slow EMA – you need to set `EMA1` to 24 (24 * 5 mins).
+For example: when you set `PERIOD` to 5, and want to use 2h for slow EMA – you need to set `EMA1` to 24 \(24 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}
@@ -602,7 +593,7 @@ Parameter name in `config.js`: `EMA1`
 {% tab title="Description" %}
 Set this to the amount of candlesticks you want to use for your fast EMA. The closing price for each candle is used in the fast EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 (12 * 5 mins).
+For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 \(12 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}
@@ -628,13 +619,11 @@ Parameter name in `config.js`: `EMA2`
 {% endtab %}
 {% endtabs %}
 
-
 ## TrailMe settings
 
 {% hint style="info" %}
 This is not available for Gunbot Starter.
 {% endhint %}
-
 
 Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
 
@@ -644,12 +633,9 @@ Because this strategy trades on crosses happening in a single cycle, it is not r
 
 {% page-ref page="../trailme.md" %}
 
-
 ## Balance settings
 
 {% page-ref page="../balance-settings.md" %}
-
-
 
 ## Confirming indicator + advanced indicator settings
 
@@ -659,8 +645,6 @@ This is not available for Gunbot Starter.
 
 {% page-ref page="../confirming-indicators.md" %}
 
-
-
 ## Dollar cost avg settings
 
 {% hint style="info" %}
@@ -669,24 +653,17 @@ This is not available for Gunbot Starter.
 
 {% page-ref page="../dollar-cost-avg-dca.md" %}
 
-
-
 ## Reversal trading settings
 
 {% hint style="info" %}
 This is not available for Gunbot Starter.
 {% endhint %}
 
-
 {% page-ref page="../reversal-trading-rt.md" %}
-
-
 
 ## Misc settings
 
 {% page-ref page="../misc-settings.md" %}
-
-
 
 ## Placeholders
 

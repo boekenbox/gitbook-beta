@@ -2,15 +2,11 @@
 
 Set a range to trail for better entry or exit points, by following prices while they are moving down- or upwards. This way Gunbot won't trade while prices are still moving in the same direction.
 
-
-
 ## Trading example
 
 ![](https://user-images.githubusercontent.com/2372008/47219307-c3f23200-d3ae-11e8-9dff-a8222360efd3.PNG)
 
 _Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/NEOUSDT/dHbKuj7Y-Trailing-Stop-Stop-Limit-Gunbot-trading-strategy/)
-
-
 
 ## How to work with this strategy
 
@@ -26,8 +22,6 @@ You can select an option to only sell at profit, to avoid the risk of a stop lim
 
 You can optionally use additional indicators like RSI for extra confirmation on entry and exit points.
 
-
-
 ## Strategy parameters
 
 Following settings options are available for `tssl` and can be set in the strategy configurator of the GUI or the strategies section of the config.js file.
@@ -35,7 +29,6 @@ Following settings options are available for `tssl` and can be set in the strate
 These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an override at the pair level.
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `tssl`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md#available-buy-and-sell-methods).
-
 
 ## Buy settings
 
@@ -45,11 +38,11 @@ Buy settings are the primary trigger for buy orders. These parameters control th
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing buy orders. 
+Set this to false to prevent Gunbot from placing buy orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -104,11 +97,11 @@ Parameter name in `config.js`: `BUY_LEVEL`
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the buy range for trailing. 
+This sets the buy range for trailing.
 
 Setting a range of 0.5% at a starting price of 0.1 would set a range between 0.0995 and 0.1005.
 
-As long as prices keep moving downwards, the range moves down along with the price. As soon as prices start going upward, the range freezes and a buy order is placed when the price crosses the upper boundary of the range. 
+As long as prices keep moving downwards, the range moves down along with the price. As soon as prices start going upward, the range freezes and a buy order is placed when the price crosses the upper boundary of the range.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -138,7 +131,7 @@ Parameter name in `config.js`: `BUY_RANGE`
 
 {% tabs %}
 {% tab title="Description" %}
-"Never Buy Above". Use this to only allow buy orders below the last sell rate. 
+"Never Buy Above". Use this to only allow buy orders below the last sell rate.
 
 This sets the minimum percentage difference between the last sell order and the next buy. The default setting of 0 disables this option.
 
@@ -236,7 +229,6 @@ Parameter name in `config.js`: `TBUY_RANGE`
 {% endtab %}
 {% endtabs %}
 
-
 ## Sell settings
 
 Sell settings are the primary trigger for sell orders. These parameters control the execution of sell orders when using `tssl` as sell method.
@@ -245,11 +237,11 @@ Sell settings are the primary trigger for sell orders. These parameters control 
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing sell orders. 
+Set this to false to prevent Gunbot from placing sell orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -316,7 +308,7 @@ This option should not be used together with reversal trading and `DOUBLE_CHECK_
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -434,7 +426,6 @@ Parameter name in `config.js`: `DOUBLE_CHECK_GAIN`
 {% endtab %}
 {% endtabs %}
 
-
 ## Indicator settings
 
 Relevant indicators for trading with tssl.
@@ -445,7 +436,7 @@ These settings have a direct effect on trading with `tssl`, because `BUY_LEVEL` 
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the candlestick period used for trading, this affects all indicators within the strategy. 
+This sets the candlestick period used for trading, this affects all indicators within the strategy.
 
 Only use [supported values](../../how-to-work-with-gunbot/basic-workings/period.md#supported-period-values).
 
@@ -479,7 +470,7 @@ Parameter name in `config.js`: `PERIOD`
 {% tab title="Description" %}
 Set this to the amount of candlesticks you want to use for your slow EMA. The closing price for each candle is used in the slow EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 2h for slow EMA – you need to set `EMA1` to 24 (24 * 5 mins).
+For example: when you set `PERIOD` to 5, and want to use 2h for slow EMA – you need to set `EMA1` to 24 \(24 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}
@@ -511,7 +502,7 @@ Parameter name in `config.js`: `EMA1`
 {% tab title="Description" %}
 Set this to the amount of candlesticks you want to use for your fast EMA. The closing price for each candle is used in the fast EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 (12 * 5 mins).
+For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 \(12 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}
@@ -537,7 +528,6 @@ Parameter name in `config.js`: `EMA2`
 {% endtab %}
 {% endtabs %}
 
-
 ## TrailMe settings
 
 Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
@@ -546,37 +536,25 @@ Because tssl already trails for buy and sell orders, there is no benefit of enab
 
 {% page-ref page="../trailme.md" %}
 
-
 ## Balance settings
 
 {% page-ref page="../balance-settings.md" %}
-
-
 
 ## Confirming indicator + advanced indicator settings
 
 {% page-ref page="../confirming-indicators.md" %}
 
-
-
 ## Dollar cost avg settings
 
 {% page-ref page="../dollar-cost-avg-dca.md" %}
-
-
 
 ## Reversal trading settings
 
 {% page-ref page="../reversal-trading-rt.md" %}
 
-
-
 ## Misc settings
 
 {% page-ref page="../misc-settings.md" %}
-
-
-
 
 ## Placeholders
 
@@ -630,6 +608,4 @@ The following parameters in `config.js` have no function for this strategy and a
 | `TENKAN_PERIOD` | Placeholder. |
 | `TENKAN_STOP` | Placeholder. |
 | `USE_RENKO` | Placeholder. |
-
-
 

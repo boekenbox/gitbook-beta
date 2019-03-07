@@ -13,15 +13,11 @@ A sell order is placed when the bid price crosses under ATR short and price is a
 
 As ATR does not provide information about price direction, it is strongly recommended to use an additional momentum indicator like RSI.
 
-
-
 ## Trading example
 
 ![](https://user-images.githubusercontent.com/2372008/47224087-f99d1800-d3ba-11e8-8f67-2f611244769b.PNG)
 
- _Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/BQXBTC/CGLIN3ce-ATRTS-Gunbot-trading-strategy/)
-
-
+_Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/BQXBTC/CGLIN3ce-ATRTS-Gunbot-trading-strategy/)
 
 ## Strategy parameters
 
@@ -31,7 +27,6 @@ These settings are global and apply to all pairs running this strategy. When you
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `ATRTS`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md).
 
-
 ## Buy settings
 
 Buy settings are the primary trigger for buy orders. These parameters control the execution of buy orders when using `ATRTS` as buy method.
@@ -40,11 +35,11 @@ Buy settings are the primary trigger for buy orders. These parameters control th
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing buy orders. 
+Set this to false to prevent Gunbot from placing buy orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -67,7 +62,7 @@ Parameter name in `config.js`: `BUY_ENABLED`
 
 {% tabs %}
 {% tab title="Description" %}
-"Never Buy Above". Use this to only allow buy orders below the last sell rate. 
+"Never Buy Above". Use this to only allow buy orders below the last sell rate.
 
 This sets the minimum percentage difference between the last sell order and the next buy. The default setting of 0 disables this option.
 
@@ -197,8 +192,6 @@ Parameter name in `config.js`: `BUY_LEVEL`
 {% endtab %}
 {% endtabs %}
 
-
-
 ## Sell settings
 
 Sell settings are the primary trigger for sell orders. These parameters control the execution of sell orders when using `ATRTS` as sell method.
@@ -207,11 +200,11 @@ Sell settings are the primary trigger for sell orders. These parameters control 
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing sell orders. 
+Set this to false to prevent Gunbot from placing sell orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -245,7 +238,7 @@ This option should not be used together with reversal trading and `DOUBLE_CHECK_
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -394,7 +387,6 @@ Parameter name in `config.js`: `GAIN`
 {% endtab %}
 {% endtabs %}
 
-
 ## Indicator settings
 
 Relevant indicators for trading with ATRTS
@@ -405,7 +397,7 @@ These settings have a direct effect on trading with `ATRTS`.
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the candlestick period used for trading, this affects all indicators within the strategy. 
+This sets the candlestick period used for trading, this affects all indicators within the strategy.
 
 Only use [supported values](../../how-to-work-with-gunbot/basic-workings/period.md#supported-period-values).
 
@@ -493,7 +485,6 @@ Parameter name in `config.js`: `ATR_PERIOD`
 {% endtab %}
 {% endtabs %}
 
-
 ## TrailMe settings
 
 Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
@@ -504,36 +495,25 @@ Because this strategy already trails, it is not recommended to use additional pr
 
 {% page-ref page="../trailme.md" %}
 
-
 ## Balance settings
 
 {% page-ref page="../balance-settings.md" %}
-
-
 
 ## Confirming indicator + advanced indicator settings
 
 {% page-ref page="../confirming-indicators.md" %}
 
-
-
 ## Dollar cost avg settings
 
 {% page-ref page="../dollar-cost-avg-dca.md" %}
-
-
 
 ## Reversal trading settings
 
 {% page-ref page="../reversal-trading-rt.md" %}
 
-
-
 ## Misc settings
 
 {% page-ref page="../misc-settings.md" %}
-
-
 
 ## Placeholders
 

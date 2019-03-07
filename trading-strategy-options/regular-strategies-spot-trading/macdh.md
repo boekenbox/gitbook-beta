@@ -7,14 +7,12 @@ A buy order is placed when the MACD histogram crosses up the zero line. A sell o
 To refine this strategy, other indicators are available to be used as confirmation for both buying and selling. For example you could have Gunbot buy on a bullish signal and RSI is 30 or lower.
 
 {% hint style="warning" %}
-Gain protection is optional for this strategy. 
+Gain protection is optional for this strategy.
 
-Be aware that this can lead to sell orders below your break-even point. 
+Be aware that this can lead to sell orders below your break-even point.
 
 Normal constraints like "buy once, sell once" don't apply to this strategy: each time buying criteria occur, Gunbot will place a buy order as high as set in your balance settings.
 {% endhint %}
-
-
 
 ## Trading example
 
@@ -22,24 +20,19 @@ Normal constraints like "buy once, sell once" don't apply to this strategy: each
 
 _Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/XRPUSD/HK0j4emv-MACDH-Gunbot-trading-strategy/)
 
-
-
 ## How to work with this strategy
 
 The infographic below describes what triggers trades with this strategy.
 
 ![](https://user-images.githubusercontent.com/2372008/41107941-a4e7da44-6a73-11e8-9cfd-861e4dc12a46.PNG)
 
- 
-
 ## Strategy parameters
 
 Following settings options are available for `MACDH` and can be set in the strategy configurator of the GUI or the strategies section of the config.js file.
 
-These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an [override](https://github.com/GuntharDeNiro/BTCT/wiki/Gunbot-settings#overrides) at the pair level.
+These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an override at the pair level.
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `MACDH`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md#available-buy-and-sell-methods).
-
 
 ## Buy settings
 
@@ -49,11 +42,11 @@ Buy settings are the primary trigger for buy orders. These parameters control th
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing buy orders. 
+Set this to false to prevent Gunbot from placing buy orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -76,7 +69,7 @@ Parameter name in `config.js`: `BUY_ENABLED`
 
 {% tabs %}
 {% tab title="Description" %}
-"Never Buy Above". Use this to only allow buy orders below the last sell rate. 
+"Never Buy Above". Use this to only allow buy orders below the last sell rate.
 
 This sets the minimum percentage difference between the last sell order and the next buy. The default setting of 0 disables this option.
 
@@ -206,8 +199,6 @@ Parameter name in `config.js`: `BUY_LEVEL`
 {% endtab %}
 {% endtabs %}
 
-
-
 ## Sell settings
 
 Sell settings are the primary trigger for sell orders. These parameters control the execution of sell orders when using `MACDH` as sell method.
@@ -216,11 +207,11 @@ Sell settings are the primary trigger for sell orders. These parameters control 
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing sell orders. 
+Set this to false to prevent Gunbot from placing sell orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -254,7 +245,7 @@ This option should not be used together with reversal trading and `DOUBLE_CHECK_
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -403,7 +394,6 @@ Parameter name in `config.js`: `GAIN`
 {% endtab %}
 {% endtabs %}
 
-
 ## Indicator settings
 
 Relevant indicators for trading with MACDH.
@@ -414,7 +404,7 @@ These settings have a direct effect on trading with `MACDH`.
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the candlestick period used for trading, this affects all indicators within the strategy. 
+This sets the candlestick period used for trading, this affects all indicators within the strategy.
 
 Only use [supported values](../../how-to-work-with-gunbot/basic-workings/period.md#supported-period-values).
 
@@ -529,7 +519,6 @@ Parameter name in `config.js`: `MACD_SIGNAL`
 {% endtab %}
 {% endtabs %}
 
-
 ## TrailMe settings
 
 Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
@@ -540,39 +529,25 @@ Because this strategy trades on crosses happening in a single cycle, it is not r
 
 {% page-ref page="../trailme.md" %}
 
-
 ## Balance settings
 
 {% page-ref page="../balance-settings.md" %}
-
-
 
 ## Confirming indicator + advanced indicator settings
 
 {% page-ref page="../confirming-indicators.md" %}
 
-
-
 ## Dollar cost avg settings
 
 {% page-ref page="../dollar-cost-avg-dca.md" %}
-
-
 
 ## Reversal trading settings
 
 {% page-ref page="../reversal-trading-rt.md" %}
 
-
-
 ## Misc settings
 
 {% page-ref page="../misc-settings.md" %}
-
-
-
-
-
 
 ## Placeholders
 

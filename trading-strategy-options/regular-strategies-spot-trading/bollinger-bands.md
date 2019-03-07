@@ -4,15 +4,11 @@
 
 With this strategy you can configure at which percentage from the lower Bollinger Band Gunbot should buy, and at which percentage from the upper Bollinger Band a sell order should be placed. Orders are placed as soon as price meets the set distance from the Bollinger Bands.
 
-
-
 ## Trading example
 
 ![](https://user-images.githubusercontent.com/2372008/47218525-504f2580-d3ac-11e8-86b6-eacc10011737.PNG)
 
- _Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/BTCUSD/4v7xtwl5-Bollinger-Bands-Gunbot-trading-strategy/)_._
-
-
+_Example of how trading with this strategy can perform._ [_Details and settings_](https://www.tradingview.com/chart/BTCUSD/4v7xtwl5-Bollinger-Bands-Gunbot-trading-strategy/)_._
 
 ## How to work with this strategy
 
@@ -20,7 +16,7 @@ The infographic below describes what triggers trades with this strategy.
 
 ![](https://user-images.githubusercontent.com/2372008/40925551-4a0d684c-681a-11e8-8ea6-f0e6fba1af56.PNG)
 
-_Note that this description is kept simple intentionally. In reality prices also need to be below `BUY_LEVEL` before a buy is triggered._
+_Note that this description is kept simple intentionally. In reality prices also need to be below_ `BUY_LEVEL` _before a buy is triggered._
 
 \_\_
 
@@ -28,7 +24,7 @@ _Note that this description is kept simple intentionally. In reality prices also
 
 Following settings options are available for `bb` and can be set in the strategy configurator of the GUI or the strategies section of the config.js file.
 
-These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an [override](https://github.com/GuntharDeNiro/BTCT/wiki/Gunbot-settings#overrides) at the pair level.
+These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an override at the pair level.
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `bb`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md).
 
@@ -42,11 +38,11 @@ Buy settings are the primary trigger for buy orders. These parameters control th
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing buy orders. 
+Set this to false to prevent Gunbot from placing buy orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -101,7 +97,7 @@ Parameter name in `config.js`: `BUY_LEVEL`
 
 {% tabs %}
 {% tab title="Description" %}
-"Never Buy Above". Use this to only allow buy orders below the last sell rate. 
+"Never Buy Above". Use this to only allow buy orders below the last sell rate.
 
 This sets the minimum percentage difference between the last sell order and the next buy. The default setting of 0 disables this option.
 
@@ -199,7 +195,6 @@ Parameter name in `config.js`: `TBUY_RANGE`
 {% endtab %}
 {% endtabs %}
 
-
 ## Sell settings
 
 Sell settings are the primary trigger for sell orders. These parameters control the execution of sell orders when using `bb` as sell method.
@@ -208,11 +203,11 @@ Sell settings are the primary trigger for sell orders. These parameters control 
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing sell orders. 
+Set this to false to prevent Gunbot from placing sell orders.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -279,7 +274,7 @@ This option should not be used together with reversal trading and `DOUBLE_CHECK_
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -397,7 +392,6 @@ Parameter name in `config.js`: `DOUBLE_CHECK_GAIN`
 {% endtab %}
 {% endtabs %}
 
-
 ## Indicator settings
 
 Relevant indicators for trading with bb.
@@ -408,7 +402,7 @@ These settings have a direct effect on trading with `bb`.
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the candlestick period used for trading, this affects all indicators within the strategy. 
+This sets the candlestick period used for trading, this affects all indicators within the strategy.
 
 Only use [supported values](../../how-to-work-with-gunbot/basic-workings/period.md#supported-period-values).
 
@@ -440,7 +434,7 @@ Parameter name in `config.js`: `PERIOD`
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the target for buying. Negative values are allowed. 
+This sets the target for buying. Negative values are allowed.
 
 The bot will buy when price hits the set percentage from the lower Bollinger Band and the price is below the entry point as defined by `BUY_LEVEL`.
 
@@ -474,11 +468,11 @@ Parameter name in `config.js`: `LOW_BB`
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the target for selling. Negative values are allowed. 
+This sets the target for selling. Negative values are allowed.
 
 The bot will sell when price hits the set percentage from the upper Bollinger Band and `GAIN` is reached.
 
-When set to 0, the upper Bollinger Band is the target (well, almost). When set to 30, the target is 30% under the upper Bollinger Band - the lower band is at 100% from the upper band.
+When set to 0, the upper Bollinger Band is the target \(well, almost\). When set to 30, the target is 30% under the upper Bollinger Band - the lower band is at 100% from the upper band.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -539,7 +533,7 @@ This value defines the multiplier used for calculating Bollinger Bands.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** numerical (recommended: between 1.9 and 2.1) - represents a multiplier value used in the bollinger bands calculation.
+**Values:** numerical \(recommended: between 1.9 and 2.1\) - represents a multiplier value used in the bollinger bands calculation.
 
 **Default value:** 2
 {% endtab %}
@@ -565,7 +559,7 @@ Parameter name in `config.js`: `STDV`
 {% tab title="Description" %}
 Set this to the amount of candlesticks you want to use for your slow EMA. The closing price for each candle is used in the slow EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 2h for slow EMA – you need to set `EMA1` to 24 (24 * 5 mins).
+For example: when you set `PERIOD` to 5, and want to use 2h for slow EMA – you need to set `EMA1` to 24 \(24 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}
@@ -597,7 +591,7 @@ Parameter name in `config.js`: `EMA1`
 {% tab title="Description" %}
 Set this to the amount of candlesticks you want to use for your fast EMA. The closing price for each candle is used in the fast EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 (12 * 5 mins).
+For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 \(12 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}
@@ -623,7 +617,6 @@ Parameter name in `config.js`: `EMA2`
 {% endtab %}
 {% endtabs %}
 
-
 ## TrailMe settings
 
 Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
@@ -632,35 +625,25 @@ Orders resulting from trailing are only placed when the main strategy criteria a
 
 {% page-ref page="../trailme.md" %}
 
-
 ## Balance settings
 
 {% page-ref page="../balance-settings.md" %}
-
-
 
 ## Confirming indicator + advanced indicator settings
 
 {% page-ref page="../confirming-indicators.md" %}
 
-
-
 ## Dollar cost avg settings
 
 {% page-ref page="../dollar-cost-avg-dca.md" %}
-
-
 
 ## Reversal trading settings
 
 {% page-ref page="../reversal-trading-rt.md" %}
 
-
-
 ## Misc settings
 
 {% page-ref page="../misc-settings.md" %}
-
 
 ## Placeholders
 
