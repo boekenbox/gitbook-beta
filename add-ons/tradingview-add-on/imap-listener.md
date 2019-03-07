@@ -1,12 +1,14 @@
 # IMAP listener
 
+{% hint style="info" %}
 The IMAP listener settings are only needed when you use the TradingView add-on to let Gunbot execute email alerts. 
+{% endhint %}
 
 Using these settings, Gunbot connects to the email address where alerts are sent to.
 
 To change them, go to **Settings** &gt; **IMAP Listener**.
 
-![Imap listener settings options](../../.gitbook/assets/image%20%284%29.png)
+![Imap listener settings options](../../.gitbook/assets/image%20%285%29.png)
 
 
 

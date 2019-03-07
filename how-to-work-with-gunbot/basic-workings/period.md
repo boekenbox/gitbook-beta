@@ -22,5 +22,5 @@ Gunbot supports different values for `PERIOD` for each exchange.
 
 Currently the following periods are supported:
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%282%29.png)
 

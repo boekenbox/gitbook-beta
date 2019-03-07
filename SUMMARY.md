@@ -5,7 +5,7 @@
 ## About
 
 * [What's new in v12?](about/whats-new-v12.md)
-* [How to purchase Gunbot](about/untitled.md)
+* [How to purchase Gunbot](about/resellers.md)
 * [Supported exchanges](about/supported-exchanges.md)
 * [System requirements](about/system-requirements.md)
 
@@ -44,16 +44,14 @@
   * [Trailing](how-to-work-with-gunbot/basic-workings/trailing.md)
   * [ROE trailing](how-to-work-with-gunbot/basic-workings/roe-trailing.md)
 * [Editing strategies and pairs](how-to-work-with-gunbot/editing-strategies-and-pairs/README.md)
-  * [Trading pairs](how-to-work-with-gunbot/editing-strategies-and-pairs/trading-pairs.md)
   * [Strategy configurator](how-to-work-with-gunbot/editing-strategies-and-pairs/strategy-configurator.md)
+  * [Trading pairs](how-to-work-with-gunbot/editing-strategies-and-pairs/trading-pairs.md)
 
 ## Trading strategy options
 
 * [About Gunbot strategies](trading-strategy-options/about-gunbot-strategies/README.md)
   * [Trading methods](trading-strategy-options/about-gunbot-strategies/trading-methods.md)
   * [Protections](trading-strategy-options/about-gunbot-strategies/protections.md)
-  * [Using overrides](trading-strategy-options/about-gunbot-strategies/using-overrides.md)
-  * [Strategy naming](trading-strategy-options/about-gunbot-strategies/strategy-naming.md)
 * [Time series analysis](trading-strategy-options/time-series-analysis.md)
 * [Regular strategies \(spot trading\)](trading-strategy-options/regular-strategies-spot-trading/README.md)
   * [ADX](trading-strategy-options/regular-strategies-spot-trading/adx.md)

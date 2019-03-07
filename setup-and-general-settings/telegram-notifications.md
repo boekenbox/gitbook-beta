@@ -4,7 +4,7 @@ Gunbot can send notifications on Telegram for every trade it places.
 
 To set this up, go to **Settings** &gt; **Telegram**.
 
-![Available settings options for Telegram notifications.](../.gitbook/assets/image%20%281%29.png)
+![Available settings options for Telegram notifications.](../.gitbook/assets/image%20%288%29.png)
 
 ## Steps to create a Telegram bot
 
@@ -15,7 +15,7 @@ This is how to create a bot:
 1. Talk to [@botfather](https://telegram.me/botfather). Create a new bot with the command /newbot and choose a name and username for your bot. Save the bot token shown
 2. Talk to [@myidbot](https://telegram.me/myidbot) to see your Chat ID, save it.
 3. Enable Telegram notifications for Gunbot, and enter the token and ID you've just gathered.
-4. Start a chat with the username you've picked for your bot, and hit the start button.
+4. Start a chat with the username you've picked for your bot, and hit the start button. If you don't see a start button, write "/start" and click on it afterwards.
 
 ## Settings descriptions
 

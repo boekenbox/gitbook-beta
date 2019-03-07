@@ -4,8 +4,6 @@
 Every trading strategy contains a few balance settings, these are among the most important settings and you must understand what they do. 
 {% endhint %}
 
-Let's go over the three most important balance settings, without going into too much detail. 
-
 ## Trading Limit
 
 With this setting you tell Gunbot how much to spend on a buy order.

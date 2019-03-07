@@ -1,2 +1,4 @@
 # Trailing
 
+\[Upcoming article\]
+

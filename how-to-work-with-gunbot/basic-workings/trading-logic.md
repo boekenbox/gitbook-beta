@@ -4,7 +4,7 @@
 
 There is very little magic involved in this product, Gunbot tries to execute exactly the settings you feed it. 
 
-This means that you pick the trading pairs the bot should trade, and assign a trading strategy to these pairs. Once you've done that, all it takes is starting the bot core to begin automatic trading.
+This means that you pick the trading pairs the bot should trade and assign a trading strategy to these pairs. Once you've done that, all it takes is starting the bot core to begin automatic trading.
 
 A trading strategy can be very simple, based on one of many presets - or you can create one from scratch using more than 120 different settings options.
 
@@ -22,7 +22,7 @@ While true as a general principle, know that there are many exceptions to this -
 * Dollar Cost Avg \(DCA\) relies on buying at least twice
 * Sell orders can sometimes be executed in multiple parts
 * Sell orders can be configured to not sell all available funds
-* Etc. This list is not meant as a complete overview of exceptions :\)
+* Etc. This list is not meant as a complete overview of exceptions.
 
 
 
