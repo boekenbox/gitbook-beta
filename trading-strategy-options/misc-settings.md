@@ -418,7 +418,7 @@ Parameter name in `config.js`: `MARKET_DU`
 
 {% tabs %}
 {% tab title="Description" %}
-When set to true, position close orders at Bitmex will be placed as market order
+When set to true, position close orders at Bitmex will be placed as market order.
 {% endtab %}
 
 {% tab title="Values" %}
