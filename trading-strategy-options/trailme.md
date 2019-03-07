@@ -177,6 +177,12 @@ As soon as prices start going upward, the range freezes and a buy order is place
 | DCA buy | Close |
 |  | Stop limit |
 |  | RT buyback |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TRAIL_ME_BUY_RANGE`
+{% endtab %}
+{% endtabs %}
 
 ### Trail Me Sell Range
 
