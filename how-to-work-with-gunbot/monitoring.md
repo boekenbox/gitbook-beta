@@ -18,7 +18,7 @@ Monitor your portfolio value on the dashboard, it shows the combined value of ac
 
 The pair overview quickly shows you which of your trading pairs are doing good.
 
-
+![](../.gitbook/assets/image%20%287%29.png)
 
 
 

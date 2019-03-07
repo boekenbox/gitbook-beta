@@ -14,7 +14,7 @@ Gunbot is used by thousands of users and has an awesome community ❤️
 
 > _We aim to build the perfect money machine._
 
-\[dashboard image\]
+![](.gitbook/assets/image%20%289%29.png)
 
 
 
