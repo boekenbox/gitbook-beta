@@ -26,6 +26,14 @@ While true as a general principle, know that there are many exceptions to this -
 
 
 
+## Some settings have strategy specific behavior
+
+Although many settings have exactly the same name across different buy & sell methods, they can still behave slightly different.
+
+For every strategy there is full documentation on what every parameter does, read the strategy documentation if you are unsure about something.
+
+
+
 
 
 
