@@ -73,9 +73,262 @@ _`LOW_BB`/`HIGH_BB` in reversal trading use the same settings as with regular tr
 
 Following settings options are available for reversal trading.
 
+### RT Enabled
 
+{% tabs %}
+{% tab title="Description" %}
+When set to true and prices drop, reversal trading will try to use the assets originally invested in your bag to accumulate more units, which can be sold for profit earlier than the original bag. 
 
+When double up is enabled, RT will start when DU_CAP_COUNT is reached.
+{% endtab %}
 
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT buy | Strategy buy |
+| RT buyback  | Strategy sell |
+| RT sell| Close |
+|  | DCA buy |
+|  | Stop limit |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `RT_ENABLED`
+{% endtab %}
+{% endtabs %}
+
+### RT Gain
+
+{% tabs %}
+{% tab title="Description" %}
+Defines the percentage drop after initial buy or RT_BUY to trigger an RT_SELL. Make sure to set this higher then the spread between bid and ask to prevent unwanted buybacks.
+
+When set to 2 and the last buy had a price of 100, an RT_SELL occurs when price is 98 or lower. Reversal trading will then wait for prices to drop by `RT_BUY_LEVEL` and buy more units back.
+
+When prices move upwards instead of downwards it can happen that the bag gets bought back at the break-even price.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical - represents a percentage.
+
+**Default value:** 1.5
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT sell | Strategy buy |
+|  | Strategy sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  | RT buyback |
+|  | RT buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `RT_GAIN`
+{% endtab %}
+{% endtabs %}
+
+### RT Buy Level
+
+{% tabs %}
+{% tab title="Description" %}
+This defines the percentage the price has to drop after RT_SELL to trigger RT_BUY.
+
+When set to 2 and the last RT_SELL happened at a price of 100, an RT_BUY occurs when price is 98 or lower. Reversal trading will then wait to sell for profit, or for another RT_SELL when prices keep dropping.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical - represents a percentage.
+
+**Default value:** 2
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT buy | Strategy buy |
+|  | Strategy sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  | RT buyback |
+|  | RT sell |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `RT_BUY_LEVEL`
+{% endtab %}
+{% endtabs %}
+
+### RT Sell Up
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the starting point for trailing up an RT_SELL. Only works when `TM_RT_SELL` is enabled.
+
+When you set this to 1 and price increases 1% after an RT_BUY, sell trailing gets activated to place the next RT_SELL as high as possible. The sell range is configurable with `TRAIL_ME_RT_SELL_RANGE`.
+
+Optionally, you can use `RT_TREND_ENABLED` to only proceed with RT_SELL_UP when forecast trend indicates a strong uptrend.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical - represents a percentage above the last buy price.
+
+**Default value:** 0.3
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT sell | Strategy buy |
+|  | Strategy sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  | RT buyback |
+|  | RT buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `RT_SELL_UP`
+{% endtab %}
+{% endtabs %}
+
+### RT Buy Up Level
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the price to place an RT_BUY order above the last RT_SELL order, the price must be below the break-even point for this to work. The default value of 0 disables this feature.
+
+When you set this to 3 and price increases 3% after an RT_SELL, an RT_BUY order will be placed there instead of waiting for the price to hit the buyback point. (Technically, this type of order is a buyback order, not a regular RT_BUY).
+
+Beware that will have a negative effect on the amount of quote units accumulated during RT, it functions as a kind of stop loss for reversal trading.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical - represents a percentage above the last sell price.
+
+**Default value:** 0
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT buyback | Strategy buy |
+|  | Strategy sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  | RT sell |
+|  | RT buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `RT_BUY_UP_LEVEL`
+{% endtab %}
+{% endtabs %}
+
+### RT Trend Enabled
+
+{% tabs %}
+{% tab title="Description" %}
+Enables the use of trend forecast for placing RT_BUY or RT_SELL orders when using `TM_RT_SELL` and/or `TRAIL_ME_RT`.
+
+The forecast trend indicator combines smacross, xtrend and the time series forecast to provide an indication of the strength of a trend. This can be used to only place RT_BUY or RT_SELL orders when there is respectively a strong down- or uptrend.
+
+An RT_SELL order will be placed when the trailing stop hits and forecast trend shows 6 green arrows. An RT_BUY order will be placed when the trailing stop hits and forecast trend shows 6 red arrows.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT buy | Strategy buy |
+| RT sell | Strategy sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  | RT buyback |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `RT_TREND_ENABLED `
+{% endtab %}
+{% endtabs %}
+
+### RT Once
+
+{% tabs %}
+{% tab title="Description" %}
+Set this to true to only allow one full RT cycle (until final strategy sell), after that the pair is set to not cycle again.
+
+At the end of the RT cycle, the pair `enabled` setting will be set to false.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `RT_ONCE`
+{% endtab %}
+{% endtabs %}
+
+### RT Once And Continue
+
+{% tabs %}
+{% tab title="Description" %}
+Set this to true to only allow one full RT cycle (until final strategy sell), after that RT will be disabled to continue normal trading.
+
+At the end of the RT cycle, the `RT_ENABLED` setting will be set to false for the pair.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `RT_ONCE_AND_CONTINUE`
+{% endtab %}
+{% endtabs %}
+
+### RT Maxbag Protection
+
+{% tabs %}
+{% tab title="Description" %}
+Sets the maximum difference between the average bought price and current price for starting RT. When the difference is bigger, RT orders won't be placed. 
+
+This is used as a protection against starting reversal trading on bags that already dropped too much for the process to work effectively.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical - represents a percentage.
+
+**Default value:** 10
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `RT_MAXBAG_PROTECTION`
+{% endtab %}
+{% endtabs %}
 
 
 
@@ -83,7 +336,132 @@ Reversal trading depends on several TrailMe settings to reach better entry point
 
 
 
+### Trail Me RT
+
+{% tabs %}
+{% tab title="Description" %}
+Use this to enable tssl-style trailing for RT_BUY orders.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT buy | Strategy buy |
+|  | Strategy sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  | RT buyback |
+|  | RT sell |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TRAIL_ME_RT`
+{% endtab %}
+{% endtabs %}
 
 
+### Trail Me RT Sell
 
+{% tabs %}
+{% tab title="Description" %}
+Use this to enable tssl-style trailing for RT_SELL orders above the last RT_BUY rate.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT sell | Strategy buy |
+|  | Strategy sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  | RT buyback |
+|  | RT buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TM_RT_SELL`
+{% endtab %}
+{% endtabs %}
+
+### Trail Me Buy Range
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the buy range for TrailMe. 
+
+Setting a range of 0.5% at a starting price of 0.1 would set a range between 0.0995 and 0.1005. As long as prices keep moving downwards, the range moves down along with the price. 
+
+As soon as prices start going upward, the range freezes and a buy order is placed when the price crosses the upper boundary of the range. 
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical – represent a percentage.
+
+**Default value:** 0.5
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT buy | Strategy buy |
+|  | Strategy sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  | RT buyback |
+|  | RT sell |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TRAIL_ME_BUY_RANGE`
+{% endtab %}
+{% endtabs %}
+
+### Trail Me RT Sell Range
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the sell range for TrailMe. 
+
+Setting a range of 0.5% at a current price of 0.1 would set a range between 0.0995 and 0.1005. As long as prices keep moving upwards, the range moves up along with the price. 
+
+As soon as prices start going downward, the range freezes and a sell order is placed when the prices crosses the lower boundary of the range.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical – represent a percentage.
+
+**Default value:** 0.5
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| RT sell | Strategy buy |
+|  | Strategy sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  | RT buyback |
+|  | RT buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TRAIL_ME_RT_SELL_RANGE`
+{% endtab %}
+{% endtabs %}
 
