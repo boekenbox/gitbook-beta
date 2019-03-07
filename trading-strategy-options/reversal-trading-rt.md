@@ -417,13 +417,11 @@ As soon as prices start going upward, the range freezes and a buy order is place
 {% tab title="Order types" %}
 | Affects | Does not affect |
 | :--- | :--- |
-| RT buy | Strategy buy |
-|  | Strategy sell |
-|  | Close |
-|  | DCA buy |
+| Strategy buy | RT sell |
+| RT Buy | Strategy sell |
+| DCA buy | Close |
 |  | Stop limit |
 |  | RT buyback |
-|  | RT sell |
 {% endtab %}
 
 {% tab title="Name" %}
