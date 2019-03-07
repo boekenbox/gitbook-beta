@@ -16,7 +16,7 @@ In the image below, you can see the effect on EMA \(the green and red lines\) wh
 
 
 
-###  Supported period values
+### Supported period values
 
 Gunbot supports different values for `PERIOD` for each exchange.
 

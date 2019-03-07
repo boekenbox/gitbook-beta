@@ -1,4 +1,4 @@
-# Balance settings
+# Important settings
 
 {% hint style="info" %}
 Every trading strategy contains a few balance settings, these are among the most important settings and you must understand what they do. 

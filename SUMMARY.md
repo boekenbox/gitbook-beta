@@ -38,7 +38,7 @@
 
 * [Learning the basics](how-to-work-with-gunbot/basic-workings/README.md)
   * [Trading logic](how-to-work-with-gunbot/basic-workings/trading-logic.md)
-  * [Balance settings](how-to-work-with-gunbot/basic-workings/balance-settings.md)
+  * [Important settings](how-to-work-with-gunbot/basic-workings/balance-settings.md)
   * [Order types](how-to-work-with-gunbot/basic-workings/order-types.md)
   * [Period](how-to-work-with-gunbot/basic-workings/period.md)
   * [Trailing](how-to-work-with-gunbot/basic-workings/trailing.md)
@@ -52,7 +52,6 @@
 * [About Gunbot strategies](trading-strategy-options/about-gunbot-strategies/README.md)
   * [Trading methods](trading-strategy-options/about-gunbot-strategies/trading-methods.md)
   * [Protections](trading-strategy-options/about-gunbot-strategies/protections.md)
-* [Time series analysis](trading-strategy-options/time-series-analysis.md)
 * [Regular strategies \(spot trading\)](trading-strategy-options/regular-strategies-spot-trading/README.md)
   * [ADX](trading-strategy-options/regular-strategies-spot-trading/adx.md)
   * [ATRTS](trading-strategy-options/regular-strategies-spot-trading/atrts.md)
@@ -88,7 +87,7 @@
 * [Confirming indicators](trading-strategy-options/confirming-indicators.md)
 * [Dollar Cost Avg \(DCA\)](trading-strategy-options/dollar-cost-avg-dca.md)
 * [Reversal trading \(RT\)](trading-strategy-options/reversal-trading-rt.md)
-* [Trailme](trading-strategy-options/trailme.md)
+* [TrailMe](trading-strategy-options/trailme.md)
 * [Misc settings](trading-strategy-options/misc-settings.md)
 
 ## Add-ons
