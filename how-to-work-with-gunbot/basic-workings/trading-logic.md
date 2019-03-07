@@ -34,6 +34,24 @@ For every strategy there is full documentation on what every parameter does, rea
 
 
 
+## Changing settings on a running trading pair
+
+You can change settings anytime, they take effect as soon as you save them.
+
+If a trading pair placed a buy order with strategy A, it's perfectly fine to change a setting in strategy A or assign a different strategy to this pair. 
+
+
+
+## Manual trading
+
+It's generally not a problem at all if you trade manually on the same exchange account, or even the same pairs that Gunbot trades. Do make sure your settings for cancelling orders don't end up cancelling your manual orders though.
+
+Gunbot will read from the trade history at the exchange and act accordingly. If you have multiple buy orders for a pair, it will work out the average bought price and use that as reference price for selling.
+
+During Reversal Trading it is recommended to not manually trade the same pair.
+
+
+
 
 
 

@@ -6,10 +6,7 @@ Trailing works just like it does for the TSSL strategy, the difference being the
 
 Orders resulting from trailing are only placed when the main strategy criteria are met, and confirming indicators \(if any\) allow the order. All these conditions must occur in the same cycle.
 
-
-
 ## TrailMe settings parameters
-
 
 ### Trail Me Buy
 
@@ -101,12 +98,11 @@ Parameter name in `config.js`: `TRAIL_ME_DU`
 {% endtab %}
 {% endtabs %}
 
-
 ### Trail Me RT
 
 {% tabs %}
 {% tab title="Description" %}
-Use this to enable tssl-style trailing for RT_BUY orders.
+Use this to enable tssl-style trailing for RT\_BUY orders.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -132,12 +128,11 @@ Parameter name in `config.js`: `TRAIL_ME_RT`
 {% endtab %}
 {% endtabs %}
 
-
 ### Trail Me RT Sell
 
 {% tabs %}
 {% tab title="Description" %}
-Use this to enable tssl-style trailing for RT_SELL orders above the last RT_BUY rate.
+Use this to enable tssl-style trailing for RT\_SELL orders above the last RT\_BUY rate.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -165,22 +160,16 @@ Parameter name in `config.js`: `TM_RT_SELL`
 
 ### Trail Me Buy Range
 
-{% tabs %}
-{% tab title="Description" %}
-This sets the buy range for TrailMe. 
+This sets the buy range for TrailMe.
 
-Setting a range of 0.5% at a starting price of 0.1 would set a range between 0.0995 and 0.1005. As long as prices keep moving downwards, the range moves down along with the price. 
+Setting a range of 0.5% at a starting price of 0.1 would set a range between 0.0995 and 0.1005. As long as prices keep moving downwards, the range moves down along with the price.
 
-As soon as prices start going upward, the range freezes and a buy order is placed when the price crosses the upper boundary of the range. 
-{% endtab %}
+As soon as prices start going upward, the range freezes and a buy order is placed when the price crosses the upper boundary of the range.
 
-{% tab title="Values" %}
 **Values:** numerical – represent a percentage.
 
 **Default value:** 0.5
-{% endtab %}
 
-{% tab title="Order types" %}
 | Affects | Does not affect |
 | :--- | :--- |
 | Strategy buy | RT sell |
@@ -188,15 +177,14 @@ As soon as prices start going upward, the range freezes and a buy order is place
 | DCA buy | Close |
 |  | Stop limit |
 |  | RT buyback |
-{% endtab %}
 
 ### Trail Me Sell Range
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the sell range for TrailMe. 
+This sets the sell range for TrailMe.
 
-Setting a range of 0.5% at a current price of 0.1 would set a range between 0.0995 and 0.1005. As long as prices keep moving upwards, the range moves up along with the price. 
+Setting a range of 0.5% at a current price of 0.1 would set a range between 0.0995 and 0.1005. As long as prices keep moving upwards, the range moves up along with the price.
 
 As soon as prices start going downward, the range freezes and a sell order is placed when the prices crosses the lower boundary of the range.
 {% endtab %}
@@ -228,9 +216,9 @@ Parameter name in `config.js`: `TRAIL_ME_SELL_RANGE`
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the sell range for TrailMe. 
+This sets the sell range for TrailMe.
 
-Setting a range of 0.5% at a current price of 0.1 would set a range between 0.0995 and 0.1005. As long as prices keep moving upwards, the range moves up along with the price. 
+Setting a range of 0.5% at a current price of 0.1 would set a range between 0.0995 and 0.1005. As long as prices keep moving upwards, the range moves up along with the price.
 
 As soon as prices start going downward, the range freezes and a sell order is placed when the prices crosses the lower boundary of the range.
 {% endtab %}
@@ -257,3 +245,4 @@ As soon as prices start going downward, the range freezes and a sell order is pl
 Parameter name in `config.js`: `TRAIL_ME_RT_SELL_RANGE`
 {% endtab %}
 {% endtabs %}
+

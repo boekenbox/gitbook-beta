@@ -142,9 +142,11 @@ Parameter name in `config.js`: `PANIC_SELL`
 {% tab title="Description" %}
 Sets a maximum number of sell orders before automatically disabling a pair.
 
-Setting this to 5 disables the pair after 5 strategy sell orders took place \(not including RT\). No further trades will happen until you reenable the pair. The `COUNT_SELL` counter gets reset after a pair is reenabled.
+Setting this to 5 disables the pair after 5 strategy sell orders took place \(not including RT\). No further trades will happen until you re-enable the pair. The `COUNT_SELL` counter gets reset after a pair is re-enabled.
 
+{% hint style="info" %}
 This parameter is irrelevant for trading at Bitmex.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}

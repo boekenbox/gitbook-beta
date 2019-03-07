@@ -1,13 +1,10 @@
 # Balance settings
 
-Balance settings define important options like how much Gunbot is allowed to invest per trade. 
+Balance settings define important options like how much Gunbot is allowed to invest per trade.
 
 These settings are part of a trading strategy, this way you have the flexibility to run different strategies with different balance settings.
 
-
-
 ## Balance settings parameters
-
 
 ### Trading Limit
 
@@ -15,11 +12,13 @@ These settings are part of a trading strategy, this way you have the flexibility
 {% tab title="Description" %}
 This value defines the trading limit for each buy order. Make sure to always set this higher than `MIN_VOLUME_TO_BUY` & `MIN_VOLUME_TO_SELL`.
 
-When you set this to 0.1 and trade BTC-x pairs, Gunbot will place a buy order worth 0.1 BTC each time it buys. 
+When you set this to 0.1 and trade BTC-x pairs, Gunbot will place a buy order worth 0.1 BTC each time it buys.
 
 When trading a fiat pair like USD-x, set a whole number like 100 as trading limit.
 
+{% hint style="info" %}
 Bitmex: enter the desired number of contracts.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -45,7 +44,6 @@ Parameter name in `config.js`: `TRADING_LIMIT`
 {% endtab %}
 {% endtabs %}
 
-
 ### Trading Limit Percentage
 
 {% tabs %}
@@ -54,7 +52,9 @@ Alternative method for setting the investment per buy order as a percentage of t
 
 Any value above 0 makes Gunbot ignore `TRADING_LIMIT` and uses the set percentage instead. For example: when set to 10, trading BTC-ALT and you have 1 BTC available at the time Gunbot places a buy order, an order of 0.1 BTC is placed.
 
+{% hint style="info" %}
 This parameter is irrelevant for trading at Bitmex.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -86,7 +86,9 @@ Parameter name in `config.js`: `TL_PERC`
 {% tab title="Description" %}
 Alternative method for setting the investment per buy order to use all available base currency at the time the trade takes place.
 
+{% hint style="info" %}
 This parameter is irrelevant for trading at Bitmex.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -122,7 +124,9 @@ Does your exchange charge 0.25% fees per trade? Then set this to 0.25. When your
 
 Trading fees are reflected in the average bought price. Exchanges only calculate fees after the trade comes in, Gunbot needs to know about fees before the trade is sent to the exchange.
 
+{% hint style="info" %}
 This parameter is irrelevant for trading at Bitmex.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -162,11 +166,13 @@ Parameter name in `config.js`: `FUNDS_RESERVE`
 {% tab title="Description" %}
 Sets a threshold for buy orders. Prevents orders below the exchange minimum trade size from being placed.
 
-Set this at least to the minimum trade size of your exchange. 
+Set this at least to the minimum trade size of your exchange.
 
 When trading a fiat pair like USD-x, set a whole number like 10 as `MIN_VOLUME_TO_BUY`.
 
+{% hint style="info" %}
 This parameter is irrelevant for trading at Bitmex.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -194,15 +200,17 @@ Parameter name in `config.js`: `MIN_VOLUME_TO_SELL`
 
 {% tabs %}
 {% tab title="Description" %}
-Sets a threshold for sell orders lower than the exchange minimum trade size. 
+Sets a threshold for sell orders lower than the exchange minimum trade size.
 
 If you own less than the set amount, sell orders will not be placed and Gunbot goes into buying mode. Set this at least to the minimum trade size of your exchange.
 
 When trading a fiat pair like USDT-x, set a whole number like 10 as `MIN_VOLUME_TO_SELL`.
 
-When you hold 0.006 (in base currency) of a coin and have set `MIN_VOLUME_TO_SELL` to 0.01, Gunbot will not try to sell your current 0.006 balance because it is below the set threshold of 0.01, instead it will place another buy order first as soon as buying are met.
+When you hold 0.006 \(in base currency\) of a coin and have set `MIN_VOLUME_TO_SELL` to 0.01, Gunbot will not try to sell your current 0.006 balance because it is below the set threshold of 0.01, instead it will place another buy order first as soon as buying are met.
 
+{% hint style="info" %}
 This parameter is irrelevant for trading at Bitmex.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -225,5 +233,4 @@ This parameter is irrelevant for trading at Bitmex.
 Parameter name in `config.js`: `MIN_VOLUME_TO_BUY`
 {% endtab %}
 {% endtabs %}
-
 
