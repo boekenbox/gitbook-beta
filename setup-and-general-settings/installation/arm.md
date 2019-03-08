@@ -4,11 +4,11 @@
 
 1. Unpack the release .zip file to a new folder. Then, from a terminal window, make sure Gunbot is executable:
 
-   `chmod +x gunthy-linux`
+   `chmod +x gunthy-arm`
 
 2. Start running Gunbot with the following command. Keep this terminal window open.
 
-   `./gunthy-linux`
+   `./gunthy-arm`
 
 3. Open `localhost:5000` in a browser on the same system to access the Gunbot GUI \(modern browsers recommended, preferably Chrome or Firefox\)
 
