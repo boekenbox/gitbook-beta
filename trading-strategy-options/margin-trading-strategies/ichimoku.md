@@ -2,8 +2,6 @@
 
 This page describes how margin trading on Bitmex works with the [ichimoku](https://github.com/GuntharDeNiro/BTCT/wiki/Ichimoku) strategy. The triggers for trades are slightly different than in the same strategy for regular trading.
 
-
-
 ## How to work with this strategy
 
 The expected behavior for margin trading with Gunbot is that it will open one position, either long or short, and close this position when the target is reached. When the stop is hit before profitably closing a trade, Gunbot will place a stop order at loss. After closing a position, Gunbot will again look to open a new long or short position. Gunbot will not add to existing open positions.
@@ -54,8 +52,6 @@ You can configure which of the three items is used for stopping a position, with
 
 After a stop is hit, the "alert" conditions for a long or short must happen again before another position is opened.
 
-
-
 ### Strategy parameters
 
 Following settings options are available for `ichimoku` and can be set in the strategy configurator of the GUI or the strategies section of the config.js file.
@@ -63,8 +59,6 @@ Following settings options are available for `ichimoku` and can be set in the st
 These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an [override](https://github.com/GuntharDeNiro/BTCT/wiki/Gunbot-settings#overrides) at the pair level.
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `ichimoku`. Accepted values are all strategy names as listed [here](https://github.com/GuntharDeNiro/BTCT/wiki/About-Gunbot-strategies).
-
- 
 
 ## Margin settings
 
@@ -74,7 +68,7 @@ Margin settings control settings like leverage and the target for ROE. These par
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the target for closing a position. 
+This sets the target for closing a position.
 
 ROE is measured as a percentage from the opening rate of a position, leverage and fees are not taken into consideration.
 {% endtab %}
@@ -124,7 +118,7 @@ Sets the leverage for opening any position. Setting 0 places the order with cros
 |  | RT sell |
 |  | Close |
 |  | Stop limit |
-|  | Close|
+|  | Close |
 |  | DCA buy |
 {% endtab %}
 
@@ -156,8 +150,8 @@ When set to 1 and a long order is opened at a price of 100, a stop market order 
 |  | RT sell |
 |  | Close |
 |  | Stop limit |
-|  | Close|
-|  | Strategy sell|
+|  | Close |
+|  | Strategy sell |
 |  | DCA buy |
 {% endtab %}
 
@@ -189,8 +183,8 @@ When set to 1 and a short order is opened at a price of 100, a stop market order
 |  | RT sell |
 |  | Close |
 |  | Stop limit |
-|  | Close|
-|  | Strategy buy|
+|  | Close |
+|  | Strategy buy |
 |  | DCA buy |
 {% endtab %}
 
@@ -220,8 +214,8 @@ Use this to enable tssl-style trailing for ROE.
 |  | RT sell |
 |  | Strategy sell |
 |  | Stop limit |
-|  | Close|
-|  | Strategy buy|
+|  | Close |
+|  | Strategy buy |
 |  | DCA buy |
 {% endtab %}
 
@@ -234,9 +228,9 @@ Parameter name in `config.js`: `ROE_TRAILING`
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the range for ROE trailing. 
+This sets the range for ROE trailing.
 
-Setting a range of 5% at a ROE target of 1 would set an initial range between 0.95 and 1.05. 
+Setting a range of 5% at a ROE target of 1 would set an initial range between 0.95 and 1.05.
 
 As long as ROE keeps increasing, the range moves along with ROE. As soon as ROE start decreasing, the lower range gets frozen. A close order is placed when ROE crosses the lower limit.
 {% endtab %}
@@ -255,8 +249,8 @@ As long as ROE keeps increasing, the range moves along with ROE. As soon as ROE 
 |  | RT sell |
 |  | Strategy sell |
 |  | Stop limit |
-|  | Close|
-|  | Strategy buy|
+|  | Close |
+|  | Strategy buy |
 |  | DCA buy |
 {% endtab %}
 
@@ -326,7 +320,6 @@ Parameter name in `config.js`: `PRE_ORDER_GAP`
 {% endtab %}
 {% endtabs %}
 
-
 ## Buy settings
 
 Buy settings are the primary trigger for opening long positions. These parameters control the execution of buy orders when using `ichimoku` as buy method.
@@ -392,8 +385,6 @@ Parameter name in `config.js`: `NBA`
 {% endtab %}
 {% endtabs %}
 
-
-
 ## Sell settings
 
 Sell settings are the primary trigger for opening short positions. These parameters control the execution of sell orders when using `ichimoku` as sell method.
@@ -457,6 +448,7 @@ Setting a short period allows you to trade on shorter trends, but be aware that 
 |  | RT sell |
 |  | Close |
 |  | Stop limit |
+|  | DCA buy |
 {% endtab %}
 
 {% tab title="Name" %}
@@ -580,7 +572,7 @@ Parameter name in `config.js`: `DISPLACEMENT`
 
 {% tabs %}
 {% tab title="Description" %}
-Enable this to close a position when the current candle moves completely below (long) or above (short) Kijun-sen.
+Enable this to close a position when the current candle moves completely below \(long\) or above \(short\) Kijun-sen.
 
 Do not enable multiple close triggers.
 {% endtab %}
@@ -612,7 +604,7 @@ Parameter name in `config.js`: `KUMO_CLOSE`
 
 {% tabs %}
 {% tab title="Description" %}
-Enable this to close a position when the current candle moves completely below (long) or above (short) Tenkan-sen.
+Enable this to close a position when the current candle moves completely below \(long\) or above \(short\) Tenkan-sen.
 
 Do not enable multiple close triggers.
 {% endtab %}
@@ -644,7 +636,7 @@ Parameter name in `config.js`: `TENKAN_CLOSE`
 
 {% tabs %}
 {% tab title="Description" %}
-Enable this to close a position when the current candle moves completely below (long) or above (short) Kijun-sen.
+Enable this to close a position when the current candle moves completely below \(long\) or above \(short\) Kijun-sen.
 
 Do not enable multiple close triggers.
 {% endtab %}
@@ -708,7 +700,7 @@ Parameter name in `config.js`: `ROE_CLOSE`
 
 {% tabs %}
 {% tab title="Description" %}
-Enable this to stop a position when the current candle moves completely below (long) or above (short) Kumo.
+Enable this to stop a position when the current candle moves completely below \(long\) or above \(short\) Kumo.
 
 Do not enable multiple stop triggers.
 {% endtab %}
@@ -741,7 +733,7 @@ Parameter name in `config.js`: `KUMO_STOP`
 
 {% tabs %}
 {% tab title="Description" %}
-Enable this to close a position when the current candle moves completely below (long) or above (short) Tenkan-sen.
+Enable this to close a position when the current candle moves completely below \(long\) or above \(short\) Tenkan-sen.
 
 Do not enable multiple stop triggers.
 {% endtab %}
@@ -774,7 +766,7 @@ Parameter name in `config.js`: `TENKAN_STOP`
 
 {% tabs %}
 {% tab title="Description" %}
-Enable this to stop a position when the current candle moves completely below (long) or above (short) Kijun-sen.
+Enable this to stop a position when the current candle moves completely below \(long\) or above \(short\) Kijun-sen.
 
 Do not enable multiple stop triggers.
 {% endtab %}
@@ -834,7 +826,6 @@ Parameter name in `config.js`: `ICHIMOKU_PROTECTION`
 {% endtab %}
 {% endtabs %}
 
-
 ## Balance settings
 
 {% page-ref page="../balance-settings.md" %}
@@ -858,9 +849,6 @@ RT is not intented to be used for margin trading.
 ## TrailMe settings
 
 TrailMe is not intended to be used with this strategy.
-
-
-
 
 ## Placeholders
 

@@ -2,12 +2,10 @@
 
 This page describes how margin trading on Bitmex works with the Stepgain strategy. The triggers for trades are slightly different than in the same strategy for regular trading.
 
-
-
 ### How to work with this strategy
 
 {% hint style="info" %}
-Using `stepgain` \(margin\) is only meaningful with `MEAN_REVERSION` enabled. 
+Using `stepgain` \(margin\) is only meaningful with `MEAN_REVERSION` enabled.
 
 The info below assumes you have set this.
 {% endhint %}
@@ -32,8 +30,6 @@ A position is closed when the desired `ROE` is reached.
 
 A position is closed at loss when `STOP_LIMIT` is reached.
 
- 
-
 ## Strategy parameters
 
 Following settings options are available for `stepgain` and can be set in the strategy configurator of the GUI or the strategies section of the config.js file.
@@ -41,8 +37,6 @@ Following settings options are available for `stepgain` and can be set in the st
 These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an [override](https://github.com/GuntharDeNiro/BTCT/wiki/Gunbot-settings#overrides) at the pair level.
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `stepgain`. Accepted values are all strategy names as listed [here](https://github.com/GuntharDeNiro/BTCT/wiki/About-Gunbot-strategies).
-
- 
 
 ## Margin settings
 
@@ -116,7 +110,7 @@ Parameter name in `config.js`: `SHORT_LEVEL`
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the target for closing a position. 
+This sets the target for closing a position.
 
 ROE is measured as a percentage from the opening rate of a position, leverage and fees are not taken into consideration.
 {% endtab %}
@@ -166,7 +160,7 @@ Sets the leverage for opening any position. Setting 0 places the order with cros
 |  | RT sell |
 |  | Close |
 |  | Stop limit |
-|  | Close|
+|  | Close |
 |  | DCA buy |
 {% endtab %}
 
@@ -198,8 +192,8 @@ When set to 1 and a long order is opened at a price of 100, a stop market order 
 |  | RT sell |
 |  | Close |
 |  | Stop limit |
-|  | Close|
-|  | Strategy sell|
+|  | Close |
+|  | Strategy sell |
 |  | DCA buy |
 {% endtab %}
 
@@ -231,8 +225,8 @@ When set to 1 and a short order is opened at a price of 100, a stop market order
 |  | RT sell |
 |  | Close |
 |  | Stop limit |
-|  | Close|
-|  | Strategy buy|
+|  | Close |
+|  | Strategy buy |
 |  | DCA buy |
 {% endtab %}
 
@@ -262,8 +256,8 @@ Use this to enable tssl-style trailing for ROE.
 |  | RT sell |
 |  | Strategy sell |
 |  | Stop limit |
-|  | Close|
-|  | Strategy buy|
+|  | Close |
+|  | Strategy buy |
 |  | DCA buy |
 {% endtab %}
 
@@ -276,9 +270,9 @@ Parameter name in `config.js`: `ROE_TRAILING`
 
 {% tabs %}
 {% tab title="Description" %}
-This sets the range for ROE trailing. 
+This sets the range for ROE trailing.
 
-Setting a range of 5% at a ROE target of 1 would set an initial range between 0.95 and 1.05. 
+Setting a range of 5% at a ROE target of 1 would set an initial range between 0.95 and 1.05.
 
 As long as ROE keeps increasing, the range moves along with ROE. As soon as ROE start decreasing, the lower range gets frozen. A close order is placed when ROE crosses the lower limit.
 {% endtab %}
@@ -297,8 +291,8 @@ As long as ROE keeps increasing, the range moves along with ROE. As soon as ROE 
 |  | RT sell |
 |  | Strategy sell |
 |  | Stop limit |
-|  | Close|
-|  | Strategy buy|
+|  | Close |
+|  | Strategy buy |
 |  | DCA buy |
 {% endtab %}
 
@@ -400,7 +394,6 @@ Long and short levels are reversed in this mode, long level is placed below EMA,
 Parameter name in `config.js`: `MEAN_REVERSION`
 {% endtab %}
 {% endtabs %}
-
 
 ## Buy settings
 
@@ -599,7 +592,6 @@ Parameter name in `config.js`: `NBA`
 {% endtab %}
 {% endtabs %}
 
-
 ## Sell settings
 
 Sell settings are the primary trigger for opening short positions. These parameters control the execution of sell orders when using `stepgain` as sell method.
@@ -764,7 +756,6 @@ Parameter name in `config.js`: `SELLLVL3`
 {% endtab %}
 {% endtabs %}
 
-
 ## Indicator settings
 
 Relevant indicators for trading with stepgain.
@@ -888,18 +879,13 @@ RT is not intented to be used for margin trading.
 
 ## TrailMe settings
 
-With margin trading, additional trailing only works when MEAN_REVERSION is enabled.
+With margin trading, additional trailing only works when MEAN\_REVERSION is enabled.
 
 Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
 
-Orders resulting from trailing are only placed when the main strategy criteria are met, and confirming indicators (if any) allow the order. All these conditions must occur in the same cycle.
+Orders resulting from trailing are only placed when the main strategy criteria are met, and confirming indicators \(if any\) allow the order. All these conditions must occur in the same cycle.
 
 {% page-ref page="../trailme.md" %}
-
-
-
-
-
 
 ## Placeholders
 
@@ -953,6 +939,4 @@ The following parameters in `config.js` have no function for this strategy and a
 | `TP_RANGE` | Placeholder. |
 | `TSSL_TARGET_ONLY` | Placeholder. |
 | `USE_RENKO` | Placeholder. |
-
-
 
