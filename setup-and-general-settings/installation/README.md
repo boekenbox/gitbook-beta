@@ -14,7 +14,7 @@ Installation guides per platform can be found here:
 
 {% page-ref page="macos.md" %}
 
-{% page-ref page="macos.md" %}
+{% page-ref page="linux.md" %}
 
 {% page-ref page="arm.md" %}
 

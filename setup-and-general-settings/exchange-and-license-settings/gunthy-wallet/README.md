@@ -1,6 +1,8 @@
-# GUNTHY wallet
+# Register GUNTHY wallet
 
 Gunbot uses a blockchain based license validation system. It uses our own ERC-20 utility token called "GUNTHY". Using this system, you can manage your own API keys and change them anytime, or even sell your license to third party.
+
+_Your wallet address, combined with an airdropped amount of tokens, is your Gunbot license key._
 
 {% hint style="warning" %}
  **You are responsible for your own API keys and GUNTHY wallet.** 
@@ -20,15 +22,13 @@ In that case only the wallet address and API keys need to be entered in Gunbot.
 
 After your reseller registered an [API key](https://github.com/GuntharDeNiro/BTCT/wiki/api) to be used for Gunbot, you can take control and update it yourself. 
 
-This is how it works:
 
-\*\*\*\*
 
 **Step 1: Reseller registers your API key to be used with Gunbot.**
 
-For each exchange you use Gunbot on, your reseller initially registers the API key on the Gunbot license server.
+For every Gunbot license, one exchange API needs to be registered to a GUNTHY wallet address. If you license allows for multiple exchange slots, you can register the others yourself anytime.
 
-\*\*\*\*
+
 
 **Step 2. Create a GUNTHY wallet.**
 
@@ -42,7 +42,7 @@ If your wallet software asks about the number of decimals to use for GUNTHY, ent
 
 Read more about the [steps to create a GUNTHY wallet](https://github.com/GuntharDeNiro/BTCT/wiki/api-key-management#steps-to-create-a-gunthy-wallet).
 
-\*\*\*\*
+
 
 **Step 3a. Enter your exchange API key\(s\)**
 
@@ -50,7 +50,7 @@ Enter your exchange key\(s\) on **Settings &gt; Trading &gt; Exchanges**.
 
 In Gunbot, use your registered API key as master key. Optionally you can use a secondary API key for trading, this key needs to exist in the same exchange account as the registered API.
 
-![](https://user-images.githubusercontent.com/2372008/52206416-707ef380-287a-11e9-8f93-881abdbe9e5b.png)
+![](../../../.gitbook/assets/image%20%2811%29.png)
 
 \*\*\*\*
 
@@ -62,13 +62,13 @@ Enter **your** GUNTHY wallet address. All of your API keys are then registered t
 
 When you add registered keys to Gunbot after already having set your wallet address, the new keys are automatically registered to this wallet.
 
-![](https://user-images.githubusercontent.com/2372008/52208512-32390280-2881-11e9-96fb-29367a31d618.png)
+![](../../../.gitbook/assets/image%20%286%29.png)
 
 \*\*\*\*
 
 **Step 4. Receive GUNTHY airdrop**
 
-After you've added your wallet address, you'll receive an airdrop with the required amount of tokens for your license type. Hold these tokens at all times to be sure your Gunbot can run.
+After you've registered your wallet address, you'll receive an airdrop with the required amount of tokens for your license type. **Hold these tokens at all times to be sure your Gunbot can run.**
 
 These are the required amounts per license:
 
@@ -77,7 +77,7 @@ These are the required amounts per license:
 * **Pro**: 1500 GUNTHY
 * **Ultimate**: 2500 GUNTHY
 
-> During the initial rollout of the new license system, airdrops are not yet automatic. Gunbot will work without a token balance until this process is fully tried and tested.
+> During the initial roll out of the new license system, airdrops are not yet automatic. Gunbot will work without a token balance until this process is fully tried and tested.
 
 
 
@@ -87,5 +87,7 @@ If you need to switch to another GUNTHY wallet, you can update it on **Settings 
 
 All of your registered API keys connected to the old wallet address will be registered to the new wallet address after updating it.
 
-![](https://user-images.githubusercontent.com/2372008/52209089-15053380-2883-11e9-9e71-1476b536210b.png)
+![](../../../.gitbook/assets/image%20%284%29.png)
+
+
 

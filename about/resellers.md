@@ -4,8 +4,6 @@ Gunbot is sold through a number of approved resellers, who have their own suppor
 
 **The list of approved resellers on this page is continuously kept up to date.**
 
- 
-
 ## Resellers
 
 ### Master dealers

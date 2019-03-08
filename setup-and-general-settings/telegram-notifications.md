@@ -4,7 +4,7 @@ Gunbot can send notifications on Telegram for every trade it places.
 
 To set this up, go to **Settings** &gt; **Telegram**.
 
-![Available settings options for Telegram notifications.](../.gitbook/assets/image%20%2813%29.png)
+![Available settings options for Telegram notifications.](../.gitbook/assets/image%20%2817%29.png)
 
 ## Steps to create a Telegram bot
 
