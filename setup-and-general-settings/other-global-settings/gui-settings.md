@@ -1,18 +1,20 @@
 # GUI settings
 
+## GUI settings
+
 The GUI Notifications menu lets you change which notifications are shown.
 
 To change them, go to **Settings** &gt; **GUI Notifications**.
 
-![Available options for GUI notifications](../../.gitbook/assets/image%20%2811%29.png)
+![](../../.gitbook/assets/image%20%2821%29.png)
 
 
 
-## Settings descriptions
+### Settings descriptions
 
 Below you'll find detailed descriptions of all available parameters for GUI settings. A few advanced settings are only available in the `config.js` file.
 
-### Callback Messages
+#### Callback Messages
 
 {% tabs %}
 {% tab title="Description" %}
@@ -20,7 +22,7 @@ Set this to true to receive callback notifications in the GUI.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -30,7 +32,7 @@ Parameter name in `config.js`: `callback`
 {% endtab %}
 {% endtabs %}
 
-### Error Messages
+#### Error Messages
 
 {% tabs %}
 {% tab title="Description" %}
@@ -38,7 +40,7 @@ Set this to true to receive error notifications in the GUI.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -48,7 +50,7 @@ Parameter name in `config.js`: `error`
 {% endtab %}
 {% endtabs %}
 
-### Trade Messages
+#### Trade Messages
 
 {% tabs %}
 {% tab title="Description" %}
@@ -56,7 +58,7 @@ Set this to true to receive trade notifications in the GUI.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -66,7 +68,7 @@ Parameter name in `config.js`: `trade`
 {% endtab %}
 {% endtabs %}
 
-### Enabled
+#### Enabled
 
 {% tabs %}
 {% tab title="Description" %}
@@ -74,7 +76,7 @@ Set this to false to disable the GUI.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -84,7 +86,7 @@ Parameter name in `config.js`: `enabled`
 {% endtab %}
 {% endtabs %}
 
-### Start
+#### Start
 
 {% tabs %}
 {% tab title="Description" %}
@@ -94,7 +96,7 @@ In case you don't want to use the GUI, set this to true.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -104,7 +106,7 @@ Parameter name in `config.js`: `start`
 {% endtab %}
 {% endtabs %}
 
-### Port
+#### Port
 
 {% tabs %}
 {% tab title="Description" %}
@@ -122,17 +124,17 @@ Parameter name in `config.js`: `port`
 {% endtab %}
 {% endtabs %}
 
-### Https
+#### Https
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to true to run the GUI via https only. 
+Set this to true to run the GUI via https only.
 
 This requires that you generate a key pair and save these in your Gunbot folder.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -142,7 +144,7 @@ Parameter name in `config.js`: `https`
 {% endtab %}
 {% endtabs %}
 
-### Key
+#### Key
 
 {% tabs %}
 {% tab title="Description" %}
@@ -160,7 +162,7 @@ Parameter name in `config.js`: `key`
 {% endtab %}
 {% endtabs %}
 
-### Cert
+#### Cert
 
 {% tabs %}
 {% tab title="Description" %}
@@ -178,17 +180,17 @@ Parameter name in `config.js`: `cert`
 {% endtab %}
 {% endtabs %}
 
-### Networktraffic
+#### Networktraffic
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to true to show GUI network traffic requests in Gunbot logs. 
+Set this to true to show GUI network traffic requests in Gunbot logs.
 
 Can be useful for debug purposes.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -198,17 +200,17 @@ Parameter name in `config.js`: `networktraffic`
 {% endtab %}
 {% endtabs %}
 
-### Login
+#### Login
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to true to enable password authentication. The password is setup using the GUI. 
+Set this to true to enable password authentication. The password is setup using the GUI.
 
 In case you need to reset your password, set this to false.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** true
 {% endtab %}
@@ -218,17 +220,17 @@ Parameter name in `config.js`: `login`
 {% endtab %}
 {% endtabs %}
 
-### TwoFA
+#### TwoFA
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to true to enable two factor authentication. This is setup using the GUI. 
+Set this to true to enable two factor authentication. This is setup using the GUI.
 
 In case you need to reset 2FA, set this to false.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false 
+**Values:** true or false
 
 **Default value:** false
 {% endtab %}
@@ -238,5 +240,5 @@ Parameter name in `config.js`: `twoFA`
 {% endtab %}
 {% endtabs %}
 
-### 
+#### 
 
