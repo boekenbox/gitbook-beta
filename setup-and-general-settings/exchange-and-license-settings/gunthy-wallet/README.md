@@ -2,7 +2,7 @@
 
 Gunbot uses a blockchain based license validation system. It uses our own ERC-20 utility token called "GUNTHY". Using this system, you can manage your own API keys and change them anytime, or even sell your license to third party.
 
-{% hint style="danger" %}
+{% hint style="warning" %}
  **You are responsible for your own API keys and GUNTHY wallet.** 
 
 Please understand that we might not be able to help you if you lose all your registered API keys and \(access to\) your wallet address. Make sure to follow all the security advise when setting up a wallet and properly save and backup the API key\(s\) used for Gunbot.
