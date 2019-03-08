@@ -1,6 +1,6 @@
 # Connect exchange
 
-To be able to trade, you need to enter the exchange [API key](creating-api-keys.md) and secret. 
+To be able to trade, you need to enter the exchange [API key](creating-api-keys.md) and secret.
 
 To enter these, go to **Settings &gt; Trading &gt; Exchanges**.
 
@@ -48,7 +48,6 @@ Select your exchange and fill in all the fields for this exchange.
       </td>
       <td style="text-align:left">
         <p>The delay factor (in seconds) for processing pairs on this exchange.</p>
-        <p></p>
         <p>Setting this to 10 should work in almost all cases, you can lower it later
           to speed up pair processing after you&apos;ve verified that everything
           works.</p>
@@ -84,7 +83,7 @@ Select your exchange and fill in all the fields for this exchange.
       <td style="text-align:left"><b>password</b>
       </td>
       <td style="text-align:left">
-        <p>Your KuCoin trading passphrade. This setting is only relevant for KuCoin.</p>
+        <p>Your KuCoin trading passphrase. This setting is only relevant for KuCoin.</p>
         <p>
           <br />In case you use a different trading key than your master key, make sure
           that both keys use the same passphrase.</p>
@@ -92,4 +91,3 @@ Select your exchange and fill in all the fields for this exchange.
     </tr>
   </tbody>
 </table>
-
