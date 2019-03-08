@@ -13,7 +13,7 @@ Please understand that we might not be able to help you if you lose all your reg
 ## Registering API keys to a GUNTHY wallet address
 
 {% hint style="success" %}
-New users already register the wallet address and API keys at time of purchase. 
+New users register the wallet address and API keys at time of purchase. 
 
 In that case only the wallet address and API keys need to be entered in Gunbot. 
 {% endhint %}
