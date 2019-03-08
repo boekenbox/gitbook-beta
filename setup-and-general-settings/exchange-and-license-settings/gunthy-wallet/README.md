@@ -50,7 +50,7 @@ Enter your exchange key\(s\) on **Settings &gt; Trading &gt; Exchanges**.
 
 In Gunbot, use your registered API key as master key. Optionally you can use a secondary API key for trading, this key needs to exist in the same exchange account as the registered API.
 
-![](../../../.gitbook/assets/image%20%2811%29.png)
+![](../../../.gitbook/assets/image%20%2815%29.png)
 
 \*\*\*\*
 
@@ -62,7 +62,7 @@ Enter **your** GUNTHY wallet address. All of your API keys are then registered t
 
 When you add registered keys to Gunbot after already having set your wallet address, the new keys are automatically registered to this wallet.
 
-![](../../../.gitbook/assets/image%20%286%29.png)
+![](../../../.gitbook/assets/image%20%288%29.png)
 
 \*\*\*\*
 
@@ -87,7 +87,7 @@ If you need to switch to another GUNTHY wallet, you can update it on **Settings 
 
 All of your registered API keys connected to the old wallet address will be registered to the new wallet address after updating it.
 
-![](../../../.gitbook/assets/image%20%284%29.png)
+![](../../../.gitbook/assets/image%20%285%29.png)
 
 
 

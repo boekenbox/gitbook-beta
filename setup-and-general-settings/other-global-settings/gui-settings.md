@@ -4,7 +4,7 @@ The GUI Notifications menu lets you change which notifications are shown.
 
 To change them, go to **Settings** &gt; **GUI Notifications**.
 
-![Available options for GUI notifications](../../.gitbook/assets/image%20%289%29.png)
+![Available options for GUI notifications](../../.gitbook/assets/image%20%2811%29.png)
 
 
 

@@ -12,7 +12,7 @@ On the strategy pages you can find detailed explanations for each buy and sell m
 
 ## Create a new strategy
 
-![](https://user-images.githubusercontent.com/2372008/51828870-d1dc1b00-22ec-11e9-977d-a4f978b7c8ad.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 Set a nickname for your strategy \(this can be anything you want\), and select the main methods for buying and selling. Hit the **Create** button to save the new strategy.  
   
@@ -24,7 +24,5 @@ You can create an unlimited number of strategies.
 
 Click on a strategy nickname to edit its settings.
 
-![](https://user-images.githubusercontent.com/2372008/51828922-e9b39f00-22ec-11e9-8953-f98f5832a8d3.png)
-
-
+![](../../.gitbook/assets/image%20%2814%29.png)
 
