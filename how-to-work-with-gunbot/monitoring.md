@@ -22,5 +22,9 @@ The pair overview quickly shows you which of your trading pairs are doing good.
 
 
 
+## Trading map
 
+The trading map gives you instant information about how your pairs are doing.
+
+![](../.gitbook/assets/image%20%2812%29.png)
 
