@@ -10,11 +10,11 @@ For security reasons, Gunbot runs on your local computer or your server only. Th
 
 No need for a subscription, a one time fee gets you lifetime support and software updates.
 
+> _We aim to build the perfect money machine._
+
 #### Gunbot is used by thousands of users and has an awesome community ❤️
 
 ![](.gitbook/assets/image%20%289%29.png)
-
-> _We aim to build the perfect money machine._
 
 {% page-ref page="setup-and-general-settings/installation/" %}
 
