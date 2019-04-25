@@ -1,5 +1,7 @@
 ---
-description: 'This wiki is written for the latest stable Gunbot release: v12'
+description: >-
+  This wiki is written for Gunbot beta releases. Pages may be outdated or wrong
+  until a stable comes out.
 ---
 
 # Welcome to the Gunbot wiki
