@@ -1,4 +1,0 @@
-# ROE trailing
-
-\[Upcoming article\]
-

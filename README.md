@@ -1,8 +1,10 @@
 ---
-description: 'This wiki is written for the latest stable Gunbot release: v12'
+description: >-
+  This wiki is written for bitRage beta releases. Pages may be outdated or wrong
+  until a stable comes out.
 ---
 
-# Welcome to the Gunbot wiki
+# Welcome to the bitRage wiki \(beta\)
 
 **Gunbot is an easy to use, advanced crypto trading bot. You define your trading strategy and watch Gunbot do the trading for you. Enabling you to get up to hundreds of profitable trades per day, 24/7.**
 
@@ -20,9 +22,9 @@ No need for a subscription, a one time fee gets you lifetime support and softwar
 
 {% page-ref page="about/supported-exchanges.md" %}
 
-{% page-ref page="how-to-work-with-gunbot/basic-workings/" %}
+{% page-ref page="how-to-work-with-bitraga/basic-workings/" %}
 
-{% page-ref page="how-to-work-with-gunbot/editing-strategies-and-pairs/" %}
+{% page-ref page="how-to-work-with-bitraga/editing-strategies-and-triplets/" %}
 
 {% hint style="warning" %}
 #### Disclaimer

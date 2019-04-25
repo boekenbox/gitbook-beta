@@ -1,4 +1,0 @@
-# Trailing
-
-\[Upcoming article\]
-
