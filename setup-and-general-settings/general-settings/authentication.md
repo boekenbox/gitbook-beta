@@ -4,8 +4,6 @@
 
 The first time you visit the bitRage GUI in your browser, you'll be asked to register your password.
 
-
-
 ## Two factor authentication \(2FA\)
 
 bitRage supports two factor authentication, using Google Authenticator, Authy or similar apps.
@@ -13,8 +11,4 @@ bitRage supports two factor authentication, using Google Authenticator, Authy or
 To enable 2FA, go to **Settings** &gt; **Authentication**.
 
 ![Do not scan the image above, instead use the unique QR code generated in bitRage.](../../.gitbook/assets/image%20%2818%29.png)
-
-
-
-
 

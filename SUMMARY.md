@@ -31,14 +31,14 @@
 
 ## How to work with bitRage
 
-* [Learning the basics](how-to-work-with-bitraga/basic-workings/README.md)
-  * [Trading logic](how-to-work-with-bitraga/basic-workings/trading-logic.md)
-  * [Valid Triplets / Pairs](how-to-work-with-bitraga/basic-workings/triples.md)
-  * [Important settings](how-to-work-with-bitraga/basic-workings/balance-settings.md)
-* [Editing strategies and triplets](how-to-work-with-bitraga/editing-strategies-and-triplets/README.md)
-  * [Strategy configurator](how-to-work-with-bitraga/editing-strategies-and-triplets/strategy-configurator.md)
-  * [Triplets / pairs](how-to-work-with-bitraga/editing-strategies-and-triplets/trading-pairs.md)
-* [Monitoring](how-to-work-with-bitraga/monitoring.md)
+* [Learning the basics](how-to-work-with-bitrage/basic-workings/README.md)
+  * [Trading logic](how-to-work-with-bitrage/basic-workings/trading-logic.md)
+  * [Valid Triplets / Pairs](how-to-work-with-bitrage/basic-workings/triples.md)
+  * [Important settings](how-to-work-with-bitrage/basic-workings/balance-settings.md)
+* [Editing strategies and triplets](how-to-work-with-bitrage/editing-strategies-and-triplets/README.md)
+  * [Strategy configurator](how-to-work-with-bitrage/editing-strategies-and-triplets/strategy-configurator.md)
+  * [Triplets / pairs](how-to-work-with-bitrage/editing-strategies-and-triplets/trading-pairs.md)
+* [Monitoring](how-to-work-with-bitrage/monitoring.md)
 
 ## Trading strategy options
 

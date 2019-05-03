@@ -19,5 +19,3 @@ description: bitRage currently supports trading at the following exchanges.
 | **KuCoin** | `kucoin` | Regular | Regular |
 | **Poloniex** | `poloniex` | Regular | Regular & Margin |
 
-
-

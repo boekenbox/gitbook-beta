@@ -4,23 +4,19 @@ Monitoring and evaluating your trades is an important aspect of bot trading. bit
 
 ## Charts
 
-The built in charts exclusively use data available to the bitRage Core. You can let it draw every indicator that bitRage offers. Trades are visualized on the chart. 
+The built in charts exclusively use data available to the bitRage Core. You can let it draw every indicator that bitRage offers. Trades are visualized on the chart.
 
-Charts go as far back as the exchange API returns candles to your bot. 
+Charts go as far back as the exchange API returns candles to your bot.
 
 ![](../.gitbook/assets/image%20%282%29.png)
 
-
-
 ## Dashboard
 
-Monitor your portfolio value on the dashboard, it shows the combined value of active BTC, USD\(T\) and EUR trading pairs. 
+Monitor your portfolio value on the dashboard, it shows the combined value of active BTC, USD\(T\) and EUR trading pairs.
 
 The pair overview quickly shows you which of your trading pairs are doing good.
 
 ![](../.gitbook/assets/image%20%2813%29.png)
-
-
 
 ## Trading map
 

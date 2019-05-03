@@ -8,8 +8,6 @@ To change them, go to **Settings** &gt; **GUI Notifications**.
 
 ![](../../../.gitbook/assets/image%20%2821%29.png)
 
-
-
 ### Settings descriptions
 
 Below you'll find detailed descriptions of all available parameters for GUI settings. A few advanced settings are only available in the `config.json` file.
@@ -239,6 +237,4 @@ In case you need to reset 2FA, set this to false.
 Parameter name in `config.json`: `twoFA`
 {% endtab %}
 {% endtabs %}
-
-#### 
 

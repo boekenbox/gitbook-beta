@@ -4,8 +4,6 @@ Each time you apply saved settings, a copy of the previously working `config.jso
 
 Backups are automatically saved in the /backups folder within your bitRage folder.
 
-
-
 ## Restore a backup
 
 To restore a backup, follow these steps:
