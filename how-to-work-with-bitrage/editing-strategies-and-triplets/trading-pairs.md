@@ -1,29 +1,31 @@
 # Triplets / pairs
 
+You define the trading pairs to monitor for arbitrage opportunities. Since bitRage is based on triangular arbitration, "pairs" are often referred to as "triplets" and consist of a combination of three individual trading pairs. 
+
+Example of a valid triplet: BTC-ETC &gt; ETH-ETC &gt; BTC-ETH
+
+| Pair | Trades \(normal mode\) |
+| :--- | :--- |
+| BTC-ETC | Stage 1: buy ETC for BTC |
+| ETH-ETC | Stage 2: sell ETC for ETH |
+| BTC-ETH | Stage 3: sell ETH for BTC |
+
+
+
 To configure which trading pairs bitRage should trade, go to **Settings &gt; Trading &gt; Trading Pairs**.
 
 You can use an unlimited number of trading pairs, across multiple exchanges.
 
 **Pair processing example for 1 exchange:**
 
-* 2 enabled trading pairs
-* Exchange delay set to 5
-* "Processing" below means that bitRage retrieves data and trades when strategy trading conditions happen in that round
-* First round of pair 1 is processed
-* Waits 5 seconds \(as defined in the exchange delay\)
-* First round of pair 2 is processed
-* Waits 5 seconds
-* Second round of pair 1 is processed
-* Waits 5 seconds
-* Second round of pair 2 is processed.
-* ... continues cycling through further rounds
+* TODO
 
 {% hint style="info" %}
 **Parallel processing of multiple exchanges**
 
 If you have trading pairs across multiple exchanges, each exchange will process pairs in parallel. This means that a pair on exchange 1 does not wait for pairs on exchange 2 to be processed first.
 
-Every exchange will individually cycle through enabled pairs like described above. Each exchange can have it's individual delay setting.
+Every exchange will individually cycle through enabled pairs like described above. Each exchange can have it's individual delay setting. TODO
 {% endhint %}
 
 ## Add trading pairs

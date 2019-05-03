@@ -36,8 +36,8 @@
   * [Valid Triplets / Pairs](how-to-work-with-bitrage/basic-workings/triples.md)
   * [Important settings](how-to-work-with-bitrage/basic-workings/balance-settings.md)
 * [Editing strategies and triplets](how-to-work-with-bitrage/editing-strategies-and-triplets/README.md)
-  * [Strategy configurator](how-to-work-with-bitrage/editing-strategies-and-triplets/strategy-configurator.md)
   * [Triplets / pairs](how-to-work-with-bitrage/editing-strategies-and-triplets/trading-pairs.md)
+  * [Strategy configurator](how-to-work-with-bitrage/editing-strategies-and-triplets/strategy-configurator.md)
 * [Monitoring](how-to-work-with-bitrage/monitoring.md)
 
 ## Trading strategy options
