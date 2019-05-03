@@ -1,10 +1,10 @@
 # Monitoring
 
-Monitoring and evaluating your trades is an important aspect of bot trading. Gunbot makes it easy to visualize the trades it makes, this will help you to keep improving your trading strategies.
+Monitoring and evaluating your trades is an important aspect of bot trading. bitRage makes it easy to visualize the trades it makes, this will help you to keep improving your trading strategies.
 
 ## Charts
 
-The built in charts exclusively use data available to the Gunbot Core. You can let it draw every indicator that Gunbot offers. Trades are visualized on the chart. 
+The built in charts exclusively use data available to the bitRage Core. You can let it draw every indicator that bitRage offers. Trades are visualized on the chart. 
 
 Charts go as far back as the exchange API returns candles to your bot. 
 

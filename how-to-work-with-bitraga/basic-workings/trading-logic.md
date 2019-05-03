@@ -1,8 +1,8 @@
 # Trading logic
 
-## Gunbot does what you tell it to do
+## bitRage does what you tell it to do
 
-There is very little magic involved in this product, Gunbot tries to execute exactly the settings you feed it. 
+There is very little magic involved in this product, bitRage tries to execute exactly the settings you feed it. 
 
 This means that you pick the trading pairs the bot should trade and assign a trading strategy to these pairs. Once you've done that, all it takes is starting the bot core to begin automatic trading.
 
@@ -12,7 +12,7 @@ A trading strategy can be very simple, based on one of many presets - or you can
 
 ## General principle: buy once, sell once
 
-A strategy in Gunbot always consists of settings that control when it should buy, and when to sell.
+A strategy in bitRage always consists of settings that control when it should buy, and when to sell.
 
 Most strategies will buy one time once the buying criteria occur, then sell everything it bought as soon as selling conditions happen.
 
@@ -44,9 +44,9 @@ If a trading pair placed a buy order with strategy A, it's perfectly fine to cha
 
 ## Manual trading
 
-It's generally not a problem at all if you trade manually on the same exchange account, or even the same pairs that Gunbot trades. Do make sure your settings for cancelling orders don't end up cancelling your manual orders though.
+It's generally not a problem at all if you trade manually on the same exchange account, or even the same pairs that bitRage trades. Do make sure your settings for cancelling orders don't end up cancelling your manual orders though.
 
-Gunbot will read from the trade history at the exchange and act accordingly. If you have multiple buy orders for a pair, it will work out the average bought price and use that as reference price for selling.
+bitRage will read from the trade history at the exchange and act accordingly. If you have multiple buy orders for a pair, it will work out the average bought price and use that as reference price for selling.
 
 During Reversal Trading it is recommended to not manually trade the same pair.
 

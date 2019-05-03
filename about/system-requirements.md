@@ -2,7 +2,7 @@
 
 ## Supported platforms
 
-Gunbot runs from your own Windows, macOS, Linux or ARM computer or server. 
+bitRage runs from your own Windows, macOS, Linux or ARM computer or server. 
 
 You are free to run multiple instances across multiple platforms and devices.
 

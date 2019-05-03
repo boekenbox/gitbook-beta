@@ -1,5 +1,5 @@
 ---
-description: Gunbot currently supports trading at the following exchanges.
+description: bitRage currently supports trading at the following exchanges.
 ---
 
 # Supported exchanges

@@ -1,18 +1,18 @@
 # Headless mode
 
 {% hint style="info" %}
-This article is meant for power users who want to run Gunbot without using the GUI. 
+This article is meant for power users who want to run bitRage without using the GUI. 
 
 This is not an exhaustive overview of all available settings, just a quick overview of how to manually work with the config file. Refer to other parts of the wiki for detailed settings descriptions.
 {% endhint %}
 
 ## Config file system
 
-All Gunbot settings are defined in a single file named `config.js`. This is where you set up your exchange API keys, add pairs and define your strategies. 
+All bitRage settings are defined in a single file named `config.json`. This is where you set up your exchange API keys, add pairs and define your strategies. 
 
 You can refer to the included `config-js-example.txt` file for an example of a config file with properly defined pairs and all needed parameters for adding each exchange. Throughout this wiki you'll find detailed descriptions for every parameter available in the config file.
 
-When the config file is overwritten while Gunbot is running, the changed settings will be loaded automatically. 
+When the config file is overwritten while bitRage is running, the changed settings will be loaded automatically. 
 
 Make sure that no parameters are removed when setting it up. Make sure the JSON-formatting stays intact. If you are unsure about your config file, you can validate it on [https://jsonlint.com](https://jsonlint.com) \(or a similar JSON validator\).
 
@@ -26,7 +26,7 @@ The only actions that require using the GUI are:
 
 ## Disabling the GUI
 
-To disable the GUI completely, make the following change in the GUI section of `config.js`:
+To disable the GUI completely, make the following change in the GUI section of `config.json`:
 
 ```text
 "GUI": {
@@ -37,7 +37,7 @@ To disable the GUI completely, make the following change in the GUI section of `
 
 ## Connecting exchanges
 
-To connect an exchange, add the relevant settings to the exchange section of `config.js`. 
+To connect an exchange, add the relevant settings to the exchange section of `config.json`. 
 
 It looks like this:
 

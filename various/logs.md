@@ -1,6 +1,6 @@
 # Logs
 
-Gunbot logs contain most of the information it works with. This article provides an overview of the different sections in these logs, and explains how to read them.
+bitRage logs contain most of the information it works with. This article provides an overview of the different sections in these logs, and explains how to read them.
 
 This article applies to all strategies except Emotionless, which has intentionally limited log output.
 
@@ -67,7 +67,7 @@ The so called grid area contains all information about core checks, indicators a
 
 ### **Indicators**
 
-The indicators section shows all indicators as calculated by Gunbot.
+The indicators section shows all indicators as calculated by bitRage.
 
 
 

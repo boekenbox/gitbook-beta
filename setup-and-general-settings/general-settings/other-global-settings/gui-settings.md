@@ -12,7 +12,7 @@ To change them, go to **Settings** &gt; **GUI Notifications**.
 
 ### Settings descriptions
 
-Below you'll find detailed descriptions of all available parameters for GUI settings. A few advanced settings are only available in the `config.js` file.
+Below you'll find detailed descriptions of all available parameters for GUI settings. A few advanced settings are only available in the `config.json` file.
 
 #### Callback Messages
 
@@ -28,7 +28,7 @@ Set this to true to receive callback notifications in the GUI.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `callback`
+Parameter name in `config.json`: `callback`
 {% endtab %}
 {% endtabs %}
 
@@ -46,7 +46,7 @@ Set this to true to receive error notifications in the GUI.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `error`
+Parameter name in `config.json`: `error`
 {% endtab %}
 {% endtabs %}
 
@@ -64,7 +64,7 @@ Set this to true to receive trade notifications in the GUI.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `trade`
+Parameter name in `config.json`: `trade`
 {% endtab %}
 {% endtabs %}
 
@@ -82,7 +82,7 @@ Set this to false to disable the GUI.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `enabled`
+Parameter name in `config.json`: `enabled`
 {% endtab %}
 {% endtabs %}
 
@@ -90,7 +90,7 @@ Parameter name in `config.js`: `enabled`
 
 {% tabs %}
 {% tab title="Description" %}
-When set to false, Gunbot starts the GUI but does not process pairs until the core is started from the GUI. This setting is toggled with the **START BOT CORE** button.
+When set to false, bitRage starts the GUI but does not process pairs until the core is started from the GUI. This setting is toggled with the **START BOT CORE** button.
 
 In case you don't want to use the GUI, set this to true.
 {% endtab %}
@@ -102,7 +102,7 @@ In case you don't want to use the GUI, set this to true.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `start`
+Parameter name in `config.json`: `start`
 {% endtab %}
 {% endtabs %}
 
@@ -120,7 +120,7 @@ The port number for the GUI.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `port`
+Parameter name in `config.json`: `port`
 {% endtab %}
 {% endtabs %}
 
@@ -130,7 +130,7 @@ Parameter name in `config.js`: `port`
 {% tab title="Description" %}
 Set this to true to run the GUI via https only.
 
-This requires that you generate a key pair and save these in your Gunbot folder.
+This requires that you generate a key pair and save these in your bitRage folder.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -140,7 +140,7 @@ This requires that you generate a key pair and save these in your Gunbot folder.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `https`
+Parameter name in `config.json`: `https`
 {% endtab %}
 {% endtabs %}
 
@@ -158,7 +158,7 @@ Defines the filename of your private key used for running the GUI via https.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `key`
+Parameter name in `config.json`: `key`
 {% endtab %}
 {% endtabs %}
 
@@ -176,7 +176,7 @@ Defines the filename of your certificate / public key used for running the GUI v
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `cert`
+Parameter name in `config.json`: `cert`
 {% endtab %}
 {% endtabs %}
 
@@ -184,7 +184,7 @@ Parameter name in `config.js`: `cert`
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to true to show GUI network traffic requests in Gunbot logs.
+Set this to true to show GUI network traffic requests in bitRage logs.
 
 Can be useful for debug purposes.
 {% endtab %}
@@ -196,7 +196,7 @@ Can be useful for debug purposes.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `networktraffic`
+Parameter name in `config.json`: `networktraffic`
 {% endtab %}
 {% endtabs %}
 
@@ -216,7 +216,7 @@ In case you need to reset your password, set this to false.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `login`
+Parameter name in `config.json`: `login`
 {% endtab %}
 {% endtabs %}
 
@@ -236,7 +236,7 @@ In case you need to reset 2FA, set this to false.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `twoFA`
+Parameter name in `config.json`: `twoFA`
 {% endtab %}
 {% endtabs %}
 

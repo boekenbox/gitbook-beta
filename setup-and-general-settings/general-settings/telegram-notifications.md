@@ -1,6 +1,6 @@
 # Telegram notifications
 
-Gunbot can send notifications on Telegram for every trade it places.
+bitRage can send notifications on Telegram for every trade it places.
 
 To set this up, go to **Settings** &gt; **Telegram**.
 
@@ -8,13 +8,13 @@ To set this up, go to **Settings** &gt; **Telegram**.
 
 ## Steps to create a Telegram bot
 
-Notifications work by first creating a personal bot on Telegram, Gunbot then connects to this bot to push notifications to you.
+Notifications work by first creating a personal bot on Telegram, bitRage then connects to this bot to push notifications to you.
 
 This is how to create a bot:
 
 1. Talk to [@botfather](https://telegram.me/botfather). Create a new bot with the command /newbot and choose a name and username for your bot. Save the bot token shown
 2. Talk to [@myidbot](https://telegram.me/myidbot) to see your Chat ID, save it.
-3. Enable Telegram notifications for Gunbot, and enter the token and ID you've just gathered.
+3. Enable Telegram notifications for bitRage, and enter the token and ID you've just gathered.
 4. Start a chat with the username you've picked for your bot, and hit the start button. If you don't see a start button, write "/start" and click on it afterwards.
 
 ## Settings descriptions
@@ -25,7 +25,7 @@ Below you'll find detailed descriptions of all available parameters for Telegram
 
 {% tabs %}
 {% tab title="Description" %}
-Enable this to have Gunbot send trade notifications through Telegram.
+Enable this to have bitRage send trade notifications through Telegram.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -35,7 +35,7 @@ Enable this to have Gunbot send trade notifications through Telegram.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `TELEGRAM_ENABLED`
+Parameter name in `config.json`: `TELEGRAM_ENABLED`
 {% endtab %}
 {% endtabs %}
 
@@ -51,11 +51,11 @@ Use this to easily check from which bot instance the notifications have been sen
 {% tab title="Values" %}
 **Values:** string 
 
-**Default value:** Gunbot
+**Default value:** bitRage
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `TELEGRAM_NICK`
+Parameter name in `config.json`: `TELEGRAM_NICK`
 {% endtab %}
 {% endtabs %}
 
@@ -73,7 +73,7 @@ The Telegram token for your bot.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `TOKEN`
+Parameter name in `config.json`: `TOKEN`
 {% endtab %}
 {% endtabs %}
 
@@ -107,7 +107,7 @@ This must be listed in chat\_id with a - symbol in front, in this case "-12345"
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `chat_id`
+Parameter name in `config.json`: `chat_id`
 {% endtab %}
 {% endtabs %}
 
@@ -125,7 +125,7 @@ When enabled notifications will be only sent for strategy sell orders.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `TG_PL_ONLY`
+Parameter name in `config.json`: `TG_PL_ONLY`
 {% endtab %}
 {% endtabs %}
 
@@ -133,7 +133,7 @@ Parameter name in `config.js`: `TG_PL_ONLY`
 
 {% tabs %}
 {% tab title="Description" %}
-When set above 0, you'll receive a Telegram dialog to manually allow or deny every order Gunbot wants to place. 
+When set above 0, you'll receive a Telegram dialog to manually allow or deny every order bitRage wants to place. 
 
 During the set amount of seconds you can choose to allow the order \(and it will immediately be placed\) or deny it. After the timeout passes without reply, the order will be placed at the exchange.
 {% endtab %}
@@ -145,7 +145,7 @@ During the set amount of seconds you can choose to allow the order \(and it will
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `TG_PL_ONLY`
+Parameter name in `config.json`: `TG_PL_ONLY`
 {% endtab %}
 {% endtabs %}
 
@@ -165,7 +165,7 @@ A test message will be sent on the first round for each pair. Disable after veri
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `TG_TEST`
+Parameter name in `config.json`: `TG_TEST`
 {% endtab %}
 {% endtabs %}
 

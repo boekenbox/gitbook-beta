@@ -1,11 +1,11 @@
 # Strategy configurator
 
-A strategy in Gunbot is a collection of settings that can be assigned to one or more trading pairs. These pairs will then trade according to the assigned settings.
+A strategy in bitRage is a collection of settings that can be assigned to one or more trading pairs. These pairs will then trade according to the assigned settings.
 
 On **Settings &gt; Strategies &gt; Strategy Configurator** you can view and modify strategy presets, or create your own custom strategies.
 
 {% hint style="info" %}
-Make sure to read up on [Gunbot strategies](../../trading-strategy-options/strategy-options.md) before you start trading.
+Make sure to read up on [bitRage strategies](../../trading-strategy-options/strategy-options.md) before you start trading.
 
 On the strategy pages you can find detailed explanations for each buy and sell method, as well as documentation for all available strategy parameters.
 {% endhint %}

@@ -1,6 +1,6 @@
 # Installation & startup
 
-## Download Gunbot
+## Download bitRage
 
 {% page-ref page="download.md" %}
 
@@ -22,7 +22,7 @@ Installation guides per platform can be found here:
 
 ## Upgrading
 
-Instructions on how to upgrade Gunbot are usually found in the release changelog.
+Instructions on how to upgrade bitRage are usually found in the release changelog.
 
 For minor releases \(like patches\) it is usually enough to just overwrite the gunthy executable file.
 

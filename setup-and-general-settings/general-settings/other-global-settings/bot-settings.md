@@ -10,13 +10,13 @@ To change them, go to **Settings** &gt; **Bot Settings**.
 
 ## Settings descriptions
 
-Below you'll find detailed descriptions of all available parameters for bot settings. A few advanced settings are only available in the `config.js` file.
+Below you'll find detailed descriptions of all available parameters for bot settings. A few advanced settings are only available in the `config.json` file.
 
 ### Watch Mode
 
 {% tabs %}
 {% tab title="Description" %}
-When set to true, Gunbot will process the configured pairs, but will not place actual buy or sell orders. Good for testing.
+When set to true, bitRage will process the configured pairs, but will not place actual buy or sell orders. Good for testing.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -26,7 +26,7 @@ When set to true, Gunbot will process the configured pairs, but will not place a
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `WATCH_MODE`
+Parameter name in `config.json`: `WATCH_MODE`
 {% endtab %}
 {% endtabs %}
 
@@ -36,7 +36,7 @@ Parameter name in `config.js`: `WATCH_MODE`
 {% tab title="Description" %}
 Use this option to trade pairs with cross-over between quote and base \(for example BTC-ETH and ETH-ADA\). 
 
-When enabled, Gunbot won't sell all available quote units when selling, instead it will only sell the invested funds \(as defined in the trading limit\). Also affects the TradingView add-on.
+When enabled, bitRage won't sell all available quote units when selling, instead it will only sell the invested funds \(as defined in the trading limit\). Also affects the TradingView add-on.
 
 Only enable this when you really need it.
 {% endtab %}
@@ -48,7 +48,7 @@ Only enable this when you really need it.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `MULTIPLE_BASE`
+Parameter name in `config.json`: `MULTIPLE_BASE`
 {% endtab %}
 {% endtabs %}
 
@@ -66,7 +66,7 @@ Used to show debug messages in the bot, when set to true. Only use this if you r
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `debug`
+Parameter name in `config.json`: `debug`
 {% endtab %}
 {% endtabs %}
 
@@ -84,7 +84,7 @@ Setting this to true will lead to more detailed information being shown in the c
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `VERBOSE`
+Parameter name in `config.json`: `VERBOSE`
 {% endtab %}
 {% endtabs %}
 
@@ -102,7 +102,7 @@ When set to true, trading gains will be automatically added to the funds reserve
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `RESERVE_PILE_UP`
+Parameter name in `config.json`: `RESERVE_PILE_UP`
 {% endtab %}
 {% endtabs %}
 
@@ -112,7 +112,7 @@ Parameter name in `config.js`: `RESERVE_PILE_UP`
 {% tab title="Description" %}
 Bot will delay processing a new pair for a set amount of seconds.
 
-Useful for when Gunbot requests data faster than the exchange API is allowing you to do. As the needed delay depends on the amount of pairs and the speed your system needs to cycle pairs, there are no recommended values.
+Useful for when bitRage requests data faster than the exchange API is allowing you to do. As the needed delay depends on the amount of pairs and the speed your system needs to cycle pairs, there are no recommended values.
 
 This is the global setting for bot delay, it is ignored when an exchange specific delay is set.
 {% endtab %}
@@ -124,7 +124,7 @@ This is the global setting for bot delay, it is ignored when an exchange specifi
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `BOT_DELAY`
+Parameter name in `config.json`: `BOT_DELAY`
 {% endtab %}
 {% endtabs %}
 
@@ -132,7 +132,7 @@ Parameter name in `config.js`: `BOT_DELAY`
 
 {% tabs %}
 {% tab title="Description" %}
-This parameter forces the Gunbot cache to be cleaned by restarting the bot every x hours. This setting does not trigger `TRADES_TIMEOUT`.
+This parameter forces the bitRage cache to be cleaned by restarting the bot every x hours. This setting does not trigger `TRADES_TIMEOUT`.
 
 Only set this to a low value when your bot actually has problems not trading after a longer period of use.
 {% endtab %}
@@ -144,7 +144,7 @@ Only set this to a low value when your bot actually has problems not trading aft
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `BOT_CCLEAN`
+Parameter name in `config.json`: `BOT_CCLEAN`
 {% endtab %}
 {% endtabs %}
 
@@ -194,7 +194,7 @@ This is an internal timeout that prevents the bot from buying again within the s
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `timeout_buy`
+Parameter name in `config.json`: `timeout_buy`
 {% endtab %}
 {% endtabs %}
 
@@ -212,7 +212,7 @@ This is an internal timeout that prevents the bot from selling again within the 
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `timeout_sell`
+Parameter name in `config.json`: `timeout_sell`
 {% endtab %}
 {% endtabs %}
 
@@ -226,7 +226,7 @@ Set this to false if you also trade manually to prevent the bot from cancelling 
 
 **Simulated Fill Or Kill \(FOK\)** 
 
-When an order is not or only partially filled and gets cancelled, Gunbot will attempt to fill the order by replacing it at current bid/ask.
+When an order is not or only partially filled and gets cancelled, bitRage will attempt to fill the order by replacing it at current bid/ask.
 
 For buy orders this means that FOK orders are sent as long as the number of quote units held are worth less than `TRADING_LIMIT` and the difference is higher than `MIN_VOLUME_TO_BUY`.
 
@@ -240,7 +240,7 @@ For sell orders this means that FOK orders are sent as long as the number of quo
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `CANCEL_ORDERS_ENABLED`
+Parameter name in `config.json`: `CANCEL_ORDERS_ENABLED`
 {% endtab %}
 {% endtabs %}
 
@@ -250,7 +250,7 @@ Parameter name in `config.js`: `CANCEL_ORDERS_ENABLED`
 {% tab title="Description" %}
 This only applies when using `MAKER_FEES`. 
 
-Set the number of rounds that pending orders need to be kept open. After this number of rounds passes, Gunbot will cancel the pending order.
+Set the number of rounds that pending orders need to be kept open. After this number of rounds passes, bitRage will cancel the pending order.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -260,7 +260,7 @@ Set the number of rounds that pending orders need to be kept open. After this nu
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `CANCEL_ORDERS_CYCLE_CAP`
+Parameter name in `config.json`: `CANCEL_ORDERS_CYCLE_CAP`
 {% endtab %}
 {% endtabs %}
 
@@ -280,7 +280,7 @@ Please use this feature on your own risk only.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `withdraw_address`
+Parameter name in `config.json`: `withdraw_address`
 {% endtab %}
 {% endtabs %}
 
@@ -298,7 +298,7 @@ Set the amount of BTC to be accumulated with `RESERVE_PILE_UP` before an automat
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `withdraw_threshold`
+Parameter name in `config.json`: `withdraw_threshold`
 {% endtab %}
 {% endtabs %}
 

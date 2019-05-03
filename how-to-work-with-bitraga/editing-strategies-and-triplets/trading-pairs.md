@@ -1,6 +1,6 @@
 # Triplets / pairs
 
-To configure which trading pairs Gunbot should trade, go to **Settings &gt; Trading &gt; Trading Pairs**.
+To configure which trading pairs bitRage should trade, go to **Settings &gt; Trading &gt; Trading Pairs**.
 
 You can use an unlimited number of trading pairs, across multiple exchanges.
 
@@ -8,7 +8,7 @@ You can use an unlimited number of trading pairs, across multiple exchanges.
 
 * 2 enabled trading pairs
 * Exchange delay set to 5
-* "Processing" below means that Gunbot retrieves data and trades when strategy trading conditions happen in that round
+* "Processing" below means that bitRage retrieves data and trades when strategy trading conditions happen in that round
 
 1. First round of pair 1 is processed
 2. Waits 5 seconds \(as defined in the exchange delay\)
@@ -33,7 +33,7 @@ Every exchange will individually cycle through enabled pairs like described abov
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
-Gunbot uses a standardized format for entering trading pairs, this allows you to use the same syntax for all exchanges you might use.
+bitRage uses a standardized format for entering trading pairs, this allows you to use the same syntax for all exchanges you might use.
 
 The format is: **BASECOIN-QUOTECOIN**, where the base coin is the one used to buy another asset. Be aware that some exchange show pair names in the exact reverse order.
 
@@ -42,7 +42,7 @@ To start trading on a new pair, just enter the pair name, pick the exchange and 
 {% hint style="info" %}
 **Pair naming conventions**
 
-Gunbot normalizes pair notation, all pairs for all exchanges except Bitmex follow the same logic: BASECOIN-QUOTECOIN
+bitRage normalizes pair notation, all pairs for all exchanges except Bitmex follow the same logic: BASECOIN-QUOTECOIN
 
 All pairs with BTC as base currency are written like: BTC-ETH, BTC-OK, BTC-XLM
 

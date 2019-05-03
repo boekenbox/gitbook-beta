@@ -1,26 +1,26 @@
 # Critical errors
 
-When there is a problem that might need attention, Gunbot usually shows an error notification in the GUI. Some errors are only visible in the console window running Gunbot.
+When there is a problem that might need attention, bitRage usually shows an error notification in the GUI. Some errors are only visible in the console window running bitRage.
 
-For troubleshooting purposes, recent logs are stored in the /logs folder. After Gunbot is closed, logfiles can be read with a text editor like Notepad++.
+For troubleshooting purposes, recent logs are stored in the /logs folder. After bitRage is closed, logfiles can be read with a text editor like Notepad++.
 
 This page describes common problems and their possible solutions.
 
 {% hint style="success" %}
 **Tips for troubleshooting**
 
-Always completely close and restart Gunbot before trying to resolve a critical issue. 
+Always completely close and restart bitRage before trying to resolve a critical issue. 
 
-Reboot your computer when you are unsure if you've completely closed Gunbot. 
+Reboot your computer when you are unsure if you've completely closed bitRage. 
 
-When resolving an isse that might be related to API rate limiting, stop running Gunbot for at least 30 minutes before trying to solve the problem.
+When resolving an isse that might be related to API rate limiting, stop running bitRage for at least 30 minutes before trying to solve the problem.
 {% endhint %}
 
 
 
-## Errors when starting Gunbot
+## Errors when starting bitRage
 
-The following errors are **critical** and will prevent trading, they indicate Gunbot could not properly start or connect to an exchange.
+The following errors are **critical** and will prevent trading, they indicate bitRage could not properly start or connect to an exchange.
 
 
 
@@ -31,7 +31,7 @@ The following errors are **critical** and will prevent trading, they indicate Gu
 **Possible solutions:**
 
 * Double check if your master key and secret are correct and do not start or end with a blank space.
-* Verify that you are running the correct edition of Gunbot.
+* Verify that you are running the correct edition of bitRage.
 * If the problem persists: contact your reseller.
 
 
@@ -45,9 +45,9 @@ The following errors are **critical** and will prevent trading, they indicate Gu
 * Double check if your master key and secret are correct and do not start or end with a blank space.
 * Check if your system clock is synced with an internet time server. [Tool for Windows](http://www.timesynctool.com/) / [Info for Linux](https://www.howtogeek.com/tips/how-to-sync-your-linux-server-time-with-network-time-servers-ntp)
 * Make sure both a valid master key and key are present in your config.
-* Make sure your pairs actually exist on the exchange and conform to Gunbot pair syntax.
-* Increase exchange delay, the exchange might have rate limited you. Stop Gunbot and wait at least 30 minutes before retrying.
-* Make sure all Gunbot files were correctly unzipped.
+* Make sure your pairs actually exist on the exchange and conform to bitRage pair syntax.
+* Increase exchange delay, the exchange might have rate limited you. Stop bitRage and wait at least 30 minutes before retrying.
+* Make sure all bitRage files were correctly unzipped.
 * Make sure the IMAP listener is disabled \(when not using the TradingView add-on\).
 * Try a wired internet connection.
 * Restart your router and/or flush your DNS cache.
@@ -72,7 +72,7 @@ The following errors are **critical** and will prevent trading, they indicate Gu
 **Possible solutions:**
 
 * Restart your computer.
-* When other software requires using any of the ports needed for Gunbot, change the ports Gunbot uses in the config.js file.
+* When other software requires using any of the ports needed for bitRage, change the ports bitRage uses in the config.json file.
 
 
 
@@ -82,7 +82,7 @@ The following errors are **critical** and will prevent trading, they indicate Gu
 
 **Solution:**
 
-* Set `start` false in the GUI section of config.js, with a text editor like Notepad++. Save the file and you should be able to connect to the GUI again.
+* Set `start` false in the GUI section of config.json, with a text editor like Notepad++. Save the file and you should be able to connect to the GUI again.
 
 
 
@@ -92,8 +92,8 @@ The following errors are **critical** and will prevent trading, they indicate Gu
 
 **Possible solutions:**
 
-* Enable `https` in the config.js file.
-* Visit Gunbot via http, instead of https.
+* Enable `https` in the config.json file.
+* Visit bitRage via http, instead of https.
 
 
 
@@ -109,7 +109,7 @@ The following errors are **critical** and will prevent trading, they indicate Gu
 
 
 
-## Errors after successfully starting Gunbot
+## Errors after successfully starting bitRage
 
 The following orders can prevent trading when occurring very often. When any of these errors only occur intermittently, there is usually no issue that needs solving.
 
@@ -154,7 +154,7 @@ The following orders can prevent trading when occurring very often. When any of 
 **Possible solutions:**
 
 * Make sure that you have not accidentally removed one of your exchanges and still have pairs connected to it. 
-* Check if all of the pairs in your setup actually exist on your exchange and conform to Gunbot pair syntax \(BASE-QUOTE\).
+* Check if all of the pairs in your setup actually exist on your exchange and conform to bitRage pair syntax \(BASE-QUOTE\).
 * Wait until the exchange finishes possible maintenance.
 
 

@@ -1,6 +1,6 @@
 # Websockets
 
-Gunbot emits certain data through websockets. Limited documentation for this feature is available on the following repository: [https://github.com/GuntharDeNiro/Gunthy/\#webgui-informations-for-devs-](https://github.com/GuntharDeNiro/Gunthy/#webgui-informations-for-devs-)
+bitRage emits certain data through websockets. Limited documentation for this feature is available on the following repository: [https://github.com/GuntharDeNiro/Gunthy/\#webgui-informations-for-devs-](https://github.com/GuntharDeNiro/Gunthy/#webgui-informations-for-devs-)
 
 To change websocket settings, go to **Settings** &gt; **Websocket**.
 
@@ -26,7 +26,7 @@ Sets the port used for websockets.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `port`
+Parameter name in `config.json`: `port`
 {% endtab %}
 {% endtabs %}
 
@@ -44,7 +44,7 @@ You can change the client port for third party web interfaces here.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `clientport`
+Parameter name in `config.json`: `clientport`
 {% endtab %}
 {% endtabs %}
 
@@ -62,7 +62,7 @@ The IP address or hostname to be used for WebSockets. Defaults to your localhost
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `hostname`
+Parameter name in `config.json`: `hostname`
 {% endtab %}
 {% endtabs %}
 
