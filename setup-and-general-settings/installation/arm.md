@@ -4,16 +4,16 @@
 
 1. Unpack the release .zip file to a new folder. Then, from a terminal window, make sure bitRage is executable:
 
-   `chmod +x gunthy-arm`
+   `chmod +x bitrage-arm`
 
 2. Start running bitRage with the following command. Keep this terminal window open.
 
-   `./gunthy-arm`
+   `./bitrage-arm`
 
-3. Open `localhost:5000` in a browser on the same system to access the bitRage GUI \(modern browsers recommended, preferably Chrome or Firefox\)
+3. Open [localhost:3000](http://localhost:3000) in a browser on the same system to access the bitRage GUI \(modern browsers recommended, preferably Chrome or Firefox\)
 
 {% hint style="info" %}
-Depending on your systems settings, you may need to add a firewall rule to allow for incoming traffic on TCP port 5000.
+Depending on your systems settings, you may need to add a firewall rule to allow for incoming traffic on TCP port 3000.
 {% endhint %}
 
 {% hint style="info" %}

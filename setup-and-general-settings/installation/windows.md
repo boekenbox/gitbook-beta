@@ -3,11 +3,11 @@
 ## Instructions
 
 1. Unpack the release .zip file to a new folder
-2. Start running bitRage by double clicking **gunthy-win.exe**
-3. Open [localhost:5000](http://localhost:5000) in a browser on the same system to access the bitRage GUI \(modern browsers recommended, preferably Chrome or Firefox\)
+2. Start running bitRage by double clicking **bitrage-win.exe**
+3. Open [localhost:3000](http://localhost:5000) in a browser on the same system to access the bitRage GUI \(modern browsers recommended, preferably Chrome or Firefox\)
 
 {% hint style="info" %}
-Depending on your systems settings, you may need to add a firewall rule to allow for incoming traffic on TCP port 5000.
+Depending on your systems settings, you may need to add a firewall rule to allow for incoming traffic on TCP port 3000.
 {% endhint %}
 
 {% hint style="info" %}
@@ -23,10 +23,4 @@ bitRage is intended to run on your local system. Making the bitRage GUI availabl
 
 Considerable efforts went into securing the GUI, but please understand that achieving 100% security is not realistic.
 {% endhint %}
-
-## Installation video
-
-{% embed url="https://youtu.be/ZGDSZbYmWDc" caption="" %}
-
-_The video above was made for bitRage v10, however the basic steps still apply._
 

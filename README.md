@@ -6,17 +6,11 @@ description: >-
 
 # Welcome to the bitRage wiki \(beta\)
 
-**bitRage is an easy to use, advanced crypto trading bot. You define your trading strategy and watch bitRage do the trading for you. Enabling you to get up to hundreds of profitable trades per day, 24/7.**
 
-For security reasons, bitRage runs on your local computer or your server only. This way your trading API secret stays private, and nobody can influence or monitor your trading.
 
-No need for a subscription, a one time fee gets you lifetime support and software updates.
+## 
 
-> _We aim to build the perfect money machine._
-
-## bitRage is used by thousands of users and has an awesome community ❤️
-
-![](.gitbook/assets/image%20%2817%29.png)
+![](.gitbook/assets/gfx-bitrage.png)
 
 {% page-ref page="setup-and-general-settings/installation/" %}
 

@@ -8,7 +8,7 @@ This is not an exhaustive overview of all available settings, just a quick overv
 
 ## Config file system
 
-All bitRage settings are defined in a single file named `config.json`. This is where you set up your exchange API keys, add pairs and define your strategies.
+All bitRage settings are defined in a single file named `config.json`. This is where you set up your exchange API keys, add pairs and define strategy settings.
 
 You can refer to the included `config-js-example.txt` file for an example of a config file with properly defined pairs and all needed parameters for adding each exchange. Throughout this wiki you'll find detailed descriptions for every parameter available in the config file.
 
@@ -18,9 +18,7 @@ Make sure that no parameters are removed when setting it up. Make sure the JSON-
 
 The only actions that require using the GUI are:
 
-* Updating master keys
-* Updating the GUNTHY wallet address
-* Transferring the software license to a third party
+* tbd
 
 ## Disabling the GUI
 
@@ -33,7 +31,9 @@ To disable the GUI completely, make the following change in the GUI section of `
 
 ## Connecting exchanges
 
-To connect an exchange, add the relevant settings to the exchange section of `config.json`.
+To connect an exchange, add the relevant settings to the exchange section of `config.json`. 
+
+Gunbot and bitRage share the same license system, you must use masterkeys that are already registered to be used with Gunbot.
 
 It looks like this:
 
@@ -52,46 +52,50 @@ Note that you can use a different API key for trading than the registered key. I
 
 ## Strategies
 
-A strategy is defined by giving it a unique name and adding it to the `strategies` section of the config file. This strategy can then be assigned to one or more trading pairs.
+A strategy is defined in the `strategies` section of the config file. This strategy can then be assigned to one or more trading pairs.
+
+**TBD: check if strats can be renamed**
 
 It looks like this:
 
 ```text
-"custom-strategy": {
-            "BUY_METHOD": "tssl",
-            "BUY_ENABLED": true,
-            "SELL_METHOD": "tssl",
-            "SELL_ENABLED": true,
-            "BUY_LEVEL": 1,
-            "GAIN": 0.5,
-
-(many lines cut out to keep this page clean)
-
-            "SL_DISABLE_BUY": false,
-            "COUNT_SELL": 9999,
-            "TRADES_TIMEOUT": 0
-        },
+"bitrage": {
+            "BTC": 0.1,
+            "USDT": 200,
+            "USD": 200,
+            "EUR": 200,
+            "NZDT": 200,
+            "LTC": 1,
+            "ETH": 1,
+            "XMR": 1,
+            "DOGE": 50000,
+            "BNB": 1,
+            "GBP": 50,
+            "ARBITRAGE_GAIN": 1,
+            "TRADING_FEES": 0.75,
+            "PANIC_SELL": false,
+            "CHECK_SECOND": false,
+            "CHECK_THIRD": false,
+            "RAGE_HAMMER": true,
+            "NO_BAGS": false,
+            "COMPOUND": true,
+            "BNB_FEES": false
+        }
 ```
 
 ## Defining pairs and overrides
 
-In the `pairs` section of the config file you can add one or more pairs inside a block specifying the exchange the pairs will run on.
+In the `pairs` section of the config file you can add one or more pairs inside a block specifying the exchange the pairs will run on. 
 
-Each pair must be assigned an existing strategy, it must be specified if the pair is enabled or not.
+When no pairs are specified for an exchange, bitRage will run in autoscan mode on this exchange.
+
+Each pair must be assigned an existing strategy.
 
 ```text
-"Binance": {
-            "BTC-LTC": {
-                "strategy": "SMACROSS",
-                "enabled": true,
-                "override": {
-                    "TRADING_LIMIT": 1000
-                }
-            }
-        },
+todo
 ```
 
 The override section allows for pair specific modifications to the assigned strategy. Any strategy parameter can be used as an override.
 
-In the example above the pair will run the SMACROSS strategy, with a `TRADING_LIMIT` different from what is defined in the strategy itself.
+In the example above the pair will run the `bitrage` strategy, with a `BTC` allocation different than  defined in the strategy itself.
 

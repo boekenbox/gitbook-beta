@@ -1,28 +1,4 @@
 # How to purchase bitRage
 
-bitRage is sold through a number of approved resellers, who have their own support channels to make sure you are helped when you have questions about using the software.
-
-**The list of approved resellers on this page is continuously kept up to date.**
-
-## Resellers
-
-### Master dealers
-
-| **Forum** | **Telegram** | **Links** | **Languages** |
-| :--- | :--- | :--- | :--- |
-| [Aitor](https://gunthy.org/forum/index.php?action=profile;u=1494) | [@AitorRuiz](https://telegram.me/AitorRuiz) | [bitRage.shop](https://bitRage.shop/) / [bitRages.com](https://www.bitRages.com/) / [bitRage.es](https://bitRage.es/) | Español, English, Portuguese, Vietnamese |
-| [Bitcoin DatabaseNL](https://gunthy.org/forum/index.php?action=profile;u=5263) | [@bitRageNL \_support](https://telegram.me/bitRageNL_support) | [bitRage.app \(EN\)](https://bitRage.app/) / [bitRage.nl \(NL\)](https://bitRage.nl) / [Telegram group \(NL\)](https://t.me/bitRageNL_support) / [Telegram group \(EN\)](https://t.me/bitRageappsupport) | Dutch \(Nederlands\), English, German |
-| [coinrebels](https://gunthy.org/forum/index.php?action=profile;u=4535) | [@coinrebels](https://telegram.me/coinrebels) | [bitRage.com](http://www.bitRage.com/) | English |
-| [Cryptodaily trading](https://gunthy.org/forum/index.php?action=profile;u=5369) / [Fresh Money](https://gunthy.org/forum/index.php?action=profile;u=1814) / [dobcrypto](https://gunthy.org/forum/index.php?action=profile;u=5) | [@Cryptodaily tradingofficial](http://www.cryptodailytrading.com/) / [@dobcrypto](https://telegram.me/dobcrypto) | [cryptodailytrading.com](http://www.cryptodailytrading.com/) / [bitRage.vip](https://bitRage.vip/) / [Telegram group](https://t.me/joinchat/FnlTuQ4EbyEo9f2ZFrjK1w) / [Russian Telegram group](https://t.me/bitRage_ru) | French, English, Dutch, Russian |
-| [cw](https://gunthy.org/forum/index.php?action=profile;u=171) / [x-online](https://gunthy.org/forum/index.php?action=profile;u=1757) | [@Cryptowally](https://telegram.me/Cryptowally) / [@PoyTB](https://telegram.me/PoyTB) | [bitRageuniversity.com](https://bitRageuniversity.com/) / [buybitRage.com](https://buybitRage.com/) | English, Thai, Urdu |
-| [GrumpyKitty](https://gunthy.org/forum/index.php?action=profile;u=60) | [@GrumpyKitty](https://telegram.me/GrumpyKitty) | [bitRage.eu](http://bitRage.eu/) / [bitRage.uk](http://bitRage.uk/) / [cryptodienst.nl](https://cryptodienst.nl/) | English, German, Dutch, Spanish |
-| [leeview](https://gunthy.org/forum/index.php?action=profile;u=70) | [@leeview](https://telegram.me/leeview) | [Thread](https://gunthy.org/forum/index.php/topic,656.0.html) / [TheCryptoBot.com](https://thecryptobot.com/) / [bitRage.cc](https://bitRage.cc/) | English |
-| [boekenbox](https://gunthy.org/forum/index.php?action=profile;u=259) | [@boekenbox](https://telegram.me/boekenbox) / [@medeeiros](https://telegram.me/medeeiros) | [awesome-bitRage.com](https://www.awesome-bitRage.com/) | English, German, Dutch |
-| [MohammadElgizawy](https://telegram.me/MohammadElgizawy) | [@MohammadElgizawy](https://telegram.me/MohammadElgizawy) | [bitRage Academy](http://bitRageacademy.com) | English, Arab |
-
-### Affiliates
-
-| **Forum** | **Telegram** | **Links** | **Languages** |
-| :--- | :--- | :--- | :--- |
-| bitRage Affilliates | [@Crwth](https://telegram.me/crwth) / [Crwth](https://gunthy.org/forum/index.php?action=profile;u=1195) / [crwth](https://bitcointalk.org/index.php?action=profile;u=914465) / [@KryptoGB](https://telegram.me/KryptoGB) / [@Soyab007](https://telegram.me/Soyab007) / [@TruthBlitz](https://telegram.me/TruthBlitz) / [@NarKotix](https://telegram.me/NarKotix) / [@cryptosticks](https://telegram.me/cryptosticks) / [@Captain Corporate](https://telegram.me/CaptainCorporate) / [@okkies](https://telegram.me/okkies) / [@GuyTheGuy](https://telegram.me/GuyTheGuy) / [@VCMen](https://telegram.me/VCMen) / [@fuathanOfficial bitRageSeller](https://github.com/GuntharDeNiro/BTCT/wiki/fuathanOfficialbitRageSeller) / [@AlexChu85](https://telegram.me/AlexChu85) / [@exquitas](https://telegram.me/exquitas) / [@Sword\_Fish](https://telegram.me/Sword_Fish) / [@ThiagoAnnibal](https://telegram.me/ThiagoAnnibal) / [@bestnaf](https://telegram.me/bestnaf) / [@manhdn](https://telegram.me/manhdn) / [@spiftheninja](https://telegram.me/spiftheninja) / [@altGear](https://telegram.me/altGear) / [@TeddyScoops](https://telegram.me/TeddyScoops) / [@AutoCoinBot](https://telegram.me/AutoCoinBot) / [@AndreaPomposelli](https://telegram.me/AndreaPomposelli) / [@ColorizeLiveSupport](https://telegram.me/ColorizeLiveSupport) / [@Gaato77](https://telegram.me/Gaato77) / [@NickAlbernas](https://telegram.me/NickAlbernas) / [@Civil\_Finance](https://telegram.me/Civil_Finance) / [@MafiaHackAttack](https://telegram.me/MafiaHackAttack) / [@eKyNoX](https://telegram.me/eKyNoX) / [@Criptonauta](https://telegram.me/Criptonauta) / [@Nova\_tec](https://telegram.me/Nova_tec) | [bitRage Ph](https://bitRage.ph) / [bitRage Originals Discord](https://discord.gg/ue8eCyD) / [bitcoinbitRage.com](https://bitcoinbitRage.com/) / [bitRagereseller.com](http://www.bitRagereseller.com/) / [Telegram group](https://t.me/bitRageresellers) / [gunthy.io](https://gunthy.io/) / [bitRage.info](http://bitRage.info/) / [Bitcoin Ninjas](https://bitcoinninjas.org) / [CW bitRage Shop](http://cwbitRage.shop) / [AutoCoinBot](https://autocoinbot.com) / [Colorize Club](http://colorize.club) / [bitRage Prime](https://bitRageprime.com) / [noxen.net](http://noxen.net/) / [bitRage.com.br](https://bitRage.com.br/) / [bitRage-store.com](https://bitRage-store.com/) | English, Russian, Portuguese, Italiano, Spanish, French, German, Luxembourgish, Turkish, Dutch, Vietnamese, Filipino, Arab |
+tbd
 
