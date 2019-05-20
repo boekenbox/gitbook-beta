@@ -4,19 +4,9 @@ A strategy in bitRage is a collection of settings that can be assigned to one or
 
 On **Settings &gt; Strategies &gt; Strategy Configurator** you can view and modify strategy presets, or create your own custom strategies.
 
-## Create a new strategy
 
-![](../../.gitbook/assets/image%20%2823%29.png)
 
-Set a nickname for your strategy \(this can be anything you want\), and select the main methods for buying and selling. Hit the **Create** button to save the new strategy.
-
-You can create an unlimited number of strategies.
-
-## Modify an existing strategy
-
-Click on a strategy nickname to edit its settings.
-
-![](../../.gitbook/assets/image%20%2814%29.png)
+tbd
 
 
 

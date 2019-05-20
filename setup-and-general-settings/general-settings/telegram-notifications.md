@@ -4,7 +4,7 @@ bitRage can send notifications on Telegram for every trade it places.
 
 To set this up, go to **Settings** &gt; **Telegram**.
 
-![Available settings options for Telegram notifications.](../../.gitbook/assets/image%20%2824%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 ## Steps to create a Telegram bot
 
@@ -101,7 +101,7 @@ This must be listed in chat\_id with a - symbol in front, in this case "-12345"
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** string
+**Values:** string or number
 
 **Default value:** 123456789
 {% endtab %}
