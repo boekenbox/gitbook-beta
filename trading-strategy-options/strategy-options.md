@@ -328,7 +328,7 @@ In `safe` mode, bitRage does not aim for immediate order execution. It will plac
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false
+**Values:** string, available options: crazybitch, safe
 
 **Default value:** TODO
 {% endtab %}
@@ -344,7 +344,9 @@ Parameter name in `config.json`: `bitRage_MODE`
 {% tab title="Description" %}
 Sets the minimum expected gain from an arbitrage opportunity, after fees.
 
-When set to 1, bitRage will only enter opportunities that have an expected overall gain of 1%.
+When set to 1, bitRage will only enter opportunities that have an expected overall gain of 1%. 
+
+Note that bitRage does not only check for expected gain before entering an opportunity, it will also check if there is enough expected trading volume.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -405,7 +407,7 @@ This setting allows trading a reverse variant of a defined pair, often an RT opp
 Example for a defined triple like BTC-ETC &gt; ETH-ETC &gt; BTC-ETH:
 
 * In normal mode, bitRage will buy ETC with BTC in stage 1, sell ETC for ETH in stage 2, then sell ETH for BTC in stage 3.
-* In RT mode, bitRage first buy ETH with BTC, then buy ETC with ETH and finally sells ETC for BTC.
+* In RT mode, bitRage first buys ETH with BTC, then buys ETC with ETH and finally sells ETC for BTC.
 {% endtab %}
 
 {% tab title="Values" %}

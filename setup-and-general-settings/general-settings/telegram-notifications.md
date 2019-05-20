@@ -4,7 +4,7 @@ bitRage can send notifications on Telegram for every trade it places.
 
 To set this up, go to **Settings** &gt; **Telegram**.
 
-![](../../.gitbook/assets/image%20%288%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 ## Steps to create a Telegram bot
 
