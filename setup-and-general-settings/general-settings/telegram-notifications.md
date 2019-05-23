@@ -111,61 +111,95 @@ Parameter name in `config.json`: `chat_id`
 {% endtab %}
 {% endtabs %}
 
-### TG PL Only
+### Opportunity Found Notification
 
 {% tabs %}
 {% tab title="Description" %}
-When enabled notifications will be only sent for strategy sell orders.
+When enabled, sends a notification for every opportunity found.
 {% endtab %}
 
 {% tab title="Values" %}
 **Values:** true or false
 
-**Default value:** false
+**Default value:** tbd
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.json`: `TG_PL_ONLY`
+Parameter name in `config.json`: `opp_found`
 {% endtab %}
 {% endtabs %}
 
-### Telegram Order Timeout
+### First Trade Notification
 
 {% tabs %}
 {% tab title="Description" %}
-When set above 0, you'll receive a Telegram dialog to manually allow or deny every order bitRage wants to place.
-
-During the set amount of seconds you can choose to allow the order \(and it will immediately be placed\) or deny it. After the timeout passes without reply, the order will be placed at the exchange.
-{% endtab %}
-
-{% tab title="Values" %}
-**Values:** numerical, represent time in seconds.
-
-**Default value:** 0
-{% endtab %}
-
-{% tab title="Name" %}
-Parameter name in `config.json`: `TG_PL_ONLY`
-{% endtab %}
-{% endtabs %}
-
-### TG Test
-
-{% tabs %}
-{% tab title="Description" %}
-Enable this to test if your Telegram bot is working.
-
-A test message will be sent on the first round for each pair. Disable after verifying your bot works.
+When enabled, sends a notification for every stage 1 order that gets placed.
 {% endtab %}
 
 {% tab title="Values" %}
 **Values:** true or false
 
-**Default value:** false
+**Default value:** tbd
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.json`: `TG_TEST`
+Parameter name in `config.json`: `first_trade`
 {% endtab %}
 {% endtabs %}
+
+### Second Trade Notification
+
+{% tabs %}
+{% tab title="Description" %}
+When enabled, sends a notification for every stage 2 order that gets placed.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** tbd
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `second_trade`
+{% endtab %}
+{% endtabs %}
+
+### Third Trade Notification
+
+{% tabs %}
+{% tab title="Description" %}
+When enabled, sends a notification for every stage 3 order that gets placed.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** tbd
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `third_trade`
+{% endtab %}
+{% endtabs %}
+
+### Sellback Trade Notification
+
+{% tabs %}
+{% tab title="Description" %}
+When enabled, sends a notification for every sellback trade that gets placed.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** tbd
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `sb_trade`
+{% endtab %}
+{% endtabs %}
+
+### 
 
