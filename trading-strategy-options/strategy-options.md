@@ -6,6 +6,162 @@ These settings are global and apply to all pairs running this strategy. When you
 
 
 
+## Trading options
+
+You can use a few different modes and options for executing trades, these are described below.
+
+### bitRage Mode
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the mode for executing arbitrage opportunities.
+
+In `crazybitch` mode, bitRage will execute trades for all three stages as fast as possible, for market rates. Optionally you can use an extra check if the third stage is still profitable before the final order is placed, this check is called `CB_CHECK`.
+
+In `safe` mode, bitRage does not aim for immediate order execution. It will place subsequent limit orders for all three stages, each at profitable rates. When needed, these orders will be continuously cancelled and placed at rates that have a higher chance of execution.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** string, available options: crazybitch, safe
+
+**Default value:** TODO
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `bitRage_MODE`
+{% endtab %}
+{% endtabs %}
+
+### Arbitrage Gain
+
+{% tabs %}
+{% tab title="Description" %}
+Sets the minimum expected gain from an arbitrage opportunity, after fees.
+
+When set to 1, bitRage will only enter opportunities that have an expected overall gain of 1%. 
+
+Note that bitRage does not only check for expected gain before entering an opportunity, it will also check if there is enough expected trading volume.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** number, represents a percentage
+
+**Default value:** TODO
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `ARBITRAGE_GAIN`
+{% endtab %}
+{% endtabs %}
+
+### CB Check
+
+{% tabs %}
+{% tab title="Description" %}
+Enables an additional check for stage three trades when using the `crazybitch` mode. 
+
+The third trade only gets fired when the expected market price is still profitable after having executed the first two trades. If not, bitRage will wait with this order until a profitable rate is available.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** number, represents a percentage
+
+**Default value:** TODO
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `ARBITRAGE_GAIN`
+{% endtab %}
+{% endtabs %}
+
+### Take Profit
+
+{% tabs %}
+{% tab title="Description" %}
+When enabled, bitRage will attempt to take any opportunity with an expected gain covering more than just the trading fees. This overrules `ARBITRAGE_GAIN`.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** number, represents a percentage
+
+**Default value:** TODO
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `ARBITRAGE_GAIN`
+{% endtab %}
+{% endtabs %}
+
+### RT Enabled
+
+{% tabs %}
+{% tab title="Description" %}
+This setting allows trading a reverse variant of a defined pair, often an RT opportunity will happen when no regular opportunity exists.
+
+Example for a defined triple like BTC-ETC &gt; ETH-ETC &gt; BTC-ETH:
+
+* In normal mode, bitRage will buy ETC with BTC in stage 1, sell ETC for ETH in stage 2, then sell ETH for BTC in stage 3.
+* In RT mode, bitRage first buys ETH with BTC, then buys ETC with ETH and finally sells ETC for BTC.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** TODO
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `RT_ENABLED`
+{% endtab %}
+{% endtabs %}
+
+### Rage Hammer
+
+{% tabs %}
+{% tab title="Description" %}
+With this setting, after executing all three trades for an arbitrage opportunity, bitRage will check if there is still an opportunity on the same triplet. It will then immediately proceed trading on this triple until the opportunity is exhausted.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** TODO
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `RAGE_HAMMER`
+{% endtab %}
+{% endtabs %}
+
+### Quad
+
+{% tabs %}
+{% tab title="Description" %}
+This setting puts bitRage in quadruple arbitration mode, trading two base and two quote currencies to aim for an increase of the first traded base after the fourth trade.
+
+Example for BTC-MANA-ETH-POLY:
+
+| Stage | Trade |
+| :--- | :--- |
+| Stage 1 | Buy BTC-MANA |
+| Stage 2 | Sell ETH-MANA |
+| Stage 3 | Buy ETH-POLY |
+| Stage 4 | Sell BTC-POLY |
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `QUAD`
+{% endtab %}
+{% endtabs %}
+
+### 
+
 ## Balance settings
 
 Available balances for trades are defined per base currency. Only set values for the base currencies you will trade, leave the rest set to 0 to disable them.
@@ -311,164 +467,6 @@ Parameter name in `config.json`: `PANIC_BASE`
 {% endtabs %}
 
 ### 
-
-## Trading options
-
-You can use a few different modes and options for executing trades.
-
-### bitRage Mode
-
-{% tabs %}
-{% tab title="Description" %}
-This sets the mode for executing arbitrage opportunities.
-
-In `crazybitch` mode, bitRage will execute trades for all three stages as fast as possible, for market rates. Optionally you can use an extra check if the third stage is still profitable before the final order is placed, this check is called `CB_CHECK`.
-
-In `safe` mode, bitRage does not aim for immediate order execution. It will place subsequent limit orders for all three stages, each at profitable rates. When needed, these orders will be continuously cancelled and placed at rates that have a higher chance of execution.
-{% endtab %}
-
-{% tab title="Values" %}
-**Values:** string, available options: crazybitch, safe
-
-**Default value:** TODO
-{% endtab %}
-
-{% tab title="Name" %}
-Parameter name in `config.json`: `bitRage_MODE`
-{% endtab %}
-{% endtabs %}
-
-### Arbitrage Gain
-
-{% tabs %}
-{% tab title="Description" %}
-Sets the minimum expected gain from an arbitrage opportunity, after fees.
-
-When set to 1, bitRage will only enter opportunities that have an expected overall gain of 1%. 
-
-Note that bitRage does not only check for expected gain before entering an opportunity, it will also check if there is enough expected trading volume.
-{% endtab %}
-
-{% tab title="Values" %}
-**Values:** number, represents a percentage
-
-**Default value:** TODO
-{% endtab %}
-
-{% tab title="Name" %}
-Parameter name in `config.json`: `ARBITRAGE_GAIN`
-{% endtab %}
-{% endtabs %}
-
-### CB Check
-
-{% tabs %}
-{% tab title="Description" %}
-Enables an additional check for stage three trades when using the `crazybitch` mode. 
-
-The third trade only gets fired when the expected market price is still profitable after having executed the first two trades. If not, bitRage will wait with this order until a profitable rate is available.
-{% endtab %}
-
-{% tab title="Values" %}
-**Values:** number, represents a percentage
-
-**Default value:** TODO
-{% endtab %}
-
-{% tab title="Name" %}
-Parameter name in `config.json`: `ARBITRAGE_GAIN`
-{% endtab %}
-{% endtabs %}
-
-### Take Profit
-
-{% tabs %}
-{% tab title="Description" %}
-When enabled, bitRage will attempt to take any opportunity with an expected gain covering more than just the trading fees. This overrules `ARBITRAGE_GAIN`.
-{% endtab %}
-
-{% tab title="Values" %}
-**Values:** number, represents a percentage
-
-**Default value:** TODO
-{% endtab %}
-
-{% tab title="Name" %}
-Parameter name in `config.json`: `ARBITRAGE_GAIN`
-{% endtab %}
-{% endtabs %}
-
-### RT Enabled
-
-{% tabs %}
-{% tab title="Description" %}
-This setting allows trading a reverse variant of a defined pair, often an RT opportunity will happen when no regular opportunity exists.
-
-Example for a defined triple like BTC-ETC &gt; ETH-ETC &gt; BTC-ETH:
-
-* In normal mode, bitRage will buy ETC with BTC in stage 1, sell ETC for ETH in stage 2, then sell ETH for BTC in stage 3.
-* In RT mode, bitRage first buys ETH with BTC, then buys ETC with ETH and finally sells ETC for BTC.
-{% endtab %}
-
-{% tab title="Values" %}
-**Values:** true or false
-
-**Default value:** TODO
-{% endtab %}
-
-{% tab title="Name" %}
-Parameter name in `config.json`: `RT_ENABLED`
-{% endtab %}
-{% endtabs %}
-
-### Rage Hammer
-
-{% tabs %}
-{% tab title="Description" %}
-With this setting, after executing all three trades for an arbitrage opportunity, bitRage will check if there is still an opportunity on the same triplet. It will then immediately proceed trading on this triple until the opportunity is exhausted.
-{% endtab %}
-
-{% tab title="Values" %}
-**Values:** true or false
-
-**Default value:** TODO
-{% endtab %}
-
-{% tab title="Name" %}
-Parameter name in `config.json`: `RAGE_HAMMER`
-{% endtab %}
-{% endtabs %}
-
-### Quad
-
-{% tabs %}
-{% tab title="Description" %}
-This setting puts bitRage in quadruple arbitration mode, trading two base and two quote currencies to aim for an increase of the first traded base after the fourth trade.
-
-Example for BTC-MANA-ETH-POLY:
-
-| Stage | Trade |
-| :--- | :--- |
-| Stage 1 | Buy BTC-MANA |
-| Stage 2 | Sell ETH-MANA |
-| Stage 3 | Buy ETH-POLY |
-| Stage 4 | Sell BTC-POLY |
-{% endtab %}
-
-{% tab title="Values" %}
-**Values:** true or false
-
-**Default value:** false
-{% endtab %}
-
-{% tab title="Name" %}
-Parameter name in `config.json`: `QUAD`
-{% endtab %}
-{% endtabs %}
-
-### 
-
-
 
 
 

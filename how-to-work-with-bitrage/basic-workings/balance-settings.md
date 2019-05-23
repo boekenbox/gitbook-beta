@@ -20,5 +20,9 @@ Always make sure to set it at the appropriate fees level for your exchange accou
 
 
 
+Delay
+
+
+
 
 
