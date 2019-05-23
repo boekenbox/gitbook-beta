@@ -12,6 +12,8 @@ The basic principle of bitRage is to profit from a price imbalance of a quote cu
 
 Note that bitRage often won't fire all three trades immediately. In safe mode it will actually play with the order book to make the opportunity happen.
 
+In safe mode it can happen that before stage2 is executed, it's profitable to sell back the quote bought in the first trade. In that case bitRage chooses to place a sellback order instead of proceeding with arbitraging, this mechanism prevents bags.
+
 ## Changing settings on a running trading pair
 
 todo

@@ -8,9 +8,13 @@ Exchanges often have different limits for different base currencies. When you bu
   
 Setting the base limit too low can lead to an opportunity getting stuck on one of the stages involved.
 
+
+
 ## Min volume to sell
 
 Always make sure to set `MVTS` to at least the exchange defined minimum trade size of the base currency of your pairs. This way owning smaller balances than that will be disregarded.
+
+
 
 ## Trading Fees
 
@@ -20,7 +24,7 @@ Always make sure to set it at the appropriate fees level for your exchange accou
 
 
 
-Delay
+## Delay
 
 
 
