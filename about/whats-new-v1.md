@@ -2,7 +2,7 @@
 description: Placeholder article for future updates.
 ---
 
-# What's new in vX?
+# What's new?
 
 ## 
 

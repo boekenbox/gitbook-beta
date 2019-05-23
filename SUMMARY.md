@@ -4,7 +4,7 @@
 
 ## About
 
-* [What's new in vX?](about/whats-new-v1.md)
+* [What's new?](about/whats-new-v1.md)
 * [How to purchase bitRage](about/purchase-bitrage.md)
 * [Supported exchanges](about/supported-exchanges.md)
 * [System requirements](about/system-requirements.md)
