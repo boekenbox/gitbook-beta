@@ -50,7 +50,7 @@ Enter your exchange key\(s\) on **Settings &gt; Trading &gt; Exchanges**.
 
 In Gunbot, use your registered API key as master key. Optionally you can use a secondary API key for trading, this key needs to exist in the same exchange account as the registered API.
 
-![](../../../.gitbook/assets/image%20%2818%29.png)
+![](../../../.gitbook/assets/image%20%2819%29.png)
 
 \*\*\*\*
 
