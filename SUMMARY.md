@@ -21,13 +21,11 @@
   * [Running multiple instances](setup-and-general-settings/installation/running-multiple-instances.md)
   * [Headless mode](setup-and-general-settings/installation/headless-mode.md)
 * [General settings](setup-and-general-settings/general-settings/README.md)
+  * [Bot settings](setup-and-general-settings/general-settings/bot-settings.md)
   * [Authentication](setup-and-general-settings/general-settings/authentication.md)
-  * [Exchange settings](setup-and-general-settings/general-settings/exchange-and-license-settings.md)
   * [Telegram notifications](setup-and-general-settings/general-settings/telegram-notifications.md)
-  * [Other global settings](setup-and-general-settings/general-settings/other-global-settings/README.md)
-    * [Bot settings](setup-and-general-settings/general-settings/other-global-settings/bot-settings.md)
-    * [GUI settings](setup-and-general-settings/general-settings/other-global-settings/gui-settings.md)
-    * [Websockets](setup-and-general-settings/general-settings/other-global-settings/websockets.md)
+  * [Websockets](setup-and-general-settings/general-settings/websockets.md)
+  * [Exchange settings](setup-and-general-settings/general-settings/exchange-and-license-settings.md)
 
 ## How to work with bitRage
 

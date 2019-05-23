@@ -52,9 +52,9 @@ Note that you can use a different API key for trading than the registered key. I
 
 ## Strategies
 
-A strategy is defined in the `strategies` section of the config file. This strategy can then be assigned to one or more trading pairs.
+A strategy is defined in the `strategies` section of the config file. This strategy can then be assigned to one or more trading pairs. 
 
-**tbd**
+For now, there is only one strategy called "bitrage", you can't copy/rename it to run variants.
 
 It looks like this:
 
