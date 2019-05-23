@@ -4,7 +4,7 @@ A strategy in bitRage is a collection of settings that can be assigned to one or
 
 On **Settings &gt; Strategies &gt; Strategy Configurator** you can modify the strategy settings.
 
-![](../../.gitbook/assets/image%20%2816%29.png)
+![](../../.gitbook/assets/image%20%2817%29.png)
 
 
 
