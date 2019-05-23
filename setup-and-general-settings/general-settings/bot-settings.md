@@ -30,6 +30,44 @@ Parameter name in `config.json`: `WATCH_MODE`
 {% endtab %}
 {% endtabs %}
 
+### HUD
+
+{% tabs %}
+{% tab title="Description" %}
+When set to true, logs only show a list with summarized data per pair.   
+  
+The number of lines is configurable with `HUD_COUNT`.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `HUD`
+{% endtab %}
+{% endtabs %}
+
+### HUD Count
+
+{% tabs %}
+{% tab title="Description" %}
+Sets the maximum number of lines to shown when `HUD` is enabled.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `HUD_COUNT`
+{% endtab %}
+{% endtabs %}
+
 ### Debug
 
 {% tabs %}
