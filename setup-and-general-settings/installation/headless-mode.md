@@ -10,7 +10,7 @@ This is not an exhaustive overview of all available settings, just a quick overv
 
 All bitRage settings are defined in a single file named `config.json`. This is where you set up your exchange API keys, add pairs and define strategy settings.
 
-You can refer to the included `config-js-example.txt` file for an example of a config file with properly defined pairs and all needed parameters for adding each exchange. Throughout this wiki you'll find detailed descriptions for every parameter available in the config file.
+You can refer to the included `config-json-example.txt` file for an example of a config file with properly defined pairs and all needed parameters for adding each exchange. Throughout this wiki you'll find detailed descriptions for every parameter available in the config file.
 
 When the config file is overwritten while bitRage is running, the changed settings will be loaded automatically.
 
@@ -54,7 +54,7 @@ Note that you can use a different API key for trading than the registered key. I
 
 A strategy is defined in the `strategies` section of the config file. This strategy can then be assigned to one or more trading pairs.
 
-**TBD: check if strats can be renamed**
+**tbd**
 
 It looks like this:
 
@@ -87,7 +87,7 @@ It looks like this:
 
 In the `pairs` section of the config file you can add one or more pairs inside a block specifying the exchange the pairs will run on. 
 
-When no pairs are specified for an exchange, bitRage will run in autoscan mode on this exchange.
+When no pairs are specified for an exchange, bitRage will run in autoscan mode on this exchange, trading every possible pair for which you have set a base balance higher than 0.
 
 Each pair must be assigned an existing strategy.
 

@@ -439,7 +439,38 @@ Parameter name in `config.json`: `RAGE_HAMMER`
 {% endtab %}
 {% endtabs %}
 
+### Quad
+
+{% tabs %}
+{% tab title="Description" %}
+This setting puts bitRage in quadruple arbitration mode, trading two base and two quote currencies to aim for an increase of the first traded base after the fourth trade.
+
+Example for BTC-MANA-ETH-POLY:
+
+| Stage | Trade |
+| :--- | :--- |
+| Stage 1 | Buy BTC-MANA |
+| Stage 2 | Sell ETH-MANA |
+| Stage 3 | Buy ETH-POLY |
+| Stage 4 | Sell BTC-POLY |
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `QUAD`
+{% endtab %}
+{% endtabs %}
+
 ### 
+
+
+
+
 
 
 
