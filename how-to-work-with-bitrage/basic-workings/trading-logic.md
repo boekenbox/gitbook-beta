@@ -2,9 +2,9 @@
 
 ## What is bitRage about?
 
-The basic principle of bitRage is to profit from price imbalance of a quote currency between multiple base currencies. 
+The basic principle of bitRage is to profit from a price imbalance of a quote currency between two base currencies. 
 
-Basic example:
+**Basic example:**
 
 * If you can buy 100 ADA for 1 BTC,
 * then sell 100 ADA for ETH, then sell ETH for BTC,
