@@ -70,7 +70,7 @@ The third trade only gets fired when the expected market price is still profitab
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.json`: `ARBITRAGE_GAIN`
+Parameter name in `config.json`: `CB_CHECK`
 {% endtab %}
 {% endtabs %}
 
@@ -88,7 +88,7 @@ When enabled, bitRage will attempt to take any opportunity with an expected gain
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.json`: `ARBITRAGE_GAIN`
+Parameter name in `config.json`: `TAKE_PROFIT`
 {% endtab %}
 {% endtabs %}
 
