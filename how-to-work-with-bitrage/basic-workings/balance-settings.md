@@ -20,3 +20,7 @@ Always make sure to set it at the appropriate fees level for your exchange accou
 
 ## Delay
 
+BitRage pulls a very large amount of data from the exchange. Because exchange generally try to restrict API usage, using delay is very important to not run into API rate limits.
+
+You can set separate delays for the time between polling for tickers or pair processing for REST and websockets, as well as a separate delay between executed trades.
+

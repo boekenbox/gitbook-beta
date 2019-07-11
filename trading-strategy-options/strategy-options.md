@@ -18,7 +18,7 @@ This sets the mode for executing arbitrage opportunities.
 
 In `crazybitch` mode, bitRage will execute trades for all three stages as fast as possible, for market rates. Optionally you can use an extra check if the third stage is still profitable before the final order is placed, this check is called `CB_CHECK`.
 
-In `safe` mode, bitRage does not aim for immediate order execution. It will place subsequent limit orders for all three stages, each at profitable rates. When needed, these orders will be continuously cancelled and placed at rates that have a higher chance of execution.
+In `safe` mode, bitRage does not aim for immediate order execution. It will place subsequent limit orders for all three stages, each at profitable rates. When needed, these orders will be continuously cancelled when rates change more than set in `DELETE_ON_SPREAD` , and replaced at rates that have a higher chance of execution.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -133,20 +133,13 @@ Parameter name in `config.json`: `RAGE_HAMMER`
 {% endtab %}
 {% endtabs %}
 
-### Quad
+### Compound Bags
 
 {% tabs %}
 {% tab title="Description" %}
-This setting puts bitRage in quadruple arbitration mode, trading two base and two quote currencies to aim for an increase of the first traded base after the fourth trade.
+When enabled, bitRage will ignore previous balances and sell the complete balance for any coin in stage 3. Be aware that some triples sell BTC \(or other coins most used as primary base\) in stage 3, in that case all BTC would be sold.
 
-Example for BTC-MANA-ETH-POLY:
-
-| Stage | Trade |
-| :--- | :--- |
-| Stage 1 | Buy BTC-MANA |
-| Stage 2 | Sell ETH-MANA |
-| Stage 3 | Buy ETH-POLY |
-| Stage 4 | Sell BTC-POLY |
+In case you prefer bitRage to only work with the amounts obtained in stage 2, disable this option.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -156,11 +149,57 @@ Example for BTC-MANA-ETH-POLY:
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.json`: `QUAD`
+Parameter name in `config.json`: `COMPOUND_BAGS`
 {% endtab %}
 {% endtabs %}
 
-### 
+### Parallel Trades
+
+{% tabs %}
+{% tab title="Description" %}
+Use this setting to ensure the fastest trade execution time for opportunities in `crazybitch` mode.
+
+Make sure to have balances in all involved base currencies when using this. 
+
+{% hint style="info" %}
+This setting is specific to websockets in crazybitch mode.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `PARALLEL_TRADES`
+{% endtab %}
+{% endtabs %}
+
+### Delete on Spread
+
+{% tabs %}
+{% tab title="Description" %}
+Defines the maximum allowed price difference before a stage 1 or stage 2 order gets cancelled in safe mode. 
+
+When set to 0.5, an open order will be cancelled when the best bid/ask price moves away more than 0.5% from the rate of your open order. After the order is cancelled, it will be replaced at current rates, if still profitable to do so.
+
+{% hint style="info" %}
+This setting is specific to safe mode.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical, represents a percentage
+
+**Default value:** 0.5
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.json`: `DELETE_ON_SPREAD`
+{% endtab %}
+{% endtabs %}
 
 ## Balance settings
 
