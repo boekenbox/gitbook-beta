@@ -39,16 +39,28 @@ It looks like this:
 
 ```text
 "binance": {
-            "masterkey": "registered_api_key",
-            "mastersecret": "secret_for_registered_api_key",
-            "key": "trading_api_key",
-            "secret": "secret_for_trading_api_key",
-            "delay": 1,
-            "type": "binance"
-        },
+            "masterkey": "Registered API",
+            "mastersecret": "SECRET",
+            "key": "API",
+            "secret": "SECRET",
+            "key2": "API",
+            "secret2": "SECRET",
+            "delay": 10,
+            "REST_delay": 10,
+            "TRADING_FEES": 0.25,
+            "TRADES_INTERVAL": 10,
+            "filteredPairs": ["BTC","USD","USDT"],
+            "includeCoins": ["BTC","USD","USDT"],
+            "filteredBags": ["BTC","USD","USDT","EUR"],
+            "Volume1st": {"XMR":100},
+            "Volume2nd": {"XMR":100,"MAID":100},
+            "Volume3rd": {"MAID":100}
+        }
 ```
 
 Note that you can use a different API key for trading than the registered key. If you don't use a secondary key, you can just enter the registered key in the `key` parameter.
+
+The `key2` field requires a different API key from `key`, it does not need to be registered on the license server.
 
 ## Strategies
 
@@ -60,26 +72,31 @@ It looks like this:
 
 ```text
 "bitrage": {
-            "BTC": 0.1,
-            "USDT": 200,
-            "USD": 200,
-            "EUR": 200,
-            "NZDT": 200,
-            "LTC": 1,
-            "ETH": 1,
-            "XMR": 1,
-            "DOGE": 50000,
-            "BNB": 1,
-            "GBP": 50,
-            "ARBITRAGE_GAIN": 1,
-            "TRADING_FEES": 0.75,
+            "BTC": 0.002,
+            "USDT": 20,
+            "USDC": 20,
+            "USD": 20,
+            "EUR": 20,
+            "GBP": 20,
+            "NZDT": 0,
+            "LTC": 0,
+            "ETH": 0,
+            "XMR": 0,
+            "DOGE": 0,
+            "ARBITRAGE_GAIN": 0.1,
             "PANIC_SELL": false,
-            "CHECK_SECOND": false,
-            "CHECK_THIRD": false,
-            "RAGE_HAMMER": true,
-            "NO_BAGS": false,
+            "RAGE_HAMMER": false,
             "COMPOUND": true,
-            "BNB_FEES": false
+            "MVTS": 0.00005,
+            "bitRage_MODE": "crazybitch",
+            "RT_ENABLED": true,
+            "PANIC_BASE": "BTC",
+            "CB_CHECK": false,
+            "TAKE_PROFIT": true,
+            "BNB_FEES": true,
+            "DELETE_ON_SPREAD": 0.5,
+            "PARALLEL_TRADES": false,
+            "COMPOUND_BAGS": false
         }
 ```
 
