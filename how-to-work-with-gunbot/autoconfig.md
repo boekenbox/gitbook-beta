@@ -1,6 +1,6 @@
 # AutoConfig
 
-Gunbot AutoConfig is a collection of tools you can use to dynamically manage your config files.   
+Gunbot AutoConfig is a collection of tools you can use to dynamically manage your config files.  
 You can create "jobs" to do something you would normally do by hand, for example scan an exchange for potential pairs to add, and schedule the job in a cron-like format.
 
 Things you can currently do with Autoconfig:
@@ -8,8 +8,6 @@ Things you can currently do with Autoconfig:
 * Scan exchanges and automatically add pairs, for example add pairs with volume &gt; 500 BTC and for which price is rising.
 * Scan exchanges to remove pairs from your config. For example remove pairs without quote balance for which volume has dropped below 100 BTC.
 * Monitor pair state information and automatically set pair overrides. For example set a different DU\_BUYDOWN after the first round of DU happened.
-
-
 
 ## How it works
 
@@ -27,8 +25,6 @@ Schedules are set in a format similar to how cron jobs are set. If you're not us
 
 Exchange names must be set like ccxt lists the id's here: [https://github.com/ccxt/ccxt/wiki/Exchange-Markets](https://github.com/ccxt/ccxt/wiki/Exchange-Markets)
 
-
-
 ## Config examples
 
 ### Adding pairs
@@ -41,16 +37,15 @@ Filter options are described later in this article.
 
 **Pair options:**
 
-  
 **exclude**: excluded pairs \(processed last\). Any pair on the exchange that matches any of the excludes, won't be processed. Excluded items do not need to be whole pair names, as long as part of the string matches an actual pair, it will be excluded. Input as comma separated list, does not accept spaces between items. Can be empty.
 
 **include:** included pairs \(processed first\). Any pair on the exchange that matches any of the includes, will be processed \(after also processing excluded\). Included items do not need to be whole pair names, as long as part of the string matches an actual pair, it will be included. Input as comma separated list, does not accept spaces between items. Can not be empty.
 
-**maxPairs:** maximum number of allowed pairs. In case a filter action would result in more pairs than this setting, the config will be filled up to the max number of allowed pairs. 
+**maxPairs:** maximum number of allowed pairs. In case a filter action would result in more pairs than this setting, the config will be filled up to the max number of allowed pairs.
 
 #### Other options:
 
-**type:** must be set to `addPairs` 
+**type:** must be set to `addPairs`
 
 **snapshots:** defines how many ticker snapshots are saved to perform calculations on. Relevant for filtertypes that include `Interval` in their name. For example: snapshots is set to 10, this means that the ticker data for the last 10 times the job runs are saved and some of the values in it are used for calculating average values over time. For now, snapshot data gets cleared when Gunbot restarts.3
 
@@ -122,8 +117,6 @@ Filter options are described later in this article.
   }
 ```
 
-
-
 ### Removing pairs
 
 Below is a config example that would scan Binance and remove pairs from your config when they meet the filter criteria. Only the pairs that Gunbot already cycled in it's current session can be filtered.
@@ -140,7 +133,7 @@ Filter options are described later in this article.
 
 #### Other options:
 
-**type:** must be set to `removePairs` 
+**type:** must be set to `removePairs`
 
 **snapshots:** defines how many ticker snapshots are saved to perform calculations on. Relevant for filtertypes that include `Interval` in their name. For example: snapshots is set to 10, this means that the ticker data for the last 10 times the job runs are saved and some of the values in it are used for calculating average values over time. For now, snapshot data gets cleared when Gunbot restarts.
 
@@ -165,8 +158,6 @@ Filter options are described later in this article.
 }
 ```
 
-
-
 ### Managing overrides
 
 Filter options are described later in this article.
@@ -179,78 +170,76 @@ Filter options are described later in this article.
 
 **clearOverrides** \(true/false\): when set to true, all existing overrides for a pair are removed before placing the new ones.
 
+**exchange**: must be set to the same value as gunbot calls refers to them in the pairs section.
+
 **type**: must be set to `manageOverrides`
-
-
 
 ```text
 {
-	"DynamicDU1": {
-		"pairs": {
-			"exclude": "DOGE,ETH",
-			"include": "USDT,BNB",
-			"exchange": "binance"
-		},
-		"filters": {
-			"ducount": {
-				"type": "exact",
-				"ducount": 1
-			}
-		},
-		"overrides": {
-			"DU_BUYDOWN": 3
-		},
-		"clearOverrides": false,
-		"schedule": "*/10 * * * *"
+    "DynamicDU1": {
+        "pairs": {
+            "exclude": "DOGE,ETH",
+            "include": "USDT,BNB",
+            "exchange": "binance"
+        },
+        "filters": {
+            "ducount": {
+                "type": "exact",
+                "ducount": 1
+            }
+        },
+        "overrides": {
+            "DU_BUYDOWN": 3
+        },
+        "clearOverrides": false,
+        "schedule": "*/10 * * * *"
   },
   "DynamicDU2": {
-		"pairs": {
-			"exclude": "DOGE,ETH",
-			"include": "USDT,BNB",
-			"exchange": "binance"
-		},
-		"filters": {
-			"ducount": {
-				"type": "exact",
-				"ducount": 2
-			}
-		},
-		"overrides": {
+        "pairs": {
+            "exclude": "DOGE,ETH",
+            "include": "USDT,BNB",
+            "exchange": "binance"
+        },
+        "filters": {
+            "ducount": {
+                "type": "exact",
+                "ducount": 2
+            }
+        },
+        "overrides": {
       "DU_BUYDOWN": 8,
       "GAIN": 1
-		},
-		"clearOverrides": false,
-		"schedule": "1 * * * *"
+        },
+        "clearOverrides": false,
+        "schedule": "1 * * * *"
   },
   "MMshort": {
-		"pairs": {
-			"exclude": "",
-			"include": "XBT-USD",
-			"exchange": "bitmex"
-		},
-		"filters": {
-			"side": {
-				"type": "exact",
-				"state": "SHORT"
-			},
-			"liquidationDistance": {
-				"type": "differenceSmaller",
-				"liquidationPrice": 1,
-				"avgEntryPrice": 1,
-				"delta": 90
-			}
-		},
-		"overrides": {
-			"MAX_SELL": 0
-		},
-		"clearOverrides": true,
-		"type": "manageOverrides",
-		"schedule": "* * * * *"
-	}
+        "pairs": {
+            "exclude": "",
+            "include": "XBT-USD",
+            "exchange": "bitmex"
+        },
+        "filters": {
+            "side": {
+                "type": "exact",
+                "state": "SHORT"
+            },
+            "liquidationDistance": {
+                "type": "differenceSmaller",
+                "liquidationPrice": 1,
+                "avgEntryPrice": 1,
+                "delta": 90
+            }
+        },
+        "overrides": {
+            "MAX_SELL": 0
+        },
+        "clearOverrides": true,
+        "type": "manageOverrides",
+        "schedule": "* * * * *"
+    }
 }
 ```
-
-
 
 ## Filter options
 
@@ -275,13 +264,9 @@ Filter for price use ask when adding pairs and bid when filtering for removal.
 
 ![Available data at supported exchanges. Other ccxt exchanges might work as well.](../.gitbook/assets/image%20%2810%29.png)
 
-
-
 ### Managing overrides
 
 ![](../.gitbook/assets/image%20%2836%29.png)
-
-
 
 ## Various
 
