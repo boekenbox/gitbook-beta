@@ -65,7 +65,7 @@ Pairs on Bitmex use almost the same symbols as on Bitmex itself, but with a hyph
 
 Overrides are pair specific settings, overruling the assigned strategy. Every strategy parameter can be used as an override.
 
-![](../../.gitbook/assets/image%20%2833%29.png)
+![](../../.gitbook/assets/image%20%2835%29.png)
 
 You can use this, for example, to set a different `TRADING_LIMIT` for a specific pair.
 

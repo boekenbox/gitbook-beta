@@ -46,6 +46,7 @@
   * [Strategy configurator](how-to-work-with-gunbot/editing-strategies-and-pairs/strategy-configurator.md)
   * [Trading pairs](how-to-work-with-gunbot/editing-strategies-and-pairs/trading-pairs.md)
 * [Monitoring](how-to-work-with-gunbot/monitoring.md)
+* [AutoConfig](how-to-work-with-gunbot/autoconfig.md)
 
 ## Trading strategy options
 
