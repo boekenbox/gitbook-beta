@@ -1,6 +1,6 @@
 # AutoConfig
 
-Gunbot AutoConfig is a collection of filter tools you can use to dynamically manage your config files.   
+Gunbot AutoConfig is a collection of tools you can use to dynamically manage your config files.   
 You can create "jobs" to do something you would normally do by hand, for example scan an exchange for potential pairs to add, and schedule the job in a cron-like format.
 
 Things you can currently do with Autoconfig:
