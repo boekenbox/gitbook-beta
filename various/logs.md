@@ -8,7 +8,7 @@ Log files per trading pair are automatically saved in the /logs folder and autom
 
 The console log output of bitRage is condensed into one grid showing the relevant data for the "pair" that is being processed. 
 
-![](../.gitbook/assets/image%20%2817%29.png)
+![](../.gitbook/assets/image%20%2819%29.png)
 
 ### **Prices, balances and volume**
 
@@ -34,7 +34,7 @@ The various profitability checks show the expected profitability for an opportun
 
 When you run your logs in HUD mode, instead of the usual grid output it will show a continuously updated summary of the status of your set trading pairs.
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 ### \*\*\*\*
 

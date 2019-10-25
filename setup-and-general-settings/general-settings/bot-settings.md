@@ -4,7 +4,7 @@ The bot settings menu lets you change global settings that affect all trading pa
 
 To change them, go to **Settings** &gt; **Bot Settings**.
 
-![](../../.gitbook/assets/image%20%2833%29.png)
+![](../../.gitbook/assets/image%20%2835%29.png)
 
 ## Settings descriptions
 

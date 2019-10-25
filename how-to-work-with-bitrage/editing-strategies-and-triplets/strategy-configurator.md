@@ -4,7 +4,7 @@ A strategy in bitRage is a collection of settings that can be assigned to one or
 
 On **Settings &gt; Strategies &gt; Strategy Configurator** you can modify the [strategy settings](../../trading-strategy-options/strategy-options.md).
 
-![](../../.gitbook/assets/image%20%2820%29.png)
+![](../../.gitbook/assets/image%20%2822%29.png)
 
 
 

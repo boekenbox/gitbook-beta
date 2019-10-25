@@ -14,7 +14,7 @@ Example of a valid triplet: BTC-ETC &gt; ETH-ETC &gt; BTC-ETH
 
 To configure which trading pairs bitRage should trade, go to **Settings &gt; Trading &gt; Trading Pairs**.
 
-![Triplets can be selected from a list.](../../.gitbook/assets/image%20%285%29.png)
+![Triplets can be selected from a list.](../../.gitbook/assets/image%20%287%29.png)
 
 
 
