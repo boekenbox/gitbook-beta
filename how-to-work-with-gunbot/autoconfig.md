@@ -25,7 +25,7 @@ Schedules are set in a format similar to how cron jobs are set. If you're not us
 
 Exchange names must be set like ccxt lists the id's here: [https://github.com/ccxt/ccxt/wiki/Exchange-Markets](https://github.com/ccxt/ccxt/wiki/Exchange-Markets)
 
-## Config examples
+## Job types \(with config examples\)
 
 ### Adding pairs
 
@@ -47,7 +47,7 @@ Filter options are described later in this article.
 
 **type:** must be set to `addPairs`
 
-**snapshots:** defines how many ticker snapshots are saved to perform calculations on. Relevant for filtertypes that include `Interval` in their name. For example: snapshots is set to 10, this means that the ticker data for the last 10 times the job runs are saved and some of the values in it are used for calculating average values over time. For now, snapshot data gets cleared when Gunbot restarts.3
+**snapshots:** defines how many ticker snapshots are saved to perform calculations on. Relevant for filtertypes that include `Interval` in their name. For example: snapshots is set to 10, this means that the ticker data for the last 10 times the job runs are saved and some of the values in it are used for calculating average values over time. For now, snapshot data gets cleared when Gunbot restarts.
 
 **strategy:** this defines the strategy that will be assigned to pairs added by this job.
 
@@ -112,6 +112,7 @@ Filter options are described later in this article.
       },
       "schedule": "* * * * *",
       "type": "addPairs",
+      "strategy": "gain",
       "snapshots": 2
     }
   }
@@ -128,6 +129,8 @@ Filter options are described later in this article.
 **Pair options:**
 
 **exclude**: pairs that should not be scanned for possible removal. Any active pair that matches any of the excludes, won't be processed. Excluded items do not need to be whole pair names, as long as part of the string matches an actual pair, it will be excluded. Input as comma separated list, does not accept spaces between items. Can be empty.
+
+There is no include options for this filter type. Pairs in your config \(that have already cycled\) are basically the list of includes.
 
 **noBag** \(true/false\): when true, only pairs with a balance below mvts are filtered for possible removal. When set to false, all pairs in config are filtered.
 
@@ -157,6 +160,51 @@ Filter options are described later in this article.
   }
 }
 ```
+
+### Change strategy
+
+This job type is basically the same as how removePairs works, but this one changes a pairs strategy instead of removing the pair.
+
+You must have at least one pair set per exchange you use this job type on.
+
+Filter options are described later in this article.
+
+**Pair options not already described for removePairs:**
+
+**bag** \(true/false\): when true, only pairs with a balance above mvts are filtered for possible removal. When set to false, all pairs in config are filtered.
+
+**strategy:** the target strategy to set for pairs matching all filters.
+
+**type:** must be set to `removePairs`
+
+```text
+{
+	"removeCrap": {
+		"pairs": {
+			"include": "BTC-",
+			"exclude": "",
+			"bag": true,
+			"exchange": "binance"
+		},
+		"filters": {
+			"filter1": {
+				"type": "minSpreadPct",
+				"min": 0.000001
+			},
+			"filter2": {
+				"type": "minVolatilityPct24h",
+				"min": -10
+			}
+		},
+		"schedule": "* * * * *",
+		"type": "changeStrategy",
+		"snapshots": 10,
+		"strategy": "baghandler"
+	}
+}
+```
+
+### 
 
 ### Managing overrides
 
@@ -256,7 +304,7 @@ Filter for price use ask when adding pairs and bid when filtering for removal.
 * `minVolumePctChangeInterval`: filter returns true if the current 24h volume is at least x% higher than the average 24h volume of all snapshots. Only executed when max snapshot sample size is reached.
 * `maxVolumePctChangeInterval`: filter returns true if the current 24h volume is at least x% lower than the average 24h volume of all snapshots. Only executed when max snapshot sample size is reached.
 * `minVolume24h`: filter returns true if 24h volume is higher than set, volume in base.
-* `maxVolume24h`: filter returns true if 24h volume is higher than set, volume in base.
+* `maxVolume24h`: filter returns true if 24h volume is lower than set, volume in base.
 * `minVolatilityPct24h`: filter returns true if 24h price percentage change is higher than set.
 * `maxVolatilityPct24h`: filter returns true if 24h price percentage change is lower than set.
 * `minSpreadPct`: filter returns true if percentage difference between bid and ask is higher than set.
