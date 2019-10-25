@@ -8,7 +8,7 @@ The built in charts exclusively use data available to the Gunbot Core. You can l
 
 Charts go as far back as the exchange API returns candles to your bot. 
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 
 
@@ -18,7 +18,7 @@ Monitor your portfolio value on the dashboard, it shows the combined value of ac
 
 The pair overview quickly shows you which of your trading pairs are doing good.
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2821%29.png)
 
 
 
@@ -26,5 +26,5 @@ The pair overview quickly shows you which of your trading pairs are doing good.
 
 The trading map gives you instant information about how your pairs are doing.
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image%20%2832%29.png)
 

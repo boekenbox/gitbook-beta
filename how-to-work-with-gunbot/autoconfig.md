@@ -273,11 +273,24 @@ Filter for price use ask when adding pairs and bid when filtering for removal.
 * `minSpreadPct`: filter returns true if percentage difference between bid and ask is higher than set.
 * `maxSpreadPct`: filter returns true if percentage difference between bid and ask is lower than set.
 
-![Available data at supported exchanges. Other ccxt exchanges might work as well.](../.gitbook/assets/image%20%288%29.png)
+![Available data at supported exchanges. Other ccxt exchanges might work as well.](../.gitbook/assets/image%20%2810%29.png)
 
 
 
 ### Managing overrides
 
-![](../.gitbook/assets/image%20%2834%29.png)
+![](../.gitbook/assets/image%20%2836%29.png)
+
+
+
+## Various
+
+* It's fine to schedule many jobs for the same times, but in case multiple of those jobs causes a config change, the first one to finish will write it's changes and the others jobs will need to wait for another chance.
+* The output of every job is that the config.js file is updated, this will always cause Gunbot to restart.
+* Data is read from either exchange tickers or the internal Gunbot memory with pair state info. To find out which pair state data to filter on is available, look in the pairs state file in the gunbot /json folder.
+* Almost every key/value in pair state files can be filtered, as long as they are on the first level \(not inside additional arrays or objects\)
+
+![These can be used for filtering](../.gitbook/assets/image%20%281%29.png)
+
+![Elements like these cannot be used for filtering](../.gitbook/assets/image%20%283%29.png)
 
