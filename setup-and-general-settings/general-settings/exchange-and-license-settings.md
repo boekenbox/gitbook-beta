@@ -12,7 +12,9 @@ Select your exchange and fill in the required fields.
 
 **image**
 
-Select your exchange and fill in all the fields for this exchange.
+
+
+## API settings
 
 <table>
   <thead>
@@ -50,6 +52,17 @@ Select your exchange and fill in all the fields for this exchange.
       <td style="text-align:left">The API secret for the Key.</td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>Key2</b>
+      </td>
+      <td style="text-align:left">The API key used for stage 3 orders, must be a different API key than
+        &quot;Key&quot;.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Secret2</b>
+      </td>
+      <td style="text-align:left">The API secret for Key2.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>Delay</b>
       </td>
       <td style="text-align:left">
@@ -70,9 +83,11 @@ Select your exchange and fill in all the fields for this exchange.
       </td>
     </tr>
   </tbody>
-</table>
+</table>{% hint style="info" %}
+Not all exchanges require a second API key, called `key2.`
+{% endhint %}
 
-Some exchanges require extra settings like a passphrase. These are described below.
+Some exchanges require extra settings like a passphrase. These are described below. 
 
 <table>
   <thead>
@@ -98,22 +113,109 @@ Some exchanges require extra settings like a passphrase. These are described bel
       </td>
     </tr>
   </tbody>
+</table>## Delay settings
+
+| Field | Description |
+| :--- | :--- |
+| **Delay** | The delay in seconds between polling tickers. Used in websocket mode. |
+| **REST delay** | Delay in seconds between processing pairs. Used in REST mode. |
+| **Trades interval** | Delay in seconds between firing trades. Relevant for `crazybitch` mode. Increase this value when you notice trade execution errors after stage 1. |
+
+## Filter settings
+
+Each exchange has various options to filter pairs and volume. The options are:
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Field</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><b>Filtered pairs</b>
+      </td>
+      <td style="text-align:left">Comma separated list of coins to exclude.
+        <br />
+        <br />Triples that include any of the filtered coins will never be traded.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Include Coins</b>
+      </td>
+      <td style="text-align:left">
+        <p>Comma separated list of coins to include.</p>
+        <p></p>
+        <p>Only triples that contain explicitly included coins will be traded.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Filtered Bags</b>
+      </td>
+      <td style="text-align:left">
+        <p>Comma separated list of coins that are exempt from <code>COMPOUND_BAGS.</code>
+        </p>
+        <p></p>
+        <p>Any coin listed here is will trade as if <code>COMPOUND_BAGS</code> is disabled.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Volume 1st</b>
+      </td>
+      <td style="text-align:left">
+        <p>Volume filter for stage 1 orders. Only triples will be traded when they
+          match the volume filters for all stages.</p>
+        <p></p>
+        <p>Volume can be defined per coin as a comma separated list, expressed in
+          base.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Volume 2nd</b>
+      </td>
+      <td style="text-align:left">
+        <p>Volume filter for stage 2 orders. Only triples will be traded when they
+          match the volume filters for all stages.</p>
+        <p></p>
+        <p>Volume can be defined per coin as a comma separated list, expressed in
+          base.</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Volume 3rd</b>
+      </td>
+      <td style="text-align:left">
+        <p>Volume filter for stage 3 orders. Only triples will be traded when they
+          match the volume filters for all stages.</p>
+        <p></p>
+        <p>Volume can be defined per coin as a comma separated list, expressed in
+          base.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>## Config example
 
 When you prefer to use the config file instead of the GUI, find an example below of a successfully added exchange.
 
 ```text
-"exchanges": {
-        "huobi": {
-            "key": "key",
-            "secret": "secret",
-            "masterkey": "registered key",
-            "mastersecret": "secret for registered key",
-            "type": "huobi",
-            "TRADING_FEES": 0.2,
-            "delay": 1
+ "binance": {
+            "masterkey": "Registered API",
+            "mastersecret": "SECRET",
+            "key": "API (can be same as masterkey)",
+            "secret": "SECRET",
+            "key2": "Different API",
+            "secret2": "SECRET",
+            "delay": 10,
+            "REST_delay": 10,
+            "TRADING_FEES": 0.25,
+            "TRADES_INTERVAL": 10,
+            "filteredPairs": ["BTC","USD","USDT"],
+            "includeCoins": ["BTC","USD","USDT"],
+            "filteredBags": ["BTC","USD","USDT","EUR"],
+            "Volume1st": {"XMR":100},
+            "Volume2nd": {"XMR":100,"MAID":100},
+            "Volume3rd": {"MAID":100}
         }
-    }
 ```
 
 

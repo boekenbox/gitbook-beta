@@ -2,7 +2,7 @@
 
 The bitRage dashboard allows you to easily monitor your results and ongoing trades.
 
-![](../.gitbook/assets/image%20%2823%29.png)
+![](../.gitbook/assets/image%20%2824%29.png)
 
 The profit summary shows cumulative profits per exchange and base currency. Profits listed here include profits from final trades that have yet to fill.
 
