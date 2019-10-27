@@ -9,6 +9,16 @@ Things you can currently do with Autoconfig:
 * Scan exchanges to remove pairs from your config. For example remove pairs without quote balance for which volume has dropped below 100 BTC.
 * Monitor pair state information and automatically set pair overrides. For example set a different DU\_BUYDOWN after the first round of DU happened.
 
+To use AutoConfig, you must have this in your config.js file:
+
+```text
+"AutoConfig": {
+        "enabled": true
+    },
+```
+
+
+
 ## How it works
 
 There is a single config file for AutoConfig \(autoconfig.json\), which can contain many jobs. As soon as Gunbot starts or the config file is changed, all jobs in the config are scheduled \(any pre-existing scheduled job is removed in this process\).
@@ -41,7 +51,7 @@ Filter options are described later in this article.
 
 **include:** included pairs \(processed first\). Any pair on the exchange that matches any of the includes, will be processed \(after also processing excluded\). Included items do not need to be whole pair names, as long as part of the string matches an actual pair, it will be included. Input as comma separated list, does not accept spaces between items. Can not be empty.
 
-**maxPairs:** maximum number of allowed pairs. In case a filter action would result in more pairs than this setting, the config will be filled up to the max number of allowed pairs.
+**maxPairs:** maximum number of allowed pairs. In case a filter action would result in more pairs than this setting, the config will be filled up to the max number of allowed pairs. Only enabled pairs count towards maxPairs.
 
 #### Other options:
 
@@ -134,6 +144,8 @@ There is no include options for this filter type. Pairs in your config \(that ha
 
 **noBag** \(true/false\): when true, only pairs with a balance below mvts are filtered for possible removal. When set to false, all pairs in config are filtered.
 
+**removeDisabled** \(true/false\): when true, each time a removePairs job is ran it will remove all disabled pairs for the exchange the job runs on - regardless of filter settings. Useful, for example, when you use `COUNT_SELL`
+
 #### Other options:
 
 **type:** must be set to `removePairs`
@@ -146,6 +158,7 @@ There is no include options for this filter type. Pairs in your config \(that ha
     "pairs": {
       "exclude": "BNB,XVG",
       "noBag": false,
+      "removeDisabled": true,
       "exchange": "binance"
     },
     "filters": {
