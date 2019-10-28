@@ -8,6 +8,7 @@ Things you can currently do with Autoconfig:
 * Scan exchanges and automatically add pairs, for example add pairs with volume &gt; 500 BTC and for which price is rising.
 * Scan exchanges to remove pairs from your config. For example remove pairs without quote balance for which volume has dropped below 100 BTC.
 * Change the strategy for pairs from your config, for example set a bag handling strategy when the pair did buy but prices dropped a lot.
+* Change the exchange delay.
 * Monitor pair state information and automatically set pair overrides. For example set a different DU\_BUYDOWN after the first round of DU happened.
 
 To use AutoConfig, you must have this in your config.js file:
@@ -304,6 +305,20 @@ Filter options are described later in this article.
 }
 ```
 
+### Change exchange delay
+
+Filter options are described later in this article. Has exactly the same filter options as `manageOverrides` jobs
+
+**exclude**: excluded pairs \(processed last\). Any active pair that matches any of the excludes, won't be processed. Excluded items do not need to be whole pair names, as long as part of the string matches an actual pair, it will be excluded. Input as comma separated list, does not accept spaces between items. Can be empty.
+
+**include:** included pairs \(processed first\). Any active pair that matches any of the includes, will be processed \(after also processing excluded\). Included items do not need to be whole pair names, as long as part of the string matches an actual pair, it will be included. Input as comma separated list, does not accept spaces between items. Can not be empty.
+
+**delay**: exchange delay in seconds, this value will be set when one or more pairs in the job pass all filters.
+
+**exchange**: must be set to the same value as gunbot calls refers to them in the pairs section.
+
+**type**: must be set to `changeDelay`
+
 ## Filter options
 
 ### Adding & removing pairs
@@ -327,7 +342,7 @@ Filter for price use ask when adding pairs and bid when filtering for removal.
 
 ![Available data at supported exchanges. Other ccxt exchanges might work as well.](../.gitbook/assets/image%20%2810%29.png)
 
-### Managing overrides
+### Managing overrides & change delay
 
 ![](../.gitbook/assets/image%20%2836%29.png)
 
