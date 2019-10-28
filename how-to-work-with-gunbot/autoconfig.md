@@ -7,6 +7,7 @@ Things you can currently do with Autoconfig:
 
 * Scan exchanges and automatically add pairs, for example add pairs with volume &gt; 500 BTC and for which price is rising.
 * Scan exchanges to remove pairs from your config. For example remove pairs without quote balance for which volume has dropped below 100 BTC.
+* Change the strategy for pairs from your config, for example set a bag handling strategy when the pair did buy but prices dropped a lot.
 * Monitor pair state information and automatically set pair overrides. For example set a different DU\_BUYDOWN after the first round of DU happened.
 
 To use AutoConfig, you must have this in your config.js file:
@@ -188,7 +189,7 @@ Filter options are described later in this article.
 
 **strategy:** the target strategy to set for pairs matching all filters.
 
-**type:** must be set to `removePairs`
+**type:** must be set to `changeStrategy`
 
 ```text
 {
