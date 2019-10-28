@@ -254,7 +254,8 @@ Filter options are described later in this article.
             "DU_BUYDOWN": 3
         },
         "clearOverrides": false,
-        "schedule": "*/10 * * * *"
+        "schedule": "*/10 * * * *",
+        "type": manageOverrides
   },
   "DynamicDU2": {
         "pairs": {
