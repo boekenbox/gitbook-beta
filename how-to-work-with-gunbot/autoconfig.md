@@ -150,7 +150,7 @@ There is no include options for this filter type. Pairs in your config \(that ha
 
 #### Other options:
 
-**type:** must be set to `removePairs`
+**type:** must be set to `removePairs` \(can use ticker filters\) or `removePairs2` \(can use state filters\)
 
 **snapshots:** defines how many ticker snapshots are saved to perform calculations on. Relevant for filtertypes that include `Interval` in their name. For example: snapshots is set to 10, this means that the ticker data for the last 10 times the job runs are saved and some of the values in it are used for calculating average values over time. For now, snapshot data gets cleared when Gunbot restarts.
 
@@ -190,7 +190,7 @@ Filter options are described later in this article.
 
 **strategy:** the target strategy to set for pairs matching all filters.
 
-**type:** must be set to `changeStrategy`
+**type:** must be set to `changeStrategy` \(can use ticker filters\) or `changeStrategy2` \(can use state filters\)
 
 ```text
 {
@@ -321,7 +321,9 @@ Filter options are described later in this article. Has exactly the same filter 
 
 ## Filter options
 
-### Adding & removing pairs
+### Ticker filters
+
+**For job types:** `addPairs`, `removePairs`, `changeStrategy`
 
 You can use the following filter types for adding and removing pairs. Please note that not every filter type is available for every exchange, due to the fact that some exchanges don't offer the required data.
 
@@ -340,9 +342,9 @@ Filter for price use ask when adding pairs and bid when filtering for removal.
 * `minSpreadPct`: filter returns true if percentage difference between bid and ask is higher than set.
 * `maxSpreadPct`: filter returns true if percentage difference between bid and ask is lower than set.
 
-![Available data at supported exchanges. Other ccxt exchanges might work as well.](../.gitbook/assets/image%20%2810%29.png)
+### Pair state filters
 
-### Managing overrides & change delay
+For job types: `manageOverrides`, `changeDelay`, `removePairs2`, `changeStrategy2`
 
 ![](../.gitbook/assets/image%20%2836%29.png)
 
