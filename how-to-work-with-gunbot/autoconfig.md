@@ -194,9 +194,8 @@ Filter options are described later in this article.
 
 ```text
 {
-	"removeCrap": {
+	"changeStrat": {
 		"pairs": {
-			"include": "BTC-",
 			"exclude": "",
 			"bag": true,
 			"exchange": "binance"
@@ -256,7 +255,7 @@ Filter options are described later in this article.
         },
         "clearOverrides": false,
         "schedule": "*/10 * * * *",
-        "type": manageOverrides
+        "type": "manageOverrides"
   },
   "DynamicDU2": {
         "pairs": {
@@ -358,4 +357,346 @@ For job types: `manageOverrides`, `changeDelay`, `removePairs2`, `changeStrategy
 ![These can be used for filtering](../.gitbook/assets/image%20%281%29.png)
 
 ![Elements like these cannot be used for filtering](../.gitbook/assets/image%20%283%29.png)
+
+## Example config with all possible job types and filters 
+
+You don't want to use this ever in this form, but use it as reference for how each job can be formatted.
+
+```text
+{
+	"addPairs-jobname": {
+		"pairs": {
+			"exclude": "DOGE,XLM,PAX",
+			"include": "BTC,USDT",
+			"maxPairs": 25,
+			"exchange": "binance"
+		},
+		"filters": {
+			"filter1": {
+				"type": "minPrice",
+				"min": 0.0000001
+			},
+			"filter2": {
+				"type": "maxPrice",
+				"max": 0.0000010
+			},
+			"filter3": {
+				"type": "minPricePctChangeInterval",
+				"min": 0.00002
+			},
+			"filter4": {
+				"type": "maxPricePctChangeInterval",
+				"max": 1
+			},
+			"filter5": {
+				"type": "minVolumePctChangeInterval",
+				"min": 10
+			},
+			"filter6": {
+				"type": "maxVolumePctChangeInterval",
+				"max": 50
+			},
+			"filter7": {
+				"type": "minVolume24h",
+				"min": 500
+			},
+			"filter8": {
+				"type": "maxVolume24h",
+				"max": 1000
+			},
+			"filter9": {
+				"type": "minVolatilityPct24h",
+				"min": 1
+			},
+			"filter10": {
+				"type": "maxVolatilityPct24h",
+				"max": 1
+			},
+			"filter11": {
+				"type": "minSpreadPct",
+				"min": 0.00001
+			},
+			"filter12": {
+				"type": "maxSpreadPct",
+				"max": 1
+			}
+		},
+		"schedule": "* * * * *",
+		"type": "addPairs",
+		"strategy": "gain",
+		"snapshots": 2,
+		"debug": "true"
+	},
+	"removePairs-jobname": {
+		"pairs": {
+			"exclude": "BNB,XVG",
+			"noBag": false,
+			"removeDisabled": true,
+			"exchange": "binance"
+		},
+		"filters": {
+			"filter1": {
+				"type": "minPrice",
+				"min": 0.0000001
+			},
+			"filter2": {
+				"type": "maxPrice",
+				"max": 0.0000010
+			},
+			"filter3": {
+				"type": "minPricePctChangeInterval",
+				"min": 0.00002
+			},
+			"filter4": {
+				"type": "maxPricePctChangeInterval",
+				"max": 1
+			},
+			"filter5": {
+				"type": "minVolumePctChangeInterval",
+				"min": 10
+			},
+			"filter6": {
+				"type": "maxVolumePctChangeInterval",
+				"max": 50
+			},
+			"filter7": {
+				"type": "minVolume24h",
+				"min": 500
+			},
+			"filter8": {
+				"type": "maxVolume24h",
+				"max": 1000
+			},
+			"filter9": {
+				"type": "minVolatilityPct24h",
+				"min": 1
+			},
+			"filter10": {
+				"type": "maxVolatilityPct24h",
+				"max": 1
+			},
+			"filter11": {
+				"type": "minSpreadPct",
+				"min": 0.00001
+			},
+			"filter12": {
+				"type": "maxSpreadPct",
+				"max": 1
+			}
+		},
+		"schedule": "* * * * *",
+		"type": "removePairs",
+		"snapshots": 10,
+		"debug": "true"
+	},
+	"removePairs2-jobname": {
+		"pairs": {
+			"exclude": "BNB,XVG",
+			"noBag": false,
+			"removeDisabled": true,
+			"exchange": "binance"
+		},
+		"filters": {
+			"filter1": {
+				"type": "exact",
+				"ducount": 1
+			},
+			"filter2": {
+				"type": "biggerThan",
+				"ducount": 1
+			},
+			"filter3": {
+				"type": "smallerThan",
+				"ducount": 1
+			},
+			"filter4": {
+				"type": "compareBigger",
+				"ema1": 1,
+				"ema2": 1
+			},
+			"filter5": {
+				"type": "compareSmaller",
+				"ema1": 1,
+				"ema2": 1
+			},
+			"filter6": {
+				"type": "differenceBigger",
+				"ema1": 1,
+				"ema2": 1,
+				"delta": 10
+			},
+			"filter7": {
+				"type": "differenceSmaller",
+				"ema1": 1,
+				"ema2": 1,
+				"delta": 10
+			}
+		},
+		"schedule": "* * * * *",
+		"type": "removePairs2",
+		"snapshots": 10,
+		"debug": "true"
+	},
+	"changeStrategy-jobname": {
+		"pairs": {
+			"exclude": "",
+			"bag": true,
+			"exchange": "binance"
+		},
+		"filters": {
+			"filter1": {
+				"type": "minPrice",
+				"min": 0.0000001
+			},
+			"filter2": {
+				"type": "maxPrice",
+				"max": 0.0000010
+			},
+			"filter3": {
+				"type": "minPricePctChangeInterval",
+				"min": 0.00002
+			},
+			"filter4": {
+				"type": "maxPricePctChangeInterval",
+				"max": 1
+			},
+			"filter5": {
+				"type": "minVolumePctChangeInterval",
+				"min": 10
+			},
+			"filter6": {
+				"type": "maxVolumePctChangeInterval",
+				"max": 50
+			},
+			"filter7": {
+				"type": "minVolume24h",
+				"min": 500
+			},
+			"filter8": {
+				"type": "maxVolume24h",
+				"max": 1000
+			},
+			"filter9": {
+				"type": "minVolatilityPct24h",
+				"min": 1
+			},
+			"filter10": {
+				"type": "maxVolatilityPct24h",
+				"max": 1
+			},
+			"filter11": {
+				"type": "minSpreadPct",
+				"min": 0.00001
+			},
+			"filter12": {
+				"type": "maxSpreadPct",
+				"max": 1
+			}
+		},
+		"schedule": "* * * * *",
+		"type": "changeStrategy",
+		"snapshots": 10,
+		"strategy": "baghandler",
+		"debug": "true"
+	},
+	"changeStrategy2-jobname": {
+		"pairs": {
+			"exclude": "",
+			"bag": true,
+			"exchange": "binance"
+		},
+		"filters": {
+			"filter1": {
+				"type": "exact",
+				"ducount": 1
+			},
+			"filter2": {
+				"type": "biggerThan",
+				"ducount": 1
+			},
+			"filter3": {
+				"type": "smallerThan",
+				"ducount": 1
+			},
+			"filter4": {
+				"type": "compareBigger",
+				"ema1": 1,
+				"ema2": 1
+			},
+			"filter5": {
+				"type": "compareSmaller",
+				"ema1": 1,
+				"ema2": 1
+			},
+			"filter6": {
+				"type": "differenceBigger",
+				"ema1": 1,
+				"ema2": 1,
+				"delta": 10
+			},
+			"filter7": {
+				"type": "differenceSmaller",
+				"ema1": 1,
+				"ema2": 1,
+				"delta": 10
+			}
+		},
+		"schedule": "* * * * *",
+		"type": "changeStrategy2",
+		"snapshots": 10,
+		"strategy": "baghandler",
+		"debug": "true"
+	},
+	"manageOverrides-jobname": {
+		"pairs": {
+			"exclude": "DOGE,ETH",
+			"include": "USDT,BNB",
+			"exchange": "binance"
+		},
+		"filters": {
+			"filter1": {
+				"type": "exact",
+				"ducount": 1
+			},
+			"filter2": {
+				"type": "biggerThan",
+				"ducount": 1
+			},
+			"filter3": {
+				"type": "smallerThan",
+				"ducount": 1
+			},
+			"filter4": {
+				"type": "compareBigger",
+				"ema1": 1,
+				"ema2": 1
+			},
+			"filter5": {
+				"type": "compareSmaller",
+				"ema1": 1,
+				"ema2": 1
+			},
+			"filter6": {
+				"type": "differenceBigger",
+				"ema1": 1,
+				"ema2": 1,
+				"delta": 10
+			},
+			"filter7": {
+				"type": "differenceSmaller",
+				"ema1": 1,
+				"ema2": 1,
+				"delta": 10
+			}
+		},
+		"overrides": {
+			"DU_BUYDOWN": 3
+		},
+		"clearOverrides": false,
+		"schedule": "*/10 * * * *",
+		"type": "manageOverrides",
+		"debug": "true"
+	}
+}
+```
 
