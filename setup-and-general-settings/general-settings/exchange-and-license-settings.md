@@ -83,7 +83,9 @@ Select your exchange and fill in the required fields.
       </td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 Not all exchanges require a second API key, called `key2.`
 {% endhint %}
 
@@ -113,7 +115,9 @@ Some exchanges require extra settings like a passphrase. These are described bel
       </td>
     </tr>
   </tbody>
-</table>## Delay settings
+</table>
+
+## Delay settings
 
 | Field | Description |
 | :--- | :--- |
@@ -193,7 +197,9 @@ Each exchange has various options to filter pairs and volume. The options are:
       </td>
     </tr>
   </tbody>
-</table>## Config example
+</table>
+
+## Config example
 
 When you prefer to use the config file instead of the GUI, find an example below of a successfully added exchange.
 

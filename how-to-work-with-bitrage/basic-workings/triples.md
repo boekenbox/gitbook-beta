@@ -50,3 +50,5 @@ The Reversal Trade option makes bitRage trade a triplet in a difference sequence
 
 
 
+
+
