@@ -55,7 +55,9 @@ Select your exchange and fill in all the fields for this exchange.
       </td>
     </tr>
   </tbody>
-</table>Some exchanges require extra settings like a passphrase. These are described below.
+</table>
+
+Some exchanges require extra settings like a passphrase. These are described below.
 
 <table>
   <thead>
@@ -92,4 +94,6 @@ Select your exchange and fill in all the fields for this exchange.
     </tr>
   </tbody>
 </table>
+
+
 
