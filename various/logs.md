@@ -4,9 +4,7 @@ Gunbot logs contain most of the information it works with. This article provides
 
 This article applies to all strategies except Emotionless, which has intentionally limited log output.
 
-Log files per trading pair are automatically saved in the /logs folder and automatically rotated to zipped backups after reaching a filesize of 25MB. Up to three backup logfiles are kept per trading pair.
-
- 
+Log files per trading pair are automatically saved in the /gunbot\_logs folder and automatically rotated to zipped backups after reaching a filesize of 25MB. Up to three backup logfiles are kept per trading pair.
 
 ## Trailing
 
@@ -25,7 +23,7 @@ _Log entries for TrailMe trailing and TSSL look almost identical and follow the 
 | `Target to buy` | Starting point for buy trailing, a percentage from the lowest EMA as defined with `BUY_LEVEL`. |
 | `Stop limit` | The upper limit for trailing, as defined by the set buy range. This value is updated every cycle, following price movement for `Last price`. |
 
-A buy order will occur when `Last price` crosses up `Stop limit` and is above lowest EMA.
+A buy order will occur when `Last price` crosses up `Stop limit` and is below the lowest EMA.
 
 When the logs state that the price is in range, that means the current price is between `Stop limit` and `TrailingBuy limit`.
 
@@ -44,8 +42,6 @@ When the logs state that the price is in range, that means the current price is 
 
 If you've set `TSSL_TARGET_ONLY` to false, sell orders would also be placed without respecting `GAIN`. This can only be used for TSSL, not for TrailMe
 
- 
-
 ## The "grid"
 
 The so called grid area contains all information about core checks, indicators and trading checks. This section should always show for cycles processed correctly \(except for `emotionless`, no grid is shown for this strategy\).
@@ -63,13 +59,9 @@ The so called grid area contains all information about core checks, indicators a
 | `Can average` | When `DOUBLE_UP` is enabled, this shows YES when doubling up is possible according to `DU_METHOD` and `DU_CAP_COUNT`. |
 | `REVERSAL TRADE` | Indicated if a pair is in reversal trading. Shows YES when `REVERSAL_TRADING` is enabled and an `RT_BUY` has been performed and no buyback order took place yet. |
 
-
-
 ### **Indicators**
 
 The indicators section shows all indicators as calculated by Gunbot.
-
-
 
 ### **Trading checks**
 

@@ -1,50 +1,54 @@
 # Gain
 
-This page describes how margin trading on Bitmex works with the Gain strategy. The triggers for trades are slightly different than in the same strategy for regular trading.
+This page describes how margin trading works with the Gain strategy. The triggers for trades are slightly different than in the same strategy for regular trading.
 
 ## How to work with this strategy
 
-The expected behavior for margin trading with Gunbot is that it will open one position, either long or short, and close this position when the target is reached. When the stop is hit before profitably closing a trade, Gunbot will place a stop order at loss. After closing a position, Gunbot will again look to open a new long or short position. Gunbot will not add to existing open positions.
+{% hint style="info" %}
+**Expected behavior for margin trading**
+
+Gunbot will open one position, either long or short, and close this position when the target is reached. When the stop is hit before profitably closing a trade, Gunbot will place a stop order at loss. After closing a position, Gunbot will again look to open a new long or short position. Gunbot will not add to existing open positions.
 
 Please don't manually add to or reduce positions opened by Gunbot, unless you stop running Gunbot on this trading pair until you've closed this position.
+{% endhint %}
 
 The examples below show how the basic triggers for `gain` work. Additionally, you can use confirming indicators and settings like ROE trailing.
 
 ### Long \(regular: trend following\)
 
-![](https://user-images.githubusercontent.com/2372008/53241674-b6252400-36a2-11e9-83d0-7ecb863865c8.png)
+![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/margin-gain-1.png)
 
 * A long position is opened when the ask price is equal to or above `LONG_LEVEL`.
-* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `ROE`: 1.
-* A position is closed at loss when `STOP_LIMIT` is reached. This is a percentage from the entry point in the opposite direction of your profit target, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `STOP_LIMIT`: 1.
+* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, taking leverage into consideration. 
+* A position is closed at loss when a stop is hit.
 
 ### Short \(regular: trend following\)
 
-![](https://user-images.githubusercontent.com/2372008/53241917-76127100-36a3-11e9-963e-6b95218e49b1.png)
+![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/margin-gain-2.png)
 
 * A short position is opened when the bid price is equal to or below `SHORT_LEVEL`.
-* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `ROE`: 1.
-* A position is closed at loss when `STOP_LIMIT` is reached. This is a percentage from the entry point in the opposite direction of your profit target, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `STOP_LIMIT`: 1.
+* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, taking leverage into consideration. 
+* A position is closed at loss when a stop is hit.
 
 ### Long \(mean reversion mode\)
 
 In `MEAN_REVERSION` mode the behavior for `LONG_LEVEL` and `SHORT_LEVEL` is reversed in this strategy.
 
-![](https://user-images.githubusercontent.com/2372008/53238728-5aef3380-369a-11e9-9baa-392087bb0c01.png)
+![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/margin-gain-3.png)
 
 * A long position is opened when the ask price is equal to or below `LONG_LEVEL`.
-* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `ROE`: 1.
-* A position is closed at loss when `STOP_LIMIT` is reached. This is a percentage from the entry point in the opposite direction of your profit target, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `STOP_LIMIT`: 1.
+* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, taking leverage into consideration. 
+* A position is closed at loss when a stop is hit.
 
 ### Short \(mean reversion mode\)
 
 In `MEAN_REVERSION` mode the behavior for `LONG_LEVEL` and `SHORT_LEVEL` is reversed in this strategy.
 
-![](https://user-images.githubusercontent.com/2372008/53239781-3183d700-369d-11e9-85d4-2e5b35afd86b.png)
+![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/margin-gain-4.png)
 
 * A short position is opened when the bid price is equal to or above `SHORT_LEVEL`.
-* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `ROE`: 1.
-* A position is closed at loss when `STOP_LIMIT` is reached. This is a percentage from the entry point in the opposite direction of your profit target, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `STOP_LIMIT`: 1.
+* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, taking leverage into consideration. 
+* A position is closed at loss when a stop is hit.
 
 ## Strategy parameters
 
@@ -128,7 +132,18 @@ Parameter name in `config.js`: `SHORT_LEVEL`
 {% tab title="Description" %}
 This sets the target for closing a position.
 
-ROE is measured as a percentage from the opening rate of a position, leverage and fees are not taken into consideration.
+ROE is the Return On Equity for a position, the percentage profit and loss on your invested margin. This value is calculated in a similar way to how Bitmex calculates it, it does include leverage and does not include fees.
+
+**Examples:**
+
+Long position, 1x leverage.  
+When price moves 1% above the average entry price, 1% ROE is reached.
+
+Long position, 100x leverage \(or cross leverage\).  
+When price moves 1% above the average entry price, 100% ROE is reached.
+
+Short position, 20x leverage  
+When price moves 1% below the average entry price, 20% ROE is reached.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -160,6 +175,10 @@ Parameter name in `config.js`: `ROE`
 {% tabs %}
 {% tab title="Description" %}
 Sets the leverage for opening any position. Setting 0 places the order with cross margin.
+
+{% hint style="warning" %}
+On Binance Futures you must set leverage per pair on the exchange itself.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -192,6 +211,10 @@ Parameter name in `config.js`: `LEVERAGE`
 Places a market stop order for a long position, at the same time as the position is opened.
 
 When set to 1 and a long order is opened at a price of 100, a stop market order will be placed at 99.
+
+{% hint style="info" %}
+This setting is exclusive to Bitmex
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -225,6 +248,10 @@ Parameter name in `config.js`: `STOP_BUY`
 Places a market stop order for a short position, at the same time as the position is opened.
 
 When set to 1 and a short order is opened at a price of 100, a stop market order will be placed at 101.
+
+{% hint style="info" %}
+This setting is exclusive to Bitmex
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -354,6 +381,8 @@ Sets the gap between the best bid/ask price in the orderbook and the rate at whi
 It is possible to use negative values, this will increase the chance of receiving maker fees.
 
 Example when set to 1 and a buy signal occurs at an ask price of 100: a limit order gets placed at a rate of 101. When set to -1 and a buy signal occurs at an ask price of 100: a limit order gets placed at a rate of 99.
+
+Don't use a negative gap together with `STOP_BUY` and/or `STOP_SELL`, as these stops do not combine well with position that do not always fill. Instead use `STOP_LIMIT`.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -631,11 +660,7 @@ RT is not intented to be used for margin trading.
 
 ## TrailMe settings
 
-With margin trading, additional trailing only works when MEAN\_REVERSION is enabled.
-
-Parameters to configure additional trailing for various types of orders. Trailing works just like it does for the TSSL strategy, the difference being the starting point of trailing.
-
-Orders resulting from trailing are only placed when the main strategy criteria are met, and confirming indicators \(if any\) allow the order. All these conditions must occur in the same cycle.
+TrailMe is not intented to be used for margin trading.
 
 {% page-ref page="../trailme.md" %}
 
