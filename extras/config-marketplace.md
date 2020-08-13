@@ -10,15 +10,11 @@ A trusted marketplace for Gunbot users, where experienced users share ready made
 [**https://marketplace.gunthy.io/**](https://marketplace.gunthy.io/)\*\*\*\*
 {% endhint %}
 
-### 
-
-### Only for verified Gunbot users
+## Only for verified Gunbot users
 
 Please be aware that the registration process might take a little while, admins will verify the authenticity of every signup to make sure this marketplace is exclusive to Gunbot users.
 
+## Vetted offers
 
-
-### Vetted offers
-
-To make sure the offers are legitimate, every item on the marketplace gets manually reviewed before publication. 
+To make sure the offers are legitimate, every item on the marketplace gets manually reviewed before publication.
 

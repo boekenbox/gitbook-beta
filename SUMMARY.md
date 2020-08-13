@@ -33,20 +33,18 @@
   * [How to enable SSL/TLS](setup-and-general-settings/installation/enable-ssl-tls.md)
   * [Running multiple instances](setup-and-general-settings/installation/running-multiple-instances.md)
   * [Headless mode](setup-and-general-settings/installation/headless-mode.md)
-* [Preferences](setup-and-general-settings/preferences/README.md)
-  * [Bot settings](setup-and-general-settings/preferences/bot-settings.md)
-  * [Authentication](setup-and-general-settings/preferences/authentication.md)
-  * [GUI notifications](setup-and-general-settings/preferences/gui-notifications.md)
-  * [Websockets](setup-and-general-settings/preferences/websockets.md)
-  * [Telegram notifications](setup-and-general-settings/preferences/telegram-notifications.md)
-  * [TradingView \(add-on\)](setup-and-general-settings/preferences/tradingview-add-on.md)
-  * [IMAP listener](setup-and-general-settings/preferences/imap-listener.md)
-* [Exchange & license settings](setup-and-general-settings/exchange-and-license-settings/README.md)
-  * [GUNTHY wallet](setup-and-general-settings/exchange-and-license-settings/gunthy-wallet/README.md)
-    * [How to create a wallet](setup-and-general-settings/exchange-and-license-settings/gunthy-wallet/how-to-create-a-wallet.md)
-  * [Connect exchange](setup-and-general-settings/exchange-and-license-settings/connect-exchange/README.md)
-    * [Swap exchanges](setup-and-general-settings/exchange-and-license-settings/connect-exchange/api-slots.md)
-    * [Creating API keys](setup-and-general-settings/exchange-and-license-settings/connect-exchange/creating-api-keys.md)
+* [Global settings](setup-and-general-settings/global-settings/README.md)
+  * [Bot settings](setup-and-general-settings/global-settings/bot-settings.md)
+  * [Authentication](setup-and-general-settings/global-settings/authentication.md)
+  * [GUI notifications](setup-and-general-settings/global-settings/gui-notifications.md)
+  * [Websockets](setup-and-general-settings/global-settings/websockets.md)
+  * [Telegram notifications](setup-and-general-settings/global-settings/telegram-notifications.md)
+* [Profile settings](setup-and-general-settings/profile-settings/README.md)
+  * [GUNTHY wallet](setup-and-general-settings/profile-settings/gunthy-wallet/README.md)
+    * [How to create a wallet](setup-and-general-settings/profile-settings/gunthy-wallet/how-to-create-a-wallet.md)
+  * [Connect exchange](setup-and-general-settings/profile-settings/connect-exchange/README.md)
+    * [Swap exchanges](setup-and-general-settings/profile-settings/connect-exchange/api-slots.md)
+    * [Creating API keys](setup-and-general-settings/profile-settings/connect-exchange/creating-api-keys.md)
 
 ## How to work with Gunbot
 
@@ -58,10 +56,16 @@
   * [Trailing](how-to-work-with-gunbot/basic-workings/trailing.md)
   * [ROE trailing](how-to-work-with-gunbot/basic-workings/roe-trailing.md)
 * [Editing strategies and pairs](how-to-work-with-gunbot/editing-strategies-and-pairs/README.md)
+  * [Easy edit](how-to-work-with-gunbot/editing-strategies-and-pairs/easy-edit.md)
   * [Strategy configurator](how-to-work-with-gunbot/editing-strategies-and-pairs/strategy-configurator.md)
   * [Trading pairs](how-to-work-with-gunbot/editing-strategies-and-pairs/trading-pairs.md)
-* [Monitoring](how-to-work-with-gunbot/monitoring.md)
-* [AutoConfig](how-to-work-with-gunbot/autoconfig.md)
+* [Chart & results](how-to-work-with-gunbot/chart-results.md)
+* [Extras](how-to-work-with-gunbot/extras/README.md)
+  * [AutoConfig](how-to-work-with-gunbot/extras/autoconfig.md)
+  * [Backtesting](how-to-work-with-gunbot/extras/backtesting-add-on.md)
+  * [TradingView Alerts](how-to-work-with-gunbot/extras/tradingview-add-on/README.md)
+    * [IMAP listener](how-to-work-with-gunbot/extras/tradingview-add-on/imap-listener.md)
+  * [Alerts \(beta\)](how-to-work-with-gunbot/extras/alerts-beta.md)
 
 ## Trading strategy options
 
@@ -108,7 +112,6 @@
 
 ## Extras
 
-* [Backtesting](extras/backtesting-add-on.md)
 * [Config marketplace](extras/config-marketplace.md)
 * [TradingView](https://wiki.gunthy.org/setup-and-general-settings/preferences/tradingview-add-on)
 * [CryptoSight](https://wiki.gunthy.org/setup-and-general-settings/preferences/telegram-notifications)

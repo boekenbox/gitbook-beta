@@ -12,8 +12,6 @@ Gunbot will open one position, either long or short, and close this position whe
 Please don't manually add to or reduce positions opened by Gunbot, unless you stop running Gunbot on this trading pair until you've closed this position.
 {% endhint %}
 
-
-
 For this strategy it is recommended to use an additional momentum indicator to confirm long and short entries.
 
 ### Long / Buy
@@ -78,8 +76,8 @@ This sets the target for closing a position.
 
 ROE is the Return On Equity for a position, the percentage profit and loss on your invested margin. This value is calculated in a similar way to how Bitmex calculates it, it does include leverage and does not include fees.
 
-**Examples:**  
-  
+**Examples:**
+
 Long position, 1x leverage.  
 When price moves 1% above the average entry price, 1% ROE is reached.
 
@@ -326,7 +324,7 @@ It is possible to use negative values, this will increase the chance of receivin
 
 Example when set to 1 and a buy signal occurs at an ask price of 100: a limit order gets placed at a rate of 101. When set to -1 and a buy signal occurs at an ask price of 100: a limit order gets placed at a rate of 99.
 
-Don't use a negative gap together with `STOP_BUY` and/or `STOP_SELL`, as these stops do not combine well with position that do not always fill. 
+Don't use a negative gap together with `STOP_BUY` and/or `STOP_SELL`, as these stops do not combine well with position that do not always fill.
 {% endtab %}
 
 {% tab title="Values" %}

@@ -34,8 +34,6 @@ In case you are upgrading from an older version, refer to the changelogs of prev
 * Solve problem with pSar for bitRage hedging
 * Automatically switch to market orders for bitRage panic sell
 
-
-
 \*\*\*\*
 
 {% page-ref page="../../setup-and-general-settings/installation/download.md" %}
