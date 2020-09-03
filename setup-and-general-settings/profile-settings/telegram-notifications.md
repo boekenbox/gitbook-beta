@@ -5,7 +5,7 @@ description: >-
   from your Telegram client.
 ---
 
-# Telegram notifications
+# Telegram
 
 {% hint style="info" %}
 The Telegram bot \(formerly called CryptoSight\) is fully integrated into Gunbot. All you need to do to start the Telegram bot is enable Telegram notifications in your Gunbot settings.
