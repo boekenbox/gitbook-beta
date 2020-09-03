@@ -35,6 +35,8 @@
   * [Headless mode](setup-and-general-settings/installation/headless-mode.md)
 * [Global settings](setup-and-general-settings/global-settings/README.md)
   * [Bot settings](setup-and-general-settings/global-settings/bot-settings.md)
+  * [Cancel orders](setup-and-general-settings/global-settings/cancel-orders.md)
+  * [Advanced](setup-and-general-settings/global-settings/advanced.md)
   * [Authentication](setup-and-general-settings/global-settings/authentication.md)
   * [GUI notifications](setup-and-general-settings/global-settings/gui-notifications.md)
   * [Websockets](setup-and-general-settings/global-settings/websockets.md)
