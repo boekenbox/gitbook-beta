@@ -1,18 +1,24 @@
 ---
-description: Articles about how to work with the Gunthy license system.
+description: 'Settings for private data like API keys, Telegram bots, and more.'
 ---
 
 # Profile settings
 
+Manage your private settings like exchange keys, API slots, Gunthy wallet and more on the profile page. 
+
+![](../../.gitbook/assets/image%20%2846%29.png)
+
+{% page-ref page="exchanges.md" %}
+
+{% page-ref page="gunthy-wallet-1.md" %}
+
+{% page-ref page="edit-license.md" %}
+
+{% page-ref page="gui-authentication.md" %}
+
+{% page-ref page="telegram-notifications.md" %}
+
+{% page-ref page="tournament.md" %}
 
 
-{% page-ref page="../../about/system-requirements/how-to-create-a-wallet.md" %}
-
-{% page-ref page="connect-exchange/" %}
-
-{% page-ref page="./" %}
-
-{% page-ref page="connect-exchange/api-slots.md" %}
-
-{% page-ref page="connect-exchange/creating-api-keys.md" %}
 
