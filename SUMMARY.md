@@ -19,7 +19,8 @@
   * [New in v6](about/whats-new/new-in-v6.md)
 * [Supported exchanges](about/supported-exchanges/README.md)
   * [Websockets support](about/supported-exchanges/websockets-support.md)
-* [System requirements](about/system-requirements.md)
+* [License info & system specs](about/system-requirements/README.md)
+  * [How to create a wallet](about/system-requirements/how-to-create-a-wallet.md)
 * [Purchasing Gunbot](https://gunthy.org/resellers)
 
 ## Setup & general settings
@@ -48,8 +49,7 @@
   * [GUI authentication](setup-and-general-settings/profile-settings/gui-authentication.md)
   * [Telegram](setup-and-general-settings/profile-settings/telegram.md)
   * [Tournament](setup-and-general-settings/profile-settings/tournament.md)
-  * [GUNTHY wallet](setup-and-general-settings/profile-settings/gunthy-wallet/README.md)
-    * [How to create a wallet](setup-and-general-settings/profile-settings/gunthy-wallet/how-to-create-a-wallet.md)
+  * [GUNTHY wallet](setup-and-general-settings/profile-settings/gunthy-wallet.md)
   * [Connect exchange](setup-and-general-settings/profile-settings/connect-exchange/README.md)
     * [Swap exchanges](setup-and-general-settings/profile-settings/connect-exchange/api-slots.md)
     * [Creating API keys](setup-and-general-settings/profile-settings/connect-exchange/creating-api-keys.md)

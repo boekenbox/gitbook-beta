@@ -6,9 +6,9 @@ description: Articles about how to work with the Gunthy license system.
 
 
 
-{% page-ref page="gunthy-wallet/" %}
+{% page-ref page="gunthy-wallet.md" %}
 
-{% page-ref page="gunthy-wallet/how-to-create-a-wallet.md" %}
+{% page-ref page="../../about/system-requirements/how-to-create-a-wallet.md" %}
 
 {% page-ref page="connect-exchange/" %}
 
