@@ -41,7 +41,8 @@
   * [Authentication](setup-and-general-settings/global-settings/authentication.md)
   * [GUI notifications](setup-and-general-settings/global-settings/gui-notifications.md)
 * [Profile settings](setup-and-general-settings/profile-settings/README.md)
-  * [Exchanges](setup-and-general-settings/profile-settings/exchanges.md)
+  * [Exchanges](setup-and-general-settings/profile-settings/exchanges/README.md)
+    * [Creating API keys](setup-and-general-settings/profile-settings/exchanges/creating-api-keys.md)
   * [Gunthy wallet](setup-and-general-settings/profile-settings/gunthy-wallet-1.md)
   * [Edit license](setup-and-general-settings/profile-settings/edit-license.md)
   * [GUI authentication](setup-and-general-settings/profile-settings/gui-authentication.md)
@@ -49,7 +50,6 @@
   * [Tournament](setup-and-general-settings/profile-settings/tournament.md)
   * [Connect exchange](setup-and-general-settings/profile-settings/connect-exchange/README.md)
     * [Swap exchanges](setup-and-general-settings/profile-settings/connect-exchange/api-slots.md)
-    * [Creating API keys](setup-and-general-settings/profile-settings/connect-exchange/creating-api-keys.md)
 
 ## How to work with Gunbot
 

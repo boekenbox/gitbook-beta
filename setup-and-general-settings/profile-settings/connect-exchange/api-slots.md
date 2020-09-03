@@ -4,6 +4,8 @@ description: Self service your registered API keys.
 
 # Swap exchanges
 
+
+
 {% hint style="success" %}
 All Gunbot license types can use an API slot system, this allows you to update your keys anytime or switch between different supported exchanges at no extra costs.
 {% endhint %}
