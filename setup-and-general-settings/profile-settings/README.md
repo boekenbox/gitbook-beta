@@ -4,6 +4,8 @@ description: Articles about how to work with the Gunthy license system.
 
 # Profile settings
 
+
+
 {% page-ref page="gunthy-wallet/" %}
 
 {% page-ref page="gunthy-wallet/how-to-create-a-wallet.md" %}
