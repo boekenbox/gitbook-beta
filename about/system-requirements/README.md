@@ -15,8 +15,6 @@ Gunbot runs from your own Windows, macOS, Linux or ARMv7 computer or server. You
 * **Disk space**: 10 GB free disk space
 * **Network**: stable broadband network connection
 
-
-
 ## License system
 
 Gunbot uses a blockchain based license validation system. It uses our own ERC-20 utility token called "GUNTHY". Using this system, you can manage your own API keys and change them anytime, or even sell your license to a third party.
