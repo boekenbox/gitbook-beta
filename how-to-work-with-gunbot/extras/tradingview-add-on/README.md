@@ -19,10 +19,6 @@ Before you start setting up your alerts, you need:
 * The IMAP data for the email address you receive alerts from TradingView on.
 * A Pro subscription at tradingview.com \(works with trial too\). Free accounts are limited to one alert.
 
-{% embed url="https://www.youtube.com/watch?v=H2EybuYxc3Y" caption="This video was made for an older Gunbot version. The basic steps still apply." %}
-
-[Script used in example: Finn's Microprofit Strategy](https://gunthy.org/forum/index.php/topic,1548.0.html)
-
 {% page-ref page="imap-listener.md" %}
 
 ## Alert message contents
@@ -88,6 +84,8 @@ _Replace_ `EXCHANGE` _with the name of your exchange._
   </tbody>
 </table>
 
+#### For all futures exchanges
+
 <table>
   <thead>
     <tr>
@@ -132,6 +130,12 @@ _Replace_ `EXCHANGE` _with the name of your exchange._
   </tbody>
 </table>
 
+#### Change strategy by alert
+
+| Alert message | Action |
+| :--- | :--- |
+| `STRAT_BITMEX_XBT-USD_yourstratname` | Assigns strategy `yourstratname` to XBT-USD |
+
 {% hint style="info" %}
 **Note about trading limits**
 
@@ -148,7 +152,7 @@ To test alerts on Bitmex Testnet, you should write the alerts like this: LONG\_B
 
 To run Gunbot with the TradingView add-on, the following are the only relevant settings. Normal Gunbot strategy and pair settings are not relevant and not used unless `TV_GB` is enabled.
 
-Open the settings by going to **⋮** &gt; **TradingView**
+Open the settings by going to **⋮** &gt; **TradingView Alerts &gt; Alert execution**
 
 ![](../../../.gitbook/assets/image%20%2853%29.png)
 
