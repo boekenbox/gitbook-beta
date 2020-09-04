@@ -7,7 +7,7 @@ description: Config marketplace for verified Gunbot users.
 A trusted marketplace for Gunbot users, where experienced users share ready made config examples.
 
 {% hint style="success" %}
-[**https://marketplace.gunthy.io/**](https://marketplace.gunthy.io/)\*\*\*\*
+[**https://marketplace.gunthy.io/**](https://marketplace.gunthy.io/)
 {% endhint %}
 
 ## Only for verified Gunbot users
