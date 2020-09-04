@@ -1426,7 +1426,7 @@ Before you can backtest, you need to collect a dataset with a "collectData" job.
     "pairs": { 
         "exchange": "binance" 
     }, 
-    "schedule": "/30 * * * * *", 
+    "schedule": "*/30 * * * * *", 
     "type": "collectData", 
     "snapshots": 1000,
     "enabled": true, 
@@ -1444,7 +1444,7 @@ As long as the `collectData` job runs, it keeps collecting tickers. It is not re
 
 To backtest using the collected data, run a job with type `backtesting`. Do this while you have Gunbot core and other autoconfig jobs disabled, because it's very cpu intensive and you don't want other jobs to interrupt.
 
-A backtesting job is basically the same as an addPairs job, you can use all available filter / filterset options. Collected ticker data is replayed as if it were live data, the results should 100% match the results from a regular addPairs job. Results are logged the same way as regular jobs, the debug option for jobs is also available.
+A backtesting job is basically the same as an addPairs job, you can use all available filter / filterset options. Collected ticker data is replayed as if it were live data, the results should 100% match the results from a regular addPairs job. Results are logged the same way as regular jobs, the debug option for jobs is also available. "History" ticker snapshots can be used as well, these are built up in RAM while running through a backtest.
 
 Results are saved to a .csv file that lists when pairs would have been added, and what the ask price was at that moment.
 
@@ -1499,10 +1499,6 @@ The data source for backtesting is set with the `"tickersFolder"` parameter. Set
 * Data is read from either exchange tickers or the internal Gunbot memory with pair state info. To find out which pair state data to filter on is available, look in the pairs state file in the Gunbot `/json` folder.
 * You can disable telegram notifications per job, just include this line in your job: `"muteTG": true`
 * Almost every key/value in pair state files can be filtered, as long as they are on the first level \(not inside additional arrays or objects\)
-
-![First level elements like these can be used for filtering.](https://github.com/boekenbox/gitbook-stable/tree/08541f128eac4ac228233ba2630eef52e7a2cc9c/.gitbook/assets/image%20%2890%29.png)
-
-![Elements like these cannot be used for filtering.](../../.gitbook/assets/image%20%2811%29.png)
 
 ## Example config with many job types and filters
 
