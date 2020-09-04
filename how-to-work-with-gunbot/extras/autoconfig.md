@@ -11,19 +11,11 @@ description: >-
 Available for Gunbot Standard and higher.
 {% endhint %}
 
-{% hint style="info" %}
-Currently there is no GUI for AutoConfig. You'll need to create your own `autoconfig.json` config file, which contains the jobs it should run.
-
-The [config marketplace](https://marketplace.gunthy.io/) has a growing number of free AutoConfig examples.
-
-_If you are not comfortable editing config files manually, it's probably a good idea to wait until the GUI supports AutoConfig._
-{% endhint %}
-
 Gunbot AutoConfig is a collection of tools you can use to dynamically manage your config files.
 
 You can create "jobs" to do something you would normally do by hand, for example scan an exchange for potential pairs to add, and schedule the job in a cron-like format.
 
-Things you can currently do with AutoConfig:
+Examples of things you can do with AutoConfig:
 
 * **Scan exchanges and automatically add pairs:** for example add pairs with volume &gt; 500 BTC and for which price is rising. You can even filter on buy trailing stops for all pairs on an exchange.
 * **Simulate your filter settings for adding pairs:** you can collect your own data for backtesting and simulate all possible filters.
@@ -33,16 +25,9 @@ Things you can currently do with AutoConfig:
 * **Monitor pair state information and automatically set pair overrides:** for example set a different `DU_BUYDOWN` after the first round of DU happened.
 * **Handle hedging in bitRage**: use your own criteria to initiate hedging from BTC to USDT in bitRage \(or the other way around\).
 * **Set user variables as output for a filter job**, which can be used to filter on in other jobs.
+* **Complete orchestration of complex trading setups**: you can use javascript to create custom autoconfig filters and to set override or variable values. This allows for completely custom scenarios.
 
-To use AutoConfig, you must have this in your `config.js` file:
 
-```text
-"AutoConfig": {
-        "enabled": true
-    },
-```
-
-Additionally, you must create a file named `autoconfig.json` which contains one or more jobs to process. Currently there is no GUI yet to manage this config file, but you can find detailed information on each job type in this article.
 
 ## How it works
 
@@ -58,6 +43,10 @@ When a job is processed, changes to `config.js` are only made for pairs that hav
 If a job successfully completes, the changes are written to `config.js` and Gunbot restarts using the new settings. If a job causes no changes, for example because it tries to place already existing overrides, it won't cause a Gunbot restart.
 
 Schedules are set per job in a [format similar to how cron jobs are set](https://www.npmjs.com/package/node-schedule#cron-style-scheduling). If you're not used to the format, use a website like [https://crontab-generator.org/](https://crontab-generator.org/) to generate it.
+
+All config options are available in the browser interface. Even if you prefer manually editing the config file, it's recommended to create a config example using the interface, this way you can be sure all essential parameters exist.  
+  
+
 
 ## Job types \(with config examples\)
 
@@ -1004,10 +993,6 @@ Config building blocks for ticker filters:
 }
 ```
 
-\_\_
-
-\_\_
-
 #### Trailing filters
 
 The filter types `buyTrailing` , `volumeTrailing` and `slopeTrailing` are ticker filters that trails down prices or volume very [similar](../basic-workings/trailing.md#buy-trailing) to a regular Gunbot strategy with buy trailing, you can use it to add pairs to your config only after they have hit their trailing stop. Useful for trailing massive numbers of pairs without the downsides of long cycling times.
@@ -1185,6 +1170,10 @@ Generic filters can be used in any job type, regardless if they primarily use ti
 | :--- | :--- |
 | `variableExact` | Filter returns true when variable value is exactly as defined. |
 | `variableNotExist` | Filter returns true when variable key does not \(yet\) exist. |
+| `variableBiggerThan` | Filter returns true when variable value is bigger than target. |
+| `variableSmallerThan` | Filter returns true when variable value is smaller than target. |
+| `pairVariableSmallerThan` | Filter returns true when pair specific variable value is smaller than target. |
+| `pairVariableBiggerThan` | Filter returns true when pair specific variable value is bigger than target. |
 | `pairVariableExact` | Filter returns true when pair specific variable is exactly as defined. Can use an extra "exchange" input to check pair variables for another exchange. |
 | `strategyName` | Filter returns true when strategy of an enabled pair is like defined. |
 | `minTimeInConfig` | Filter returns true when pair is longer in config than a set value in minutes. |
@@ -1192,6 +1181,7 @@ Generic filters can be used in any job type, regardless if they primarily use ti
 | `maxSameOrder` | Filter returns true when last x orders for different pairs do NOT have the same defined type |
 | `minTimeSinceOrder` | Filter returns true when at least x minutes have passed since a defined order type, for the same pair. |
 | `maxTimeSinceOrder` | Filter returns true when at most x minutes have passed since a defined order type, for the same pair. |
+| `custom` | Use any custom javascript expression, when the expression returns true the filter passes. |
 
 Config building blocks for generic filters:
 
@@ -1373,6 +1363,56 @@ Besides the obligatory first set of filters, you can add up to 9 more sets. name
         "enabled": true
     }
 }
+```
+
+## Calculated config values and custom filters
+
+Many elements in AutoConfig can be calculated at the time the job executes, this allows for completely dynamic scenarios for power users. Every valid javascript expression can be used.
+
+You can use calculated values for the following elements in AutoConfig:
+
+* overrides
+* variables
+* pairVariables
+* maxPairs
+* target in filter type custom
+
+To use an expression instead of a string or number, enter your expression as string with a leading blank space:
+
+```text
+"validExpression": " 1 + 2"
+```
+
+Many internal data is made available to custom expressions. Use these with caution though, it is very common to encounter undefined data sooner or later - you can handle such errors though. 
+
+Use the following references to access internal data in your expressions:
+
+| Reference | Content |
+| :--- | :--- |
+| `this.config` | The complete Gunbot config |
+| `this.pair` | All pair data the bot works with, the same as available in json state files |
+| `this.pairName` | String of the pair currently processing |
+| `this.variables` | All AutoConfig variables |
+| `this.pairVariables` | All AutoConfig pair variables |
+| `this.tickers` | All collected ticker snapshots, in case it's ran in a job type that works with tickers. |
+
+Availability of pair specific data depends on the context where you're trying to access it. For example a pair override will have access to all pair specific data \(because overrides are set per pair\), but a global variable won't \(because global variables are just set once\).
+
+#### Some examples of valid expressions
+
+```text
+" this.pair.Bid * this.pair.quoteBalance"
+
+" (this.pair.Bid * this.pair.quoteBalance) > this.pair.whatstrat.MIN_VOLUME_TO_SELL ? true : false"
+
+" (function doStuff(data) {
+      if (data.pair.Bid > 0){
+      return true
+      }
+      else {
+      return false
+      }
+    })(this)" ---> this example needs to be minified before it would work
 ```
 
 ## Backtesting for addPairs jobs
@@ -1905,6 +1945,16 @@ You don't want to use this ever in this form, but use it as reference for how ea
 ## Config format definitions
 
 Templates for all available job types and filters.
+
+To use AutoConfig, you must have this in your `config.js` file:
+
+```text
+"AutoConfig": {
+        "enabled": true
+    },
+```
+
+Additionally, you must create a file named `autoconfig.json` which contains one or more jobs to process. Currently there is no GUI yet to manage this config file, but you can find detailed information on each job type in this article.
 
 ```javascript
 // config templates for different job types
