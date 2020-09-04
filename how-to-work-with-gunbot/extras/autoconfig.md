@@ -259,7 +259,7 @@ Excluded items do not need to be whole pair names, as long as part of the string
 
 **Other obligatory parameters:**
 
-**overrides**: contain one or more overrides, these will be set for each pair that passes all filters when a job is executed.
+**overrides**: contain zero or more overrides, these will be set for each pair that passes all filters when a job is executed. 
 
 **clearOverrides** \(true/false\): when set to true, all existing overrides for a pair are removed before placing the new ones.
 
