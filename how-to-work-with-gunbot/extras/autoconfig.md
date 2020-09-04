@@ -398,7 +398,7 @@ There is no include options for this filter type. Pairs in your config \(that ha
 "BOT_DELAY": 20,
 "BOT_CCLEAN": 9991
 },
-"schedule": "*   * *",
+"schedule": "* * * * *",
 "type": "manageBotSettings"
 }
 }
@@ -480,7 +480,7 @@ You'll need two jobs to do this, one for each hedging direction:
 "hegdedTo": "USDT"
 },
 "strategy": "gain",
-"schedule": "1 /4  * *",
+"schedule": "1 */4 * * *",
 "type": "hedgeGB",
 "debug": false
 }
@@ -1944,7 +1944,7 @@ You don't want to use this ever in this form, but use it as reference for how ea
 
 ## Config format definitions
 
-Templates for all available job types and filters.
+Templates for \(almost\) all available job types and filters.
 
 To use AutoConfig, you must have this in your `config.js` file:
 
