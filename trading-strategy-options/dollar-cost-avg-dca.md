@@ -163,8 +163,6 @@ Parameter name in `config.js`: `DOUBLE_UP_CAP`
 {% endtab %}
 {% endtabs %}
 
-
-
 ### DU Cap Count
 
 {% tabs %}

@@ -12,9 +12,9 @@ A trading pair always executes a single trading strategy. On the pair level, it 
 
 ## Easy edit
 
-A combined strategy and pair editor for novice users. It guides through all essential steps to select a trading pair and to create a spot trading strategy.   
-  
-This editor shows a limited number of options, focusing only on the essentials. 
+A combined strategy and pair editor for novice users. It guides through all essential steps to select a trading pair and to create a spot trading strategy.
+
+This editor shows a limited number of options, focusing only on the essentials.
 
 {% page-ref page="easy-edit.md" %}
 
@@ -26,11 +26,9 @@ The strategy editor can be used to create or modify any kind of spot or futures 
 
 ## Trading pairs
 
-On the pairs page you can add, disable or remove trading pairs. Additionally you can make pair specific overrides to individual settings within a strategy.  
-  
+On the pairs page you can add, disable or remove trading pairs. Additionally you can make pair specific overrides to individual settings within a strategy.
+
 Pairs can be added manually, or by using filter rules to quickly add pairs - for example - matching your volume requirements.
 
 {% page-ref page="trading-pairs/" %}
-
-
 

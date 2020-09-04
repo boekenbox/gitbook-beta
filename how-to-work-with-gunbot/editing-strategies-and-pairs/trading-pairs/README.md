@@ -10,8 +10,6 @@ You can use an unlimited number of trading pairs, across multiple exchanges.
 
 {% page-ref page="pair-processing.md" %}
 
-
-
 ## Add trading pairs
 
 ![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/image%20%2846%29.png)
@@ -31,8 +29,6 @@ All pairs with BTC as base currency are written like: BTC-ETH, BTC-OK, BTC-XLM
 
 All pairs with USDT as base currency are written like: USDT-BTC, USDT-ETH, USDT-XMR
 {% endhint %}
-
-
 
 ### Pair naming exceptions
 
@@ -60,7 +56,7 @@ Overrides are pair specific settings, overruling the assigned strategy. Every st
 
 You can use this, for example, to set a different trading limit for a specific pair.
 
-When adding overrides, you can choose from a list of all available strategy settings. 
+When adding overrides, you can choose from a list of all available strategy settings.
 
 {% hint style="info" %}
 Make sure to only add overrides for settings that actually have a function for the buy and sell methods of your strategy. See the strategy pages for detailed info about relevant settings.

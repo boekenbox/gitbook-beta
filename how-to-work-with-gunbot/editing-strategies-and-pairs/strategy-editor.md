@@ -30,8 +30,6 @@ Click on a strategy nickname to edit its settings.
 
 ![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/image%20%2842%29.png)
 
-
-
 ## Editors for bitRage and Market Maker
 
 If you're a bitRage or Market Maker user, you can use the strategy editor in a different layout to manage the strategies for these modules.

@@ -4,7 +4,7 @@ description: Overview of exchanges Gunbot can connect to using websockets
 
 # Websockets support
 
-Connecting to exchanges with websockets allows for lower exchange delay settings in Gunbot. 
+Connecting to exchanges with websockets allows for lower exchange delay settings in Gunbot.
 
 Data can be cycled in close to real time in some cases. To maintain maximum reliability, some API calls have to be done with REST.
 

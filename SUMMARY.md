@@ -116,11 +116,10 @@
 * [TrailMe](trading-strategy-options/trailme.md)
 * [Misc settings](trading-strategy-options/misc-settings.md)
 
-## Extras
+## More
 
-* [Config marketplace](extras/config-marketplace.md)
+* [Config marketplace](more/config-marketplace.md)
 * [TradingView](https://wiki.gunthy.org/setup-and-general-settings/preferences/tradingview-add-on)
-* [CryptoSight](https://wiki.gunthy.org/setup-and-general-settings/preferences/telegram-notifications)
 
 ## Various
 

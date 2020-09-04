@@ -86,7 +86,9 @@ There are a few non-Gunbot variables that are also present in the scripts:
 
 "BTC\_PND Exchange = " should be set to the Exchange of the pair you are testing if you are using BTC\_PND\_PROTECTION.
 
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/bt-11.png)
+
+
+![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/bt-12.png)
 
 PricesA / PricesB sets percentage range of candle prices that are read. You may also choose to use candle sources instead. Only this portion of the candle will register when crossing indicators or levels. There is a plot in gray on top of the candles that represents this area.
 
@@ -102,15 +104,13 @@ PricesA / PricesB sets percentage range of candle prices that are read. You may 
 
 Default range settings of 50 / 50 is equal to source settings of HL2 / HL2 for Prices.
 
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/bt-12.png)
+![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/bt-13.png)
 
 TradingView scripts trade on the OPEN price of the NEXT candle AFTER conditions have been met. The green "LONG!" or "CLOSE SHORT!" and red "SHORT!" or "CLOSE LONG!" indicate the candle where the decision to trade was made, the blue, red, and purple markers indicate where the trade was made.
 
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/bt-13.png)
+![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/bt-14.png)
 
 When using the "Gunbot Deluxe Tuners BE \[Alerts\]" script the green "LONG!" or "CLOSE SHORT!" and red "SHORT!" or "CLOSE LONG!" indicate on screen where the alerts will trigger and send to Gunbot's TradingView add-on.
-
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/bt-14.png)
 
 ![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/bt-15.png)
 
