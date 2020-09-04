@@ -10,7 +10,7 @@ As an alternative to the advanced pair and strategy editors you can use _Easy ed
 
 First select the exchange you want to add a pair for. 
 
-Then if the exchange supports it, you can select your desired trading pair from a list of all available pairs. If you don't see a list of trading pairs after selecting an exchange, add your pair manually in the [format ](trading-pairs.md#pair-naming-conventions)Gunbot expects, like BTC-ETH or USDT-BTC.
+Then if the exchange supports it, you can select your desired trading pair from a list of all available pairs. If you don't see a list of trading pairs after selecting an exchange, add your pair manually in the [format ](trading-pairs/#pair-naming-conventions)Gunbot expects, like BTC-ETH or USDT-BTC.
 
 ## Step 2: name your new strategy, or select an existing strategy 
 

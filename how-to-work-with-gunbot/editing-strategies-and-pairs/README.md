@@ -30,7 +30,7 @@ On the pairs page you can add, disable or remove trading pairs. Additionally you
   
 Pairs can be added manually, or by using filter rules to quickly add pairs - for example - matching your volume requirements.
 
-{% page-ref page="trading-pairs.md" %}
+{% page-ref page="trading-pairs/" %}
 
 
 

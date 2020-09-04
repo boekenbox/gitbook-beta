@@ -136,6 +136,8 @@ This defines the ratio to the pairs balance to be used for each consecutive buy 
 It is recommended to set this as high as you can afford, to increase your chance to actually average down and sell at profit. Make sure that the resulting amount for the first double up order exceeds `MIN_VOLUME_TO_SELL`
 
 Example with ratio of 1: initial buy of 100 LTC, first double up buy order is 100 LTC, second will be 200 LTC, then 400 LTC, etc. Example with 0.5 ratio: initial buy of 100 LTC, first double up buy order is 50 LTC, then 75 LTC, then 112.5 LTC.
+
+_Changing this setting after DU has started may lead to "cap count" not working as expected._
 {% endtab %}
 
 {% tab title="Values" %}
@@ -160,6 +162,8 @@ Example with ratio of 1: initial buy of 100 LTC, first double up buy order is 10
 Parameter name in `config.js`: `DOUBLE_UP_CAP`
 {% endtab %}
 {% endtabs %}
+
+
 
 ### DU Cap Count
 
@@ -198,6 +202,8 @@ Parameter name in `config.js`: `DU_CAP_COUNT`
 {% tabs %}
 {% tab title="Description" %}
 The minimum price drop compared to the last bought price that needs to occur for double up buys to be placed.
+
+_Changing this setting after DU has started may lead to "cap count" not working as expected._
 {% endtab %}
 
 {% tab title="Values" %}

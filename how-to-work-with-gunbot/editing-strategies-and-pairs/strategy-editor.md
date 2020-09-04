@@ -8,7 +8,7 @@ description: >-
 
 A strategy in Gunbot is a collection of settings that can be assigned to one or more trading pairs. These pairs will then trade according to the assigned settings.
 
-On **Settings &gt; Strategies &gt; Strategy Configurator** you can view and modify strategy presets, or create your own custom strategies.
+On **Strategies** you can view and modify strategy presets, or create your own custom strategies.
 
 {% hint style="info" %}
 Make sure to read up on [Gunbot strategies](../../trading-strategy-options/about-gunbot-strategies/) before you start trading.
@@ -36,5 +36,5 @@ Click on a strategy nickname to edit its settings.
 
 If you're a bitRage or Market Maker user, you can use the strategy editor in a different layout to manage the strategies for these modules.
 
-Just create a new strategy with both bitRage or Market Maker as buy and sell method, and the strategy editor opens in a different layout showing only the relevant settins in categories that make sense for bitRagen and Market Maker.
+Just create a new strategy with both bitRage or Market Maker as buy and sell method, and the strategy editor opens in a different layout showing only the relevant settings in categories that make sense for bitRage and Market Maker.
 
