@@ -4,9 +4,7 @@ description: Learn how to use Gunbot to execute trades based on incoming email a
 
 # TradingView Alerts
 
-TradingView is the most active social network for traders and investors. TradingView allows users to create and share technical analysis and advanced trading strategies on their interactive charts.
-
-With the Gunbot TradingView add-on you can trade on alerts sent from custom strategies at Tradingview, completely managing your strategy at TradingView. Gunbot receives trade signals by e-mail and trades accordingly.
+With the Gunbot TradingView add-on you can execute trading alerts sent from custom strategies at Tradingview, completely managing your strategy at TradingView. Gunbot receives trade signals by e-mail and trades accordingly.
 
 This add-on can also be used for executing trades from arbitrary email alerts, TradingView is not strictly required.
 
@@ -35,100 +33,103 @@ Trading limits can only be specifically defined in buy/long alerts, for other al
 
 _Replace_ `EXCHANGE` _with the name of your exchange._
 
-\_\_
-
 #### For all spot exchanges
 
-| Alert message | Action |
-| :--- | :--- |
-
-
-| BUY\_EXCHANGE\_BTC-ETH | **Buy ETH using BTC** |
-| :--- | :--- |
-
-
-| BUY\_EXCHANGE\_BTC-ETH\_0.1 | Buy ETH using BTC with a trading limit of 0.1 BTC |
-| :--- | :--- |
-
-
-| SELL\_EXCHANGE\_USDT-BTC | Sell BTC for USDT |
-| :--- | :--- |
-
-
-| SELL\_EXCHANGE\_USDT-BTC\_100 | Sell BTC for USDT with a trading limit of 100 USDT |
-| :--- | :--- |
-
-
-| STOPLOSS\_EXCHANGE\_BTC-ETH | Sell ETH for BTC if stoploss is triggered |
-| :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">BUY_EXCHANGE_USDT-BTC_amount_rate</th>
-      <th style="text-align:left">
-        <p>Buy BTC using USDT for a specified amount</p>
-        <p>in USDT at a specified rate.</p>
-        <p>Requires TV market orders to be disabled</p>
-      </th>
+      <th style="text-align:left">Alert message</th>
+      <th style="text-align:left">Action</th>
     </tr>
   </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
+  <tbody>
     <tr>
-      <th style="text-align:left">BUY_EXCHANGE_BTC-ETH_0_rate</th>
-      <th style="text-align:left">
+      <td style="text-align:left"><code>BUY_EXCHANGE_BTC-ETH</code>
+      </td>
+      <td style="text-align:left">Buy ETH using BTC</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>BUY_EXCHANGE_BTC-ETH_0.1</code>
+      </td>
+      <td style="text-align:left">Buy ETH using BTC with a trading limit of 0.1 BTC</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>SELL_EXCHANGE_USDT-BTC</code>
+      </td>
+      <td style="text-align:left">Sell BTC for USDT</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>SELL_EXCHANGE_USDT-BTC_100</code>
+      </td>
+      <td style="text-align:left">Sell BTC for USDT with a trading limit 100 USDT</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>STOPLOSS_EXCHANGE_BTC-ETH</code>
+      </td>
+      <td style="text-align:left">Sell ETh for BTC if stoploss is triggered</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>BUY_EXCHANGE_USDT-BTC_amount_rate</code>
+      </td>
+      <td style="text-align:left">
+        <p>Buy BTC using USDT for a specified amount in USDT</p>
+        <p>at a specified rate. Requires TV market orders to be disabled</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>BUY_EXCHANGE_BTC-ETH_0_rate</code>
+      </td>
+      <td style="text-align:left">
         <p>Buy BTC using USDT for &quot;TV trading limit buy&quot;,</p>
         <p>at a specified rate.</p>
         <p>Requires TV market orders to be disabled.</p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>
-
-| LONG\_EXCHANGE\_XBT-USD | Long order for XBT-USD |
-| :--- | :--- |
-
-
-| SHORT\_EXCHANGE\_XBT-USD\_amount | Short order for XBT-USD with a specified trading limit |
-| :--- | :--- |
-
-
-| LONG\_EXCHANGE\_XBT-USD\_amount | Long order for XBT-USD with a specified trading limit |
-| :--- | :--- |
-
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">LONG_EXCHANGE_XBT-USD_amount_rate</th>
-      <th style="text-align:left">
+      <th style="text-align:left">Alert message</th>
+      <th style="text-align:left">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>LONG_EXCHANGE_XBT-USD</code>
+      </td>
+      <td style="text-align:left">Long order for XBT-USD</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>SHORT_EXCHANGE_XBT-USD_amount</code>
+      </td>
+      <td style="text-align:left">Short order for XBT-USD with a specified trading limit</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>LONG_EXCHANGE_XBT-USD_amount</code>
+      </td>
+      <td style="text-align:left">Long order for XBT-USD with a specified trading limit</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>LONG_EXCHANGE_XBT-USD_amount_rate</code>
+      </td>
+      <td style="text-align:left">
         <p>Long order for XBT-USD with a specified</p>
         <p>trading limit and rate.</p>
         <p>Requires TV market orders to be disabled.</p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left">SHORT_EXCHANGE_XBT-USD_0_rate</th>
-      <th style="text-align:left">
-        <p>Short order for XBT-USD without a specified</p>
-        <p>trading limit and with a specified rate.</p>
+      <td style="text-align:left"><code>SHORT_EXCHANGE_XBT-USD_0_rate</code>
+      </td>
+      <td style="text-align:left">
+        <p>Short order for XBT-USD without</p>
+        <p>a specified trading limit and with a specified rate.</p>
         <p>Requires TV market orders to be disabled.</p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>
 
 {% hint style="info" %}
@@ -147,9 +148,9 @@ To test alerts on Bitmex Testnet, you should write the alerts like this: LONG\_B
 
 To run Gunbot with the TradingView add-on, the following are the only relevant settings. Normal Gunbot strategy and pair settings are not relevant and not used unless `TV_GB` is enabled.
 
-Open the settings by going to **Settings** &gt; **TradingView.**
+Open the settings by going to **⋮** &gt; **TradingView**
 
-![Settings options for the TradingView add-on](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/image-1.png)
+![](../../../.gitbook/assets/image%20%2853%29.png)
 
 Trading limits for buy orders are set in the configuration settings, optionally you can override these by specifying the trading limit in the alert message contents.
 
@@ -472,6 +473,10 @@ Parameter name in `config.js`: `TV_GB`
 For margin trading only. Sets the leverage for opening any position. Setting 0 places the order with cross margin, if your exchange supports cross leverage.
 
 Only use values supported by your exchange.
+
+{% hint style="info" %}
+On some exchanges it may be needed to manually set leverage on the exchange itself. Always test if this works as expected.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
