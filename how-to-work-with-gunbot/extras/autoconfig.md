@@ -1,8 +1,8 @@
 ---
 description: >-
   Automated config changes for Gunbot. Enables you to automatically add or
-  remove trading pairs, or change change pair strategy overrides - using filter
-  criteria you define.
+  remove trading pairs, or change pair overrides - using filter criteria you
+  define.
 ---
 
 # AutoConfig
