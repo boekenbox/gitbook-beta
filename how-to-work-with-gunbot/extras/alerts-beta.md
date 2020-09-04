@@ -4,6 +4,8 @@ description: Visual trading by creating alerts on a chart.
 
 # Alerts \(beta\)
 
+
+
 {% hint style="danger" %}
 Alerts are in beta and not officially supported yet.   
   
