@@ -361,7 +361,7 @@ Parameter name in `config.js`: `TV_CLOSE_ALL`
 The maximum amount of base currency to be invested in a pair.
 
 {% hint style="warning" %}
-**Only works for spot trading.**
+**Only works for spot trading and on** 
 {% endhint %}
 {% endtab %}
 

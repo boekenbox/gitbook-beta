@@ -719,174 +719,180 @@ _Filters for prices use ask when adding pairs and bid when filtering for removal
 
 \_\_
 
-| _Type_ | Description | Extras |
-| :--- | :--- | :--- |
-
-
-| `minPrice` | Filter returns true when price is higher than set. | n/a |
-| :--- | :--- | :--- |
-
-
-| `maxPrice` | Filter returns true when price is lower than set. | n/a |
-| :--- | :--- | :--- |
-
-
-| `minPricePctChangeInterval` | Filter returns true if the current price is at least x% higher than the average price of all snapshots. | `lastSnapshots` |
-| :--- | :--- | :--- |
-
-
-| `maxPricePctChangeInterval` | Filter returns true if the current price is at least x% lower than the average price of all snapshots. | `lastSnapshots` |
-| :--- | :--- | :--- |
-
-
-| `minVolumePctChangeInterval` | Filter returns true if the current 24h volume is at least x% higher than the average 24h volume of all snapshots. | `lastSnapshots` |
-| :--- | :--- | :--- |
-
-
-| `maxVolumePctChangeInterval` | Filter returns true if the current 24h volume is at least x% lower than the average 24h volume of all snapshots. | `lastSnapshots` |
-| :--- | :--- | :--- |
-
-
-| `minVolume24h` | Filter returns true if 24h volume is higher than set, volume in base. | n/a |
-| :--- | :--- | :--- |
-
-
-| `maxVolume24h` | Filter returns true if 24h volume is lower than set, volume in base. | n/a |
-| :--- | :--- | :--- |
-
-
-| `minVolatilityPct24h` | Filter returns true if 24h price percentage change is higher than set. | n/a |
-| :--- | :--- | :--- |
-
-
-| `maxVolatilityPct24h` | Filter returns true if 24h price percentage change is lower than set. | n/a |
-| :--- | :--- | :--- |
-
-
-| `minSpreadPct` | Filter returns true if percentage difference between bid and ask is higher than set. | n/a |
-| :--- | :--- | :--- |
-
-
-| `maxSpreadPct` | Filter returns true if percentage difference between bid and ask is lower than set. | n/a |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><code>minSlopePctInterval</code>
+      <th style="text-align:left"><em>Type</em>
       </th>
-      <th style="text-align:left">
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Extras</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>minPrice</code>
+      </td>
+      <td style="text-align:left">Filter returns true when price is higher than set.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>maxPrice</code>
+      </td>
+      <td style="text-align:left">Filter returns true when price is lower than set.</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>minPricePctChangeInterval</code>
+      </td>
+      <td style="text-align:left">Filter returns true if the current price is at least x% higher than the
+        average price of all snapshots:</td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>maxPricePctChangeInterval</code>
+      </td>
+      <td style="text-align:left">Filter returns true if the current price is at least x% lower than the
+        average price of all snapshots</td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>minVolumePctChangeInterval</code>
+      </td>
+      <td style="text-align:left">Filter returns true if the current 24h volume is at least x% higher than
+        the average 24h volume of all snapshots</td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>maxVolumePctChangeInterval</code>
+      </td>
+      <td style="text-align:left">Filter returns true if the current 24h volume is at least x% lower than
+        the average 24h volume of all snapshots</td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>minVolume24h</code>
+      </td>
+      <td style="text-align:left">Filter returns true if 24h volume is higher than set, volume in base</td>
+      <td
+      style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>maxVolume24h</code>
+      </td>
+      <td style="text-align:left">Filter returns true if 24h volume is lower than set, volume in base</td>
+      <td
+      style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>minVolatilityPct24h</code>
+      </td>
+      <td style="text-align:left">Filter returns true if 24h price percentage change is higher than set</td>
+      <td
+      style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>maxVolatilityPct24h</code>
+      </td>
+      <td style="text-align:left">Filter returns true if 24h price percentage change is lower than set</td>
+      <td
+      style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>minSpreadPct</code>
+      </td>
+      <td style="text-align:left">Filter returns true if percentage difference between bid and ask is higher
+        than set</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>maxSpreadPct</code>
+      </td>
+      <td style="text-align:left">Filter returns true if percentage difference between bid and ask is lower
+        than set</td>
+      <td style="text-align:left">n/a</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>minSlopePctInterval</code>
+      </td>
+      <td style="text-align:left">
         <p>Filter returns true if the <a href="https://tulipindicators.org/linregslope">slope</a> for
           all prices in snapshots is bigger than set.</p>
         <p>Slope is expressed as a percentage of the last price. A slope of 1 means
           that, according to a simple linear regression, the next collected ticker
-          price is likely to be 1% higher than the last one.</p>
-      </th>
-      <th style="text-align:left"><code>lastSnapshots</code>
-      </th>
+          price is likely to be 1% higher than the last one</p>
+      </td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left"><code>maxSlopePctInterval</code>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><code>maxSlopePctInterval</code>
+      </td>
+      <td style="text-align:left">
         <p>Filter returns true if the <a href="https://tulipindicators.org/linregslope">slope</a> for
           all prices in snapshots is smaller than set.</p>
         <p>Slope is expressed as a percentage of the last price. A slope of 1 means
           that, according to a simple linear regression, the next collected ticker
           price is likely to be 1% higher than the last one.</p>
-        <p>Only executed when max snapshot sample size is reached.</p>
-      </th>
-      <th style="text-align:left"><code>lastSnapshots</code>
-      </th>
+        <p>Only executed when max snapshot sample size is reached</p>
+      </td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left"><code>minStandardDevPctInterval</code>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><code>minStandardDevPctInterval</code>
+      </td>
+      <td style="text-align:left">
         <p>Filter returns true if the <a href="https://tulipindicators.org/stddev">Standard Deviation</a> for
           all prices in snapshots is bigger than set.</p>
         <p>Standard Deviation is expressed as a percentage of the last price.</p>
-        <p>Only executed when max snapshot sample size is reached.</p>
-      </th>
-      <th style="text-align:left"><code>lastSnapshots</code>
-      </th>
+        <p>Only executed when max snapshot sample size is reached</p>
+      </td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left"><code>maxStandardDevPctInterval</code>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><code>maxStandardDevPctInterval</code>
+      </td>
+      <td style="text-align:left">
         <p>Filter returns true if the <a href="https://tulipindicators.org/stddev">Standard Deviation</a> for
           all prices in snapshots is smaller than set.</p>
         <p>Standard Deviation is expressed as a percentage of the last price.</p>
-        <p>Only executed when max snapshot sample size is reached.</p>
-      </th>
-      <th style="text-align:left"><code>lastSnapshots</code>
-      </th>
+        <p>Only executed when max snapshot sample size is reached</p>
+      </td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left"><code>minVolumeRank</code>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><code>minVolumeRank</code>
+      </td>
+      <td style="text-align:left">
         <p>Filter returns true if a pairs 24h volume rank (rankings are specific
           per base) is higher than set.</p>
         <p>This filter is only useful if you want to exclude some of the top ranking
           volume pairs, for example set it to 5 to only allow pairs that have a volume
-          rank of 6 or higher.</p>
-      </th>
-      <th style="text-align:left">n/a</th>
+          rank of 6 or higher</p>
+      </td>
+      <td style="text-align:left">n/a</td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left"><code>maxVolumeRank</code>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><code>maxVolumeRank</code>
+      </td>
+      <td style="text-align:left">
         <p>Filter returns true if a pairs 24h volume rank (rankings are specific
           per base) is lower than set.</p>
         <p>Setting it to 10, for example, would only include pairs that have a top10
-          volume ranking.</p>
-      </th>
-      <th style="text-align:left">n/a</th>
+          volume ranking</p>
+      </td>
+      <td style="text-align:left">n/a</td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left"><code>bullishStandardDeviationChannel</code>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><code>bullishStandardDeviationChannel</code>
+      </td>
+      <td style="text-align:left">
         <p>It works similar to described here: <a href="http://www.forexpromos.com/what-is-standard-deviation-channel">http://www.forexpromos.com/what-is-standard-deviation-channel</a>
         </p>
         <p>The filter passes when:</p>
@@ -898,20 +904,14 @@ _Filters for prices use ask when adding pairs and bid when filtering for removal
         <p>(it would detect a downwards breakout from an upwards channel)</p>
         <p>Range 0 = same price as lower band</p>
         <p>Range 100 = same price as upper band</p>
-      </th>
-      <th style="text-align:left"><code>lastSnapshots</code>
-      </th>
+      </td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left"><code>bearishStandardDeviationChannel</code>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><code>bearishStandardDeviationChannel</code>
+      </td>
+      <td style="text-align:left">
         <p>It works similar to described here: <a href="http://www.forexpromos.com/what-is-standard-deviation-channel">http://www.forexpromos.com/what-is-standard-deviation-channel</a>
         </p>
         <p>The filter passes when:</p>
@@ -923,20 +923,14 @@ _Filters for prices use ask when adding pairs and bid when filtering for removal
         <p>(it would detect an upwards breakout from a downwards channel)</p>
         <p>Range 0 = same price as upper band</p>
         <p>Range 100 = same price as lower band</p>
-      </th>
-      <th style="text-align:left"><code>lastSnapshots</code>
-      </th>
+      </td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<table>
-  <thead>
     <tr>
-      <th style="text-align:left"><code>linearRegressionChannel</code>
-      </th>
-      <th style="text-align:left">
+      <td style="text-align:left"><code>linearRegressionChannel</code>
+      </td>
+      <td style="text-align:left">
         <p>Same as &quot;Linear regression&quot; indicator on TradingView. Standard
           deviation is hardcoded to 2.</p>
         <p>The filter passes when:</p>
@@ -946,12 +940,11 @@ _Filters for prices use ask when adding pairs and bid when filtering for removal
         </ul>
         <p>Range 0 = same price as lower band</p>
         <p>Range 100 = same price as upper band</p>
-      </th>
-      <th style="text-align:left"><code>lastSnapshots</code>
-      </th>
+      </td>
+      <td style="text-align:left"><code>lastSnapshots</code>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
+  </tbody>
 </table>
 
 The extra input called `lastSnapshots` lets you use only the last x snapshots to calculate the filter.
