@@ -66,7 +66,7 @@ Select your exchange and fill in all the fields for this exchange.
     <tr>
       <td style="text-align:left"><b>Trading Fees</b>
       </td>
-      <td style="text-align:left">Fees percentage per trade, use the appropriate value for your exchange
+      <td style="text-align:left">Fee percentage per trade, use the appropriate value for your exchange
         and fees level.</td>
     </tr>
     <tr>
