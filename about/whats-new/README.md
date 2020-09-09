@@ -10,11 +10,11 @@ Gunbot v20 introduces a completely new interface built around the TradingView ch
 
 ## **Upgrading**
 
-**There are no breaking config changes for v20 In case you are upgrading from v18.x, replacing only the executable file** \(gunthy-win.exe / gunthy-linux / gunthy-macos / gunthy-arm\) **is all that's needed to upgrade.**
+**There are no breaking config changes for v20 In case you are upgrading from v18.x, replacing only the executable file** \(gunthy-win.exe / gunthy-linux / gunthy-macos / gunthy-arm\) **is all that's needed to upgrade. The new GUI requires that password authentication is enabled.**
 
 In case you are upgrading from an older version, refer to the changelogs of previous versions for instructions, or start with a fresh installation.  
   
-_It could be that strategies made with a much older version don't include some new parameters. You would notice this when you see any blank fields in the strategy editor. Creating a new strategy with the GUI always guarantees that every single parameter is included._
+It could be that strategies made with a much older version don't include some new parameters. You would notice this when you see any blank fields in the strategy editor. Creating a new strategy with the GUI always guarantees that every single parameter is included.
 
 {% page-ref page="../../setup-and-general-settings/installation/download.md" %}
 
