@@ -8,22 +8,18 @@ description: >-
 # Telegram
 
 {% hint style="info" %}
-The Telegram bot \(formerly called CryptoSight\) is fully integrated into Gunbot. All you need to do to start the Telegram bot is enable Telegram notifications in your Gunbot settings.
+The Telegram bot is fully integrated into Gunbot. All you need to do to start the Telegram bot is enable Telegram notifications in your Gunbot settings.
 
 After setting it up, type `/start` to your bot to open the menu.
 {% endhint %}
 
-## Demo video
-
-{% embed url="https://www.youtube.com/watch?v=11fHq22nNFo" caption="" %}
-
 ## Get started
 
-To set this up, go to **Settings** &gt; **Telegram**.
+To set this up, go to **Profile** &gt; **Telegram**.
 
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/assets_-l_rejuz9k0bdqxsqvuh_-lmxpz7bytewlfxthxx3_-lmxq-bd1mskrrdvzvdq_image.png)
+### 
 
-## Steps to create a Telegram bot
+### Steps to create a Telegram bot
 
 Notifications work by first creating a personal bot on Telegram, Gunbot then connects to this bot to push notifications to you.
 
@@ -34,9 +30,9 @@ This is how to create a bot:
 3. Enable Telegram notifications for Gunbot, and enter the token and ID you've just gathered. Use the ID for both the user and admin ID fields, this makes sure that only you can interact with the Telegram bot. _Alternatively, you can set a comma separated list for Admin ID, specifying multiple IDs who may interact with the bot._
 4. Start a chat with the username you've picked for your bot, and hit the start button. If you don't see a start button, write "/start" and click on it afterwards.
 
-{% hint style="warning" %}
-Currently the Telegram functionality is not available on ARM platforms.
-{% endhint %}
+## Demo video
+
+{% embed url="https://www.youtube.com/watch?v=11fHq22nNFo" caption="" %}
 
 ## Settings descriptions
 
