@@ -15,11 +15,13 @@ Gunbot runs from your own Windows, macOS, Linux or ARMv7 computer or server. You
 * **Disk space**: 10 GB free disk space
 * **Network**: stable broadband network connection
 
-## License system
+## Blockchain based license system
 
 Gunbot uses a blockchain based license validation system. It uses our own ERC-20 utility token called "GUNTHY". Using this system, you can [manage your own API keys](../../setup-and-general-settings/profile-settings/edit-license.md) and change them anytime, or even sell your license to a third party.
 
 **Your** [**wallet address**](how-to-create-a-wallet.md)**, combined with an airdropped amount of tokens, is your Gunbot license key.**
+
+Wallet registration and token distribution happens after the initial license purchase through a [reseller](https://gunthy.org/resellers/). 
 
 {% hint style="warning" %}
 **You are responsible for your own API keys and GUNTHY wallet.**
@@ -27,22 +29,32 @@ Gunbot uses a blockchain based license validation system. It uses our own ERC-20
 Please understand that we might not be able to help you if you lose all your registered API keys and \(access to\) your wallet address. Make sure to follow all the security advise when setting up a wallet and properly save and backup the API key\(s\) used for Gunbot.
 {% endhint %}
 
+### Extend license options using Gunthy tokens
+
+If you own a **Gunbot Standard license or higher**, you can extend your license in a few ways by holding more Gunthy tokens than were delivered to you after the initial purchase.   
+  
+Get a total of 3 API slots when you hold 1500 tokens, get a total of 5 API slots when you hold 2500 tokens.
+
+Some Gunthy modules are not for sale, they are only available to Gunbot license holder with a substantial token balance. This is the case for bitRage and Gunthy Market Maker.
+
+This token balance is the main factor in your "user rank", you see your user rank in the bot startup messages. If you reach rank 20, you automatically get access to bitRage. If you reach rank 10 you automatically get access to Market Maker. 
+
+As long as your token balance does not decrease, access to these modules stays. The ranking system is not a competition between users, you can't lose your ranking when other users increase their token holding.
+
 ## Token airdrops and requirements
 
 After you've registered your wallet address, you'll receive an airdrop with the required amount of tokens for your license type. **Hold these tokens at all times to be sure your Gunbot can run.**
 
 These are the required amounts for undiscounted license types:
 
-* **Starter**: 400 GUNTHY
-* **Standard**: 1000 GUNTHY
-* **Pro**: 1500 GUNTHY
-* **Ultimate**: 2500 GUNTHY
+* **Starter**: 400 
+* **Standard**: 1000 
+* **Pro**: 1500 
+* **Ultimate**: 2500 
 
 **Discounted license have reduced token requirements.**
 
 Tokens are generally airdropped within 24 hours after registering the wallet address.
-
-
 
 ## FAQ
 
