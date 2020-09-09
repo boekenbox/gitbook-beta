@@ -106,6 +106,70 @@ Parameter name in `config.js`: `ROE`
 {% endtab %}
 {% endtabs %}
 
+### PND
+
+{% tabs %}
+{% tab title="Description" %}
+Use "PND" logic to close trades. This mode tries to not close a position before a pump or dump has fully played out - usually beats ROE trailing performance.
+
+Respects the minimum ROE set.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Close | RT buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | Stop limit |
+|  | Strategy buy |
+|  | Strategy sell |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `PND`
+{% endtab %}
+{% endtabs %}
+
+### PND protection
+
+{% tabs %}
+{% tab title="Description" %}
+Fallback ROE value when using PND: if ROE drops below this version after PND started looking for an exit, the position gets immediately closed.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical
+
+**Default value:** 0
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Close | RT buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | Stop limit |
+|  | Strategy buy |
+|  | Strategy sell |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `PND_PROTECTION`
+{% endtab %}
+{% endtabs %}
+
 ### Leverage
 
 {% tabs %}
