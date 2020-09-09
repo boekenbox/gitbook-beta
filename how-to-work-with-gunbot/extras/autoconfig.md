@@ -44,8 +44,12 @@ If a job successfully completes, the changes are written to `config.js` and Gunb
 
 Schedules are set per job in a [format similar to how cron jobs are set](https://www.npmjs.com/package/node-schedule#cron-style-scheduling). If you're not used to the format, use a website like [https://crontab-generator.org/](https://crontab-generator.org/) to generate it.
 
-All config options are available in the browser interface. Even if you prefer manually editing the config file, it's recommended to create a config example using the interface, this way you can be sure all essential parameters exist.  
-  
+All config options are available in the browser interface. Even if you prefer manually editing the config file, it's recommended to create a config example using the interface, this way you can be sure all essential parameters exist.
+
+{% hint style="info" %}
+If you use a very fast schedule, for example with jobs that might update your bot config every few seconds, prevent unexpected config changes and make it a habit to not make manual settings changes using the browser anymore while AutoConfig jobs are running.
+{% endhint %}
+
 
 
 ## Job types \(with config examples\)

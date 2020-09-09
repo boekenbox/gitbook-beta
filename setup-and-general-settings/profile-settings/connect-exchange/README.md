@@ -10,6 +10,14 @@ To enter these, go to **Profiles &gt; Exchanges**.
 
 ![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/image-15.png)
 
+{% hint style="success" %}
+The master key is just the API key you've registered for an exchange.   
+  
+Using the same registered key for both the "master key" and "key" fields is OK.
+{% endhint %}
+
+
+
 Select your exchange and fill in all the fields for this exchange.
 
 <table>

@@ -39,8 +39,6 @@
   * [Bot settings](setup-and-general-settings/global-settings/bot-settings.md)
   * [Cancel orders](setup-and-general-settings/global-settings/cancel-orders.md)
   * [Advanced](setup-and-general-settings/global-settings/advanced.md)
-  * [Authentication](setup-and-general-settings/global-settings/authentication.md)
-  * [GUI notifications](setup-and-general-settings/global-settings/gui-notifications.md)
 * [Profile settings](setup-and-general-settings/profile-settings/README.md)
   * [Exchanges](setup-and-general-settings/profile-settings/exchanges.md)
   * [Gunthy wallet](setup-and-general-settings/profile-settings/gunthy-wallet-1.md)
