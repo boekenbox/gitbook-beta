@@ -64,7 +64,7 @@
   * [Trading pairs](how-to-work-with-gunbot/editing-strategies-and-pairs/trading-pairs/README.md)
     * [Pair processing](how-to-work-with-gunbot/editing-strategies-and-pairs/trading-pairs/pair-processing.md)
 * [Chart & results](how-to-work-with-gunbot/chart-results.md)
-* [Extras](how-to-work-with-gunbot/extras/README.md)
+* [Extra modules](how-to-work-with-gunbot/extras/README.md)
   * [AutoConfig](how-to-work-with-gunbot/extras/autoconfig.md)
   * [Backtesting](how-to-work-with-gunbot/extras/backtesting-add-on.md)
   * [TradingView Alerts](how-to-work-with-gunbot/extras/tradingview-add-on/README.md)
