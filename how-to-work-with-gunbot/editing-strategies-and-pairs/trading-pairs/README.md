@@ -12,25 +12,35 @@ You can use an unlimited number of trading pairs, across multiple exchanges.
 
 ## Add trading pairs
 
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/image%20%2846%29.png)
+![](../../../.gitbook/assets/image%20%2854%29.png)
+
+To start trading on a new pair, just enter or select the pair name, pick the exchange and strategy and hit the **Add** button. When you want to temporarily stop trading a pair, use the **Enabled** toggle to disable the pair.
+
+### Using filters to add multiple pairs at once
+
+Select the **Use filter rules** option to add pairs based on filters you set. This way you can for example easily add the top 10 volume USDT pairs. 
+
+When you're done, hit the **Filter** button to add pairs matching your filters.
+
+![](../../../.gitbook/assets/image%20%2855%29.png)
+
+{% hint style="warning" %}
+Some exchange unfortunately just don't provide the data needed to filter pairs in this way, or their API rate limits are just too strict to do it in a practical way. In that case likely just nothing happens when you hit the filter button.
+{% endhint %}
+
+## Pair naming conventions
 
 Gunbot uses a standardized format for entering trading pairs, this allows you to use the same syntax for all exchanges you might use.
 
-The format is: **BASECOIN-QUOTECOIN**, where the base coin is the one used to buy another asset. Be aware that some exchange show pair names in the exact reverse order.
+Where possible it uses this notation: BASECOIN-QUOTECOIN
 
-To start trading on a new pair, just enter the pair name, pick the exchange and strategy and hit the **Add** button. When you want to temporarily stop trading a pair, use the **Enabled** toggle to disable the pair.
-
-{% hint style="info" %}
-### Pair naming conventions
-
-Gunbot normalizes pair notation, where possible it uses this notation: BASECOIN-QUOTECOIN
-
-All pairs with BTC as base currency are written like: BTC-ETH, BTC-OK, BTC-XLM
+All pairs with BTC as base currency are written like: BTC-ETH, BTC-ATOM, BTC-ETH
 
 All pairs with USDT as base currency are written like: USDT-BTC, USDT-ETH, USDT-XMR
-{% endhint %}
 
-### Pair naming exceptions
+The format is: **BASECOIN-QUOTECOIN**, where the base coin is the one used to buy another asset. Be aware that some exchange show pair names in the exact reverse order. 
+
+## Exceptions
 
 On **Binance**, use YOYOW instead of YOYO.
 
@@ -56,7 +66,7 @@ Overrides are pair specific settings, overruling the assigned strategy. Every st
 
 You can use this, for example, to set a different trading limit for a specific pair.
 
-When adding overrides, you can choose from a list of all available strategy settings.
+When adding overrides, you can choose from a list of all available strategy settings. See the strategy settings pages for which values are accepted for each individual parameter.
 
 {% hint style="info" %}
 Make sure to only add overrides for settings that actually have a function for the buy and sell methods of your strategy. See the strategy pages for detailed info about relevant settings.
