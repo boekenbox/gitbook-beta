@@ -70,7 +70,7 @@ Enter your Exchange's TRADING\_FEES in the \[Properties\] Tab and then the \[Inp
 
 Drag this window to where you can also see the Strategy Tester pane stats.
 
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/bt-8.png)
+![](../../.gitbook/assets/image%20%2858%29.png)
 
 Now you are ready to begin adjusting settings in the \[Inputs\] window while watching Net Profit \(red is loss\) to see how this affects your returns. Once you have settings that you are satisfied with, record them to be entered into the real Gunbot when you are ready to begin trading that pair.
 
