@@ -1380,7 +1380,7 @@ To use an expression instead of a string or number, enter your expression as str
 "validExpression": " 1 + 2"
 ```
 
-Many internal data is made available to custom expressions. Use these with caution though, it is very common to encounter undefined data sooner or later - you can handle such errors though. 
+Many internal data is made available to custom expressions. Use these with caution though, it is very common to encounter undefined data sooner or later - you can handle such errors though - for example by first placing a filter that checks if the data you'll use in an expression has a value bigger than 0.
 
 Use the following references to access internal data in your expressions:
 
@@ -1399,8 +1399,10 @@ Availability of pair specific data depends on the context where you're trying to
 
 ```text
 " this.pair.Bid * this.pair.quoteBalance"
+// returns bag value in base currency
 
 " (this.pair.Bid * this.pair.quoteBalance) > this.pair.whatstrat.MIN_VOLUME_TO_SELL ? true : false"
+// returns true if bag is bigger than MVTS, false if not
 
 " (function doStuff(data) {
       if (data.pair.Bid > 0){
