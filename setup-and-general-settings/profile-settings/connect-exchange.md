@@ -4,7 +4,7 @@ description: How to connect Gunbot to your exchange account.
 
 # Exchanges
 
-To be able to trade, you need to enter the exchange [API key](../../../about/supported-exchanges/creating-api-keys.md) and secret, as well as the trading fees level for each exchange.
+To be able to trade, you need to enter the exchange [API key](../../about/supported-exchanges/creating-api-keys.md) and secret, as well as the trading fees level for each exchange.
 
 To enter these, go to **Profiles &gt; Exchanges**.
 
