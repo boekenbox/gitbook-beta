@@ -40,14 +40,13 @@
   * [Cancel orders](setup-and-general-settings/global-settings/cancel-orders.md)
   * [Advanced](setup-and-general-settings/global-settings/advanced.md)
 * [Profile settings](setup-and-general-settings/profile-settings/README.md)
-  * [Exchanges](setup-and-general-settings/profile-settings/exchanges.md)
+  * [Exchanges](setup-and-general-settings/profile-settings/connect-exchange/README.md)
+    * [Swap exchanges](setup-and-general-settings/profile-settings/connect-exchange/api-slots.md)
   * [Gunthy wallet](setup-and-general-settings/profile-settings/gunthy-wallet-1.md)
   * [Edit license](setup-and-general-settings/profile-settings/edit-license.md)
   * [GUI authentication](setup-and-general-settings/profile-settings/gui-authentication.md)
   * [Telegram](setup-and-general-settings/profile-settings/telegram-notifications.md)
   * [Tournament](setup-and-general-settings/profile-settings/tournament.md)
-  * [Connect exchange](setup-and-general-settings/profile-settings/connect-exchange/README.md)
-    * [Swap exchanges](setup-and-general-settings/profile-settings/connect-exchange/api-slots.md)
 
 ## How to work with Gunbot
 
