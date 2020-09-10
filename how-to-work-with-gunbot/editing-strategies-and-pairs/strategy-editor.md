@@ -30,6 +30,12 @@ Click on a strategy nickname to edit its settings.
 
 ![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/image%20%2842%29.png)
 
+## Duplicating and renaming strategies
+
+When you duplicate a strategy a copy is created with a random tag at the end of the strategy name.
+
+When you rename a strategy, strategy assignment for pairs does not get automatically updated. If you want to use a renamed strategy on existing pairs, make sure to assign the strategy to the pairs.
+
 ## Editors for bitRage and Market Maker
 
 If you're a bitRage or Market Maker user, you can use the strategy editor in a different layout to manage the strategies for these modules.
