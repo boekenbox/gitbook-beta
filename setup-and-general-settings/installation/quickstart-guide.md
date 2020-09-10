@@ -34,12 +34,12 @@ On Mac systems, expect to have to explicitly allow running various libraries use
 
 ## 3. Enter license related data
 
-Before you can start actually trading with the bot, you'll need to enter a few things to make sure it will pass the license checks.
+Before you can start trading with the bot, you'll need to enter a few things to make sure it will pass the license checks.
 
 When you first start the interface, it will show a window that guides you through the initial setup of:
 
 * Entering the wallet address where you hold your Gunthy tokens
-* Connecting one exchange for which you've registered an API key after your order
+* Connecting one exchange for which you've registered an API key after your order. Make sure to use the same API key as you've registered.
 
 ![](../../.gitbook/assets/image%20%2860%29.png)
 
