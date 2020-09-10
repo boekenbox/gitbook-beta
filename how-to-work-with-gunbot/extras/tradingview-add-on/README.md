@@ -29,7 +29,7 @@ Trading limits can only be specifically defined in buy/long alerts, for other al
 
 _Replace_ `EXCHANGE` _with the name of your exchange._
 
-#### For all spot exchanges
+#### For spot exchanges
 
 <table>
   <thead>
@@ -84,7 +84,7 @@ _Replace_ `EXCHANGE` _with the name of your exchange._
   </tbody>
 </table>
 
-#### For all futures exchanges
+#### For futures / margin exchanges
 
 <table>
   <thead>
@@ -127,8 +127,30 @@ _Replace_ `EXCHANGE` _with the name of your exchange._
         <p>Requires TV market orders to be disabled.</p>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><code>CLOSE_EXCHANGE_USDT-LTC</code>
+      </td>
+      <td style="text-align:left">Close a margin position</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>CLOSELONG_EXCHANGE_XBT-USD</code>
+      </td>
+      <td style="text-align:left">Close a long position</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>CLOSESHORT_EXCHANGE_XBT-USD</code>
+      </td>
+      <td style="text-align:left">Close a short position</td>
+    </tr>
   </tbody>
 </table>
+
+{% hint style="success" %}
+* Orders in the opposite direction of a position can be used to \(partially\) close positions
+* Want to flip between long and short? Open one position manually, then send long and short alerts at 2x that position size to keep flipping from long to short or vice versa.
+{% endhint %}
+
+#### 
 
 #### Change strategy by alert
 
