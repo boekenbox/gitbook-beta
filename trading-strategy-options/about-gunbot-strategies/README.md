@@ -12,8 +12,6 @@ A strategy in Gunbot is a set of rules for trading, you can assign it to one or 
 Every buy or sell condition you set, must occur in the **same** round of processing.
 {% endhint %}
 
-\*\*\*\*
-
 Because strategies are a very long topic, the documentation is split into different pages:
 
 {% page-ref page="trading-methods.md" %}

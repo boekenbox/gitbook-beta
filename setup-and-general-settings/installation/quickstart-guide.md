@@ -50,3 +50,27 @@ Pick "other" if your registered exchange is not listed on the setup wizard.
 After saving, you can enter the exchange details on the profile page.
 {% endhint %}
 
+## 4. Ready to go. Keep reading to get the most out of your bot
+
+Your bot should now be ready to start trading when you add a trading pair and assign it a strategy.
+
+However, this is really just the beginning. There are a lot of strategy options, you should learn at least about the ones that will affect your trading strategy \(if you've picked one already\).
+
+If you read through at least the following pages, you should quickly get a much clearer idea about how Gunbot actually works and how you can make it work for you.
+
+### General information
+
+{% page-ref page="../../how-to-work-with-gunbot/basic-workings/trading-logic.md" %}
+
+{% page-ref page="../../how-to-work-with-gunbot/editing-strategies-and-pairs/trading-pairs/pair-processing.md" %}
+
+{% page-ref page="../../how-to-work-with-gunbot/editing-strategies-and-pairs/" %}
+
+### Essential info about strategies
+
+{% page-ref page="../../how-to-work-with-gunbot/basic-workings/balance-settings.md" %}
+
+{% page-ref page="../../trading-strategy-options/about-gunbot-strategies/" %}
+
+
+
