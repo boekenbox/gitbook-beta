@@ -27,6 +27,7 @@
 ## Setup & general settings
 
 * [Installation & startup](setup-and-general-settings/installation/README.md)
+  * [Quickstart guide](setup-and-general-settings/installation/quickstart-guide.md)
   * [Download software](setup-and-general-settings/installation/download.md)
   * [Windows installation](setup-and-general-settings/installation/windows.md)
   * [macOS installation](setup-and-general-settings/installation/macos.md)
