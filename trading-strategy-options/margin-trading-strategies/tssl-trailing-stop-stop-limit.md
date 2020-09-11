@@ -193,13 +193,15 @@ Parameter name in `config.js`: `PND`
 
 {% tabs %}
 {% tab title="Description" %}
-Fallback ROE value when using PND: if ROE drops below this version after PND started looking for an exit, the position gets immediately closed.
+Threshold to close a position when it drops below ROE again.
+
+A value of 1.5 means that if ROE reached 1.5x the minimum target, the position will get closed immediately if the trend turns.
 {% endtab %}
 
 {% tab title="Values" %}
 **Values:** numerical
 
-**Default value:** 0
+**Default value:** 1.5
 {% endtab %}
 
 {% tab title="Order types" %}

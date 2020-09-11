@@ -14,7 +14,7 @@ description: Instructions to install Gunbot on a Windows machine.
 On some Windows installations the file will be blocked by default and won't open. If that happens, right click gunthy-win.exe and open the properties dialog. Then use the unblock option:  
 
 
-![](../../.gitbook/assets/image%20%2858%29.png)
+![Unblocking is needed on some Windows installations](../../.gitbook/assets/image%20%2858%29.png)
 
 {% hint style="info" %}
 Depending on your systems settings, you may need to add a firewall rule to allow for incoming traffic on TCP port 5000.
