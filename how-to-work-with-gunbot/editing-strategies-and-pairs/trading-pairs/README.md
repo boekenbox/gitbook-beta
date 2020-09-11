@@ -38,15 +38,43 @@ All pairs with BTC as base currency are written like: BTC-ETH, BTC-ATOM, BTC-ETH
 
 All pairs with USDT as base currency are written like: USDT-BTC, USDT-ETH, USDT-XMR
 
-The format is: **BASECOIN-QUOTECOIN**, where the base coin is the one used to buy another asset. Be aware that some exchange show pair names in the exact reverse order. 
+The base coin is the one used to buy another asset. Be aware that some exchange show pair names in the exact reverse order. ****
 
-## Exceptions
+## Symbol name exceptions
 
-On **Binance**, use YOYOW instead of YOYO.
+A small number of symbol names need to be written in a slightly different way than the exchange lists them on their site. 
 
-For a few coins on **Bitfinex**, the API display name is required. These are: IOTA = IOT, DASH = DSH, QTUM = QTM, DATA = DAT, QASH = QSH
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Exchange</th>
+      <th style="text-align:left">Symbol exceptions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">binance</td>
+      <td style="text-align:left">Use YOYOW instead of YOYO</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">bitfinex</td>
+      <td style="text-align:left">
+        <p>For a few symbols, the API display name is required. These are:</p>
+        <p>IOTA = IOT</p>
+        <p>DASH = DSH</p>
+        <p>QTUM = QTM</p>
+        <p>DATA = DAT</p>
+        <p>QASH = QSH</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">kraken</td>
+      <td style="text-align:left">Use BTC instead of XBT</td>
+    </tr>
+  </tbody>
+</table>
 
-**Kraken** calls Bitcoin XBT, use BTC instead.
+## Pair naming for futures exchanges
 
 Pairs on **Bitmex** use almost the same symbols as on Bitmex itself, but with a hyphen-minus between the two asset names. Example: XBT-USD
 
