@@ -255,7 +255,7 @@ Parameter name in `config.js`: `EMASPREAD`
 
 {% tabs %}
 {% tab title="Description" %}
-Sets the minimum percentage difference between slow and fast EMA for `EMASPREAD`.
+Sets the minimum percentage difference between slow and medium EMA for `EMASPREAD`.
 
 When set to 1, the spread must reach at least 1% before `EMASPREAD` can trigger a buy or sell.
 {% endtab %}
