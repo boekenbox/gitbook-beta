@@ -307,10 +307,10 @@ Parameter name in `config.js`: `BOUGHT_PRICE`
 
 On exchanges that support market orders, you can select which types of orders should be sent as limit or market.
 
-{% hint style="success" %}
-**Supported exchanges**
+{% hint style="info" %}
+**Not all exchanges support market orders**
 
-Binance, Bitfinex, Bitmex, Coinbase Pro, Kraken and Poloniex
+Test if your market orders execute before leaving your strategy run unattended.
 {% endhint %}
 
 ### Market Buy
