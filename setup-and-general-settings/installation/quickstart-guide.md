@@ -21,17 +21,18 @@ The installation procedure is pretty straightforward, although there are slight 
 * Depending on your firewall: allow TCP traffic on the port used for the interface \(default port: 5000\)
 * Start executable file and visit the interface in your browser on: [http://localhost:5000](http://localhost:5000)
 
-| Links to operating system specific install guides |
-| :--- |
-| [Windows](windows.md) |
-| [macOS](macos.md) |
-| [Linux](linux.md) |
-| [ARM](linux.md) |
-
 ![If you see this after starting the bot, all is good and you can open the interface in your browser](../../.gitbook/assets/image%20%2860%29.png)
 
+{% page-ref page="windows.md" %}
+
+{% page-ref page="macos.md" %}
+
+{% page-ref page="linux.md" %}
+
+{% page-ref page="arm.md" %}
+
 {% hint style="info" %}
-On Mac systems, expect to have to explicitly allow running various libraries used by Gunbot due to Gatekeeper.
+On Mac systems, expect to need to explicitly allow running various libraries used by Gunbot due to Gatekeeper.
 {% endhint %}
 
 ## 3. Enter license related data
