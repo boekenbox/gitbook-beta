@@ -11,6 +11,11 @@ description: Instructions to install Gunbot on a Windows machine.
 3. Open [localhost:5000](http://localhost:5000) in a browser on the same system to access the Gunbot GUI \(modern browsers recommended, preferably Chrome or Firefox\)
 4. Make sure to enter your registered ERC-20 wallet \("Gunthy wallet"\) and your [registered API key](../profile-settings/connect-exchange.md) in Gunbot before starting the bot core for the first time.
 
+On some Windows installations the file will be blocked by default and won't open. If that happens, right click gunthy-win.exe and open the properties dialog. Then use the unblock option:  
+
+
+![](../../.gitbook/assets/image%20%2858%29.png)
+
 {% hint style="info" %}
 Depending on your systems settings, you may need to add a firewall rule to allow for incoming traffic on TCP port 5000.
 {% endhint %}

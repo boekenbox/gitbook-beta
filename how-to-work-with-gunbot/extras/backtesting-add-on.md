@@ -70,13 +70,13 @@ Enter your Exchange's TRADING\_FEES in the \[Properties\] Tab and then the \[Inp
 
 Drag this window to where you can also see the Strategy Tester pane stats.
 
-![](../../.gitbook/assets/image%20%2861%29.png)
+![](../../.gitbook/assets/image%20%2862%29.png)
 
 Now you are ready to begin adjusting settings in the \[Inputs\] window while watching Net Profit \(red is loss\) to see how this affects your returns. Once you have settings that you are satisfied with, record them to be entered into the real Gunbot when you are ready to begin trading that pair.
 
 To see the "console" readings open the Data Window and hover mouse over a candle, this can be useful for troubleshooting and will also allow you to see the color coding of the plots \(inactive are blue\).
 
-![](../../.gitbook/assets/image%20%2863%29.png)
+![](../../.gitbook/assets/image%20%2864%29.png)
 
 The "Gunbot Tuners Companion" script is used for visually tuning the indicators which cannot be shown on the main chart window. It has it's own Gear icon where you will change it's settings. Once you have visually satisfactory settings, enter those same settings into the "Gunbot Deluxe Tuners BE" script settings to see how they perform.
 

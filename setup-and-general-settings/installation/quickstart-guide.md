@@ -28,7 +28,7 @@ The installation procedure is pretty straightforward, although there are slight 
 | [Linux](linux.md) |
 | [ARM](linux.md) |
 
-![If you see this after starting the bot, all is good and you can open the interface in your browser](../../.gitbook/assets/image%20%2859%29.png)
+![If you see this after starting the bot, all is good and you can open the interface in your browser](../../.gitbook/assets/image%20%2860%29.png)
 
 {% hint style="info" %}
 On Mac systems, expect to have to explicitly allow running various libraries used by Gunbot due to Gatekeeper.
@@ -43,7 +43,7 @@ When you first start the interface, it will show a window that guides you throug
 * Entering the wallet address where you hold your Gunthy tokens
 * Connecting one exchange for which you've registered an API key after your order. Make sure to use the same API key as you've registered.
 
-![](../../.gitbook/assets/image%20%2862%29.png)
+![](../../.gitbook/assets/image%20%2863%29.png)
 
 Save the settings after completing the wizard.
 
