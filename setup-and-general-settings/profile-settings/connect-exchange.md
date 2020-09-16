@@ -82,6 +82,11 @@ Select your exchange and fill in all the fields for this exchange.
       <td style="text-align:left">Some exchanges require a passphrase for each API key, it may be called
         slightly different on the exchange itself.</td>
     </tr>
+    <tr>
+      <td style="text-align:left"><b>Market</b> (needed for select exchanges)</td>
+      <td style="text-align:left">Some exchanges require specifying the market the bot will be used on:
+        spot, swap or futures. Applies to Okex and BitGet.</td>
+    </tr>
   </tbody>
 </table>
 
