@@ -303,6 +303,14 @@ Parameter name in `config.js`: `BOUGHT_PRICE`
 {% endtab %}
 {% endtabs %}
 
+## Liquidity maker / taker
+
+Provide liquidity to any spot market, with a simple staggered orders strategy that fills the order book.
+
+![](../.gitbook/assets/image%20%2870%29.png)
+
+
+
 ## Order type settings
 
 On exchanges that support market orders, you can select which types of orders should be sent as limit or market.

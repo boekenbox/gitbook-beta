@@ -21,7 +21,7 @@ Gunbot uses a blockchain based license validation system. It uses our own ERC-20
 
 **Your** [**wallet address**](how-to-create-a-wallet.md)**, combined with a number of tokens, is your Gunbot license key.**
 
-Wallet registration and token distribution happens after the initial license purchase through a [reseller](https://gunthy.org/resellers/). 
+Wallet registration and token distribution happens after the initial license purchase through a [reseller](https://gunthy.org/resellers/).
 
 {% hint style="warning" %}
 **You are responsible for your own API keys and GUNTHY wallet.**
@@ -31,13 +31,13 @@ Please understand that we might not be able to help you if you lose all your reg
 
 ### Extend license options using Gunthy tokens
 
-If you own a **Gunbot Standard license or higher**, you can extend your license in a few ways by holding more Gunthy tokens than were delivered to you after the initial purchase.   
-  
+If you own a **Gunbot Standard license or higher**, you can extend your license in a few ways by holding more Gunthy tokens than were delivered to you after the initial purchase.
+
 Get a total of 3 API slots when you hold 1500 tokens, get a total of 5 API slots when you hold 2500 tokens.
 
 Some Gunthy modules are not for sale, they are only available to Gunbot license holder with a substantial token balance. This is the case for bitRage and Gunthy Market Maker.
 
-This token balance is the main factor in your "user rank", you see your user rank in the bot startup messages. If you reach rank 20, you automatically get access to bitRage. If you reach rank 10 you automatically get access to Market Maker. 
+This token balance is the main factor in your "user rank", you see your user rank in the bot startup messages. If you reach rank 20, you automatically get access to bitRage. If you reach rank 10 you automatically get access to Market Maker.
 
 As long as your token balance does not decrease, access to these modules stays. The ranking system is not a competition between users, you can't lose your ranking when other users increase their token holding.
 
