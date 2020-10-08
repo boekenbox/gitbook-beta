@@ -303,11 +303,106 @@ Parameter name in `config.js`: `BOUGHT_PRICE`
 {% endtab %}
 {% endtabs %}
 
-## Liquidity maker / taker
+## Liquidity maker
 
-Provide liquidity to any spot market, with a simple staggered orders strategy that fills the order book.
+Use any strategy as a liquidity provider on spot markets, by using a simple staggered orders strategy that places orders at many positions in the order book.
 
-![](../.gitbook/assets/image%20%2871%29.png)
+![Empty order book? Not anymore with liquidity maker.](../.gitbook/assets/image%20%2870%29.png)
+
+### Liquidity maker
+
+{% tabs %}
+{% tab title="Description" %}
+Enables a staggered orders strategy variant that continuously places up to 9 orders on the bid side of the order book. If there is enough quote balance, up to 9 orders are placed on the ask side as well. You profit from the spread between bid and ask, provided the spread is higher than your trading fees.
+
+Each order is in value of 1x `TRADING_LIMIT`. Potentially it can use your whole balance.
+
+This works in addition to your regular strategy. You can disable the regular strategy by setting both buy and sell enabled to "false".
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Stop limit |
+| Strategy sell | RT Buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `LIQUIDITY`
+{% endtab %}
+{% endtabs %}
+
+### Liquidity taker 
+
+{% tabs %}
+{% tab title="Description" %}
+In addition to maker orders, use taker orders when reaching your targets or to DCA.
+
+When `GAIN` is reached, every round a market sell order of 1x `TRADING_LIMIT` gets fired to reduce your position in profit. 
+
+When price drops below the average bought price, every round a market buy order of 1x `TRADING_LIMIT` gets fired to bring down the average price per unit. 
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** false
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Stop limit |
+| Strategy sell | RT Buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `LIQUIDITY_TAKER`
+{% endtab %}
+{% endtabs %}
+
+### Max invested base
+
+{% tabs %}
+{% tab title="Description" %}
+Limits the total position size for liquidity taker orders. When the maximum value is reached, no more taker orders are placed that would add to the position.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical - represents a value in base currency
+
+**Default value:** 0.1
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Stop limit |
+| Strategy sell | RT Buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `MAX_INVESTMENT`
+{% endtab %}
+{% endtabs %}
 
 
 
