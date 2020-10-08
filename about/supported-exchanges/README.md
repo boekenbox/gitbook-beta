@@ -15,9 +15,11 @@ These exchanges are official Gunbot partners. We are in direct contact with thei
 | **Gunthy** | `gunthy` | Regular | Regular |
 | **Binance** | `binance` / `binanceus` | Regular | Regular |
 | **Binance Futures** | `binanceFutures` | Margin | Margin |
+| **Bitget** | `bitget` | Margin | Margin |
 | **HitBTC** | `hitbtc2` | Regular | Regular |
 | **Kraken Futures** | `krakenFutures` | Margin | Margin |
 | **KuCoin** | `kucoin` | Regular | Regular |
+| **Nash** | `nashio` | Regular | Regular |
 | **OKEx** | `okex3` | Regular & margin | Regular & margin |
 
 ## Certified exchanges
