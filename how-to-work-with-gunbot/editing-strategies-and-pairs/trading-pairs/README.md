@@ -16,6 +16,10 @@ You can use an unlimited number of trading pairs, across multiple exchanges.
 
 To start trading on a new pair, just enter or select the pair name, pick the exchange and strategy and hit the **Add** button. When you want to temporarily stop trading a pair, use the **Enabled** toggle to disable the pair.
 
+{% hint style="success" %}
+The _Use safe balance settings_ option makes sure that a few critical balance settings are automatically set to known working values, for each newly added BTC, USD, USDT or EUR pair.
+{% endhint %}
+
 ### Using filters to add multiple pairs at once
 
 Select the **Use filter rules** option to add pairs based on filters you set. This way you can for example easily add the top 10 volume USDT pairs. 
