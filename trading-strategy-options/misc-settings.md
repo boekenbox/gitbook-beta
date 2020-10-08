@@ -307,7 +307,7 @@ Parameter name in `config.js`: `BOUGHT_PRICE`
 
 Provide liquidity to any spot market, with a simple staggered orders strategy that fills the order book.
 
-![](../.gitbook/assets/image%20%2870%29.png)
+![](../.gitbook/assets/image%20%2871%29.png)
 
 
 
