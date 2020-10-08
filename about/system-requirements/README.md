@@ -19,7 +19,7 @@ Gunbot runs from your own Windows, macOS, Linux or ARMv7 computer or server. You
 
 Gunbot uses a blockchain based license validation system. It uses our own ERC-20 utility token called "GUNTHY". Using this system, you can [manage your own API keys](../../setup-and-general-settings/profile-settings/edit-license.md) and change them anytime, or even sell your license to a third party.
 
-**Your** [**wallet address**](how-to-create-a-wallet.md)**, combined with an airdropped amount of tokens, is your Gunbot license key.**
+**Your** [**wallet address**](how-to-create-a-wallet.md)**, combined with a number of tokens, is your Gunbot license key.**
 
 Wallet registration and token distribution happens after the initial license purchase through a [reseller](https://gunthy.org/resellers/). 
 
