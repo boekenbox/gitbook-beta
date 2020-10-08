@@ -29,9 +29,9 @@ Only the most important changes are listed.
 * **Completely new GUI:** improved performance, easier to use, better charting, more stats 
 * **Seamless config changes:** pair cycling is no longer interrupted when a config change happens. New settings take effect the next cycle.
 * **New supported partner exchanges:** Bitget and Nash
-* **New strategy for spot trading**: Support / Resistance
+* **New strategy for spot trading**: [Support / Resistance](../../trading-strategy-options/regular-strategies-spot-trading/support-resistance.md)
 * **PND close**: an alternative to ROE trailing to aim for bigger profits in margin strategies. PND attempts to wait until a move plays out before closing position.
-* **Alternate ROE trailing method  for margin strats:** 
+* **Alternate ROE trailing method  for margin strats:** with `ROE_SCALPER` the trailing range is an absolute ROE value
 * **Liquidity maker for spot trading:** provide [liquidity ](../../trading-strategy-options/misc-settings.md#liquidity-maker)and profit from bid/ask spread
 * **Store more order history:** to improve profit/loss calculations and prevent unneeded "bought price" warnings, the complete order history is now locally saved over time 
 * **TradingView alerts**: option to change strategy by alert, enable `TV_TRADING_LIMIT_CAP` for Bitmex
@@ -39,13 +39,14 @@ Only the most important changes are listed.
 
 ### Market Maker
 
-* **New strategy variants**: Grid, Support/Resistance, Fibonacci, x125 & Moto
+* **New strategy variants**: Grid, Support/Resistance, Fibonacci, Pullback, One Scalper, x125 & Moto
 
 ### AutoConfig
 
-* **Editor and stats in the GUI**: every single AutoConfig feature is now editable through the GUI, every config changed is visible on the AutoConfig dashboard
+* **Editor and stats in the GUI**: every single AutoConfig feature is now editable through the GUI, every config change is visible on the AutoConfig dashboard
 * **More filter types**: add pairs with linear regression filters, more [options ](../../how-to-work-with-gunbot/extras/autoconfig.md#generic-filters)to filter your own variables
 * **Use your own logic:** most values in Autoconfig jobs can now optionally use [custom JavaScript expressions](../../how-to-work-with-gunbot/extras/autoconfig.md#calculated-config-values-and-custom-filters). Expressions have access to almost all internal bot data
+* **Silent mode**: disable console logs for AutoConfig
 
 ### Bugfixes
 
