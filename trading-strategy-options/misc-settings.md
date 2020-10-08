@@ -232,33 +232,36 @@ Use any strategy as a liquidity provider on spot markets, by using a simple stag
 
 ![Empty order book? Not anymore with liquidity maker.](../.gitbook/assets/image%20%2870%29.png)
 
-### Trades Timeout
+### Liquidity maker
 
 {% tabs %}
 {% tab title="Description" %}
-Sets a timeout between two trades for a single pair, in this time no trades will be placed.
+Enabled a staggered orders strategy variant that continuously places up to 9 orders on the bid side of the order book. If there is enough quote balance, up to 9 orders are placed on the ask side as well. You profit from the spread between bid and ask, provided the spread is higher than your trading fees.
+
+Each order is in value of 1x "trading limit".
+
+This works in addition to your regular strategy. You can disable the regular strategy by setting both buy and sell enabled to "false".
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** numerical - represents time in seconds.
+**Values:** true or false
 
-**Default value:** 0
+**Default value:** false
 {% endtab %}
 
 {% tab title="Order types" %}
 | Affects | Does not affect |
 | :--- | :--- |
 | Strategy buy | Stop limit |
-| RT buy |  |
-| RT buyback |  |
-| RT sell |  |
-| Close |  |
-| DCA buy |  |
-| Strategy sell |  |
+| Strategy sell | RT Buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `TRADES_TIMEOUT`
+Parameter name in `config.js`: `LIQUIDITY`
 {% endtab %}
 {% endtabs %}
 
