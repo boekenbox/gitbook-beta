@@ -5,7 +5,6 @@
 ## About
 
 * [What's new in v12?](about/whats-new-v12.md)
-* [How to purchase Gunbot](about/resellers.md)
 * [Supported exchanges](about/supported-exchanges.md)
 * [System requirements](about/system-requirements.md)
 
