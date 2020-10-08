@@ -226,6 +226,44 @@ Parameter name in `config.js`: `IGNORE_TRADES_BEFORE`
 {% endtab %}
 {% endtabs %}
 
+## Liquidity maker
+
+Use any strategy as a liquidity provider on spot markets, by using a simple staggered orders strategy that places orders at many positions in the order book.
+
+![Empty order book? Not anymore with liquidity maker.](../.gitbook/assets/image%20%2870%29.png)
+
+### Trades Timeout
+
+{% tabs %}
+{% tab title="Description" %}
+Sets a timeout between two trades for a single pair, in this time no trades will be placed.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical - represents time in seconds.
+
+**Default value:** 0
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy buy | Stop limit |
+| RT buy |  |
+| RT buyback |  |
+| RT sell |  |
+| Close |  |
+| DCA buy |  |
+| Strategy sell |  |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `TRADES_TIMEOUT`
+{% endtab %}
+{% endtabs %}
+
+### Count Sell
+
 ## Order type settings
 
 On exchanges that support market orders, you can select which types of orders should be sent as limit or market.
