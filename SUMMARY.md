@@ -89,6 +89,7 @@
   * [Pingpong](trading-strategy-options/regular-strategies-spot-trading/pingpong.md)
   * [Stepgain](trading-strategy-options/regular-strategies-spot-trading/stepgain.md)
   * [SMA cross](trading-strategy-options/regular-strategies-spot-trading/sma-cross.md)
+  * [Support / Resistance](trading-strategy-options/regular-strategies-spot-trading/support-resistance.md)
   * [Tssl \(trailing stop / stop limit\)](trading-strategy-options/regular-strategies-spot-trading/tssl-trailing-stop-stop-limit.md)
   * [Time series analysis](trading-strategy-options/regular-strategies-spot-trading/time-series-analysis.md)
 * [Margin trading strategies](trading-strategy-options/margin-trading-strategies/README.md)

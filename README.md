@@ -43,6 +43,7 @@ No need for a subscription, a one time fee gets you lifetime support and softwar
 | `pp` | [Regular](trading-strategy-options/regular-strategies-spot-trading/pingpong.md) | [Margin](trading-strategy-options/margin-trading-strategies/pingpong.md) |
 | `stepgain` | [Regular](trading-strategy-options/regular-strategies-spot-trading/stepgain.md) | [Margin](trading-strategy-options/margin-trading-strategies/stepgain.md) |
 | `SMACROSS` | [Regular](trading-strategy-options/regular-strategies-spot-trading/sma-cross.md) | [Margin](trading-strategy-options/margin-trading-strategies/sma-cross.md) |
+| `SupportResistance` | [Regular](trading-strategy-options/regular-strategies-spot-trading/support-resistance.md) | N/A |
 | `tsa` | [Regular](trading-strategy-options/regular-strategies-spot-trading/time-series-analysis.md) | [Margin](trading-strategy-options/margin-trading-strategies/time-series-analysis.md) |
 | `tssl` | [Regular](trading-strategy-options/regular-strategies-spot-trading/tssl-trailing-stop-stop-limit.md) | [Margin](trading-strategy-options/margin-trading-strategies/tssl-trailing-stop-stop-limit.md) |
 
