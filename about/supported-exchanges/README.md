@@ -22,6 +22,10 @@ These exchanges are official Gunbot partners. We are in direct contact with thei
 | **Nash** | `nashio` | Regular | Regular |
 | **OKEx** | `okex3` | Regular & margin | Regular & margin |
 
+{% hint style="success" %}
+Gunthy and Nash do not require registering an additional api key in your license. Because they list Gunthy Token they are free to use for every Gunbot user.
+{% endhint %}
+
 ## Certified exchanges
 
 These exchanges have been supported in Gunbot for a long time, you can expect high quality API support.
