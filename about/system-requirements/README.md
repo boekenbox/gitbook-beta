@@ -54,7 +54,7 @@ These are the required amounts for undiscounted license types:
 
 **Discounted license have reduced token requirements.**
 
-Tokens are generally airdropped within 24 hours after registering the wallet address.
+Tokens for new users are generally airdropped within 24 hours after registering the wallet address.
 
 ## FAQ
 
