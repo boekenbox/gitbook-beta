@@ -379,7 +379,7 @@ Parameter name in `config.js`: `LIQUIDITY_TAKER`
 
 {% tabs %}
 {% tab title="Description" %}
-Limits the total position size for liquidity taker orders. When the maximum value is reached, no more taker orders are placed that would add to the position.
+Limits the total position size for liquidity maker and taker orders. When the maximum value is reached, no more liquidity maker or taker orders that would add to the position are placed . 
 {% endtab %}
 
 {% tab title="Values" %}

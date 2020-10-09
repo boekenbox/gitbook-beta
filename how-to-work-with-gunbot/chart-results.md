@@ -36,9 +36,3 @@ Get a quick overview of your active trading pairs on the dashboard. Each exchang
 
 
 
-## Trading map
-
-The trading map gives you instant information about how your pairs are doing.
-
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/image-20.png)
-
