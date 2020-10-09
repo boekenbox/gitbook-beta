@@ -8,13 +8,11 @@ With the Gunbot TradingView add-on you can execute trading alerts sent from cust
 
 This add-on can also be used for executing trades from arbitrary email alerts, TradingView is not strictly required.
 
-![](../../../.gitbook/assets/image%20%2873%29.png)
-
 {% hint style="info" %}
 This is a paid add-on, availability depends on your license type.
 {% endhint %}
 
-## Setup video
+## Initial setup
 
 Before you start setting up your alerts, you need:
 
