@@ -369,7 +369,7 @@ Parameter name in `config.js`: `ROE_TRAILING`
 {% tab title="Description" %}
 Use this to enable an alternate trailing mechanism for closing positions.
 
-Trailing limit is set with `ROE_LIMIT`.
+Trailing limit is set with `ROE_LIMIT`. Additionally `ROE_TRAILING` must be enabled.
 {% endtab %}
 
 {% tab title="Values" %}
