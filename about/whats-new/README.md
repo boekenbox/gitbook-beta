@@ -30,7 +30,7 @@ Only the most important changes are listed.
 
 * **Completely new GUI:** improved performance, easier to use, better charting, improved trading terminal, more stats, additional config wizard for novice users
 * **Seamless config changes:** pair cycling is no longer interrupted when a config change happens. New settings take effect the next cycle
-* **New supported partner exchanges:** Bitget and Nash
+* **New partner exchanges:** Bitget and Nash
 * **New strategy for spot trading**: [Support / Resistance](../../trading-strategy-options/regular-strategies-spot-trading/support-resistance.md)
 * **PND close**: an alternative to ROE trailing to aim for bigger profits in margin strategies. PND attempts to wait until a move plays out before closing position
 * **Alternate ROE trailing method  for margin strats:** with `ROE_SCALPER` the trailing range is an absolute ROE value
