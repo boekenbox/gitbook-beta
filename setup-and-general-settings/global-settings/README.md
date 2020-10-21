@@ -10,6 +10,8 @@ A few settings in Gunbot work on a higher level, and are not part of any strateg
 
 ![Global settings are available under the wheels icon](../../.gitbook/assets/image%20%2844%29.png)
 
+{% page-ref page="import-settings.md" %}
+
 {% page-ref page="bot-settings.md" %}
 
 {% page-ref page="cancel-orders.md" %}
