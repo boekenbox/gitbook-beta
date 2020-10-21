@@ -14,6 +14,8 @@ In the example below, `SupRes_SPREAD` is set to 0.1, the "buy at" line visualize
 
 Keep in mind that support and resistance are not static targets. This makes the `SupRes_SPREAD` setting more or less a trailing range. It's very important to set a value that makes sense for the current pair and the price range it is in: too big of a spread can cause immediate trades.
 
+This strategy can buy multiple times, it can be capped with `SupRes_MAX`.
+
 ## 
 
 
