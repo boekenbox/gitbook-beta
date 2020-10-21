@@ -37,6 +37,7 @@
   * [Running multiple instances](setup-and-general-settings/installation/running-multiple-instances.md)
   * [Headless mode](setup-and-general-settings/installation/headless-mode.md)
 * [Global settings](setup-and-general-settings/global-settings/README.md)
+  * [Import settings](setup-and-general-settings/global-settings/import-settings.md)
   * [Bot settings](setup-and-general-settings/global-settings/bot-settings.md)
   * [Cancel orders](setup-and-general-settings/global-settings/cancel-orders.md)
   * [Advanced](setup-and-general-settings/global-settings/advanced.md)
