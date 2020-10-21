@@ -12,7 +12,7 @@ Gunbot v20 introduces a completely new interface built around the TradingView ch
 
 There are no breaking config changes for v20. In case you are upgrading from v18.x, replacing the executable file _\(gunthy-win.exe / gunthy-linux / gunthy-macos / gunthy-arm\)_ and _node\_modules_ folder is all that's needed.
 
-![The GUI requires that password authentication is enabled in config.js. Set it like this before running it.](../../.gitbook/assets/image%20%2874%29.png)
+![The GUI requires that password authentication is enabled in config.js. Set it like this.](../../.gitbook/assets/image%20%2874%29.png)
 
 New strategy parameters are automatically merged into your strategies, as soon as you login to the browser interface.
 
@@ -28,13 +28,14 @@ Only the most important changes are listed.
 
 * **Completely new GUI:** improved performance, easier to use, better charting, improved trading terminal, more stats, additional config wizard for novice users
 * **Seamless config changes:** pair cycling is no longer interrupted when a config change happens. New settings take effect the next cycle
-* **New supported partner exchanges:** Bitget and Nash
+* **New partner exchanges:** Bitget and Nash
 * **New strategy for spot trading**: [Support / Resistance](../../trading-strategy-options/regular-strategies-spot-trading/support-resistance.md)
 * **PND close**: an alternative to ROE trailing to aim for bigger profits in margin strategies. PND attempts to wait until a move plays out before closing position
 * **Alternate ROE trailing method  for margin strats:** with `ROE_SCALPER` the trailing range is an absolute ROE value
 * **Liquidity maker for spot trading:** provide [liquidity ](../../trading-strategy-options/misc-settings.md#liquidity-maker)and profit from bid/ask spread
+* **Easier config sharing**: import parts of `config.js` or `autoconfig.json` using the GUI
 * **Store more order history:** to improve profit/loss calculations and prevent unneeded "bought price" warnings, the complete order history is now locally saved over time 
-* **TradingView alerts**: option to change strategy by alert, enable `TV_TRADING_LIMIT_CAP` for Bitmex. Better handling of multiple incoming emails.
+* **TradingView alerts**: option to change strategy by alert, enable `TV_TRADING_LIMIT_CAP` for Bitmex, better handling of multiple incoming emails
 * **Alerts \(beta\):** build your own strategy in a visual way using built-in TradingView charts
 
 ### Market Maker
