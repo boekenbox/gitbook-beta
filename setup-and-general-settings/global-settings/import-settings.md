@@ -8,7 +8,7 @@ Use the built-in import tool to import parts of config.js or autoconfig.json fil
 
 Just upload a valid config file, then select the parts you want to use in your bot.
 
-![](../../.gitbook/assets/image%20%2875%29.png)
+![](../../.gitbook/assets/image%20%2876%29.png)
 
 
 

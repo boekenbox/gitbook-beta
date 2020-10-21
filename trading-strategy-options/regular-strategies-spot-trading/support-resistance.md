@@ -4,9 +4,15 @@ Buy at support, sell at resistance. That's all this strategy does. You can confi
 
 ## How to work with this strategy
 
-The infographic below describes what triggers trades with this strategy.
+There is just a single setting that defines the entry point for this strategy: `SupRes_SPREAD`
 
-![The settings used in the example are not recommended.](https://user-images.githubusercontent.com/2372008/40631012-76d296c8-62d8-11e8-8f09-6319b349955d.PNG)
+This setting represents a percentage \(of price\) above the first support level \(when buying\), or below the first resistance level \(when selling\). As soon as price crosses this threshold, it will place an order.
+
+In the example below, `SupRes_SPREAD` is set to 0.1, the "buy at" line visualizes the target.
+
+![](../../.gitbook/assets/image%20%2875%29.png)
+
+Keep in mind that support and resistance are not static targets. This makes the `SupRes_SPREAD` setting more or less a trailing range. It's very important to set a value that makes sense for the current pair and the price range it is in: too big of a spread can cause immediate trades.
 
 ## 
 
