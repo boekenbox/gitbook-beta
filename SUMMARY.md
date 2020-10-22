@@ -126,7 +126,6 @@
 * [Logs](various/logs.md)
 * [Handling bags](various/handling-bags.md)
 * [Acronyms](various/acronyms.md)
-* [Wiki feedback](https://docs.google.com/forms/d/1QwufBGpCVZ24J6Er9WRxzM-0MQhusY9dLJHaOvbem3c/)
 
 ## Troubleshooting
 
