@@ -105,39 +105,6 @@ Parameter name in `config.js`: `SELL_ENABLED`
 {% endtab %}
 {% endtabs %}
 
-### Sup / Res spread
-
-{% tabs %}
-{% tab title="Description" %}
-Sets the distance from support/resistance levels, in which orders may be placed.
-
-For buying: this value is a percentage above the first support level.
-
-For selling: this value is a percentage below the first resistance level.
-{% endtab %}
-
-{% tab title="Values" %}
-**Values:** numerical, represents a percentage \(of price\)
-
-**Default value:** 0.1
-{% endtab %}
-
-{% tab title="Order types" %}
-| Affects | Does not affect |
-| :--- | :--- |
-| Strategy sell | Stop limit |
-| Strategy buy | RT sell |
-|  | RT buy |
-|  | RT buyback |
-|  | Close |
-|  | DCA buy |
-{% endtab %}
-
-{% tab title="Name" %}
-Parameter name in `config.js`: `SupRes_SPREAD`
-{% endtab %}
-{% endtabs %}
-
 ### Gain
 
 {% tabs %}
@@ -171,7 +138,71 @@ Parameter name in `config.js`: `GAIN`
 {% endtab %}
 {% endtabs %}
 
-## Indicator settings
+### Sup / Res spread
+
+{% tabs %}
+{% tab title="Description" %}
+Sets the distance from support/resistance levels, in which orders may be placed.
+
+For buying: this value is a percentage above the first support level.
+
+For selling: this value is a percentage below the first resistance level.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical, represents a percentage \(of price\)
+
+**Default value:** 0.1
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Stop limit |
+| Strategy buy | RT sell |
+|  | RT buy |
+|  | RT buyback |
+|  | Close |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `SupRes_SPREAD`
+{% endtab %}
+{% endtabs %}
+
+### Sup / Res max
+
+{% tabs %}
+{% tab title="Description" %}
+Use this setting to limit how many times the strategy is allowed to buy, by setting a maximum allowed position size in base currency.
+
+If the combined value of quote balance, open orders and the next order to place are higher than `SupRes_MAX`, then no order will be placed even if other buy conditions meet.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical, represents a value in base currency
+
+**Default value:** 0
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Stop limit |
+| Strategy buy | RT sell |
+|  | RT buy |
+|  | RT buyback |
+|  | Close |
+|  | DCA buy |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `SupRes_MAX`
+{% endtab %}
+{% endtabs %}
+
+## Indicator settingsIndicator settings
 
 These indicator settings have a direct effect on trading with `SupportResistance`.
 
