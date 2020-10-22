@@ -538,24 +538,6 @@ This is not available for Gunbot Starter.
 
 {% page-ref page="../misc-settings.md" %}
 
-## Reading the log
-
-Assuming no confirming indicators or additional trailing is used, this is how to read the logs for this strategy.
-
-### Buy conditions
-
-![](../../.gitbook/assets/image%20%2845%29.png)
-
-This strategy should buy when the ask price is equal to or below the entry point. The entry point price is derived from your setting for `BUY_LEVEL`.
-
-It will only buy when quote volume is worth less than your setting for `MIN_VOLUME_TO_SELL`, otherwise it'll try to sell instead.
-
-### Sell conditions
-
-![](https://github.com/boekenbox/gitbook-stable/tree/3a92dec7b38c6c68006e24cacd6dea5b58bd2152/.gitbook/assets/image%20%2884%29.png)
-
-A sell order should be placed when the bid price is equal to or higher than exit point.
-
 ## Placeholders
 
 The following parameters in `config.js` have no function for this strategy and act as placeholder.
