@@ -177,7 +177,7 @@ Parameter name in `config.js`: `SupRes_SPREAD`
 {% tab title="Description" %}
 Use this setting to limit how many times the strategy is allowed to buy, by setting a maximum allowed position size in base currency.
 
-If the combined value of quote balance, open orders and the next order to place are higher than `SupRes_MAX`, then no order will be placed even if other buy conditions meet.
+If the combined value of quote balance, open orders and the next order to place are higher than `SupRes_MAX`, then no further buy orders will be placed.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -202,7 +202,7 @@ Parameter name in `config.js`: `SupRes_MAX`
 {% endtab %}
 {% endtabs %}
 
-## Indicator settingsIndicator settings
+## Indicator settings
 
 These indicator settings have a direct effect on trading with `SupportResistance`.
 
@@ -267,9 +267,32 @@ Parameter name in `config.js`: `SMAPERIOD`
 {% endtab %}
 {% endtabs %}
 
+## Balance settings
+
+{% page-ref page="../balance-settings.md" %}
+
+## Misc settings
+
+{% page-ref page="../misc-settings.md" %}
+
+## DCA settings
+
+This strategy cannot use DCA.  
+Averaging down is natively implemented by allowing multiple buy orders.
+
+## Reversal trading 
+
+This strategy cannot use reversal trading.
+
 ## TrailMe settings
 
-These settings can be used, but they are not tested and not intended for use with emotionless. Use at your own risk.
+This strategy cannot use TrailMe.
+
+## Confirming indicators
+
+This strategy cannot use confirming indicators.
+
+
 
 
 
