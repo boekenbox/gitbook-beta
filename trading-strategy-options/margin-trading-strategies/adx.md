@@ -336,7 +336,7 @@ Range is a percentage of current ROE. Setting a `ROE_LIMIT` of 5 at a `ROE` targ
 
 **ROE scalper:**
 
-Range is an absolute ROE value. Setting a ROE\_LIMIT of 5 at a `ROE` target of 10 means that the trailing stop is initially set at ROE 5 \(`ROE` minus `ROE_LIMIT`\).
+Range is an absolute ROE value. Setting a `ROE_LIMIT` of 5 at a `ROE` target of 10 means that the trailing stop is initially set at ROE 5 \(`ROE` minus `ROE_LIMIT`\).
 
 **Both**:
 
