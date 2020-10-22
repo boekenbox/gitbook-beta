@@ -121,9 +121,10 @@ Set this to false to prevent Gunbot from placing sell orders.
 {% tab title="Order types" %}
 | Affects | Does not affect |
 | :--- | :--- |
-| Strategy sell | Strategy buy |
-| Stop limit | RT buy |
-| RT sell | RT buyback |
+| Strategy sell | Stop limit |
+| Strategy buy | RT sell |
+|  | RT buy |
+|  | RT buyback |
 |  | Close |
 |  | DCA buy |
 {% endtab %}
