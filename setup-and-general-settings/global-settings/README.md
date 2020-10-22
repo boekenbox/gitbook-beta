@@ -18,5 +18,3 @@ A few settings in Gunbot work on a higher level, and are not part of any strateg
 
 {% page-ref page="advanced.md" %}
 
-
-
