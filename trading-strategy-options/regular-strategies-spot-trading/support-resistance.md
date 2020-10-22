@@ -8,13 +8,7 @@ There is just a single setting that defines the entry point for this strategy: `
 
 This setting represents a percentage \(of price\) above the first support level \(when buying\), or below the first resistance level \(when selling\). As soon as price crosses this threshold, it will place an order. If the balance settings allow for multiple orders, a buy order gets placed every time the buy conditions are met.
 
-This setting represents a percentage \(of price\) above the first support level \(when buying\), or below the first resistance level \(when selling\). As soon as price crosses this threshold, it will place an order.
-
 In the example below, `SupRes_SPREAD` is set to 0.1, the "buy at" line visualizes the target. The sell target would be 0.1 % below the first resistance level.
-
-In the example below, `SupRes_SPREAD` is set to 0.1, the "buy at" line visualizes the target.
-
-In the example below, `SupRes_SPREAD` is set to 0.1, the "buy at" line visualizes the target.
 
 ![](../../.gitbook/assets/image%20%2875%29.png)
 
@@ -44,35 +38,15 @@ This strategy is a bit different from other strategies, it has much less configu
 
 
 
-he Emotionless strategy is fully tuned and ready to use, even for novice traders! It's meant to be a relatively safe strategy, with modest but steady gains.
-
-With this strategy, you don't need to think about setting the right or best parameters: it's all there already. You only need to set the basics like your trading limit and choose on which pairs you want to trade. Optionally, you can increase `GAIN` slightly.
-
-The specifics for how this trading strategy exactly works will not be disclosed.
-
-**Some extra features are available for users of Gunbot Standard edition and higher. These are marked below.**
-
-![Chart showing actual trades by Emotionless. Each sell order gained ~0.6%](https://user-images.githubusercontent.com/2372008/44547052-27971080-a71a-11e8-8919-c47ecbfc54ef.png)
-
 ## Strategy parameters
 
 Following settings options are available for `SupportResistance` and can be set in the strategy configurator of the GUI or the strategies section of the config.js file.
-
-Following settings options are available for `emotionless` and can be set in the strategy configurator of the GUI or the strategies section of the config.js file.
-
-Following settings options are available for `emotionless` and can be set in the strategy configurator of the GUI or the strategies section of the config.js file.
 
 These settings are global and apply to all pairs running this strategy. When you want a specific parameter to be different for one or more pairs, use an override at the pair level.
 
 Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `SupportResistance`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md#available-buy-and-sell-methods).
 
-Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `emotionless`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md#available-buy-and-sell-methods).
-
-Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different methods for buying and selling. This strategy page assumes both `BUY_METHOD` and `SELL_METHOD` are set to `emotionless`. Accepted values are all strategy names as listed [here](../about-gunbot-strategies/trading-methods.md#available-buy-and-sell-methods).
-
 ## Buy & sell settings
-
-## Buy settings
 
 ## Buy settings
 
