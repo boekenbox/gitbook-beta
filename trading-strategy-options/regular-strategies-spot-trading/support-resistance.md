@@ -109,13 +109,17 @@ Parameter name in `config.js`: `SELL_ENABLED`
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to false to prevent Gunbot from placing sell orders.
+Sets the distance from support/resistance levels, in which orders may be placed.
+
+For buying: this value is a percentage above the first support level.
+
+For selling: this value is a percentage below the first resistance level.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** true or false
+**Values:** numerical, represents a percentage \(of price\)
 
-**Default value:** true
+**Default value:** 0.1
 {% endtab %}
 
 {% tab title="Order types" %}
@@ -129,12 +133,8 @@ Set this to false to prevent Gunbot from placing sell orders.
 |  | DCA buy |
 {% endtab %}
 
-{% tab title="" %}
-
-{% endtab %}
-
 {% tab title="Name" %}
-Parameter name in `config.js`: `SELL_ENABLED`
+Parameter name in `config.js`: `SupRes_SPREAD`
 {% endtab %}
 {% endtabs %}
 
