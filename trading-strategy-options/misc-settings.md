@@ -375,6 +375,37 @@ Parameter name in `config.js`: `LIQUIDITY_TAKER`
 {% endtab %}
 {% endtabs %}
 
+### Liquidity gain
+
+{% tabs %}
+{% tab title="Description" %}
+Option to enforce sell orders to be placed at or above break-even.  
+Disable this to provide pure liquidity.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** true or false
+
+**Default value:** true
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Stop limit |
+|  | RT Buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
+|  | Strategy sell |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `LIQUIDITY_GAIN`
+{% endtab %}
+{% endtabs %}
+
 ### Max invested base
 
 {% tabs %}
