@@ -38,6 +38,8 @@ Using the `BUY_METHOD` and `SELL_METHOD` parameters you can combine different me
 
 Buy settings are the primary trigger for buy orders. These parameters control the execution of buy orders when using `BBTA` as buy method.
 
+Take Buy is only available for Gunbot Standard and higher.
+
 ### Buy enabled
 
 {% tabs %}
@@ -241,7 +243,7 @@ It works by trailing prices upwards between the break-even point and the strateg
 
 Sells at minimal loss are possible when using `TAKE_PROFIT`, acting as a sort of mini stop loss.
 
-This option should not be used together with reversal trading and `DOUBLE_CHECK_GAIN`
+This option should not be used together with reversal trading or `DOUBLE_CHECK_GAIN`
 {% endtab %}
 
 {% tab title="Values" %}
@@ -440,7 +442,7 @@ This sets the target for buying. Negative values are allowed.
 
 The bot will buy after prices first move under the set % from the lower Bollinger Band, then cross over the set level.
 
-When set to 0, the lower Bollinger Band is the target. When set to 30, the target is 30% above the lower Bollinger Band - the upper band is at 100% from the lower band.
+When set to 0, the lower Bollinger Band is the target. When set to 30, the target is 30% above the lower Bollinger Band - the upper band is at 100% from the lower band. Negative values are allowed.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -474,7 +476,7 @@ This sets the target for selling. Negative values are allowed.
 
 The bot will sell after prices first move over the set % from the upper Bollinger Band, then cross down the set level. Additionally `GAIN` must be reached.
 
-When set to 0, the upper Bollinger Band is the target. When set to 30, the target is 30% under the upper Bollinger Band - the lower band is at 100% from the upper band.
+When set to 0, the upper Bollinger Band is the target. When set to 30, the target is 30% under the upper Bollinger Band - the lower band is at 100% from the upper band. Negative values are allowed.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -587,13 +589,13 @@ Parameter name in `config.js`: `EMA1`
 {% endtab %}
 {% endtabs %}
 
-### Fast EMA
+### Medium EMA
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to the amount of candlesticks you want to use for your fast EMA. The closing price for each candle is used in the fast EMA calculation.
+Set this to the amount of candlesticks you want to use for your medium EMA. The closing price for each candle is used in the fast EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 \(12 \* 5 mins\).
+For example: when you set `PERIOD` to 5, and want to use 1h for medium EMA – you need to set `EMA2` to 12 \(12 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}

@@ -261,13 +261,48 @@ Parameter name in `config.js`: `SELL_ENABLED`
 {% endtab %}
 {% endtabs %}
 
-### Sell Range
+### Gain
 
 {% tabs %}
 {% tab title="Description" %}
 This sets the starting point for sell trailing. Gunbot will start trailing once price reaches the set percentage above the break-even point.
 
 When you set this to 1, trailing for a sell order starts when price reaches a point 1% above the average bought price.
+{% endtab %}
+
+{% tab title="Values" %}
+**Values:** numerical – represents a percentage.
+
+**Default value:** 0.5
+{% endtab %}
+
+{% tab title="Order types" %}
+| Affects | Does not affect |
+| :--- | :--- |
+| Strategy sell | Strategy buy |
+|  | RT buy |
+|  | RT buyback |
+|  | RT sell |
+|  | Close |
+|  | DCA buy |
+|  | Stop limit |
+|  |  |
+{% endtab %}
+
+{% tab title="Name" %}
+Parameter name in `config.js`: `GAIN`
+{% endtab %}
+{% endtabs %}
+
+### Sell Range
+
+{% tabs %}
+{% tab title="Description" %}
+This sets the sell range for trailing.
+
+Setting a range of 0.5% at a starting price of 0.1 would set a range between 0.0995 and 0.1005.
+
+As long as prices keep moving upwards, the range moves up along with the price. As soon as prices start going downward, the range freezes and a sell order is placed when the prices crosses the lower boundary of the range.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -304,7 +339,7 @@ It works by trailing prices upwards between the break-even point and the strateg
 
 Sells at minimal loss are possible when using `TAKE_PROFIT`, acting as a sort of mini stop loss.
 
-This option should not be used together with reversal trading and `DOUBLE_CHECK_GAIN`
+This option should not be used together with reversal trading or `DOUBLE_CHECK_GAIN`
 {% endtab %}
 
 {% tab title="Values" %}
@@ -496,13 +531,13 @@ Parameter name in `config.js`: `EMA1`
 {% endtab %}
 {% endtabs %}
 
-### Fast EMA
+### Medium EMA
 
 {% tabs %}
 {% tab title="Description" %}
-Set this to the amount of candlesticks you want to use for your fast EMA. The closing price for each candle is used in the fast EMA calculation.
+Set this to the amount of candlesticks you want to use for your medium EMA. The closing price for each candle is used in the fast EMA calculation.
 
-For example: when you set `PERIOD` to 5, and want to use 1h for fast EMA – you need to set `EMA2` to 12 \(12 \* 5 mins\).
+For example: when you set `PERIOD` to 5, and want to use 1h for medium EMA – you need to set `EMA2` to 12 \(12 \* 5 mins\).
 {% endtab %}
 
 {% tab title="Values" %}
