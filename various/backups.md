@@ -1,12 +1,10 @@
----
-description: Config backups are made automatically after every settings change.
----
-
 # Backups
 
 Each time you apply saved settings, a copy of the previously working `config.js` file is backed up.
 
 Backups are automatically saved in the /backups folder within your Gunbot folder.
+
+
 
 ## Restore a backup
 

@@ -1,7 +1,3 @@
----
-description: Accumulate quote units during sustained periods of downwards movement.
----
-
 # Reversal trading \(RT\)
 
 Reversal trading \(RT\) is a Gunbot technique to keep on trading profitably when prices move downwards after an asset has been purchased.
@@ -13,6 +9,8 @@ Trading fees paid while in reversal trading are all accounted for.
 ![](https://user-images.githubusercontent.com/2372008/38331646-13c489aa-3854-11e8-95b4-8b9143edf69b.PNG)
 
 _Note that this example is kept simple intentionally. Prices don't have to go straight down for RT to successfully accumulate._
+
+\_\_
 
 ## How it works
 
@@ -26,14 +24,18 @@ When prices reach an overall profitable price \(EXIT POINT\), a normal sell orde
 
 In case prices recover to the break even point before an RT\_BUY could be made, the initial bag will be bought back to continue normal trading \(RT\_BUYBACK\). Alternatively, you can set a custom level for buying back quote with `RT_BUY_UP_LEVEL`.
 
-{% hint style="info" %}
+**The exact process for reversal trading is dependent on the strategies used for buying or selling. There are slight differences described in detail below.**
 
-**Tips**
+\*\*\*\*
+
+{% hint style="warning" %}
+
+**Warnings**
 
 * Do not activate reversal trading on existing bags that are already down a lot unless you use`TM_RT_SELL`! The decision to run reversal trading or not should best be made before you start trading a pair, this way the process can kick in timely.
-* Reversal trading math is done based on your trading history, if your last sell order was at loss \(and not caused by stop limit\), reversal trading would immediately start when you enable it and continues until it manages to profitably end the RT cycle - even when you've disabled RT again. 
-* To prevent unwanted reversal trading, make sure to either have a profitable last sell order or to have set `IGNORE_TRADES_BEFORE` at a time after your last sell order at loss. You can use [https://currentmillis.com/](https://currentmillis.com/) to generate the needed timestamp. To be sure, delete the pairs state JSON file after setting `IGNORE_TRADES_BEFORE`. 
-* You can set a maximum price difference between current price and average bought price with `RT_MAXBAG_PROTECTION`, to prevent RT from starting on pairs that already lost a lot of value.
+* Reversal trading math is done based on your trading history, if your last sell order was at loss \(and not caused by stop limit\), reversal trading would immediately start when you enable it and continues until it manages to profitably end the RT cycle - even when you've disabled RT again. To prevent unwanted reversal trading, make sure to either have a profitable last sell order or to have set `IGNORE_TRADES_BEFORE` at a time after your last sell order at loss. To be sure, delete the pairs state JSON file after setting `IGNORE_TRADES_BEFORE`. Alternatively, you can set a maximum price difference between current price and average bought price with `RT_MAXBAG_PROTECTION`, to prevent RT from starting on pairs that already lost a lot of value.
+
+\*\*\*\*
 
 ## RT flowcharts
 
@@ -57,9 +59,11 @@ _This flowchart shows the basic steps for reversal trading, not considering addi
 
 `LOW_BB`_/_`HIGH_BB` _in reversal trading use the same settings as with regular trading on_ `bb`_._
 
+\_\_
+
 ## Relevant settings
 
-Following settings options are available for reversal trading. None of them are relevant in margin strategies.
+Following settings options are available for reversal trading.
 
 ### RT Enabled
 

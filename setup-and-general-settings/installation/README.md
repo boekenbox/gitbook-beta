@@ -1,12 +1,10 @@
----
-description: Quick guides to get up and running on all supported platforms.
----
-
 # Installation & startup
 
 ## Download Gunbot
 
 {% page-ref page="download.md" %}
+
+
 
 ## Installation instructions
 
@@ -20,11 +18,13 @@ Installation guides per platform can be found here:
 
 {% page-ref page="arm.md" %}
 
+
+
 ## Upgrading
 
-Instructions on how to upgrade Gunbot are usually found in the release [changelog](../../about/whats-new/).
+Instructions on how to upgrade Gunbot are usually found in the release changelog.
 
 For minor releases \(like patches\) it is usually enough to just overwrite the gunthy executable file.
 
-For major releases, follow the steps described in the changelog.
+For major releases, follow the steps described in the changelog on the download page.
 

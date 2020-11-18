@@ -1,18 +1,12 @@
 # Ichimoku
 
-This page describes how margin trading works with the [ichimoku](https://github.com/GuntharDeNiro/BTCT/wiki/Ichimoku) strategy. The triggers for trades are slightly different than in the same strategy for regular trading.
+This page describes how margin trading on Bitmex works with the [ichimoku](https://github.com/GuntharDeNiro/BTCT/wiki/Ichimoku) strategy. The triggers for trades are slightly different than in the same strategy for regular trading.
 
 ## How to work with this strategy
 
-{% hint style="info" %}
-**Expected behavior for margin trading**
-
-Gunbot will open one position, either long or short, and close this position when the target is reached. When the stop is hit before profitably closing a trade, Gunbot will place a stop order at loss. After closing a position, Gunbot will again look to open a new long or short position. Gunbot will not add to existing open positions.
+The expected behavior for margin trading with Gunbot is that it will open one position, either long or short, and close this position when the target is reached. When the stop is hit before profitably closing a trade, Gunbot will place a stop order at loss. After closing a position, Gunbot will again look to open a new long or short position. Gunbot will not add to existing open positions.
 
 Please don't manually add to or reduce positions opened by Gunbot, unless you stop running Gunbot on this trading pair until you've closed this position.
-{% endhint %}
-
-
 
 For this strategy it is recommended to use an additional momentum indicator to confirm long and short entries.
 
@@ -52,7 +46,7 @@ You can configure which of the three items is used for closing a position, with 
 
 A long position is stopped when the current candle crosses under Tenkan-sen, Kijun-sen or Kumo. This means that all of open, close, high and low must be above the selected item.
 
-A short position is stopped when the current candle crosses over Tenkan-sen, Kijun-sen or Kumo. This means that all of open, close, high and low must be over the selected item.
+A short position is stopped when the current candle crosses over Tenkan-sen, Kijun-sen or Kumo. This means that all of open, close, high and low must be under the selected item.
 
 You can configure which of the three items is used for stopping a position, with `TENKAN_STOP`, `KIJUN_STOP` or `KUMO_STOP`. If multiple of these parameters are set to true, the first of which occurs will close the position. Make sure to use different lines for closing and stopping a position.
 
@@ -76,18 +70,7 @@ Margin settings control settings like leverage and the target for ROE. These par
 {% tab title="Description" %}
 This sets the target for closing a position.
 
-ROE is the Return On Equity for a position, the percentage profit and loss on your invested margin. This value is calculated in a similar way to how Bitmex calculates it, it does include leverage and does not include fees.
-
-**Examples:**  
-  
-Long position, 1x leverage.  
-When price moves 1% above the average entry price, 1% ROE is reached.
-
-Long position, 100x leverage \(or cross leverage\).  
-When price moves 1% above the average entry price, 100% ROE is reached.
-
-Short position, 20x leverage  
-When price moves 1% below the average entry price, 20% ROE is reached.
+ROE is measured as a percentage from the opening rate of a position, leverage and fees are not taken into consideration.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -119,10 +102,6 @@ Parameter name in `config.js`: `ROE`
 {% tabs %}
 {% tab title="Description" %}
 Sets the leverage for opening any position. Setting 0 places the order with cross margin.
-
-{% hint style="warning" %}
-On Binance Futures you must set leverage per pair on the exchange itself.
-{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -155,10 +134,6 @@ Parameter name in `config.js`: `LEVERAGE`
 Places a market stop order for a long position, at the same time as the position is opened.
 
 When set to 1 and a long order is opened at a price of 100, a stop market order will be placed at 99.
-
-{% hint style="info" %}
-This setting is exclusive to Bitmex
-{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -192,10 +167,6 @@ Parameter name in `config.js`: `STOP_BUY`
 Places a market stop order for a short position, at the same time as the position is opened.
 
 When set to 1 and a short order is opened at a price of 100, a stop market order will be placed at 101.
-
-{% hint style="info" %}
-This setting is exclusive to Bitmex
-{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -325,8 +296,6 @@ Sets the gap between the best bid/ask price in the orderbook and the rate at whi
 It is possible to use negative values, this will increase the chance of receiving maker fees.
 
 Example when set to 1 and a buy signal occurs at an ask price of 100: a limit order gets placed at a rate of 101. When set to -1 and a buy signal occurs at an ask price of 100: a limit order gets placed at a rate of 99.
-
-Don't use a negative gap together with `STOP_BUY` and/or `STOP_SELL`, as these stops do not combine well with position that do not always fill. 
 {% endtab %}
 
 {% tab title="Values" %}

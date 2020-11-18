@@ -1,7 +1,3 @@
----
-description: Options that define how much Gunbot is allowed to spend.
----
-
 # Balance settings
 
 Balance settings define important options like how much Gunbot is allowed to invest per trade.
@@ -21,7 +17,7 @@ When you set this to 0.1 and trade BTC-x pairs, Gunbot will place a buy order wo
 When trading a fiat pair like USD-x, set a whole number like 100 as trading limit.
 
 {% hint style="info" %}
-Margin: enter the desired number of contracts.
+Bitmex: enter the desired number of contracts.
 {% endhint %}
 {% endtab %}
 
@@ -57,7 +53,7 @@ Alternative method for setting the investment per buy order as a percentage of t
 Any value above 0 makes Gunbot ignore `TRADING_LIMIT` and uses the set percentage instead. For example: when set to 10, trading BTC-ALT and you have 1 BTC available at the time Gunbot places a buy order, an order of 0.1 BTC is placed.
 
 {% hint style="info" %}
-This parameter is irrelevant for margin trading.
+This parameter is irrelevant for trading at Bitmex.
 {% endhint %}
 {% endtab %}
 
@@ -89,6 +85,10 @@ Parameter name in `config.js`: `TL_PERC`
 {% tabs %}
 {% tab title="Description" %}
 Alternative method for setting the investment per buy order to use all available base currency at the time the trade takes place.
+
+{% hint style="info" %}
+This parameter is irrelevant for trading at Bitmex.
+{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -114,29 +114,29 @@ Parameter name in `config.js`: `TL_ALLIN`
 {% endtab %}
 {% endtabs %}
 
-### Keep Quote
+### Trading Fees
 
 {% tabs %}
 {% tab title="Description" %}
-Sets an amount of quote currency that will not be sold. For a BTC-ALT pair, a set amount of ALT will not be sold.
+This sets the trading fees paid to the exchange. Gunbot uses this data to calculate the break-even point.
 
-For example: when `KEEP_QUOTE` is set to 10 for trading BTC-BNB, then Gunbot will leave 10 BNB in your account when placing a sell order, any balance above 10 will get sold as long as it is worth more than `MIN_VOLUME_TO_SELL`.
+Does your exchange charge 0.25% fees per trade? Then set this to 0.25. When your exchange has different fees for different types of trades, set the average fees per trade.
 
-To make sure trading continues after a sell order where an amount of quote is kept, make sure to set `MIN_VOLUME_TO_SELL` at least higher than the assumed value of the kept quote \(expressed in base currency\). When you do not do this, and set `MIN_VOLUME_TO_SELL` lower than the value of quote kept, Gunbot will attempt to sell again after the initial sell order \(as balance is higher than `MIN_VOLUME_TO_SELL`\) - which won't succeed since you only own the amount specified in `KEEP_QUOTE`.
+Trading fees are reflected in the average bought price. Exchanges only calculate fees after the trade comes in, Gunbot needs to know about fees before the trade is sent to the exchange.
 
 {% hint style="info" %}
-This parameter is irrelevant for margin trading.
+This parameter is irrelevant for trading at Bitmex.
 {% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** numerical - represents an amount in quote currency.
+**Values:** numerical - represents a percentage.
 
-**Default value:** 0
+**Default value:** 0.25
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `KEEP_QUOTE`
+Parameter name in `config.js`: `TRADING_FEES`
 {% endtab %}
 {% endtabs %}
 
@@ -147,10 +147,6 @@ Parameter name in `config.js`: `KEEP_QUOTE`
 Sets an amount of base currency that will not be traded. For a BTC-x pair, funds in BTC would be reserved according to this setting. For ETH- pairs ETH would be reserved, etc. It is recommended to use the same value for all pairs of the same base currency you run.
 
 For example: when funds reserve is set to 0.5 for trading BTC-x pairs then 0.5 BTC will not be used by Gunbot.
-
-{% hint style="info" %}
-This parameter is irrelevant for margin trading.
-{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -180,9 +176,9 @@ This parameter is irrelevant for trading at Bitmex.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** numerical, represents volume in base currency
+**Values:** true or false
 
-**Default value:** 0.001
+**Default value:** false
 {% endtab %}
 
 {% tab title="Order types" %}
@@ -196,7 +192,7 @@ This parameter is irrelevant for trading at Bitmex.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `MIN_VOLUME_TO_BUY`
+Parameter name in `config.js`: `MIN_VOLUME_TO_SELL`
 {% endtab %}
 {% endtabs %}
 
@@ -218,9 +214,9 @@ This parameter is irrelevant for trading at Bitmex.
 {% endtab %}
 
 {% tab title="Values" %}
-**Values:** numerical, represents volume in base currency
+**Values:** true or false
 
-**Default value:** 0.001
+**Default value:** false
 {% endtab %}
 
 {% tab title="Order types" %}
@@ -234,7 +230,7 @@ This parameter is irrelevant for trading at Bitmex.
 {% endtab %}
 
 {% tab title="Name" %}
-Parameter name in `config.js`: `MIN_VOLUME_TO_SELL`
+Parameter name in `config.js`: `MIN_VOLUME_TO_BUY`
 {% endtab %}
 {% endtabs %}
 

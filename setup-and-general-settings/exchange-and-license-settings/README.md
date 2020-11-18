@@ -1,7 +1,3 @@
----
-description: Articles about how to work with the Gunthy license system.
----
-
 # Exchange & license settings
 
 {% page-ref page="gunthy-wallet/" %}

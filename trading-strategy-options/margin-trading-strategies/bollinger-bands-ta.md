@@ -1,34 +1,30 @@
 # Bollinger Bands \(TA\)
 
-This page describes how margin trading works with the Bollinger Bands TA strategy. The triggers for trades are slightly different than in the same strategy for regular trading.
+This page describes how margin trading on Bitmex works with the Bollinger Bands TA strategy. The triggers for trades are slightly different than in the same strategy for regular trading.
 
 ## How to work with this strategy
 
-{% hint style="info" %}
-**Expected behavior for margin trading**
-
-Gunbot will open one position, either long or short, and close this position when the target is reached. When the stop is hit before profitably closing a trade, Gunbot will place a stop order at loss. After closing a position, Gunbot will again look to open a new long or short position. Gunbot will not add to existing open positions.
+The expected behavior for margin trading with Gunbot is that it will open one position, either long or short, and close this position when the target is reached. When the stop is hit before profitably closing a trade, Gunbot will place a stop order at loss. After closing a position, Gunbot will again look to open a new long or short position. Gunbot will not add to existing open positions.
 
 Please don't manually add to or reduce positions opened by Gunbot, unless you stop running Gunbot on this trading pair until you've closed this position.
-{% endhint %}
 
 The examples below show how the basic triggers for `BBTA` work. Additionally, you can use confirming indicators and settings like ROE trailing.
 
 ### Long
 
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/margin-bbta-1.png)
+![](https://user-images.githubusercontent.com/2372008/53252180-9dc30280-36be-11e9-8eb2-a5dcca61f1ad.png)
 
 * A long position is opened when the ask price crosses over `LOW_BB`. In the example above `LOW_BB` would be set to 0, which represents the actual lower Bollinger Band. With different values you could set a target above \(positive value\) or below \(negative value\) the lower band.
-* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, taking leverage into consideration. 
-* A position is closed at loss when a stop is hit.
+* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `ROE`: 1.
+* A position is closed at loss when `STOP_LIMIT` is reached. This is a percentage from the entry point in the opposite direction of your profit target, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `STOP_LIMIT`: 1.
 
 ### Short
 
-![](https://raw.githubusercontent.com/boekenbox/gitbook-images/master/margin-bbta-2.png)
+![](https://user-images.githubusercontent.com/2372008/53249924-93523a00-36b9-11e9-82dd-c052533d27f9.png)
 
 * A short position is opened when the bid price crosses below `HIGH_BB`. In the example above `HIGH_BB` would be set to 0, which represents the actual upper Bollinger Band. With different values you could set a target below \(positive value\) or above \(negative value\) the upper band.
-* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, taking leverage into consideration. 
-* A position is closed at loss when a stop is hit.
+* Position is closed when the desired `ROE` \(return on equity\) is reached. This is a percentage from the entry point, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `ROE`: 1.
+* A position is closed at loss when `STOP_LIMIT` is reached. This is a percentage from the entry point in the opposite direction of your profit target, not taking leverage into consideration. Regardless what leverage is used, 1% price difference from your entry equals `STOP_LIMIT`: 1.
 
 ## Strategy parameters
 
@@ -48,18 +44,7 @@ Margin settings control settings like leverage and the target for ROE. These par
 {% tab title="Description" %}
 This sets the target for closing a position.
 
-ROE is the Return On Equity for a position, the percentage profit and loss on your invested margin. This value is calculated in a similar way to how Bitmex calculates it, it does include leverage and does not include fees.
-
-**Examples:**
-
-Long position, 1x leverage.  
-When price moves 1% above the average entry price, 1% ROE is reached.
-
-Long position, 100x leverage \(or cross leverage\).  
-When price moves 1% above the average entry price, 100% ROE is reached.
-
-Short position, 20x leverage  
-When price moves 1% below the average entry price, 20% ROE is reached.
+ROE is measured as a percentage from the opening rate of a position, leverage and fees are not taken into consideration.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -91,10 +76,6 @@ Parameter name in `config.js`: `ROE`
 {% tabs %}
 {% tab title="Description" %}
 Sets the leverage for opening any position. Setting 0 places the order with cross margin.
-
-{% hint style="warning" %}
-On Binance Futures you must set leverage per pair on the exchange itself.
-{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -127,10 +108,6 @@ Parameter name in `config.js`: `LEVERAGE`
 Places a market stop order for a long position, at the same time as the position is opened.
 
 When set to 1 and a long order is opened at a price of 100, a stop market order will be placed at 99.
-
-{% hint style="info" %}
-This setting is exclusive to Bitmex
-{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -164,10 +141,6 @@ Parameter name in `config.js`: `STOP_BUY`
 Places a market stop order for a short position, at the same time as the position is opened.
 
 When set to 1 and a short order is opened at a price of 100, a stop market order will be placed at 101.
-
-{% hint style="info" %}
-This setting is exclusive to Bitmex
-{% endhint %}
 {% endtab %}
 
 {% tab title="Values" %}
@@ -297,8 +270,6 @@ Sets the gap between the best bid/ask price in the orderbook and the rate at whi
 It is possible to use negative values, this will increase the chance of receiving maker fees.
 
 Example when set to 1 and a buy signal occurs at an ask price of 100: a limit order gets placed at a rate of 101. When set to -1 and a buy signal occurs at an ask price of 100: a limit order gets placed at a rate of 99.
-
-Don't use a negative gap together with `STOP_BUY` and/or `STOP_SELL`, as these stops do not combine well with position that do not always fill. Instead use `STOP_LIMIT`.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -467,7 +438,7 @@ This sets the target for buying. Negative values are allowed.
 
 The bot will buy when price hits the set percentage from the lower Bollinger Band and the price is below the entry point as defined by `BUY_LEVEL`.
 
-When set to 0, the lower Bollinger Band is the target. When set to 30, the target is 30% above the lower Bollinger Band - the upper band is at 100% from the lower band. Negative values are allowed.
+When set to 0, the lower Bollinger Band is the target. When set to 30, the target is 30% above the lower Bollinger Band - the upper band is at 100% from the lower band.
 {% endtab %}
 
 {% tab title="Values" %}
@@ -501,7 +472,7 @@ This sets the target for selling. Negative values are allowed.
 
 The bot will sell when price hits the set percentage from the upper Bollinger Band and `GAIN` is reached.
 
-When set to 0, the upper Bollinger Band is the target \(well, almost\). When set to 30, the target is 30% under the upper Bollinger Band - the lower band is at 100% from the upper band. Negative values are allowed.
+When set to 0, the upper Bollinger Band is the target \(well, almost\). When set to 30, the target is 30% under the upper Bollinger Band - the lower band is at 100% from the upper band.
 {% endtab %}
 
 {% tab title="Values" %}
