@@ -1,20 +1,20 @@
 ---
 description: >-
-  This wiki is written for the latest stable Gunbot release: v20. Includes a
-  brand new interface!
+  Esta wiki está escrita para la última versión estable de Gunbot: v20. ¡Incluye
+  una nueva interfaz!
 ---
 
-# Welcome to the Gunbot wiki
+# Bienvenido a la wiki de Gunbot
 
-**Gunbot is an easy to use, advanced crypto trading bot. You define your trading strategy and watch Gunbot do the trading for you. Enabling you to get up to hundreds of profitable trades per day, 24/7.**
+**Gunbot es un bot avanzado para el trading de criptomonedas. Usted define su estrategia comercial y ve como Gunbot realiza las operaciones por ti. Permitiéndole realizar cientos de operaciones rentables al día, 24/7.**
 
-For security reasons, Gunbot runs on your local computer or your server only. This way your trading API secret stays private, and nobody can influence or monitor your trading.
+Por razones de seguridad, Gunbot se ejecuta en su computadora o en un servidor. De esta forma su API de trading se mantiene en privado y nadie puede influir ni controlar sus operaciones. 
 
-No need for a subscription, a one time fee gets you lifetime support and software updates.
+No necesita una suscripción, con un único pago obtienes soporte y actualizaciones de por vida.
 
-> _We aim to build the perfect money machine._
+> _Nuestro objetivo es construir la máquina de hacer dinero perfecta._
 
-### Gunbot is used by thousands of users and has an awesome community ❤️
+### Gunbot es utilizado por miles de usuarios y tiene una increíble comunidad ❤️
 
 ![](.gitbook/assets/image%20%28102%29.png)
 
@@ -26,9 +26,9 @@ No need for a subscription, a one time fee gets you lifetime support and softwar
 
 {% page-ref page="how-to-work-with-gunbot/editing-strategies-and-pairs/" %}
 
-### Shortcuts to strategy descriptions
+### Accesos directos a descripciones de estrategias
 
-| Strategy | Link to regular trading description | Link to margin trading description |
+| Estrategia | Enlace a la estrategia regular | Enlace a la estrategia margin |
 | :--- | :--- | :--- |
 | `ADX` | [Regular](trading-strategy-options/regular-strategies-spot-trading/adx.md) | [Margin](trading-strategy-options/margin-trading-strategies/adx.md) |
 | `ATRTS` | [Regular](trading-strategy-options/regular-strategies-spot-trading/atrts.md) | [Margin](trading-strategy-options/margin-trading-strategies/atrts.md) |
@@ -50,10 +50,10 @@ No need for a subscription, a one time fee gets you lifetime support and softwar
 {% hint style="warning" %}
 ## Disclaimer
 
-The information provided on this wiki does not constitute investment advice, financial advice, trading advice, or any other sort of advice, and you should not treat any of the wiki's content as such. Gunbot does not recommend that any asset should be bought, sold, or held by you. Nothing on this website should be taken as an offer to buy, sell or hold a cryptocurrency.
+La información proporcionada en este wiki no constituye asesoramiento de inversión, asesoramiento financiero, asesoramiento comercial o cualquier otro tipo de asesoramiento, y no debe tratar el contenido del wiki como tal. Gunbot no recomienda que usted compre, venda o conserve ningún activo. Nada en este sitio web debe tomarse como una oferta para comprar, vender o mantener una criptomoneda.
 
-Do conduct your own due diligence and consult your financial advisory before making any investment decision. Gunbot will not be held responsible for the investment decisions you make based on the information published on this wiki.
+Realice su debida diligencia y consulte su asesoría financiera antes de tomar cualquier decisión de inversión. Gunbot no se hará responsable de las decisiones de inversión que tome en base a la información publicada en este wiki.
 {% endhint %}
 
-**Project origin:** [BitcoinTalk thread](https://bitcointalk.org/index.php?topic=1715214.0).
+**Proyecto original:** [BitcoinTalk thread](https://bitcointalk.org/index.php?topic=1715214.0).
 

@@ -1,49 +1,49 @@
 ---
 description: >-
-  Here's a quick overview of the most important changes introduced with Gunbot
-  v20
+  Esta es una descripción rápida de los cambios más importantes introducidos en
+  la V20
 ---
 
-# What's new?
+# Que es lo nuevo?
 
-Gunbot v20 introduces a completely new interface built around the TradingView charting library, with easier options to create and edit strategy settings. Also comes with a ton of other changes and stability improvements.
+Gunbot v20 introduce una interfaz completamente nueva construida usando la librería de gráficos de TradingView. con opciones más fáciles para crear y editar los parametros de la estrategia. También incluye muchos cambios y mejoras en la estabilidad.
 
-## **Upgrading**
+## **Mejorando**
 
 {% hint style="success" %}
-**New: config import tool**
+**Nuevo: herramienta de importación de configuración**
 
-It's now really easy to upload a config.js or autoconfig.json file in the interface, and import the parts you need from it. You can use this to setup a clean v20 installation while migrating your old pairs, strategies and other settings.  
-  
-**Steps to start with a clean installation:** unpack v20 and run, enter your Gunthy wallet address in the wizard and select "other" as exchange and save the changes. Then go to _Profile_ &gt; _Import settings_ and select the parts from your old config to import.
+Ahora es realmente fácil cargar un archivo config.js o autoconfig.json en la interfaz e importar solo las partes que necesita de él. Puede usar esto para configurar una instalación limpia v20 mientras migra sus pares, estrategias y otras configuraciones antiguas.
+
+**Pasos para comenzar con una instalacion limpia:** extraiga v20 y ejecute, ingrese la dirección de tu cartera Gunthy en el asistente, seleccione "otro" en la pestaña intercambio y guarde los cambios. Luego vaya a Perfil &gt; Importar parametros y seleccione las partes que quiera importar de su configuración antigua. 
 {% endhint %}
 
-There are no breaking config changes for v20. In case you are upgrading from v18.x, replacing the executable file _\(gunthy-win.exe / gunthy-linux / gunthy-macos\)_ and _node\_modules_ folder is all that's needed.
+No hay cambios de configuración importantes para v20. En caso de que esté actualizando desde v18.x, lo único que necesita es reemplazar el archivo ejecutable  _\(gunthy-win.exe / gunthy-linux / gunthy-macos\)_  y la carpeta _node\_modules_.
 
-![The GUI requires that password authentication is enabled in config.js. Set it like this.](../../.gitbook/assets/image%20%2874%29.png)
+![La GUI requiere que la autenticaci&#xF3;n de contrase&#xF1;a est&#xE9; habilitada en config.js. Config&#xFA;relo as&#xED;.](../../.gitbook/assets/image%20%2874%29.png)
 
-New strategy parameters are automatically merged into your strategies, as soon as you login to the browser interface.
+Los nuevos parámetros de estrategia se fusionan automáticamente en sus estrategias tan pronto como inicie sesión en la interfaz gráfica del navegador.
 
-In case you are upgrading from an older version than v18, refer to the changelogs of previous versions for instructions, or start with a fresh installation.
+En caso de que esté actualizando desde una versión anterior a la v18, consulte los registros de cambios de versiones anteriores para obtener instrucciones o comience una instalación nueva.
 
 {% page-ref page="../../setup-and-general-settings/installation/download.md" %}
 
-## Changes in v20
+## Cambios en v20
 
-Only the most important changes are listed.
+Solo se enumeran los cmabios más importantes.
 
-### Core / GUI
+### Núcleo / GUI
 
-* **Completely new GUI:** improved performance, easier to use, better charting, improved trading terminal, more stats, additional config wizard for novice users
-* **Seamless config changes:** pair cycling is no longer interrupted when a config change happens. New settings take effect the next cycle
-* **New partner exchanges:** Bitget and Nash
-* **New strategy for spot trading**: [Support / Resistance](../../trading-strategy-options/regular-strategies-spot-trading/support-resistance.md)
-* **PND close**: an alternative to ROE trailing to aim for bigger profits in margin strategies. PND attempts to wait until a move plays out before closing position
-* **Alternate ROE trailing method  for margin strats:** with `ROE_SCALPER` the trailing range is an absolute ROE value
-* **Liquidity maker for spot trading:** provide [liquidity ](../../trading-strategy-options/misc-settings.md#liquidity-maker)and profit from bid/ask spread
-* **Easier config sharing**: import parts of `config.js` or `autoconfig.json` using the GUI
-* **Store more order history:** to improve profit/loss calculations and prevent unneeded "bought price" warnings, the complete order history is now locally saved over time 
-* **TradingView alerts**: option to change strategy by alert, enable `TV_TRADING_LIMIT_CAP` for Bitmex, better handling of multiple incoming emails
+* **Interfaz gráfica completamente nueva:** rendimiento mejorado, más fácil de usar, mejores gráficos, terminal manual de trading mejorado, más estadísticas, asistente de configuración para novatos
+* **Guardar cambios en config sin reiniciar:** el ciclado de pares ya no se reinicia cuando se guarda un cambio en la configuración. Los nuevos ajustes entran en vigor en el siguiente ciclo
+* **Nuevos exchanges asociados :** Bitget y Nash
+* **Nueva estrategia para trading en spot**: [Support / Resistance](../../trading-strategy-options/regular-strategies-spot-trading/support-resistance.md)
+* **Cierre con PND**: una alternativa al seguimiento de ROE para conseguir mayores beneficios en estrategias de margin. PND intenta esperar hasta que se desarrolle un movimiento antes de cerrar posición
+* **Método alternativo de seguimiento de ROE para estrategias de margin:** con `ROE_SCALPER` el rango de seguimiento es un valor absoluto de ROE
+* **Generador de liquidez para los mercados spot:** proporciona liquidez y beneficios de la diferencia ente oferta y demanda \(bid/ask\)
+* **Compartir estrategias más fácil**: importa partes de `config.js` o `autoconfig.json` usando la interfaz gráfica
+* **Almacena más historial de ordenes:** para mejorar los cálculos de beneficios / perdidas y evitar advertencias innecesarias de "introduzca precio de compra" \("bought price"\), el historial completo de ordenes ahora se guarda localmente a lo largo del tiempo
+* **Alertas de TradingView**: ahora puede cambiar de estrategia a través de una alerta, habilita `TV_TRADING_LIMIT_CAP`
 * **Alerts \(beta\):** build your own strategy in a visual way using built-in TradingView charts
 
 ### Market Maker

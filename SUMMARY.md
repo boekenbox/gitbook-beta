@@ -1,10 +1,10 @@
 # Table of contents
 
-* [Welcome to the Gunbot wiki](README.md)
+* [Bienvenido a la wiki de Gunbot](README.md)
 
 ## About
 
-* [What's new?](about/whats-new/README.md)
+* [Que es lo nuevo?](about/whats-new/README.md)
   * [New in v18](about/whats-new/new-in-v18.md)
   * [New in v16.7+](about/whats-new/new-in-v16.7+.md)
   * [New in v16](about/whats-new/new-in-v16.md)
