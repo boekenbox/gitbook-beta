@@ -1,29 +1,30 @@
 ---
 description: >-
-  Gunbot supports trading on a wide rage of exchanges. Exchanges listed as
-  "Certified" have been supported in Gunbot for a long time.
+  Gunbot soporta el trading en una amplia cantidad de intercambios. Los
+  intercambios listados como "Certificados" han sido compatibles con Gunbot
+  durante mucho tiempo.
 ---
 
 # Intercambios soportados
 
-## Partner exchanges
+## Intercambios asociados
 
-These exchanges are official Gunbot partners. We are in direct contact with their teams.
+Estos intercambios son socios oficiales de Gunbot. Estamos en contacto directo con su equipo.
 
-| Exchange | Name in config | Native strategies | TradingView alerts |
+| Intercambio | Nombre in configuración | Estrategias nativas | AlertasTradingView |
 | :--- | :--- | :--- | :--- |
 | **Gunthy** | `gunthy` | Regular | Regular |
 | **Binance** | `binance` / `binanceus` | Regular | Regular |
-| **Binance Futures** | `binanceFutures` | Margin | Margin |
-| **Bitget** | `bitget` | Margin | Margin |
+| **Binance Futures** | `binanceFutures` | Margen | Margen |
+| **Bitget** | `bitget` | Margen | Margen |
 | **HitBTC** | `hitbtc2` | Regular | Regular |
-| **Kraken Futures** | `krakenFutures` | Margin | Margin |
+| **Kraken Futures** | `krakenFutures` | Margen | Margen |
 | **KuCoin** | `kucoin` | Regular | Regular |
 | **Nash** | `nashio` | Regular | Regular |
-| **OKEx** | `okex3` | Regular & margin | Regular & margin |
+| **OKEx** | `okex3` | Regular & margen | Regular & margen |
 
 {% hint style="success" %}
-Gunthy and Nash do not require registering an additional api key in your license. Because they list Gunthy Token they are free to use for every Gunbot user.
+Gunthy  Nash no requieren que se registre una clave api en su licencia. Debido a que tienen listado nuestro token Gunthy, son de uso gratuito para todos los usuarios de Gunbot.
 {% endhint %}
 
 ## Certified exchanges
