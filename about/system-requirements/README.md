@@ -1,17 +1,17 @@
 ---
-description: Minimum requirements for running Gunbot.
+description: Requisitos mínimos para ejecutar Gunbot.
 ---
 
-# License info & system specs
+# Información de licencia y requisitos del sistema
 
-## Supported platforms & recommended system specs
+## Plataformas soportadas y requisitos del sistema recomendados
 
-Gunbot runs from your own Windows, macOS, Linux or ARMv7 computer or server. You are free to run multiple instances across multiple platforms and devices.
+Gunbot se ejecuta desde su propia computadora o servidor Windows, macOS, Linux o ARMv7. Puede ejecutar múltiples instancias en múltiples plataformas y dispositivos.
 
 * **CPU**: 64-bit
 * **RAM**: 2 GB
-* **Disk space**: 10 GB free disk space
-* **Network**: stable broadband network connection
+* **Disco duro**: 10 GB de espacio libre en disco
+* **Internet**: conexión de banda ancha estable
 
 ## Blockchain based license system
 
