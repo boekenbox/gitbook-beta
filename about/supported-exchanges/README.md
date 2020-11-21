@@ -4,7 +4,7 @@ description: >-
   "Certified" have been supported in Gunbot for a long time.
 ---
 
-# Supported exchanges
+# Intercambios soportados
 
 ## Partner exchanges
 
