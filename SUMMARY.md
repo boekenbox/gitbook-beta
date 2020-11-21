@@ -19,7 +19,7 @@
   * [New in v6](about/whats-new/new-in-v6.md)
 * [Intercambios soportados](about/supported-exchanges/README.md)
   * [Creación de claves API](about/supported-exchanges/creating-api-keys.md)
-  * [Websockets support](about/supported-exchanges/websockets-support.md)
+  * [Soportan Websockets](about/supported-exchanges/websockets-support.md)
 * [License info & system specs](about/system-requirements/README.md)
   * [How to create a wallet](about/system-requirements/how-to-create-a-wallet.md)
 * [Purchasing Gunbot](https://gunthy.org/resellers)

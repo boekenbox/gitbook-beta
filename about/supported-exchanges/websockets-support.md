@@ -1,16 +1,18 @@
 ---
-description: Overview of exchanges Gunbot can connect to using websockets
+description: >-
+  Descripción general de intercambios a los que Gunbot puede conectarse a través
+  de Websockets.
 ---
 
-# Websockets support
+# Soportan Websockets
 
-Connecting to exchanges with websockets allows for lower exchange delay settings in Gunbot.
+La conexión a intercambios a través de websockets permite configurar un `delay`más bajo en Gunbot.
 
-Data can be cycled in close to real time in some cases. To maintain maximum reliability, some API calls have to be done with REST.
+En algunos casos los datos pueden actualizarse casi en tiempo real. Para mantener la máxima fiabilidad, algunas de las llamadas a la API deben de realizarse con REST.
 
-## List of exchanges using websockets in Gunbot
+## Lista de intercambios con los que Gunbot usa websocket
 
-The exchanges listed below generally allow for much lower exchange delay settings:
+Los intercambios enumerados a continuación generalmente permiten configuraciones de `delay`mucho más bajas:
 
 * Binance / Binance US / Binance Futures
 * Bitfinex
