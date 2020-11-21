@@ -13,13 +13,13 @@ Gunbot se ejecuta desde su propia computadora o servidor Windows, macOS, Linux o
 * **Disco duro**: 10 GB de espacio libre en disco
 * **Internet**: conexión de banda ancha estable
 
-## Blockchain based license system
+## Sistema de licencias basado en blockchain
 
-Gunbot uses a blockchain based license validation system. It uses our own ERC-20 utility token called "GUNTHY". Using this system, you can [manage your own registered API keys](../../setup-and-general-settings/profile-settings/edit-license.md) and change them anytime, or even sell your license to a third party.
+Gunbot utiliza un sistema de validación de licencias basado en blockchain. Utiliza nuestro propio ERC-20 token llamado "GUNYHY". Con este sistema puede [administradr sus propias claves API registradas](../../setup-and-general-settings/profile-settings/edit-license.md) y cambiarlas en cualquier momento, o incluso vender su licencia a un tercero.
 
-**Your** [**wallet address**](how-to-create-a-wallet.md)**, combined with a number of tokens, is your Gunbot license key.**
+Su [**dirección de cartera**](how-to-create-a-wallet.md)**, combinado con un número de tokens, es su licencia de Gunbot.**
 
-Wallet registration and token distribution happens after the initial license purchase through a [reseller](https://gunthy.org/resellers/).
+El registro de la cartera \(dirección\) y la distribución de tokens se realiza después de un único pago a través de un [revendedor](https://gunthy.org/resellers/).
 
 {% hint style="warning" %}
 **You are responsible for your own API keys and GUNTHY wallet.**
