@@ -27,31 +27,31 @@ Estos intercambios son socios oficiales de Gunbot. Estamos en contacto directo c
 Gunthy  Nash no requieren que se registre una clave api en su licencia. Debido a que tienen listado nuestro token Gunthy, son de uso gratuito para todos los usuarios de Gunbot.
 {% endhint %}
 
-## Certified exchanges
+## Intercambios certificados
 
-These exchanges have been supported in Gunbot for a long time, you can expect high quality API support.
+Estos intercambios han sido compatibles con Gunbot durante mucho tiempo, puede esperar un soporte de la API de mucha calidad.
 
-| Exchange | Name in config | Native strategies | TradingView alerts |
+| Intercambio | Nombre en configuración | Estrategias nativas | Alertas TradingView |
 | :--- | :--- | :--- | :--- |
 | **Bittrex** | `bittrex` | Regular | Regular |
-| **Bitfinex** | `bitfinex` | Regular | Regular & Margin |
-| **Bitmex** | `bitmex` | Margin | Margin |
-| **Bitmex testnet** | `bitmex_testnet` | Margin | Margin |
+| **Bitfinex** | `bitfinex` | Regular | Regular & Margen |
+| **Bitmex** | `bitmex` | Margen | Margen |
+| **Bitmex testnet** | `bitmex_testnet` | Margen | Margen |
 | **CEX** | `cex` | Regular | Regular |
 | **Coinbase Pro** | `gdax` | Regular | Regular |
-| **Huobi Global** | `huobi` | Regular | Regular & Margin |
-| **Kraken** | `kraken` | Regular | Regular & Margin |
-| **Poloniex** | `poloniex` | Regular | Regular & Margin |
+| **Huobi Global** | `huobi` | Regular | Regular & Margen |
+| **Kraken** | `kraken` | Regular | Regular & Margen |
+| **Poloniex** | `poloniex` | Regular | Regular & Margen |
 
-## Supported exchanges
+## Intercambios soportados
 
-The following exchanges are supported through the [ccxt library](https://github.com/ccxt/ccxt/wiki/Exchange-Markets). They may not have been fully tried and tested in Gunbot yet.
+Los siguientes intercambios son compatibles con la [biclioteca ccxt](https://github.com/ccxt/ccxt/wiki/Exchange-Markets). Es posible que aún no se hayan probado en Gunbot.
 
-These exchanges support spot trading only, margin support is not yet connected in Gunbot.
+Estos intercambios solo admiten el trading en spot, el soporte para trading con margen no está conectado aún a Gunbot.
 
-You can use any of these exchanges for spot trading alerts using the TradingView add-on.
+Puede utilizar el add-on de alertas de TradingView en cualquiera de estos intercambios.
 
-|  | Name in config | Exchange |
+|  | Nonmbre en configuración | Intercambio |
 | :--- | :--- | :--- |
 | [![\_1btcxe](https://user-images.githubusercontent.com/1294454/27766049-2b294408-5ecc-11e7-85cc-adaff013dc1a.jpg)](https://1btcxe.com) | `_1btcxe` | [1BTCXE](https://1btcxe.com) |
 | [![acx](https://user-images.githubusercontent.com/1294454/30247614-1fe61c74-9621-11e7-9e8c-f1a627afa279.jpg)](https://acx.io) | `acx` | [ACX](https://acx.io) |
