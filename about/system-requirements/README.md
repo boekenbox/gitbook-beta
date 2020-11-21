@@ -22,18 +22,18 @@ Su [**dirección de cartera**](how-to-create-a-wallet.md)**, combinado con un n�
 El registro de la cartera \(dirección\) y la distribución de tokens se realiza después de un único pago a través de un [revendedor](https://gunthy.org/resellers/).
 
 {% hint style="warning" %}
-**You are responsible for your own API keys and GUNTHY wallet.**
+**Tu eres responsable de tus propias claves API keys y tu cartera GUNTHY.**
 
-Please understand that we might not be able to help you if you lose all your registered API keys and \(access to\) your wallet address. Make sure to follow all the security advise when setting up a wallet and properly save and backup the API key\(s\) used for Gunbot.
+Por favor, comprenda que es posible que no podamos ayudarlo si pierde todas sus claves API registradas y \(acceso a\) su dirección de cartera GUNTHY. Asegúrese de seguir todos los consejos de seguridad al configurar una cartera y guarda y haga copia de seguridad de las claves API utilizadas para Gunbot.
 {% endhint %}
 
-### Extend license options using Gunthy tokens
+### Amplíe las opciones de su licencia usando Gunthy tokens
 
-If you own a **Gunbot Standard license or higher**, you can extend your license in a few ways by holding more Gunthy tokens than were delivered to you after the initial purchase.
+Si posee **una licencia Gunbot Standard o superior** , puede extender su licencia de varias maneras si tiene más Gunthy tokens de los que se le entregaron después de la compra inicial.
 
-Get a total of 3 API slots when you hold 1500 tokens, get a total of 5 API slots when you hold 2500 tokens.
+Con 1500 Gunthy tokens puedes tener un total de 3 claves API registradas, con 2500 Gunthy tokens puedes obtener espacio para 5 claves API registradas.
 
-Some Gunthy modules are not for sale, they are only available to Gunbot license holder with a substantial token balance. This is the case for bitRage and Gunthy Market Maker.
+Algunos módulos de Gunthy no están a la venta, solo están disponibles para el titular de la licencia de Gunbot con un saldo de tokens sustancial.
 
 This token balance is the main factor in your "user rank", you see your user rank in the bot startup messages. If you reach rank 20, you automatically get access to bitRage. If you reach rank 10 you automatically get access to Market Maker.
 
