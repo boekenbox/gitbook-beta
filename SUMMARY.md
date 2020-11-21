@@ -18,7 +18,7 @@
   * [New in v7](about/whats-new/new-in-v7.md)
   * [New in v6](about/whats-new/new-in-v6.md)
 * [Intercambios soportados](about/supported-exchanges/README.md)
-  * [Creating API keys](about/supported-exchanges/creating-api-keys.md)
+  * [Creación de claves API](about/supported-exchanges/creating-api-keys.md)
   * [Websockets support](about/supported-exchanges/websockets-support.md)
 * [License info & system specs](about/system-requirements/README.md)
   * [How to create a wallet](about/system-requirements/how-to-create-a-wallet.md)

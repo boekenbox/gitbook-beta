@@ -1,16 +1,16 @@
 ---
-description: Requirements when creating a new API key at supported exchanges.
+description: Requisitos al crear una nueva clave API en los intercambios soportados.
 ---
 
-# Creating API keys
+# Creación de claves API
 
-To use Gunbot you need to create an API key at your exchange.
+Para usar Gunbot, debe crear una clave API en su intercambio.
 
-Through the API Gunbot can connect to the exchange and trade on your behalf. Gunbot uses the exchange assigned API key as license key to prevent fraud.
+A través de la clave API, Gunbot puede conectarse al intercambios y comerciar en su nombre. Para evitar fraude, Gunbot utiliza la clave API asignada en el intercambio como clave de licencia.
 
-On most exchanges you can find the option to create API keys on their account or settings page.
+En la mayoría de intercambios, puede encontrar la opción de crear claves API en la página de configuración de su cuenta.
 
-This page shows the minimum required settings for often used exchanges to create a working API key.
+Esta página muestra la configuración mínima requerida para crear una API funcional en los intercambios de uso frecuente.
 
 ## Binance
 
@@ -54,23 +54,23 @@ This page shows the minimum required settings for often used exchanges to create
 
 ## Nash
 
-### Step 1: open settings
+### Paso 1: Ve a configuración
 
 ![](../../.gitbook/assets/image%20%2868%29.png)
 
-### Step 2: go to API keys and generate a new key
+### Paso 2: ve a API keys y pulsa sobre crear una nueva API key
 
 ![](../../.gitbook/assets/image%20%2865%29.png)
 
-### Step 3: enter your password and 2FA code
+### Paso 3: entra tu contraseña y código 2FA
 
 ![](../../.gitbook/assets/image%20%2867%29.png)
 
-### Step 4: add whitelisted addresses \(optional\)
+### Paso 4: Añadir dirección IP a la lista blanca \(opcional\)
 
 ![](../../.gitbook/assets/image%20%2866%29.png)
 
-### Step 5: save the key and secret
+### Paso 5: Guardar clave API y Secret
 
 ![](../../.gitbook/assets/image%20%2869%29.png)
 
