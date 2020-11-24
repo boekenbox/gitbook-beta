@@ -54,33 +54,33 @@ Estas son las cantidades requeridas según el tipo de licencia:
 
 Los tokens para nuevos usuarios generalmente se envían en un plazo de 24 horas después del registro de la cartera.
 
-## FAQ
+## Preguntas más frecuentes
 
-**Are there costs involved when I update my API key?**
+**¿Hay gastos adicionales cuando actualizo mi clave API?**
 
-No, when you manage your own API keys there are no costs for changing them.
+No, cuando administra sus propias claves API no hay gastos por cambiarlas.
 
-**How often can I update my API key?**
+**¿Con qué frecuencia puedo actualizar mi clave API?**
 
-You can update your API keys as often as you want.
+Usted puede actualizar sus claves API con la frecuencia que desee.
 
-**Can I run multiple Gunbot instances using the same GUNTHY wallet?**
+**¿Puedo ejecutar varias instancias de Gunbot usando la misma dirección de cartera GUNTHY?**
 
-Yes.
+Si.
 
-**I have more than one registered API key for the same exchange, what to do?**
+**Tengo más de una clave API registrada para el mismo intercambio ¿Qué puedo hacer?**
 
-If you have multiple registered API keys for the same exchange, each key needs to be registered to a different GUNTHY wallet. You must run multiple Gunbot instances to do so.
+Si tiene varias claves API registradas para el mismo intercambio, cada clave API debe registrarse en una cartera GUNTHY diferente. Debe ejecutar varias instancias de Gunbot para hacerlo.
 
-**Can I change my API key to another exchange?**
+**¿Puedo cambiar mi clave API por la clave API de otro intercambio?**
 
-Yes, you can change to any supported exchange at any time.
+Si,usted puede cambiar a cualquier intercambio compatible en cualquier momento.
 
-**Is it mandatory to register a GUNTHY wallet for my API keys?**
+**¿Es obligatorio registrar una cartera GUNTHY para mis claves API?**
 
-Yes.
+Si.
 
-**Can't I just use any wallet address?**
+**¿Puedo usar cualquier dirección de cartera GUNTHY?**
 
-Abuse will not be tolerated. Only use your own GUNTHY wallet address in Gunbot, not a wallet provided by an exchange. Using your own wallet address is the only way to receive and control the required amount of tokens.
+No se tolerará el abuso, Solo use su propia dirección de cartera GUNTHY en Gunbot, no utilice una dirección de cartera proporcionada por un intercambio. Usar su propia dirección de billetera es la única forma de recibir y controlar la cantidad necesaria de tokens.
 
