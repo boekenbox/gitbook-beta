@@ -35,24 +35,24 @@ Con 1500 Gunthy tokens puedes tener un total de 3 claves API registradas, con 25
 
 Algunos módulos de Gunthy no están a la venta, solo están disponibles para el titular de la licencia de Gunbot con un saldo de tokens sustancial.
 
-This token balance is the main factor in your "user rank", you see your user rank in the bot startup messages. If you reach rank 20, you automatically get access to bitRage. If you reach rank 10 you automatically get access to Market Maker.
+Su "rango de usuario" está en relación directa con el número de tokens que posea en su cartera GUNTHY, verá su rango de usuario en la consola cuando inicie el bot. Si alcanzas el rango 20, automáticamente obtiene acceso a addon bitRage. Si alcanzas el rango 10, automáticamente obtiene acceso al addon Market Maker.
 
-As long as your token balance does not decrease, access to these modules stays. The ranking system is not a competition between users, you can't lose your ranking when other users increase their token holding.
+Mientras su saldo de tokens no disminuya, el acceso a estos módulos está garantizado. El sistema de clasificación no es una competencia entre usuarios, no puede perder su clasificación cuando otros usuarios aumentan su tenencia de tokens.
 
-## Token airdrops and requirements
+## Token airdrops y requisitos
 
-After you've registered your wallet address, you'll receive an airdrop with the required amount of tokens for your license type. **Hold these tokens at all times to be sure your Gunbot can run.**
+Una vez que haya registrado la dirección de su cartera, recibirá un airdrop con la cantidad de tokens correspondiente a su tipo de licencia. **Tienes que mantener al menos esa cantidad de tokens en la cartera para que Gunbot pueda funcionar.**
 
-These are the required amounts for undiscounted license types:
+Estas son las cantidades requeridas según el tipo de licencia:
 
 * **Starter**: 400 
 * **Standard**: 1000 
 * **Pro**: 1500 
 * **Ultimate**: 2500 
 
-**Discounted license have reduced token requirements.**
+**La licencia con descuento requiere un número reducido de tokens..**
 
-Tokens for new users are generally airdropped within 24 hours after registering the wallet address.
+Los tokens para nuevos usuarios generalmente se envían en un plazo de 24 horas después del registro de la cartera.
 
 ## FAQ
 
