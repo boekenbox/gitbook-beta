@@ -2,7 +2,7 @@
 description: Steps to create a compatible wallet to hold Gunthy tokens.
 ---
 
-# How to create a wallet
+# Cómo crear una cartera GUNTHY
 
 To create a GUNTHY wallet, you must add a custom token to an Ethereum wallet and enter this contract address: `0x3684b581db1f94b721ee0022624329feb16ab653`.
 
